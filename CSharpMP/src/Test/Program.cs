@@ -1,11 +1,12 @@
 ﻿
 Console.WriteLine("Einsteins - E = mc^2");
-Console.Write("Input mass: ");
-int mass = int.Parse(Console.ReadLine());
-long speed_of_light = 299792458;
-long Energy = mass * speed_of_light * speed_of_light;
+Console.Write("Input mass in kg: ");
+double m = double.Parse(Console.ReadLine());
 
-Console.WriteLine("Energy: " + Energy);
+const double c = 299792458;
+double E = m * c * c;   // E = m^2
+
+Console.WriteLine($"{E:E6}");
 
 
 // Console.WriteLine("\nI love Pizza!");

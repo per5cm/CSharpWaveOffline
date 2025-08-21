@@ -30,7 +30,6 @@ bool IsPrime(int zahl)
     return !isPrim;
 }
 
-
 Console.WriteLine("Primzahl-Test");
 // Console.Write("Gebe ein Zahl zum testen ein: ");
 do
@@ -53,3 +52,4 @@ do
         Console.WriteLine("Uengultige Eingabe");
     }
 } while (Input != 0);    
+
