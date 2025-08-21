@@ -1,0 +1,15 @@
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\Loops\obj\Debug\net9.0\Loops.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\Loops\obj\Debug\net9.0\Loops.AssemblyInfoInputs.cache
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\Loops\obj\Debug\net9.0\Loops.AssemblyInfo.cs
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\Loops\obj\Debug\net9.0\Loops.csproj.CoreCompileInputs.cache
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\Loops\obj\Debug\net9.0\Loops.sourcelink.json
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\Loops\bin\Debug\net9.0\Loops.exe
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\Loops\bin\Debug\net9.0\Loops.deps.json
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\Loops\bin\Debug\net9.0\Loops.runtimeconfig.json
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\Loops\bin\Debug\net9.0\Loops.dll
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\Loops\bin\Debug\net9.0\Loops.pdb
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\Loops\obj\Debug\net9.0\Loops.dll
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\Loops\obj\Debug\net9.0\refint\Loops.dll
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\Loops\obj\Debug\net9.0\Loops.pdb
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\Loops\obj\Debug\net9.0\Loops.genruntimeconfig.cache
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\Loops\obj\Debug\net9.0\ref\Loops.dll
