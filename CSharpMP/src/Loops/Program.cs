@@ -16,18 +16,18 @@
 int Input;
 bool IsPrime(int zahl)
 {
-    bool teilbar = false;
+    bool isPrim = false;
     decimal grenze = (decimal)Math.Sqrt(zahl);
-    
+
     for (int i = 2; i < grenze; i++)
     {
         if (zahl % i == 0)
         {
             Console.WriteLine("Teilbar durch " + i);
-            teilbar = true;
+            isPrim = true;
         }
     }
-    return !teilbar;
+    return !isPrim;
 }
 
 
