@@ -1,5 +1,5 @@
 ﻿
-Console.WriteLine("Einsteins - E = mc^2");
+Console.WriteLine("Einsteins E = mc^2");
 Console.Write("Input mass in kg: ");
 double m = double.Parse(Console.ReadLine());
 
