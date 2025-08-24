@@ -4,9 +4,9 @@ Console.Write("Input mass in kg: ");
 double m = double.Parse(Console.ReadLine());
 
 const double c = 299792458;
-double E = m * c * c;   // E = m^2
+double E = m * c * c;   // E = m * c^2
 
-Console.WriteLine($"{E:E6}");
+Console.WriteLine($"{E:N0} J");
 
 
 // Console.WriteLine("\nI love Pizza!");
