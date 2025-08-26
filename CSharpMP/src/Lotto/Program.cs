@@ -12,7 +12,6 @@ string InputEingabe = Console.ReadLine();
 Console.Write($"Es wurde Programm: {InputEingabe} gewählt!\n");
 
 Console.WriteLine("Bitte füllen Sie Ihren Tippschein aus.");
-//Console.Write("Eingabe: ");
 
 Console.Write("Zahl 1: ");
 string InputTippschein_1 = Console.ReadLine();
