@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\src\\KonsoleneingabenOperatoren\\KonsoleneingabenOperatoren.csproj": {}
+    "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\CSharpMP\\src\\if_operator\\if_operator.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\src\\KonsoleneingabenOperatoren\\KonsoleneingabenOperatoren.csproj": {
+    "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\CSharpMP\\src\\if_operator\\if_operator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\src\\KonsoleneingabenOperatoren\\KonsoleneingabenOperatoren.csproj",
-        "projectName": "KonsoleneingabenOperatoren",
-        "projectPath": "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\src\\KonsoleneingabenOperatoren\\KonsoleneingabenOperatoren.csproj",
+        "projectUniqueName": "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\CSharpMP\\src\\if_operator\\if_operator.csproj",
+        "projectName": "if_operator",
+        "projectPath": "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\CSharpMP\\src\\if_operator\\if_operator.csproj",
         "packagesPath": "C:\\Users\\Eric\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\src\\KonsoleneingabenOperatoren\\obj\\",
+        "outputPath": "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\CSharpMP\\src\\if_operator\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

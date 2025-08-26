@@ -1,0 +1,15 @@
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\if_operator\obj\Debug\net9.0\if_operator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\if_operator\obj\Debug\net9.0\if_operator.AssemblyInfoInputs.cache
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\if_operator\obj\Debug\net9.0\if_operator.AssemblyInfo.cs
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\if_operator\obj\Debug\net9.0\if_operator.csproj.CoreCompileInputs.cache
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\if_operator\obj\Debug\net9.0\if_operator.sourcelink.json
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\if_operator\bin\Debug\net9.0\if_operator.exe
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\if_operator\bin\Debug\net9.0\if_operator.deps.json
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\if_operator\bin\Debug\net9.0\if_operator.runtimeconfig.json
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\if_operator\bin\Debug\net9.0\if_operator.dll
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\if_operator\bin\Debug\net9.0\if_operator.pdb
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\if_operator\obj\Debug\net9.0\if_operator.dll
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\if_operator\obj\Debug\net9.0\refint\if_operator.dll
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\if_operator\obj\Debug\net9.0\if_operator.pdb
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\if_operator\obj\Debug\net9.0\if_operator.genruntimeconfig.cache
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\if_operator\obj\Debug\net9.0\ref\if_operator.dll

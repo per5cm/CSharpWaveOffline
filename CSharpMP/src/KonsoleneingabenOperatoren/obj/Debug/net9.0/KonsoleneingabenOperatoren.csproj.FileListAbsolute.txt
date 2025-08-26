@@ -1,0 +1,15 @@
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\KonsoleneingabenOperatoren\obj\Debug\net9.0\KonsoleneingabenOperatoren.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\KonsoleneingabenOperatoren\obj\Debug\net9.0\KonsoleneingabenOperatoren.AssemblyInfoInputs.cache
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\KonsoleneingabenOperatoren\obj\Debug\net9.0\KonsoleneingabenOperatoren.AssemblyInfo.cs
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\KonsoleneingabenOperatoren\obj\Debug\net9.0\KonsoleneingabenOperatoren.csproj.CoreCompileInputs.cache
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\KonsoleneingabenOperatoren\obj\Debug\net9.0\KonsoleneingabenOperatoren.sourcelink.json
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\KonsoleneingabenOperatoren\bin\Debug\net9.0\KonsoleneingabenOperatoren.exe
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\KonsoleneingabenOperatoren\bin\Debug\net9.0\KonsoleneingabenOperatoren.deps.json
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\KonsoleneingabenOperatoren\bin\Debug\net9.0\KonsoleneingabenOperatoren.runtimeconfig.json
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\KonsoleneingabenOperatoren\bin\Debug\net9.0\KonsoleneingabenOperatoren.dll
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\KonsoleneingabenOperatoren\bin\Debug\net9.0\KonsoleneingabenOperatoren.pdb
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\KonsoleneingabenOperatoren\obj\Debug\net9.0\KonsoleneingabenOperatoren.dll
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\KonsoleneingabenOperatoren\obj\Debug\net9.0\refint\KonsoleneingabenOperatoren.dll
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\KonsoleneingabenOperatoren\obj\Debug\net9.0\KonsoleneingabenOperatoren.pdb
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\KonsoleneingabenOperatoren\obj\Debug\net9.0\KonsoleneingabenOperatoren.genruntimeconfig.cache
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\KonsoleneingabenOperatoren\obj\Debug\net9.0\ref\KonsoleneingabenOperatoren.dll
