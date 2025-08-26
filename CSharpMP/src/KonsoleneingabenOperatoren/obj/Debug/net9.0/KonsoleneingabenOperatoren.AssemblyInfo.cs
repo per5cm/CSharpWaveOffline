@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KonsoleneingabenOperatoren")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+872396d2d441f706a1fb37f3ef7f17e00682e800")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+601ca581af7b3bb5c5ec1b4a9ff727dc878da246")]
 [assembly: System.Reflection.AssemblyProductAttribute("KonsoleneingabenOperatoren")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KonsoleneingabenOperatoren")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

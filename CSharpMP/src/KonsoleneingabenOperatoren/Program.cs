@@ -56,21 +56,21 @@
 // Console.WriteLine($"Dollarbetrag: {dollar_wert:F2} $");
 
 
-// Console.WriteLine("\nSchreinereihelfer Bretter");
+Console.WriteLine("\nSchreinereihelfer Bretter");
 
-// Console.Write("Brett Länge in cm eingeben: ");
-// int brett_laenge = Convert.ToInt32(Console.ReadLine());
+Console.Write("Brett Länge in cm eingeben: ");
+int brett_laenge = Convert.ToInt32(Console.ReadLine());
 
-// Console.Write("Holzstück Länge in cm eingeben: ");
-// int holstueck_laenge = Convert.ToInt32(Console.ReadLine());
+Console.Write("Holzstück Länge in cm eingeben: ");
+int holstueck_laenge = Convert.ToInt32(Console.ReadLine());
 
-// int holzstueck_menge = brett_laenge / holstueck_laenge;
+int holzstueck_menge = brett_laenge / holstueck_laenge;
 
-// Console.WriteLine($"Holzstücke: {holzstueck_menge}");
+Console.WriteLine($"Holzstücke: {holzstueck_menge}");
 
-// double verchnitt = holzstueck_menge * holstueck_laenge;
-// double verschnitt_final = brett_laenge - verchnitt;
+double verchnitt = holzstueck_menge * holstueck_laenge;
+double verschnitt_final = brett_laenge - verchnitt;
 
-// Console.WriteLine($"Verschnitt in cm: {verschnitt_final}");
+Console.WriteLine($"Verschnitt in cm: {verschnitt_final}");
 
 
