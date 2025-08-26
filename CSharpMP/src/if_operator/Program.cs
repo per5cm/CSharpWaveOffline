@@ -2,8 +2,8 @@
 // Console.Write("Bestellwert in Euro: ");
 
 // Ausführlich
-//string eingabe = Console.ReadLine();
-//double eingabeUmgewandelt = double.Parse(eingabe);
+// string eingabe = Console.ReadLine();
+// double eingabeUmgewandelt = double.Parse(eingabe);
 
 // 2 Schritte auf einmal
 // double bestellWert  = double.Parse(Console.ReadLine());

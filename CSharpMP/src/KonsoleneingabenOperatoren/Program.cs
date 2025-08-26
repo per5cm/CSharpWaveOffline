@@ -1,4 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿
 // Console.WriteLine("Rechner\n");
 
 // Console.WriteLine("Bitte geben Sie zwei ganzen Zahle ein!");
