@@ -29,27 +29,48 @@
 // float seite_c = Convert.ToSingle(Console.ReadLine());
 
 
-Console.WriteLine("Gleichung X");
+// Console.WriteLine("Gleichung X");
 
-Console.Write("Gleichunn A: ");
-int gleichung_a = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Gleichunn A: ");
+// int gleichung_a = Convert.ToInt32(Console.ReadLine());
 
-Console.Write("Gleichung B: ");
-int gleichung_b = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Gleichung B: ");
+// int gleichung_b = Convert.ToInt32(Console.ReadLine());
 
-// Prüfung Fehler bei ungültiger Eingabe a = b
-if (gleichung_a == 0)
+// // Prüfung Fehler bei ungültiger Eingabe a = b
+// if (gleichung_a == 0)
+// {
+//     Console.WriteLine("Fehler: ");
+// }
+
+// else if (gleichung_b == 0)
+// {
+//     Console.WriteLine("Fehler: ");
+// }
+
+// else
+// {
+//     double ergebnis_x = -gleichung_b / gleichung_a;
+//     Console.WriteLine($"Lösung: {ergebnis_x}");
+// }
+
+
+// starts with
+
+Console.WriteLine("Bank Hallo!!\n");
+
+Console.Write("Bitte geben Sie Ihre Begrüßung ein und finden Sie heraus, welchen Preis Sie bekommen!: ");
+string begruessung = Console.ReadLine();
+if (begruessung.Equals("Hello", StringComparison.OrdinalIgnoreCase))
 {
-    Console.WriteLine("Fehler: ");
+    Console.WriteLine("0€");
 }
-
-else if (gleichung_b == 0)
+else if (begruessung.Equals("H",StringComparison.OrdinalIgnoreCase))
 {
-    Console.WriteLine("Fehler: ");
+    Console.WriteLine("20€");
 }
-
 else
 {
-    double ergebnis_x = -gleichung_b / gleichung_a;
-    Console.WriteLine($"Lösung: {ergebnis_x}");
+    Console.WriteLine("100€");
 }
+
