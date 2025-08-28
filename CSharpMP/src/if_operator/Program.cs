@@ -37,7 +37,7 @@
 // Console.Write("Gleichung B: ");
 // int gleichung_b = Convert.ToInt32(Console.ReadLine());
 
-// // Prüfung Fehler bei ungültiger Eingabe a = b
+// Prüfung Fehler bei ungültiger Eingabe a = b
 // if (gleichung_a == 0)
 // {
 //     Console.WriteLine("Fehler: ");

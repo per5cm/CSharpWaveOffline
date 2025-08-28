@@ -9,6 +9,18 @@ double E = m * c * c;   // E = m * c^2
 Console.WriteLine($"{E:N0} J");
 
 
+// int zahl = 21;
+// int i;
+
+
+// void Begruss(string name, int alter, bool volljaerig, double gewicht)
+// {
+//     Console.WriteLine("Hallo " + name + " Alter: " + alter + volljaerig + gewicht);
+// }
+
+// Begruss("Erikas", 37, false, 81.3);
+
+
 // Console.WriteLine("\nI love Pizza!");
 // Console.WriteLine("Musterstrasse 1");
 // Console.WriteLine("1234 Musterstadt\n");
