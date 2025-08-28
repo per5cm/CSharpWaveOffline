@@ -15,7 +15,7 @@ class Program
         //DoWhile_3();
         //foreach_1();
         //foreach_2();
-        foreach_3();
+        //foreach_3();
     }
 
     #region Primary number
