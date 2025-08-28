@@ -12,10 +12,13 @@ class Program
         // For_1();
         // DoWhile_1();
         // DoWhile_2();
-        DoWhile_3();
+        //DoWhile_3();
+        //foreach_1();
+        //foreach_2();
+        foreach_3();
     }
 
-    #region Primzahl
+    #region Primary number
 
     static void PrimzahlMenu()
     {
@@ -106,7 +109,7 @@ class Program
 
     #endregion
 
-    #region for loop (Beispiel)
+    #region for loop
 
     static void For_1()
     {
@@ -194,6 +197,42 @@ class Program
                 Console.WriteLine($"Hello {user_name}!");
 
         } while (false);
+    }
+
+    #endregion
+
+
+    #region For Each
+
+    static void foreach_1()
+    {
+        string[] names = ["Anna", "Ben", "Clara", "David"];
+
+        foreach (string surnames in names)
+        {
+            Console.WriteLine($"Lenght of surname: {surnames} is {surnames.Lenght} Letters!");
+        }
+    }
+
+    static void foreach_2()
+    {
+        List<string> words = ["Apple", "Bannana", "Kiwi"];
+
+        foreach (string fruits in words)
+        {
+            Console.WriteLine($"Letters in word: {fruits} are {fruits.Lenght} Letters");
+        }
+    }
+
+
+    static void foreach_3()
+    {
+        int[] numbers = [2, 4, 6];
+
+        foreach (int x in numbers)
+        {
+            Console.WriteLine($"Results are: {x * x}");
+        }
     }
 
     #endregion
