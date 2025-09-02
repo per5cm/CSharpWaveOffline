@@ -129,7 +129,7 @@
 // Console.WriteLine($"{output_temperatur} Grad Celsius entsprechen {convert_nach_farenheit} Farenheit");
 
 
-Console.WriteLine("Gewichtsrechner BMI");
+Console.WriteLine("Gewichtsrechner BMI\n");
 
 Console.Write("Bite Gröẞe in cm Eingeben: ");
 string input_lenght = Console.ReadLine();
@@ -142,16 +142,16 @@ double convert_weight = double.Parse(input_weight);
 double bmi_normal = convert_lenght - 100;
 double bmi_ideal = (convert_lenght - 100) * 0.9;
 
-Console.WriteLine($"Ihr Normale gewischt wäre: {bmi_normal}");
-Console.WriteLine($"Ihr Ideale gewischt wäre: {bmi_ideal}");
+Console.WriteLine($"\nIhr Normale gewischt wäre: {bmi_normal}\n");
+Console.WriteLine($"Ihr Ideale gewischt wäre: {bmi_ideal}\n");
 
 if (convert_weight == bmi_ideal)
 {
-    Console.WriteLine("Ihr Ideal gewischt ist!");
+    Console.WriteLine($"Sie haben ein Idealgewischt!\n");
 }
 else if (convert_weight < bmi_ideal)
 {
     double under_ideal = (bmi_ideal - convert_weight) / bmi_ideal * 100;
-    Console.WriteLine($"Sie Liegen {under_ideal} % unter dem idealen gewischt");
+    Console.WriteLine($"Sie Liegen {under_ideal:F2} % unter dem idealen gewischt\n");
 }
 
