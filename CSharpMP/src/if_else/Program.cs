@@ -152,6 +152,6 @@ if (convert_weight == bmi_ideal)
 else if (convert_weight < bmi_ideal)
 {
     double under_ideal = (bmi_ideal - convert_weight) / bmi_ideal * 100;
-    Console.WriteLine($"Sie Liegen {under_ideal:F2} % unter dem idealen gewischt\n");
+    Console.WriteLine($"Sie Liegen {under_ideal:F2}% unter dem idealen gewischt\n");
 }
 
