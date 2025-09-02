@@ -76,7 +76,7 @@
 
 Console.WriteLine("Buẞgeld Converter!\n");
 
-Console.Write("Geschwindikeit Eingeben: ");
+Console.Write("Geschwindikeit in km Eingeben: ");
 string input_eingabe = Console.ReadLine();
 float top_speed = Convert.ToSingle(input_eingabe);
 
@@ -103,4 +103,4 @@ else
     ausgabe_knoele_geld += 200;
 }
 
-Console.WriteLine($"Buẞgeld: {ausgabe_knoele_geld}");
+Console.WriteLine($"Buẞgeld in EUR: {ausgabe_knoele_geld}");
