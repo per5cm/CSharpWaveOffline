@@ -1,0 +1,15 @@
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\if_else\obj\Debug\net9.0\if_else.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\if_else\obj\Debug\net9.0\if_else.AssemblyInfoInputs.cache
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\if_else\obj\Debug\net9.0\if_else.AssemblyInfo.cs
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\if_else\obj\Debug\net9.0\if_else.csproj.CoreCompileInputs.cache
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\if_else\obj\Debug\net9.0\if_else.sourcelink.json
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\if_else\bin\Debug\net9.0\if_else.exe
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\if_else\bin\Debug\net9.0\if_else.deps.json
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\if_else\bin\Debug\net9.0\if_else.runtimeconfig.json
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\if_else\bin\Debug\net9.0\if_else.dll
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\if_else\bin\Debug\net9.0\if_else.pdb
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\if_else\obj\Debug\net9.0\if_else.dll
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\if_else\obj\Debug\net9.0\refint\if_else.dll
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\if_else\obj\Debug\net9.0\if_else.pdb
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\if_else\obj\Debug\net9.0\if_else.genruntimeconfig.cache
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\if_else\obj\Debug\net9.0\ref\if_else.dll
