@@ -1,4 +1,5 @@
-﻿
+﻿// See https://aka.ms/new-console-template for more information
+
 // Console.WriteLine("Rechner\n");
 
 // Console.WriteLine("Bitte geben Sie zwei ganzen Zahle ein!");
@@ -72,5 +73,3 @@ double verchnitt = holzstueck_menge * holstueck_laenge;
 double verschnitt_final = brett_laenge - verchnitt;
 
 Console.WriteLine($"Verschnitt in cm: {verschnitt_final}");
-
-

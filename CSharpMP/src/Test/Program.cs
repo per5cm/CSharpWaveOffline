@@ -1,12 +1,12 @@
 ﻿
-Console.WriteLine("Einsteins E = mc^2");
-Console.Write("Input mass in kg: ");
-double m = double.Parse(Console.ReadLine());
+// Console.WriteLine("Einsteins E = mc^2");
+// Console.Write("Input mass in kg: ");
+// double m = double.Parse(Console.ReadLine());
 
-const double c = 299792458;
-double E = m * c * c;   // E = m * c^2
+// const double c = 299792458;
+// double E = m * c * c;   // E = m * c^2
 
-Console.WriteLine($"{E:N0} J");
+// Console.WriteLine($"{E:N0} J");
 
 
 // int zahl = 21;
@@ -73,3 +73,4 @@ Console.WriteLine($"{E:N0} J");
 // Console.WriteLine(!(i < 6 || i > 7)); // dreht die loging, z.b. suche den argument in the liste und er hat bestimmten wert nicht gefunden.
 // Console.WriteLine((i / 2 == 3 || i == 7) && i != 0);
 // Console.WriteLine((i * 2 > 10) && (i + 1 <= 8));
+
