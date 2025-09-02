@@ -74,33 +74,84 @@
 
 // Console.WriteLine($"Kindergeld: {kinder_kindergeld}");
 
-Console.WriteLine("Buẞgeld Converter!\n");
+// Console.WriteLine("Buẞgeld Converter!\n");
 
-Console.Write("Geschwindikeit in km Eingeben: ");
-string input_eingabe = Console.ReadLine();
-float top_speed = Convert.ToSingle(input_eingabe);
+// Console.Write("Geschwindikeit in km Eingeben: ");
+// string input_eingabe = Console.ReadLine();
+// float top_speed = Convert.ToSingle(input_eingabe);
 
-int ausgabe_knoele_geld = 0;
+// int ausgabe_knoele_geld = 0;
 
-if (top_speed < 10)
+// if (top_speed < 10)
+// {
+//     Console.WriteLine("Noch Glück gehabt!");
+//     ausgabe_knoele_geld += 0;
+// }
+// else if (top_speed < 20)
+// {
+//     Console.WriteLine("Buẞgeld LVL 1!");
+//     ausgabe_knoele_geld += 30;
+// }
+// else if (top_speed < 30)
+// {
+//     Console.WriteLine("Buẞgeld LVL 2!");
+//     ausgabe_knoele_geld += 60;
+// }
+// else
+// {
+//     Console.WriteLine("Buẞgeld und Führerschein abgeben!");
+//     ausgabe_knoele_geld += 200;
+// }
+
+// Console.WriteLine($"Buẞgeld in EUR: {ausgabe_knoele_geld}");
+
+
+// Console.WriteLine("Temperaturrechner\n");
+
+// Console.Write("Asuwertung Temperatur: ");
+// string input_temperatur = Console.ReadLine();
+// double output_temperatur = double.Parse(input_temperatur);
+
+// if (output_temperatur <= 0)
+// {
+//     Console.WriteLine("Es handelt sich um Eis!\n");
+// }
+// else if (output_temperatur > 110)
+// {
+//     Console.WriteLine("Es handelt sich um Wasser\n!");
+// }
+// else if (output_temperatur >= 110)
+// {
+//     Console.WriteLine("Es handelt sich um Dampf!\n");
+// }
+
+// double convert_nach_farenheit = output_temperatur * 1.8 + 32;
+// Console.WriteLine($"{output_temperatur} Grad Celsius entsprechen {convert_nach_farenheit} Farenheit");
+
+
+Console.WriteLine("Gewichtsrechner BMI");
+
+Console.Write("Bite Gröẞe in cm Eingeben: ");
+string input_lenght = Console.ReadLine();
+double convert_lenght = double.Parse(input_lenght);
+
+Console.Write("Bitte Gewischt in kg Eingeben: ");
+string input_weight = Console.ReadLine();
+double convert_weight = double.Parse(input_weight);
+
+double bmi_normal = convert_lenght - 100;
+double bmi_ideal = (convert_lenght - 100) * 0.9;
+
+Console.WriteLine($"Ihr Normale gewischt wäre: {bmi_normal}");
+Console.WriteLine($"Ihr Ideale gewischt wäre: {bmi_ideal}");
+
+if (convert_weight == bmi_ideal)
 {
-    Console.WriteLine("Noch Glück gehabt!");
-    ausgabe_knoele_geld += 0;
+    Console.WriteLine("Ihr Ideal gewischt ist!");
 }
-else if (top_speed < 20)
+else if (convert_weight < bmi_ideal)
 {
-    Console.WriteLine("Buẞgeld!");
-    ausgabe_knoele_geld += 30;
-}
-else if (top_speed < 30)
-{
-    Console.WriteLine("Buẞgeld!");
-    ausgabe_knoele_geld += 60;
-}
-else
-{
-    Console.WriteLine("Buẞgeld und Führerschein abgeben!");
-    ausgabe_knoele_geld += 200;
+    double under_ideal = (bmi_ideal - convert_weight) / bmi_ideal * 100;
+    Console.WriteLine($"Sie Liegen {under_ideal} % unter dem idealen gewischt");
 }
 
-Console.WriteLine($"Buẞgeld in EUR: {ausgabe_knoele_geld}");
