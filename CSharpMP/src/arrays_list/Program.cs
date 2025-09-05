@@ -4,7 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Aktiviere genau das, was du testen willst: ");
+        // Aktiviere genau das, was du testen willst
         //array_1();
         //array_2();
         array_3();
