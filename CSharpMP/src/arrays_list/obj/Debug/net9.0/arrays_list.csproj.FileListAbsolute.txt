@@ -1,0 +1,15 @@
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\arrays_list\bin\Debug\net9.0\arrays_list.exe
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\arrays_list\bin\Debug\net9.0\arrays_list.deps.json
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\arrays_list\bin\Debug\net9.0\arrays_list.runtimeconfig.json
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\arrays_list\bin\Debug\net9.0\arrays_list.dll
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\arrays_list\bin\Debug\net9.0\arrays_list.pdb
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\arrays_list\obj\Debug\net9.0\arrays_list.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\arrays_list\obj\Debug\net9.0\arrays_list.AssemblyInfoInputs.cache
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\arrays_list\obj\Debug\net9.0\arrays_list.AssemblyInfo.cs
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\arrays_list\obj\Debug\net9.0\arrays_list.csproj.CoreCompileInputs.cache
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\arrays_list\obj\Debug\net9.0\arrays_list.sourcelink.json
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\arrays_list\obj\Debug\net9.0\arrays_list.dll
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\arrays_list\obj\Debug\net9.0\refint\arrays_list.dll
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\arrays_list\obj\Debug\net9.0\arrays_list.pdb
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\arrays_list\obj\Debug\net9.0\arrays_list.genruntimeconfig.cache
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\arrays_list\obj\Debug\net9.0\ref\arrays_list.dll
