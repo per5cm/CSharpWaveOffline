@@ -60,5 +60,26 @@ class Program
         Console.WriteLine($"Array minimum number is: {min}.");
     }
     #endregion
+
+    #region Listen
+    static int ArraySumme(int[] array)
+    {
+        int summe = 0;
+        foreach (int einzelneZahl in array)
+        {
+            summe += einzelneZahl;
+        }
+        return summe;
+    }
+    static void List1()
+    {
+        int[] meinErstesArray = [3, 5, 7];
+        int sum = ArraySumme(meinErstesArray);
+        foreach (int einzelneZahl in meinErstesArray)
+        {
+            Console.WriteLine(einzelneZahl);
+        }
+    }
+    #endregion
 }
     
