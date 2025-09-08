@@ -1,12 +1,12 @@
 ﻿
-// Console.WriteLine("Einsteins E = mc^2");
-// Console.Write("Input mass in kg: ");
-// double m = double.Parse(Console.ReadLine());
+Console.WriteLine("Einsteins E = mc^2");
+Console.Write("Input mass in kg: ");
+double m = double.Parse(Console.ReadLine());
 
-// const double c = 299792458;
-// double E = m * c * c;   // E = m * c^2
+const double c = 299792458;
+double E = m * c * c;   // E = m * c^2
 
-// Console.WriteLine($"{E:N0} J");
+Console.WriteLine($"{E:N0} J");
 
 
 // int zahl = 21;
