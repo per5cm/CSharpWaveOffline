@@ -147,11 +147,19 @@ Console.WriteLine($"Ihr Ideale gewischt wäre: {bmi_ideal}\n");
 
 if (convert_weight == bmi_ideal)
 {
-    Console.WriteLine($"Sie haben ein Idealgewischt!\n");
+    Console.WriteLine($"Gratulation, Sie haben ein Idealgewischt!\n");
 }
 else if (convert_weight < bmi_ideal)
 {
     double under_ideal = (bmi_ideal - convert_weight) / bmi_ideal * 100;
-    Console.WriteLine($"Sie Liegen {under_ideal:F2}% unter dem idealen gewischt\n");
+    Console.WriteLine($"Gratulation, Sie Liegen {under_ideal:F2}% unter dem idealen gewischt\n");
 }
-
+else if (convert_weight > bmi_normal)
+{
+    double over_normal = (convert_weight - bmi_normal) / bmi_normal * 100;
+    Console.WriteLine($"Gratulation, Sie Liegen {over_normal:F2}% über dem normalen gewischt!\n");
+}
+else
+{
+    Console.WriteLine("Gratulation, Sie haben normalen gewischt!");
+}
