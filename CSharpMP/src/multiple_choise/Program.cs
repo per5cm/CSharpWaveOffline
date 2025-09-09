@@ -109,7 +109,7 @@ switch (menu_button)
         break;
 
     case 2:
-        Console.WriteLine("Würfel - Kantenlänge in cm: ");
+        Console.WriteLine("Würfel - Kantenlänge (nur einer Kante reicht) in cm: ");
         double height_w = double.Parse(Console.ReadLine());
 
         double cubic_o = 6 * height_w * height_w;
