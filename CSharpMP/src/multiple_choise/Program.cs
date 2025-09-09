@@ -43,7 +43,7 @@
 //         break;
 // }
 
-// Consol.WriteLine("Tachenrechner\n");
+// Consol.WriteLine("Tachenrechner\n"); //voll falch!
 
 // Console.WriteLine("Zahl eins: ");
 // string zahl_eins = double.Parse(Console.ReadLine());
@@ -102,10 +102,10 @@ switch (menu_button)
         double height_z = double.Parse(Console.ReadLine());
 
         double cylinder_o = 2 * Math.PI * radius_z * (radius_z + height_z);
-        double volumen_c = Math.PI * radius_z * radius_z * height_z;
+        double cylinder_v = Math.PI * radius_z * radius_z * height_z;
 
-        Console.WriteLine($"Zylinder oberfläche: PI{cylinder_o}.");
-        Console.WriteLine($"Zylinder volumen: PI{volumen_c}");
+        Console.WriteLine($"Zylinder oberfläche: PI-{cylinder_o}.");
+        Console.WriteLine($"Zylinder volumen: PI-{cylinder_v}");
         break;
 
     case 2:
@@ -115,8 +115,8 @@ switch (menu_button)
         double cubic_o = 6 * height_w * height_w;
         double cubic_v = height_w * height_w * height_w;
 
-        Console.WriteLine($"Würfel oberfläche: PI{cubic_o}");
-        Console.WriteLine($"Würfel volumen: PI{cubic_v}");
+        Console.WriteLine($"Würfel oberfläche: PI-{cubic_o}");
+        Console.WriteLine($"Würfel volumen: PI-{cubic_v}");
         break;
 
     case 3:
@@ -132,8 +132,8 @@ switch (menu_button)
         double quader_o = 2 * height_a * height_c + 2 * height_b * height_c + 2 * height_a * height_b;
         double quader_v = height_a * height_b * height_c;
 
-        Console.WriteLine($"Quader oberfläche: PI{quader_o}");
-        Console.WriteLine($"Quader volumen: PI{quader_v}");
+        Console.WriteLine($"Quader oberfläche: PI-{quader_o}");
+        Console.WriteLine($"Quader volumen: PI-{quader_v}");
         break;
 
     case 4:
@@ -143,10 +143,11 @@ switch (menu_button)
         double circle_o = 4 * Math.PI * radius_k * radius_k;
         double circle_v = (4 / 3) * Math.PI * radius_k * radius_k * radius_k;
 
-        Console.WriteLine($"Quader oberfläche: PI{circle_o}");
-        Console.WriteLine($"Kugel volumen: PI{circle_v}");
+        Console.WriteLine($"Quader oberfläche: PI-{circle_o}");
+        Console.WriteLine($"Kugel volumen: PI-{circle_v}");
         break;
 
     default:
         Console.WriteLine("Kein Bock zu Tippen???!!!");
+        break;
 }
