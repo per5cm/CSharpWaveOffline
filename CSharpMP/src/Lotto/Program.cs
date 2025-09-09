@@ -11,6 +11,8 @@ string input_eingabe = Console.ReadLine();
 int menu_button_one = Convert.ToInt32(inputEingabe);
 Console.Write($"Es wurde Programm: {input_eingabe} gewählt!\n");
 
+int[] gewinner_zahlen = {12, 14, 16, 18, 20, 23};
+
 if (menu_button_one == 1)
 {
     Console.WriteLine("\nTippschein ausfüllen");
@@ -22,8 +24,6 @@ else
 }
 
 Console.WriteLine("\nBitte füllen Sie Ihren Tippschein aus mit nummern von 1 bis 49. Bitte kein doppel Zahlen Auswählen!.\n");
-
-
 
 Console.Write("Zahl 1: ");
 string input_tippschein_1 = Console.ReadLine();

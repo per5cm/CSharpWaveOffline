@@ -1,0 +1,15 @@
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\multiple_choise\obj\Debug\net9.0\multiple_choise.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\multiple_choise\obj\Debug\net9.0\multiple_choise.AssemblyInfoInputs.cache
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\multiple_choise\obj\Debug\net9.0\multiple_choise.AssemblyInfo.cs
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\multiple_choise\obj\Debug\net9.0\multiple_choise.csproj.CoreCompileInputs.cache
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\multiple_choise\obj\Debug\net9.0\multiple_choise.sourcelink.json
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\multiple_choise\bin\Debug\net9.0\multiple_choise.exe
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\multiple_choise\bin\Debug\net9.0\multiple_choise.deps.json
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\multiple_choise\bin\Debug\net9.0\multiple_choise.runtimeconfig.json
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\multiple_choise\bin\Debug\net9.0\multiple_choise.dll
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\multiple_choise\bin\Debug\net9.0\multiple_choise.pdb
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\multiple_choise\obj\Debug\net9.0\multiple_choise.dll
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\multiple_choise\obj\Debug\net9.0\refint\multiple_choise.dll
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\multiple_choise\obj\Debug\net9.0\multiple_choise.pdb
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\multiple_choise\obj\Debug\net9.0\multiple_choise.genruntimeconfig.cache
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\multiple_choise\obj\Debug\net9.0\ref\multiple_choise.dll
