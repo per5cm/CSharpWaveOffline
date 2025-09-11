@@ -25,7 +25,6 @@ namespace Vpets
         public void Sleep()
         {
             Energy += 100;
-
         }
         public void Play()
         {
