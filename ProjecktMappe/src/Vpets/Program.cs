@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace VPets.Models
+namespace Vpets
 {
     internal class Program
     {
