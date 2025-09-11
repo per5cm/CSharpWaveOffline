@@ -82,5 +82,3 @@ class Program
     }
     #endregion
 }
-
-ich liebe arsch
