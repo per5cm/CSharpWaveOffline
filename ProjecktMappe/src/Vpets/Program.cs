@@ -6,12 +6,19 @@ using System.Threading.Tasks;
 
 namespace VPets.Models
 {
-    internal class Pet
+    internal class Program
     {
-        // Felder des Haustiers (zur Speicherung von Daten)
-        public string Name = "Namenlos";
-        public int Hunger;
-        public int Energy;
-        public int Mood;
+        static void Main(string[] args)
+        {
+            Pet myPet = new()
+            {
+                Name = "Amstrong",
+                Hunger = 50,
+                Energy = 80,
+                Mood = 90
+            };
+            // Gibt den Namen des neuen Haustiers auf der Konsole aus
+            Console.WriteLine($"Neues Haustier Namens {myPet.Name} wurde erstellt!");
+        }
     }
 }
