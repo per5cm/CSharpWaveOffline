@@ -40,6 +40,6 @@
 // } while (true);
 
 // double average_grade = sum / count;
-// Console.WriteLine($"Anzahl Noten : {count}, Anzahl Summe: {sum}. Notendurchnitt: {average_grade}.");
+// Console.WriteLine($"Anzahl Noten : {count}. Anzahl Summe: {sum}. Notendurchnitt: {average_grade:F2}.");
 
 Console.WriteLine("Hochzahlen\n");
