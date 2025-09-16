@@ -14,3 +14,29 @@
 // }
 
 Console.WriteLine("Schulnoten");
+
+double sum = 0;
+int count = 0;
+double grade;
+
+do
+{
+    Console.Write("Geben Sie shulnote ein: ");
+    grade = double.Parse(Console.ReadLine());
+
+    if (grade == 0)
+        break;
+
+    else if (grade < 1 || grade > 6)
+    {
+        Console.WriteLine("Ungültige Note!");
+        continue;
+    }
+
+    else
+        sum += grade;
+        count++;
+
+} while (true);
+double average_grade = sum / count;
+Console.WriteLine($"Anzahl Noten : {count}, Anzahl Summe: {sum}. Notendurchnitt: {average_grade}.");
