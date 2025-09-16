@@ -1,0 +1,15 @@
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\loops_tasks\obj\Debug\net9.0\loops_tasks.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\loops_tasks\obj\Debug\net9.0\loops_tasks.AssemblyInfoInputs.cache
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\loops_tasks\obj\Debug\net9.0\loops_tasks.AssemblyInfo.cs
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\loops_tasks\obj\Debug\net9.0\loops_tasks.csproj.CoreCompileInputs.cache
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\loops_tasks\obj\Debug\net9.0\loops_tasks.sourcelink.json
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\loops_tasks\bin\Debug\net9.0\loops_tasks.exe
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\loops_tasks\bin\Debug\net9.0\loops_tasks.deps.json
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\loops_tasks\bin\Debug\net9.0\loops_tasks.runtimeconfig.json
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\loops_tasks\bin\Debug\net9.0\loops_tasks.dll
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\loops_tasks\bin\Debug\net9.0\loops_tasks.pdb
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\loops_tasks\obj\Debug\net9.0\loops_tasks.dll
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\loops_tasks\obj\Debug\net9.0\refint\loops_tasks.dll
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\loops_tasks\obj\Debug\net9.0\loops_tasks.pdb
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\loops_tasks\obj\Debug\net9.0\loops_tasks.genruntimeconfig.cache
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\loops_tasks\obj\Debug\net9.0\ref\loops_tasks.dll
