@@ -13,6 +13,7 @@ namespace Vpets
             Pet myPet = new()
             {
                 Name = "Silke",
+                Oxygen = 200,
                 Hunger = 50,
                 Energy = 80,
                 Mood = 100
