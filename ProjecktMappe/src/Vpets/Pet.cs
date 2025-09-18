@@ -11,8 +11,8 @@ namespace Vpets
     internal class Pet // auch kann public sein
     {
         // Felder des Haustiers (zur Speicherung von Daten)
-        public string Name { get; set; }
-        public int Oxygen { get; set; }
+        public string NamePet { get; set; }
+        // public int Oxygen { get; set; }
         public int Hunger { get; set; }
         public int Energy { get; set; }
         public int Mood { get; set; }
