@@ -12,8 +12,8 @@ namespace Vpets
         {
             Pet myPet = new()
             {
-                Name = "Silke",
-                Oxygen = 200,
+                NamePet = "Silke",
+                //Oxygen = 200,
                 Hunger = 50,
                 Energy = 80,
                 Mood = 100
@@ -26,16 +26,18 @@ namespace Vpets
             while (running)
             {
                 Console.WriteLine("\nWas möchtest du tun?");
-                Console.WriteLine("1 = Füttern");
-                Console.WriteLine("2 = Schlafen");
-                Console.WriteLine("3 = Spielen");
-                Console.WriteLine("4 = Status anzeigen");
+                Console.WriteLine("1 = Sauerstoffnachschub");
+                Console.WriteLine("2 = Füttern");
+                Console.WriteLine("3 = Schlafen");
+                Console.WriteLine("4 = Spielen");
+                Console.WriteLine("5 = Status anzeigen");
                 Console.WriteLine("0 = Beenden");
                 Console.Write("Eingabe: ");
 
                 string input = Console.ReadLine();
                 switch (input)
                 {
+
                     case "1":
                         myPet.Feed();
                         break;
