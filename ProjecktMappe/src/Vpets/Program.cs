@@ -12,7 +12,7 @@ namespace Vpets
         {
             Pet myPet = new()
             {
-                NamePet = "Silke",
+                NamePet = "Moony",
                 //Oxygen = 200,
                 Hunger = 50,
                 Energy = 80,
