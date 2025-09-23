@@ -108,7 +108,7 @@ while (playerHand < blackJack)
 {
     int card = rng.Next(minCard, maxCard + 1);
     playerHand += card;
-    Console.WriteLine($"Karte: {card}");
-    Console.WriteLine($"Summe: {playerHand}");
+    Console.WriteLine($"Karte: {card}.\n");
+    Console.WriteLine($"Summe: {playerHand}.\n");
 }
-Console.WriteLine(playerHand == blackJack ? "Gewonnen" : "Über 21");
+Console.WriteLine(playerHand == blackJack ? "Gewonnen!" : "Über 21 - Verloren!");
