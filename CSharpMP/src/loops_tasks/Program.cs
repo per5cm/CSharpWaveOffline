@@ -97,29 +97,51 @@
 
 Console.WriteLine("Black Jack");
 
-int minCard = 1;
-int maxCard = 11;
-int blackJack = 21;
-int playerHand = 0;
+int playerCard = 0;
+//int dealerCard = 0;
 
-var rng = new Random();
+Random rng = new Random();
 
-while (playerHand < blackJack)
+playerCard += rng.Next(1, 12);  // Random from 1 to 11? exclusive upperbound
+//dealerCard += rng.Next(1, 12);
+
+// player 1
+while (true)
 {
-    int card = rng.Next(minCard, maxCard + 1);
-    playerHand += card;
-    Console.WriteLine($"Karte: {card}.\n");
-    Console.WriteLine($"Summe: {playerHand}.\n");
-
-    if (playerHand == blackJack)
+    if (playerCard == 21)
     {
-        Console.WriteLine("Gewonnen!");
+        Console.WriteLine($"Sie haben: {playerCard}.");
         break;
     }
-    else if (playerHand > blackJack)
+    Console.Write($"Dein Karte wert ist: {playerCard}, Weiter? j für Ja, n für Nein: ");
+
+    string answer = Console.ReadLine();
+
+    if (answer == "j")
     {
-        Console.WriteLine("Über 21 - Verloren!");
+        playerCard += rng.Next(1, 12);
+
+        if (playerCard > 21)
+        {
+            Console.WriteLine("Bite nach Hause gehen!");
+            break;
+        }
+
+        else
+        {
+            continue;
+        }
+    }
+
+    else if (answer == "n")
+    {
+        Console.WriteLine($"Sie haben: {playerCard} punkte.");
         break;
+    }
+
+    else
+    {
+        Console.WriteLine("Falsche antwort, probieren Sie nochmal");
+        continue;
     }
 }
-// Console.WriteLine(playerHand == blackJack ? "Gewonnen!" : "Über 21 - Verloren!"); possible way instead of if else if.
