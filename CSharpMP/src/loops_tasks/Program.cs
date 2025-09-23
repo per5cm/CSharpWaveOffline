@@ -62,3 +62,35 @@
 //     Console.WriteLine($"Wert nach dem {year}. Jahr: {intrest_value:F2}");
 // }
 
+Console.WriteLine("Zahlenratspiel");
+
+Console.WriteLine("Ich merke mir eine Zahl zwischen 1 und 100.");
+Console.WriteLine("Versuche, sie zu erraten!!\n");
+
+int geheimZahl = new Random().Next(1, 100);
+
+int versuch = 0;
+int eigabeZahl;
+
+while (eingabeZahl != geheimZahl)
+{
+    Console.Write("Bitte gib eine Zahl ein: ");
+    string eingabe = Console.ReadLine();
+    int eingabeZahl = int.Parse(eingabe);
+    versuch++;
+
+    if (eingabeZahl < geheimZahl)
+    {
+        Console.WriteLine("Zu klein, versuch es nochmal.\n");
+    }
+    else if (eingabeZahl > geheimZahl)
+    {
+        Console.WriteLine("Zu groẞ, versuch es nochmal.\n");
+    }
+
+    else
+    {
+        Console.WriteLine($"\nGlückwunsch! du hast die Zahl {geheimZahl} erraten.");
+        Console.WriteLine($"Du hast {versuch} Versuche gebraucht!");
+    }
+}
