@@ -110,5 +110,16 @@ while (playerHand < blackJack)
     playerHand += card;
     Console.WriteLine($"Karte: {card}.\n");
     Console.WriteLine($"Summe: {playerHand}.\n");
+
+    if (playerHand == blackJack)
+    {
+        Console.WriteLine("Gewonnen!");
+        break;
+    }
+    else if (playerHand > blackJack)
+    {
+        Console.WriteLine("Über 21 - Verloren!");
+        break;
+    }
 }
-Console.WriteLine(playerHand == blackJack ? "Gewonnen!" : "Über 21 - Verloren!");
+// Console.WriteLine(playerHand == blackJack ? "Gewonnen!" : "Über 21 - Verloren!"); possible way instead of if else if.
