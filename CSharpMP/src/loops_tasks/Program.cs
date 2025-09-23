@@ -49,7 +49,8 @@
 // double intrest_value = double.Parse(input);
 
 // Console.Write("Zinssatz in Prozent: ");
-// double intrest_rate = double.Parse(Console.ReadLine());
+// bool successful = double.TryParse(Console.ReadLine(), out double intrest_rate); //bool to check input.
+
 
 // Console.Write("Laufzeit in Jahren: ");
 // int duration = int.Parse(Console.ReadLine());
