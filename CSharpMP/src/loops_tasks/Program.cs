@@ -42,4 +42,22 @@
 // double average_grade = sum / count;
 // Console.WriteLine($"Anzahl Noten : {count}. Anzahl Summe: {sum}. Notendurchnitt: {average_grade:F2}.");
 
-Console.WriteLine("Hochzahlen\n");
+// Console.WriteLine("Zinsenberechnung");
+
+// Console.Write("Anzulegende Betrag in Euro: ");
+// string input = Console.ReadLine();
+// double intrest_value = double.Parse(input);
+
+// Console.Write("Zinssatz in Prozent: ");
+// double intrest_rate = double.Parse(Console.ReadLine());
+
+// Console.Write("Laufzeit in Jahren: ");
+// int duration = int.Parse(Console.ReadLine());
+
+
+// for (double year = 1; year <= duration; year++)
+// {
+//     intrest_value = intrest_value * (1 + intrest_rate / 100);
+//     Console.WriteLine($"Wert nach dem {year}. Jahr: {intrest_value:F2}");
+// }
+
