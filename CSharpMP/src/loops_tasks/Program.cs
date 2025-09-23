@@ -64,34 +64,42 @@
 
 // Console.WriteLine("Zahlenratspiel");
 
+
+// Random geheimZahl = new Random();
+// int geheimWert = geheimZahl.Next(1, 101);
+// int versuch = 0;
+
 // Console.WriteLine("Ich merke mir eine Zahl zwischen 1 und 100.");
 // Console.WriteLine("Versuche, sie zu erraten!!\n");
 
-// int geheimZahl = new Random().Next(1, 100);
 
-// int versuch = 0;
-// int eigabeZahl;
-
-// while (eingabeZahl != geheimZahl)
+// while (true)
 // {
 //     Console.Write("Bitte gib eine Zahl ein: ");
 //     string eingabe = Console.ReadLine();
-//     int eingabeZahl = int.Parse(eingabe);
+
+//     int tipp;
+//     if (!int.TryParse(eingabe, out tipp))
+//     {
+//         Console.WriteLine("Das ist kein zahl bitte noch mal versuchen.\n");
+//         continue;
+//     }
+
 //     versuch++;
 
-//     if (eingabeZahl < geheimZahl)
+//     if (tipp > geheimWert)
 //     {
-//         Console.WriteLine("Zu klein, versuch es nochmal.\n");
+//         Console.WriteLine("Nein, Zahl ist zu groẞ, versuch es nochmal.\n");
 //     }
-//     else if (eingabeZahl > geheimZahl)
+//     else if (tipp < geheimWert)
 //     {
-//         Console.WriteLine("Zu groẞ, versuch es nochmal.\n");
+//         Console.WriteLine("Nein, Zahl ist zu klein, versuch es nochmal.\n");
 //     }
-
 //     else
 //     {
-//         Console.WriteLine($"\nGlückwunsch! du hast die Zahl {geheimZahl} erraten.");
+//         Console.WriteLine($"\nGlückwunsch! du hast die Zahl {geheimWert} erraten.");
 //         Console.WriteLine($"Du hast {versuch} Versuche gebraucht!");
+//         break;
 //     }
 // }
 
