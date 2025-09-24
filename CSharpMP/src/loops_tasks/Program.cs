@@ -79,6 +79,7 @@
 //     string eingabe = Console.ReadLine();
 
 //     int tipp;
+
 //     if (!int.TryParse(eingabe, out tipp))
 //     {
 //         Console.WriteLine("Das ist kein zahl bitte noch mal versuchen.\n");
@@ -103,9 +104,9 @@
 //     }
 // }
 
-Console.WriteLine("Black Jack");
+Console.WriteLine("Black Jack\n");
 
-int playerCard = 0;
+int playerHand = 0;
 //int dealerCard = 0;
 
 Random rng = new Random();
@@ -118,20 +119,20 @@ while (true)
 {
     if (playerCard == 21)
     {
-        Console.WriteLine($"Sie haben: {playerCard}.");
+        Console.WriteLine($"Black Jack!: {playerHand} punkte erreicht.");
         break;
     }
-    Console.Write($"Dein Karte wert ist: {playerCard}, Weiter? j für Ja, n für Nein: ");
+    Console.Write($"Dein Karte wert ist: {playerHand}, Weiter? j für Ja, n für Nein: ");
 
     string answer = Console.ReadLine();
 
     if (answer == "j")
     {
-        playerCard += rng.Next(1, 12);
+        playerHand += rng.Next(1, 12);
 
-        if (playerCard > 21)
+        if (playerHand > 21)
         {
-            Console.WriteLine("Bite nach Hause gehen!");
+            Console.WriteLine("\nBite nach Hause gehen! Ihr Fahrrad steht vorne!");
             break;
         }
 
@@ -143,7 +144,7 @@ while (true)
 
     else if (answer == "n")
     {
-        Console.WriteLine($"Sie haben: {playerCard} punkte.");
+        Console.WriteLine($"\nSie haben: {playerHand} punkte.");
         break;
     }
 
