@@ -19,13 +19,4 @@ namespace Vpets.Models.Base
             Console.WriteLine($"{Name} hat gespielt. Energy ={Energy}, Hunger ={Hunger}, Mood ={Mood} ausgegeben.");
         }
     }
-    public class Moony : Pet
-    {
-        public Moony(string name) : base(name) { }
-    }
-
-    public class Speedy : Pet
-    {
-        public Speedy(string name) : base(name) { }
-    }
 }

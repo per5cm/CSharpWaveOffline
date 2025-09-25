@@ -19,13 +19,4 @@ namespace Vpets.Models.Base
             Console.WriteLine($"{Name} hat gearbeitet. Energie ={Energy}, Laune ={Mood}");
         }
     }
-        public class Amstrong : Human
-    {
-        public Amstrong(string name) : base(name) { }
-    }
-
-    public class Gagarin : Human
-    {
-        public Gagarin(string name) : base(name) { }
-    }
 }
