@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Vpets
 
 {
-    public abstract class PetObjects // auch kann public sein
+    public abstract class Creatures // auch kann public sein
     {
         // Felder des Haustiers (zur Speicherung von Daten)
         public string Name { get; set; }
@@ -19,7 +19,7 @@ namespace Vpets
 
         protected const int MaxValue = 100;
         protected static int Clamp(int v) => v < 0 ? 0 : (v > MaxValue ? MaxValue : v);
-        protected PetObjects(string name)
+        protected Creatures(string name)
         {
             Name = name;
             Oxygen = 100;
@@ -66,12 +66,12 @@ namespace Vpets
     }
 
     // Class Branches 
-    public class Pet : PetObjects
+    public class Pet : Creatures
     {
         public Pet(string name) : base(name) { }
     }
 
-    public class Human : PetObjects
+    public class Human : Creatures
     {
         public Human(string name) : base(name) { }
     }

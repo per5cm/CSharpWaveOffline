@@ -57,7 +57,7 @@ namespace Vpets
             petTimer.Enabled = false;
             petTimer.Elapsed -= (sender, e) => OnTimedEvent(myPet);
         }
-        private static void OnTimedEvent(PetObjects pet)
+        private static void OnTimedEvent(Creatures pet)
         {
             pet.PassTime();
             // Optional to show name.
