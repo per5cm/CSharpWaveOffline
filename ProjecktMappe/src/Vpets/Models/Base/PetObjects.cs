@@ -45,13 +45,6 @@ namespace Vpets
             Hunger = Clamp(Hunger + 5);
             Console.WriteLine($"{Name} hat geschlafen. Energie ={Energy}, Hunger ={Hunger} ausgegeben.");
         }
-        public virtual void Play()
-        {
-            Energy = Clamp(Energy - 10);
-            Hunger = Clamp(Hunger + 5);
-            Mood = Clamp(Mood + 15);
-            Console.WriteLine($"{Name} hat gespielt. Energy ={Energy}, Hunger ={Hunger}, Mood ={Mood} ausgegeben.");
-        }
         public virtual void PassTime()
         {
             Oxygen = Clamp(Oxygen - 5);
@@ -69,11 +62,24 @@ namespace Vpets
     public class Pet : Creatures
     {
         public Pet(string name) : base(name) { }
+                public virtual void Play()
+        {
+            Energy = Clamp(Energy - 10);
+            Hunger = Clamp(Hunger + 5);
+            Mood = Clamp(Mood + 15);
+            Console.WriteLine($"{Name} hat gespielt. Energy ={Energy}, Hunger ={Hunger}, Mood ={Mood} ausgegeben.");
+        }
     }
 
     public class Human : Creatures
     {
         public Human(string name) : base(name) { }
+        public virtual void Work()
+        {
+            Energy = Clamp(Energy - 30);
+            Mood = Clamp(Mood - 5);
+            Console.WriteLine($"{Name} hat gearbeitet. Energie ={Energy}, Laune ={Mood}");
+        }
     }
 
     // Specifics or "Players" with different rules(maybe)
@@ -94,7 +100,7 @@ namespace Vpets
         public override void Sleep()
         {
             base.Sleep();
-            Console.WriteLine($"{Name} power Schäfchen");
+            Console.WriteLine($"{Name} Power Schläfchen");
         }
     }
 

@@ -16,7 +16,7 @@ namespace Vpets.Models.Base
             Pet myPet = new Moony("Moony");
 
             // Gibt den Namen des neuen Haustiers auf der Konsole aus
-            Console.WriteLine($"Neues Haustier Namens {myPet.Name} wurde erstellt!");
+            Console.WriteLine($"Neues Objekt Namens {myPet.Name} wurde erstellt!");
             myPet.ShowStats();
 
             bool running = true;
@@ -27,7 +27,8 @@ namespace Vpets.Models.Base
                 Console.WriteLine("2 = Füttern");
                 Console.WriteLine("3 = Schlafen");
                 Console.WriteLine("4 = Spielen");
-                Console.WriteLine("5 = Status anzeigen");
+                Console.WriteLine("5 = Arbeiten");
+                Console.WriteLine("6 = Status anzeigen");
                 Console.WriteLine("0 = Beenden");
                 Console.Write("Eingabe: ");
 
@@ -45,12 +46,14 @@ namespace Vpets.Models.Base
                     case "4":
                         myPet.Play(); break;
                     case "5":
+                        myPet.Work(); break;
+                    case "6":
                         myPet.ShowStats(); break;
                     case "0":
                         running = false;
                         Console.WriteLine("Spiel beendet."); break;
                     default:
-                        Console.WriteLine("Ungültige Eingabe, bitte 0 - 5 wählen."); break;
+                        Console.WriteLine("Ungültige Eingabe, bitte 0 - 6 wählen."); break;
                 }
             }
             // Stop Pet timer. when case 0 pressed.
