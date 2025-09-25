@@ -52,6 +52,13 @@ namespace Vpets
             Mood = Clamp(Mood + 15);
             Console.WriteLine($"{Name} hat gespielt. Energy ={Energy}, Hunger ={Hunger}, Mood ={Mood} ausgegeben.");
         }
+        public virtual void PassTime()
+        {
+            Oxygen = Clamp(Oxygen - 5);
+            Hunger = Clamp(Hunger + 5);
+            Energy = Clamp(Energy - 5);
+            Mood = Clamp(Mood - 3);
+        }
         public virtual void ShowStats()
         {
             Console.WriteLine($"Status von: {Name}: Oxygen = {Oxygen}, Hunger={Hunger}, Laune={Mood}, Energie={Energy}");
