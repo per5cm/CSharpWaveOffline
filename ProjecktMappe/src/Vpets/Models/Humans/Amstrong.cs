@@ -15,11 +15,11 @@ namespace Vpets.Models.Humans
         public override void Work()
         {
             Energy -= Energy - 5;
-            if (Energy < 0) Energy = 0;
+            if (Energy < 0) Energy = 0; // Energy = Clamp(Energy - 5);
             Mood += 5;
-            if (Mood > 100) Mood = 100;
+            if (Mood > 100) Mood = 100; // Mood = Clamp(Mood +5);
             Hunger += 10;
-            if (Hunger < 0) Hunger = 0;
+            if (Hunger < 0) Hunger = 0; // Hunger = Clamp(Hunger + 10);
             Console.WriteLine($"{Name} hat gespielt. Energie = {Energy}, Hunger = {Hunger}, Laune = {Mood}");
         }
     }

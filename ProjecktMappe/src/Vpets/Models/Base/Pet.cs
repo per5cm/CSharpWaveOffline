@@ -22,20 +22,10 @@ namespace Vpets.Models.Base
     public class Moony : Pet
     {
         public Moony(string name) : base(name) { }
-        public override void Play()
-        {
-            base.Play();
-            Console.WriteLine($"{Name} spielt extra hart!");
-        }
     }
 
     public class Speedy : Pet
     {
         public Speedy(string name) : base(name) { }
-        public override void Sleep()
-        {
-            base.Sleep();
-            Console.WriteLine($"{Name} Power Schläfchen");
-        }
     }
 }
