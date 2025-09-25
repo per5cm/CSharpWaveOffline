@@ -29,28 +29,23 @@ namespace Vpets
                 Console.Write("Eingabe: ");
 
                 string input = Console.ReadLine();
+
                 switch (input)
                 {
 
                     case "1":
-                        myPet.Feed();
-                        break;
+                        myPet.Feed(); break;
                     case "2":
-                        myPet.Sleep();
-                        break;
+                        myPet.Sleep(); break;
                     case "3":
-                        myPet.Play();
-                        break;
+                        myPet.Play(); break;
                     case "4":
-                        myPet.ShowStats();
-                        break;
+                        myPet.ShowStats(); break;
                     case "0":
                         running = false;
-                        Console.WriteLine("Spiel beendet.");
-                        break;
+                        Console.WriteLine("Spiel beendet."); break;
                     default:
-                        Console.WriteLine("Ungültige Eingabe, bitte 0 - 4 wählen.");
-                        break;
+                        Console.WriteLine("Ungültige Eingabe, bitte 0 - 4 wählen."); break;
                 }
             }
         }
