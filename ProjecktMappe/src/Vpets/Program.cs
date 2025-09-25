@@ -26,7 +26,7 @@ namespace Vpets
             };
 
             Console.WriteLine("List initialisierung");
-            foreach (var statistics in zoo) statistics.ShowStats();
+            foreach (var time in zoo) time.ShowStats();
 
             worldTimer.Elapsed += (s, e) => TickAll(zoo);
             worldTimer.Start();
@@ -82,17 +82,17 @@ namespace Vpets
                         Console.WriteLine("Ungültige Eingabe, bitte 0 - 6 wählen."); break;
                 }
             }
-            // Stop Pet timer. when case 0 pressed.
+            // Stop timer. when case 0 pressed.
             worldTimer.Stop();
             worldTimer.Dispose();
             Console.WriteLine("Spiel beendet.");
         }
         private static void TickAll(List<Creature> zoo)
         {
-            foreach (var statistics in zoo) statistics.PassTime();
+            foreach (var time in zoo) time.PassTime();
             // Optional to show name.
             Console.WriteLine("Die Zeit vergeht für alle...");
-            foreach (var statistics in zoo) statistics.ShowStats();
+            foreach (var time in zoo) time.ShowStats();
         }
     }
 }
