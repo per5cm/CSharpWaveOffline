@@ -14,6 +14,7 @@ namespace Vpets.Models.Base
         static void Main(string[] args)
         {
             Pet myPet = new Moony("Moony");
+            Human myHuman = new Amstrong("Amstrong");
 
             // Gibt den Namen des neuen Haustiers auf der Konsole aus
             Console.WriteLine($"Neues Objekt Namens {myPet.Name} wurde erstellt!");
@@ -39,16 +40,20 @@ namespace Vpets.Models.Base
 
                     case "1":
                         myPet.RefillOxygen(); break;
+                        myHuman.RefillOxygen(); break;
                     case "2":
                         myPet.Feed(); break;
+                        myHuman.Feed(); break;
                     case "3":
                         myPet.Sleep(); break;
+                        myHuman.Sleep(); break;
                     case "4":
                         myPet.Play(); break;
                     case "5":
-                        myPet.Work(); break;
+                        myHuman.Work(); break;
                     case "6":
                         myPet.ShowStats(); break;
+                        myHuman.ShowStats(); break;
                     case "0":
                         running = false;
                         Console.WriteLine("Spiel beendet."); break;
