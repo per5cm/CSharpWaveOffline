@@ -5,9 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using Vpets.Models.Base;
+
 namespace Vpets.Models.Humans
 {
-    public class Amstrong : Vpets.Human // class tauschen
+    public class Amstrong : Human // class tauschen
     {
         public Amstrong(string name) : base(name) { }
 

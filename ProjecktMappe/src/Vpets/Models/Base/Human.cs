@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace Vpets.Models.Base
 
 {
-    public class Human : Creatures
+    public class Human : Creature
     {
         public Human(string name) : base(name) { }
         public virtual void Work()

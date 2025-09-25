@@ -9,19 +9,40 @@ using System.Threading.Tasks;
 namespace Vpets.Models.Base
 
 {
-    public abstract class Creatures // 
+    public abstract class Creature // 
     {
-        // Object Fields (zur Speicherung von Daten)
-        public string Name { get; set; }
-        public int Oxygen { get; set; }
-        public int Hunger { get; set; }
-        public int Energy { get; set; }
-        public int Mood { get; set; }
+        private int _oxygen;
+        private int _hunger;
+        private int _energy;
+        private int _mood;
 
         protected const int MaxValue = 100;
         protected const int MinValue = 0;
+        // Object Fields (zur Speicherung von Daten)
+        public string Name { get; set; }
+        public int Oxygen
+        {
+            get { return _oxygen; }
+            set { _oxygen = Math.Clamp(value, MinValue, MaxValue); }
+        }
+        public int Hunger
+        {
+            get { return _hunger; }
+            set { _hunger = Math.Clamp(value, MinValue, MaxValue); }
+        }
+        public int Energy
+        {
+            get { return _energy; }
+            set { _energy = Math.Clamp(value, MinValue, MaxValue); }
+        }
+        public int Mood
+        {
+            get { return _mood; }
+            set { _mood = Math.Clamp(value, MinValue, MaxValue); }
+        }
+
         protected static int Clamp(int v) => v < 0 ? 0 : (v > MaxValue ? MaxValue : v);
-        protected Creatures(string name)
+        protected Creature(string name)
         {
             Name = name;
             Oxygen = 100;

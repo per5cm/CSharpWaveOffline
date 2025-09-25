@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Vpets.Models.Base
 {
-    public class Pet : Creatures
+    public class Pet : Creature
     {
         public Pet(string name) : base(name) { }
         public virtual void Play()

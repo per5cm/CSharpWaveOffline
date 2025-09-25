@@ -5,9 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using Vpets.Models.Base;
+
 namespace Vpets.Models.Pets
 {
-    public class Moony : Vpets.Pet
+    public class Moony : Pet
     {
         public Moony(string name) : base(name) { }
 

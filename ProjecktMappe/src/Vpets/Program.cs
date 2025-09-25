@@ -5,8 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using Vpets.Models.Base;
 
-namespace Vpets.Models.Base
+
+namespace Vpets
 {
     internal class Program
     {
@@ -65,7 +67,7 @@ namespace Vpets.Models.Base
             petTimer.Enabled = false;
             petTimer.Elapsed -= (sender, e) => OnTimedEvent(myPet);
         }
-        private static void OnTimedEvent(Creatures pet)
+        private static void OnTimedEvent(Creature pet)
         {
             pet.PassTime();
             // Optional to show name.
