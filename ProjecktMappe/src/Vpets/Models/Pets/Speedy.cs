@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using Vpets.Models.Base;
+using Vpets.Models.Base; // inheritance line.
 
 namespace Vpets.Models.Pets
 {

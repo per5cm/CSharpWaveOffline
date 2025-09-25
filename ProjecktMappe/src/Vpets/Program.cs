@@ -6,26 +6,52 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Vpets.Models.Base;
+// using Vpets.Models.Pets;
+// using Vpets.Models.Humans;
 
 
 namespace Vpets
 {
     internal class Program
     {
-        private static readonly System.Timers.Timer petTimer = new(3000); // {AutoReset = True};
+        private static readonly System.Timers.Timer worldTimer = new(3000) {AutoReset = true};
         static void Main(string[] args)
         {
-            Pet myPet = new Moony("Moony");
-            Human myHuman = new Amstrong("Amstrong");
+            var zoo = new List<Creature>
+            {
+                new Moony("Moony"),
+                new Speedy("Speedy"),
+                new Amstrong("Amstrong"),
+                new Gagarin("Gagarin")
+            };
 
-            // Gibt den Namen des neuen Haustiers auf der Konsole aus
-            Console.WriteLine($"Neues Objekt Namens {myPet.Name} wurde erstellt!");
-            myPet.ShowStats();
+            Console.WriteLine("List initialisierung");
+            foreach (var statistics in zoo) statistics.ShowStats();
+
+            worldTimer.Elapsed += (s, e) => TickAll(zoo);
+            worldTimer.Start();
 
             bool running = true;
             while (running)
             {
-                Console.WriteLine("\nWas möchtest du tun?");
+                Console.WriteLine("\n ----- Wähle ein Objekt -----");
+                for (int i = 0; i < zoo.Count; i++)
+                    Console.WriteLine($"{i} = {zoo[i].Name}");
+
+                Console.Write("Index (oder 'q' zum Beenden): ");
+                string? sel = Console.ReadLine();
+                if (string.Equals(sel, "q", StringComparison.OrdinalIgnoreCase))
+                {
+                    running = false;
+                    break;
+                }
+                if (!int.TryParse(sel, out int idx) || idx < 0 || idx >= zoo.Count)
+                {
+                    Console.WriteLine("Ungültiger Index."); continue;
+                }
+
+                var target = zoo[idx];
+                Console.WriteLine($"\nAktion für [{target.Name}] wählen: ");
                 Console.WriteLine("1 = Sauerstoffnachschub");
                 Console.WriteLine("2 = Füttern");
                 Console.WriteLine("3 = Schlafen");
@@ -33,46 +59,40 @@ namespace Vpets
                 Console.WriteLine("5 = Arbeiten");
                 Console.WriteLine("6 = Status anzeigen");
                 Console.WriteLine("0 = Beenden");
-                Console.Write("Eingabe: ");
 
-                string input = Console.ReadLine();
+                Console.Write("Eingabe: ");
+                string? input = Console.ReadLine();
+                if (string.IsNullOrWhiteSpace(input)) continue;
 
                 switch (input)
                 {
 
-                    case "1":
-                        myPet.RefillOxygen(); break;
-                        myHuman.RefillOxygen(); break;
-                    case "2":
-                        myPet.Feed(); break;
-                        myHuman.Feed(); break;
-                    case "3":
-                        myPet.Sleep(); break;
-                        myHuman.Sleep(); break;
+                    case "1": target.RefillOxygen(); break;
+                    case "2": target.Feed(); break;
+                    case "3": target.Sleep(); break;
                     case "4":
-                        myPet.Play(); break;
+                        if (target is Pet p) p.Play();
+                        else Console.WriteLine($"{target.Name} ist kein Pet"); break;
                     case "5":
-                        myHuman.Work(); break;
-                    case "6":
-                        myPet.ShowStats(); break;
-                        myHuman.ShowStats(); break;
-                    case "0":
-                        running = false;
-                        Console.WriteLine("Spiel beendet."); break;
+                        if (target is Human h) h.Work();
+                        else Console.WriteLine($"{target.Name} ist kein Mensch"); break;
+                    case "6": target.ShowStats(); break;
+                    case "0": break;
                     default:
                         Console.WriteLine("Ungültige Eingabe, bitte 0 - 6 wählen."); break;
                 }
             }
             // Stop Pet timer. when case 0 pressed.
-            petTimer.Enabled = false;
-            petTimer.Elapsed -= (sender, e) => OnTimedEvent(myPet);
+            worldTimer.Stop();
+            worldTimer.Dispose();
+            Console.WriteLine("Spiel beendet.");
         }
-        private static void OnTimedEvent(Creature pet)
+        private static void TickAll(List<Creature> zoo)
         {
-            pet.PassTime();
+            foreach (var statistics in zoo) statistics.PassTime();
             // Optional to show name.
-            Console.WriteLine($"Die Zeit vergeht für {pet.Name}...");
-            pet.ShowStats();
+            Console.WriteLine("Die Zeit vergeht für alle...");
+            foreach (var statistics in zoo) statistics.ShowStats();
         }
     }
 }
