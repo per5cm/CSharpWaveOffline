@@ -2,9 +2,9 @@ using System;
 
 namespace Vpets.Models.Pets
 {
-    public class Moony : Vpets.PetObjects
+    public class Moony : Vpets.Pet
     {
-        //public Moony(string name) { Name = name; }
+        public Moony(string name) : base(name) { }
 
         // Small animal = plays a lot
         public override void Play()
@@ -21,9 +21,9 @@ namespace Vpets.Models.Pets
     }
 
 
-    public class Speedy : Vpets.PetObjects
+    public class Speedy : Vpets.Pet
     {
-        //public Speedy(string name) { Name = name; }
+        public Speedy(string name) : base(name) { }
 
         // Small animal = plays a lot
         public override void Sleep()

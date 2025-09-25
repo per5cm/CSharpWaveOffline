@@ -3,3 +3,13 @@ C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\ProjecktMappe\src\Vpets\obj\Deb
 C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\ProjecktMappe\src\Vpets\obj\Debug\net9.0\Vpets.AssemblyInfo.cs
 C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\ProjecktMappe\src\Vpets\obj\Debug\net9.0\Vpets.csproj.CoreCompileInputs.cache
 C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\ProjecktMappe\src\Vpets\obj\Debug\net9.0\Vpets.sourcelink.json
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\ProjecktMappe\src\Vpets\bin\Debug\net9.0\Vpets.exe
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\ProjecktMappe\src\Vpets\bin\Debug\net9.0\Vpets.deps.json
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\ProjecktMappe\src\Vpets\bin\Debug\net9.0\Vpets.runtimeconfig.json
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\ProjecktMappe\src\Vpets\bin\Debug\net9.0\Vpets.dll
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\ProjecktMappe\src\Vpets\bin\Debug\net9.0\Vpets.pdb
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\ProjecktMappe\src\Vpets\obj\Debug\net9.0\Vpets.dll
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\ProjecktMappe\src\Vpets\obj\Debug\net9.0\refint\Vpets.dll
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\ProjecktMappe\src\Vpets\obj\Debug\net9.0\Vpets.pdb
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\ProjecktMappe\src\Vpets\obj\Debug\net9.0\Vpets.genruntimeconfig.cache
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\ProjecktMappe\src\Vpets\obj\Debug\net9.0\ref\Vpets.dll
