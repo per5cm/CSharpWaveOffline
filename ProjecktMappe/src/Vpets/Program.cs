@@ -8,10 +8,11 @@ namespace Vpets
 {
     internal class Program
     {
+        private static readonly System.Timers.Timer petTimer = new(10000);
         static void Main(string[] args)
         {
             Pet myPet = new Moony("Moony");
-            
+
             // Gibt den Namen des neuen Haustiers auf der Konsole aus
             Console.WriteLine($"Neues Haustier Namens {myPet.Name} wurde erstellt!");
             myPet.ShowStats();
@@ -45,9 +46,19 @@ namespace Vpets
                         running = false;
                         Console.WriteLine("Spiel beendet."); break;
                     default:
-                        Console.WriteLine("Ungültige Eingabe, bitte 0 - 4 wählen."); break;
+                        Console.WriteLine("Ungültige Eingabe, bitte 0 - 5 wählen."); break;
                 }
             }
+            // Stop Pet timer. when case 0 pressed.
+            petTimer.Enabled = false;
+            petTimer.Elapsed -= (sender, e) => OnTimedEvent(myPet);
+        }
+        private static void OnTimedEvent(Pet pet)
+        {
+            pet.PassTime();
+            // Optional to show name.
+            Console.WriteLine($"Die Zeit vergeht für {pet.Name}...");
+            pet.ShowStats();
         }
     }
 }
