@@ -8,7 +8,7 @@ namespace Vpets
 {
     internal class Program
     {
-        private static readonly System.Timers.Timer petTimer = new(10000);
+        private static readonly System.Timers.Timer petTimer = new(3000); // {AutoReset = True};
         static void Main(string[] args)
         {
             Pet myPet = new Moony("Moony");
@@ -53,7 +53,7 @@ namespace Vpets
             petTimer.Enabled = false;
             petTimer.Elapsed -= (sender, e) => OnTimedEvent(myPet);
         }
-        private static void OnTimedEvent(Pet pet)
+        private static void OnTimedEvent(PetObjects pet)
         {
             pet.PassTime();
             // Optional to show name.

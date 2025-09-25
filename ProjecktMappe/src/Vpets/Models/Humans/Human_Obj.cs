@@ -2,9 +2,9 @@ using System;
 
 namespace Vpets.Models.Humans
 {
-    public class Amstrong : Vpets.Human // class tauschen
+    public class Amstrong : Vpets.PetObjects // class tauschen
     {
-        public Amstrongpublic(string name) { Name = name; }
+        public Amstrong(string name) { Name = name; }
 
         // Small animal = plays a lot
         public override void Play()
@@ -19,7 +19,7 @@ namespace Vpets.Models.Humans
         }
     }
 
-    public class Gagarin : Vpets.Human // class tauschen
+    public class Gagarin : Vpets.PetObjects // class tauschen
     {
         public Gagarin(string name) { Name = name; }
 

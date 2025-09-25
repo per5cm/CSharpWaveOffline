@@ -2,7 +2,7 @@ using System;
 
 namespace Vpets.Models.Pets
 {
-    public class Moony : Vpets.Pet
+    public class Moony : Vpets.PetObjects
     {
         public Moony(string name) { Name = name; }
 
@@ -21,12 +21,12 @@ namespace Vpets.Models.Pets
     }
 
 
-    public class Speedy : Vpets.Pet
+    public class Speedy : Vpets.PetObjects
     {
         public Speedy(string name) { Name = name; }
 
         // Small animal = plays a lot
-        public override void Play()
+        public override void Sleep()
         {
             // Speedy sleeps less but recovers faster.
             Energy -= Energy + 40;
