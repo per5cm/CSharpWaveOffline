@@ -4,7 +4,7 @@ namespace Vpets
 {
     internal class Gagarin : Human // class tauschen
     {
-        public Gagarin(string name) : base(name) { }
+        public Gagarin(string name) { Name = name; }
 
         // Small animal = plays a lot
         public override void Play()

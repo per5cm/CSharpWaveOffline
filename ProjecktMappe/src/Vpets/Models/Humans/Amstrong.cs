@@ -4,7 +4,7 @@ namespace Vpets.Models.Humans
 {
     internal class Amstrong : Human // class tauschen
     {
-        public Amstrong(string name) : base(name) { }
+        public Amstrongpublic(string name) { Name = name; }
 
         // Small animal = plays a lot
         public override void Play()

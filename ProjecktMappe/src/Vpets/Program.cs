@@ -10,17 +10,11 @@ namespace Vpets
     {
         static void Main(string[] args)
         {
-            Pet myPet = new()
-            {
-                NamePet = "Moony",
-                //Oxygen = 200,
-                Hunger = 50,
-                Energy = 80,
-                Mood = 100
-            };
+            Pet myPet = new Moony("Moony");
+            
             // Gibt den Namen des neuen Haustiers auf der Konsole aus
             Console.WriteLine($"Neues Haustier Namens {myPet.Name} wurde erstellt!");
-            Console.WriteLine($"Hunger = {myPet.Hunger}, Energie = {myPet.Energy}, Laune = {myPet.Mood}");
+            myPet.ShowStats();
 
             bool running = true;
             while (running)
