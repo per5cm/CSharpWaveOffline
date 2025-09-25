@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Timers;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 
 namespace Vpets
 {
@@ -35,12 +37,14 @@ namespace Vpets
                 {
 
                     case "1":
-                        myPet.Feed(); break;
+                        myPet.RefillOxygen(); break;
                     case "2":
-                        myPet.Sleep(); break;
+                        myPet.Feed(); break;
                     case "3":
-                        myPet.Play(); break;
+                        myPet.Sleep(); break;
                     case "4":
+                        myPet.Play(); break;
+                    case "5":
                         myPet.ShowStats(); break;
                     case "0":
                         running = false;

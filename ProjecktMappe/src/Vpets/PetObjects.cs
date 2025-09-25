@@ -31,19 +31,19 @@ namespace Vpets
         public virtual void RefillOxygen()
         {
             Oxygen = Clamp(Oxygen + 50);
-            Console.WriteLine($"{Name} wurde Sauerstoff erhöt. Oxygen ={Oxygen} ausgegeben.");
+            Console.WriteLine($"{Name} wurde Sauerstoff erhöht. Sauerstoff ={Oxygen} ausgegeben.");
         }
         public virtual void Feed()
         {
             Hunger = Clamp(Hunger - 20);
             Mood = Clamp(Mood + 5);
-            Console.WriteLine($"{Name} wurde gefüttert. Hunger ={Hunger}, Mood ={Mood} ausgegeben.");
+            Console.WriteLine($"{Name} wurde gefüttert. Hunger ={Hunger}, Laune ={Mood} ausgegeben.");
         }
         public virtual void Sleep()
         {
             Energy = Clamp(Energy + 60);
             Hunger = Clamp(Hunger + 5);
-            Console.WriteLine($"{Name} hat geschlafen. Energy ={Energy}, Hunger ={Hunger} ausgegeben.");
+            Console.WriteLine($"{Name} hat geschlafen. Energie ={Energy}, Hunger ={Hunger} ausgegeben.");
         }
         public virtual void Play()
         {

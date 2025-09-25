@@ -4,7 +4,7 @@ namespace Vpets.Models.Humans
 {
     public class Amstrong : Vpets.PetObjects // class tauschen
     {
-        public Amstrong(string name) { Name = name; }
+        //public Amstrong(string name) { Name = name; }
 
         // Small animal = plays a lot
         public override void Play()
@@ -21,7 +21,7 @@ namespace Vpets.Models.Humans
 
     public class Gagarin : Vpets.PetObjects // class tauschen
     {
-        public Gagarin(string name) { Name = name; }
+        //public Gagarin(string name) { Name = name; }
 
         // Small animal = plays a lot
         public override void Play()

@@ -4,7 +4,7 @@ namespace Vpets.Models.Pets
 {
     public class Moony : Vpets.PetObjects
     {
-        public Moony(string name) { Name = name; }
+        //public Moony(string name) { Name = name; }
 
         // Small animal = plays a lot
         public override void Play()
@@ -23,7 +23,7 @@ namespace Vpets.Models.Pets
 
     public class Speedy : Vpets.PetObjects
     {
-        public Speedy(string name) { Name = name; }
+        //public Speedy(string name) { Name = name; }
 
         // Small animal = plays a lot
         public override void Sleep()
