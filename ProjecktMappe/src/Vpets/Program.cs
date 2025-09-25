@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace Vpets
+namespace Vpets.Models.Base
 {
     internal class Program
     {
