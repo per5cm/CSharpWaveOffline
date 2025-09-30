@@ -11,11 +11,7 @@ namespace Vpets.Models.Base
 {
     public abstract class Creature // 
     {
-        private int _oxygen;
-        private int _hunger;
-        private int _energy;
-        private int _mood;
-
+        private int _oxygen, _hunger, _energy, _mood;
         protected const int MaxValue = 100;
         protected const int MinValue = 0;
         // Object Fields (zur Speicherung von Daten)

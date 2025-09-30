@@ -12,7 +12,7 @@ using Vpets.Models.Humans;
 
 namespace Vpets
 {
-    internal class Program
+    public class Program
     {
         private static readonly System.Timers.Timer worldTimer = new(3000) {AutoReset = true};
         static void Main(string[] args)
