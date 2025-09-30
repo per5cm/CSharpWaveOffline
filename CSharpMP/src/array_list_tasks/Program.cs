@@ -44,27 +44,57 @@
 // Console.WriteLine($"Waldo steckt in Nummer: {maxWaldo}.");
 // Console.WriteLine($"Waldo steckt in Nummer: {minWaldo}.");
 
-Console.WriteLine("Array find repeating numbers");
+// Console.WriteLine("Array find repeating numbers");
 
-int[] countWaldo = { 2, 5, 7, 2, 3, 2, 9, 7 };
+// int[] countWaldo = { 2, 5, 7, 2, 3, 2, 9, 7 };
 
-Console.Write("Eingebe einen Zahl ein: ");
-int input = int.Parse(Console.ReadLine());
+// Console.Write("Eingebe einen Zahl ein: ");
+// int input = int.Parse(Console.ReadLine());
 
-int frequency = 0;
+// int frequency = 0;
 
-for (int count = 0; count < countWaldo.Length; count++)
+// for (int count = 0; count < countWaldo.Length; count++)
+// {
+//     if (countWaldo[count] == input)
+//     {
+//         frequency++;
+//     }
+
+//     else
+//     {
+//         continue;
+//     }
+// }
+// Console.WriteLine($"Die Zahl {input} kommt {frequency} mal in Array vor.");
+
+Console.WriteLine("Schulnoten\n");
+
+int[] arrayGrade = new int[6];
+
+
+double sum = 0;
+int count = 0;
+double grade;
+
+do
 {
-    if (countWaldo[count] == input)
+    Console.Write("Geben Sie Shulnoten ein: ");
+    grade = double.Parse(Console.ReadLine());
+    if (grade == 0)
     {
-        frequency++;
+        break;
     }
-
-    else
+    else if (grade < 1 || grade > 6)
     {
+        Console.WriteLine("Ungültige Note!");
         continue;
     }
-}
-Console.WriteLine($"Die Zahl {input} kommt {frequency} mal in Array vor.");
+    else
+    {
+        sum += grade;
+        count++;
+    }
+} while (true);
 
-
+double average_grade = sum / count;
+Console.WriteLine($"Anzahl Noten : {count}. Anzahl Summe: {sum}. Notendurchnitt: {average_grade:F2}.");
