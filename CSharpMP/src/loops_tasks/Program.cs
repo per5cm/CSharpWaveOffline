@@ -107,20 +107,19 @@
 Console.WriteLine("Black Jack\n");
 
 int playerHand = 0;
-//int dealerCard = 0;
+// int dealerCard = 0;
 
 Random rng = new Random();
 
 playerCard += rng.Next(1, 12);  // Random from 1 to 11? exclusive upperbound
-//dealerCard += rng.Next(1, 12);
+// dealerCard += rng.Next(1, 12);
 
 // player 1
 while (true)
 {
     if (playerCard == 21)
     {
-        Console.WriteLine($"Black Jack!: {playerHand} punkte erreicht.");
-        break;
+        Console.WriteLine($"Black Jack!: {playerHand} punkte erreicht."); break;
     }
     Console.Write($"Dein Karte wert ist: {playerHand}, Weiter? j für Ja, n für Nein: ");
 
@@ -132,8 +131,7 @@ while (true)
 
         if (playerHand > 21)
         {
-            Console.WriteLine("\nBite nach Hause gehen! Ihr Fahrrad steht vorne!");
-            break;
+            Console.WriteLine("\nBite nach Hause gehen! Ihr Fahrrad steht vorne!"); break;
         }
 
         else
@@ -144,13 +142,47 @@ while (true)
 
     else if (answer == "n")
     {
-        Console.WriteLine($"\nSie haben: {playerHand} punkte.");
-        break;
+        Console.WriteLine($"\nSie haben: {playerHand} punkte."); break;
     }
 
     else
     {
-        Console.WriteLine("Falsche antwort, probieren Sie nochmal");
-        continue;
+        Console.WriteLine("Falsche antwort, probieren Sie nochmal"); continue;
     }
 }
+
+// Zweite Spieler. The Dealer!
+
+// Console.WriteLine($"Spieler Punkte: {playerHand}");
+
+// if (playerHand <= 21)
+// {
+//     while (dealerCard < 21 || dealerCard < playerHand)
+//     {
+//         dealerCard += rng.Next(1, 12);
+//     }
+
+//     // gucken wer gewint 
+//     if (playerHand == dealerCard)
+//     {
+//         Console.WriteLine("Spieler und Dealer haben unentschieden"); break;
+//     }
+
+//     else if (playerHand < dealerCard || dealerCard <= 21 || dealerCard == 21)
+//     {
+//         Console.WriteLine("Dealer gewinnt");
+//     }
+
+//     else if (dealerCard > 21)
+//     {
+//         Console.WriteLine("Der Dealer hat sich überkauft, der Spieler gewinnt");
+//     }
+// }
+
+// else
+// {
+//     Console.WriteLine("Dealer gewinnt, Spieler hat sich überkauft");
+// }
+
+
+
