@@ -16,7 +16,8 @@ namespace Vpets.Models.Base
             Energy = Clamp(Energy - 10);
             Hunger = Clamp(Hunger + 5);
             Mood = Clamp(Mood + 15);
-            Console.WriteLine($"{Name} hat gespielt. Energy ={Energy}, Hunger ={Hunger}, Mood ={Mood} ausgegeben.");
+            Console.WriteLine($"{Name} hat gespielt. Energy = {Energy}, Hunger = {Hunger}, Mood = {Mood} ausgegeben.");
+            GainXp(15, "Hat gespielt!");
         }
     }
 }

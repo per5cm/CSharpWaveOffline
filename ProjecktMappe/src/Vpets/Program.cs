@@ -38,7 +38,7 @@ namespace Vpets
                 for (int i = 0; i < zoo.Count; i++)
                     Console.WriteLine($"{i} = {zoo[i].Name}");
 
-                Console.Write("Index (oder 'q' zum Beenden): ");
+                Console.Write("Index oder 'q' zum Beenden: ");
                 string? sel = Console.ReadLine();
                 if (string.Equals(sel, "q", StringComparison.OrdinalIgnoreCase))
                 {
