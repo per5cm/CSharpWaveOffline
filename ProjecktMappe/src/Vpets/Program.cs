@@ -17,7 +17,7 @@ namespace Vpets
         private static readonly System.Timers.Timer worldTimer = new(3000) {AutoReset = true};
         static void Main(string[] args)
         {
-            var zoo = new List<Creature>
+            var crew = new List<Creature>
             {
                 new Moony("Moony"),
                 new Speedy("Speedy"),
@@ -26,31 +26,31 @@ namespace Vpets
             };
 
             Console.WriteLine("List initialisierung");
-            foreach (var time in zoo) time.ShowStats();
+            foreach (var time in crew) time.ShowStats();
 
-            worldTimer.Elapsed += (s, e) => TickAll(zoo);
+            worldTimer.Elapsed += (s, e) => TickAll(crew);
             worldTimer.Start();
 
             bool running = true;
             while (running)
             {
                 Console.WriteLine("\n ----- Wähle ein Objekt -----");
-                for (int i = 0; i < zoo.Count; i++)
-                    Console.WriteLine($"{i} = {zoo[i].Name}");
+                for (int i = 0; i < crew.Count; i++)
+                    Console.WriteLine($"{i} = {crew[i].Name}");
 
                 Console.Write("Index oder 'q' zum Beenden: ");
-                string? sel = Console.ReadLine();
-                if (string.Equals(sel, "q", StringComparison.OrdinalIgnoreCase))
+                string? indexPick = Console.ReadLine();
+                if (string.Equals(indexPick, "q", StringComparison.OrdinalIgnoreCase))
                 {
                     running = false;
                     break;
                 }
-                if (!int.TryParse(sel, out int idx) || idx < 0 || idx >= zoo.Count)
+                if (!int.TryParse(indexPick, out int idx) || idx < 0 || idx >= crew.Count)
                 {
                     Console.WriteLine("Ungültiger Index."); continue;
                 }
 
-                var target = zoo[idx];
+                var target = crew[idx];
                 Console.WriteLine($"\nAktion für [{target.Name}] wählen: ");
                 Console.WriteLine("1 = Sauerstoffnachschub");
                 Console.WriteLine("2 = Füttern");
@@ -87,12 +87,12 @@ namespace Vpets
             worldTimer.Dispose();
             Console.WriteLine("Spiel beendet.");
         }
-        private static void TickAll(List<Creature> zoo)
+        private static void TickAll(List<Creature> crew)
         {
-            foreach (var time in zoo) time.PassTime();
+            foreach (var time in crew) time.PassTime();
             // Optional to show name.
             Console.WriteLine("Die Zeit vergeht für alle...");
-            foreach (var time in zoo) time.ShowStats();
+            foreach (var time in crew) time.ShowStats();
         }
     }
 }
