@@ -23,6 +23,7 @@ namespace Vpets.Models.Humans
             Hunger += 10;
             if (Hunger < 0) Hunger = 0; // Hunger = Clamp(Hunger + 10);
             Console.WriteLine($"{Name} hat gespielt. Energie = {Energy}, Hunger = {Hunger}, Laune = {Mood}");
+            GainXp(10, "Hat gearbeitet!");
         }
     }
 }

@@ -20,6 +20,7 @@ namespace Vpets.Models.Pets
             Energy -= Energy + 40;
             if (Energy < 0) Energy = 0;
             Console.WriteLine($"{Name} geschlaffen. Energie = {Energy}.");
+            GainXp(5, "Hat gespielt!");
         }
     }
 }

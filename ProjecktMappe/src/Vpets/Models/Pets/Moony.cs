@@ -24,6 +24,7 @@ namespace Vpets.Models.Pets
             Hunger += 20;
             if (Hunger < 0) Hunger = 0; // Hunger = Clamp(Hunger + 20);
             Console.WriteLine($"{Name} hat gespielt. Energie = {Energy}, Hunger = {Hunger}, Laune = {Mood}");
+            GainXp(5, "Hat gespielt!");
         }
     }
 }
