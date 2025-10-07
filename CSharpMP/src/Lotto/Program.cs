@@ -11,7 +11,7 @@ string inputEingabe = Console.ReadLine();
 int menu_button_one = Convert.ToInt32(inputEingabe);
 Console.Write($"Es wurde Programm: {inputEingabe} gewählt!\n");
 
-int[] arrayNumbers = new int[6];
+int[,] arrayNumbers = new int[2, 6];
 Random rng = new Random();
 
 for (int x = 0; x < arrayNumbers.Length; x++)
