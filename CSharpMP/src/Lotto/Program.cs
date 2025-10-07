@@ -7,11 +7,17 @@ Console.WriteLine("3 = Tippschein speichern");
 Console.WriteLine("0 = Programm beenden\n");
 
 Console.Write("Menu Auswahl: ");
-string input_eingabe = Console.ReadLine();
+string inputEingabe = Console.ReadLine();
 int menu_button_one = Convert.ToInt32(inputEingabe);
-Console.Write($"Es wurde Programm: {input_eingabe} gewählt!\n");
+Console.Write($"Es wurde Programm: {inputEingabe} gewählt!\n");
 
-int[] gewinner_zahlen = {12, 14, 16, 18, 20, 23};
+int[] arrayNumbers = new int[6];
+Random rng = new Random();
+
+for (int x = 0; x < arrayNumbers.Length; x++)
+{
+    arrayNumbers[x] = rng.Next(0, 51);
+}
 
 if (menu_button_one == 1)
 {
@@ -86,3 +92,17 @@ if (zahl_6 < 1 || zahl_6 > 49 || zahl_6 == zahl_5 || zahl_6 == zahl_4 || zahl_6 
 }
 
 Console.WriteLine($"\nGlückwunsch, Ihre Zahlen: {zahl_1} {zahl_2} {zahl_3} {zahl_4} {zahl_5} {zahl_6}");
+
+int[] userNumbers = { zahl_1, zahl_2, zahl_3, zahl_4, zahl_5, zahl_6 };
+
+int matches = 0;
+for (int i = 0; i < arrayNumbers.Length; i++)
+{
+    if (userNumbers.Contains(arrayNumbers[i]))
+    {
+        matches++;
+    }
+}
+
+Console.WriteLine($"\nGezogene Zahlen: {string.Join(" ", arrayNumbers)}");
+Console.WriteLine($"Treffer: {matches}");
