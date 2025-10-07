@@ -67,42 +67,67 @@
 // }
 // Console.WriteLine($"Die Zahl {input} kommt {frequency} mal in Array vor.");
 
-Console.WriteLine("Schulnoten\n");
+// Console.WriteLine("Schulnoten\n");
 
-List<double> arrayGrade = new List<double>();
+// double[] arrayGrade = new double [6];
 
 
-double sum = 0;
-int count = 0;
-//double grade;
+// double sum = 0;
+// int count = 0;
+// double grade;
 
-do
+// do
+// {
+//     Console.Write("Geben Sie Shulnoten ein: ");
+//     grade = double.Parse(Console.ReadLine());
+
+//     if (grade == 0)
+//         {
+//             break;
+//         }
+//         else if (grade < 1 || grade > 6)
+//         {
+//             Console.WriteLine("Ungültige Note!");
+//             continue;
+//         }
+//         else
+//         {
+//             arrayGrade.Add(grade);
+//             sum += grade;
+//             count++;
+//         }
+// } while (true);
+
+// double averageGrade = sum / count;
+
+// Console.WriteLine("Geschpeicherte Liste: ");
+// for (int i = 0; i < arrayGrade.Count; i++)
+// {
+//     Console.Write(arrayGrade[i] + " ");
+// }
+// Console.WriteLine($"Anzahl Noten : {count}. Anzahl Summe: {sum}. Notendurchnitt: {averageGrade:F2}.");
+
+Console.WriteLine("2D array");
+
+int[,] arrayGrades = new int[5, 6];
+string[] subjects = { "Java", "DB", "BWL", "Web", "Mathe" };
+
+for (int row = 0; row < arrayGrades.GetLength(0); row++)
 {
-    Console.Write("Geben Sie Shulnoten ein: ");
-    grade = double.Parse(Console.ReadLine());
-
-    if (grade == 0)
-        {
-            break;
-        }
-        else if (grade < 1 || grade > 6)
-        {
-            Console.WriteLine("Ungültige Note!");
-            continue;
-        }
-        else
-        {
-            arrayGrade.Add(grade);
-            sum += grade;
-            count++;
-        }
-} while (true);
-
-double averageGrade = sum / count;
-
-Console.WriteLine("Geschpeicherte Liste: ");
-for (int i = 0; i < arrayGrade.Count; i++)
-{
-    Console.Write(arrayGrade[i] + " ");
+    for (int col = 0; col < arrayGrades.GetLength(1); col++)
+    {
+        Console.WriteLine($"Array Grade [ {row},{col}] = {arrayGrades[row, col]}");
+    }
 }
-Console.WriteLine($"Anzahl Noten : {count}. Anzahl Summe: {sum}. Notendurchnitt: {averageGrade:F2}.");
+
+int sum = 0;
+for (int row = 0; row < arrayGrades.GetLength(0); row++)
+{
+    for (int col = 0; col < arrayGrades.GetLength(1); col++)
+    {
+        if (row == col)
+            sum += arrayGrades[row, col];
+    }
+}
+
+Console.WriteLine($"Sum of Array {sum}");
