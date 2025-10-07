@@ -69,7 +69,7 @@
 
 Console.WriteLine("Schulnoten\n");
 
-int[] arrayGrade = new int[6];
+List<double> arrayGrade = new List<double>();
 
 
 double sum = 0;
@@ -79,27 +79,30 @@ int count = 0;
 do
 {
     Console.Write("Geben Sie Shulnoten ein: ");
-    arraGrade = double.Parse(Console.ReadLine());
+    grade = double.Parse(Console.ReadLine());
 
-    for (int i = 0; i < arrayGrade.Length; i++)
-    {
-        Console.Write(arrayGrade[i] + " ");
-    }
-    if (arrayGrade == 0)
+    if (grade == 0)
         {
             break;
         }
-        else if (arrayGrade < 1 || arrayGrade > 6)
+        else if (grade < 1 || grade > 6)
         {
             Console.WriteLine("Ungültige Note!");
             continue;
         }
         else
         {
-            sum += arrayGrade;
+            arrayGrade.Add(grade);
+            sum += grade;
             count++;
         }
 } while (true);
 
-double average_grade = sum / count;
-Console.WriteLine($"Anzahl Noten : {count}. Anzahl Summe: {sum}. Notendurchnitt: {average_grade:F2}.");
+double averageGrade = sum / count;
+
+Console.WriteLine("Geschpeicherte Liste: ");
+for (int i = 0; i < arrayGrade.Count; i++)
+{
+    Console.Write(arrayGrade[i] + " ");
+}
+Console.WriteLine($"Anzahl Noten : {count}. Anzahl Summe: {sum}. Notendurchnitt: {averageGrade:F2}.");

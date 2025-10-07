@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("array_list_tasks")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7caa7296a57526ee82dcc0538b60f38436a601a2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2ce5c89224d882edee25276da6e1d81d83fc801e")]
 [assembly: System.Reflection.AssemblyProductAttribute("array_list_tasks")]
 [assembly: System.Reflection.AssemblyTitleAttribute("array_list_tasks")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
