@@ -143,10 +143,10 @@ while (true)
 {
     Console.WriteLine("Java = 1, DB = 2, BWL = 3, Web = 4, Mathe = 5, Ende = 0");
     Console.Write("Fachnummer: 1 bis 5. Beenden - 0: ");
-    int fach = int.Parse(Console.ReadLine());
-    if (fach == 0) break;
+    int subject = int.Parse(Console.ReadLine());
+    if (subject == 0) break;
 
-    if (fach < 1 || fach > 5)
+    if (subject < 1 || subject > 5)
     {
         Console.WriteLine("Ungültiges Fach!");
         continue;
@@ -160,7 +160,7 @@ while (true)
         continue;
     }
 
-    arrayGrades[fach - 1, note - 1]++;
+    arrayGrades[subject - 1, note - 1]++;
     Console.WriteLine("Eingabe gespeichert.\n");
 }
 
