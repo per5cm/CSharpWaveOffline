@@ -74,26 +74,31 @@ int[] arrayGrade = new int[6];
 
 double sum = 0;
 int count = 0;
-double grade;
+//double grade;
 
 do
 {
     Console.Write("Geben Sie Shulnoten ein: ");
-    grade = double.Parse(Console.ReadLine());
-    if (grade == 0)
+    arraGrade = double.Parse(Console.ReadLine());
+
+    for (int i = 0; i < arrayGrade.Length; i++)
     {
-        break;
+        Console.Write(arrayGrade[i] + " ");
     }
-    else if (grade < 1 || grade > 6)
-    {
-        Console.WriteLine("Ungültige Note!");
-        continue;
-    }
-    else
-    {
-        sum += grade;
-        count++;
-    }
+    if (arrayGrade == 0)
+        {
+            break;
+        }
+        else if (arrayGrade < 1 || arrayGrade > 6)
+        {
+            Console.WriteLine("Ungültige Note!");
+            continue;
+        }
+        else
+        {
+            sum += arrayGrade;
+            count++;
+        }
 } while (true);
 
 double average_grade = sum / count;
