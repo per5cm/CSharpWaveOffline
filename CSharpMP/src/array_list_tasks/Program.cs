@@ -107,26 +107,26 @@
 // }
 // Console.WriteLine($"Anzahl Noten : {count}. Anzahl Summe: {sum}. Notendurchnitt: {averageGrade:F2}.");
 
-Console.WriteLine("2D array");
-int[,] arrayGrades = new int[5, 6];
-string[] subjects = { "Java", "DB", "BWL", "Web", "Mathe" };
+// Console.WriteLine("2D array");
+// int[,] arrayGrades = new int[5, 6];
+// string[] subjects = { "Java", "DB", "BWL", "Web", "Mathe" };
 
-for (int row = 0; row < arrayGrades.GetLength(0); row++)
-{
-    for (int col = 0; col < arrayGrades.GetLength(1); col++)
-    {
-        Console.WriteLine($"Array Grade [ {row},{col}] = {arrayGrades[row, col]}");
-    }
-}
+// for (int row = 0; row < arrayGrades.GetLength(0); row++)
+// {
+//     for (int col = 0; col < arrayGrades.GetLength(1); col++)
+//     {
+//         Console.WriteLine($"Array Grade [ {row},{col}] = {arrayGrades[row, col]}");
+//     }
+// }
 
-int sum = 0;
-for (int row = 0; row < arrayGrades.GetLength(0); row++)
-{
-    for (int col = 0; col < arrayGrades.GetLength(1); col++)
-    {
-        if (row == col) sum += arrayGrades[row, col];
-    }
-}
+// int sum = 0;
+// for (int row = 0; row < arrayGrades.GetLength(0); row++)
+// {
+//     for (int col = 0; col < arrayGrades.GetLength(1); col++)
+//     {
+//         if (row == col) sum += arrayGrades[row, col];
+//     }
+// }
 
 Console.WriteLine($"Sum of Array {sum}");
 
@@ -135,9 +135,6 @@ Console.WriteLine($"Sum of Array {sum}");
 
 int[,] arrayGrades = new int[5, 6];
 string[] subjects = { "Java", "DB", "BWL", "Web", "Mathe" };
-
-// int sum = 0;
-// int count = 0;
 
 while (true)
 {
