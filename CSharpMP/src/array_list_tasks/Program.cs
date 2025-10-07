@@ -108,7 +108,6 @@
 // Console.WriteLine($"Anzahl Noten : {count}. Anzahl Summe: {sum}. Notendurchnitt: {averageGrade:F2}.");
 
 Console.WriteLine("2D array");
-
 int[,] arrayGrades = new int[5, 6];
 string[] subjects = { "Java", "DB", "BWL", "Web", "Mathe" };
 
@@ -125,9 +124,62 @@ for (int row = 0; row < arrayGrades.GetLength(0); row++)
 {
     for (int col = 0; col < arrayGrades.GetLength(1); col++)
     {
-        if (row == col)
-            sum += arrayGrades[row, col];
+        if (row == col) sum += arrayGrades[row, col];
     }
 }
 
 Console.WriteLine($"Sum of Array {sum}");
+
+
+// Working version something like that.
+
+int[,] arrayGrades = new int[5, 6];
+string[] subjects = { "Java", "DB", "BWL", "Web", "Mathe" };
+
+// int sum = 0;
+// int count = 0;
+
+while (true)
+{
+    Console.WriteLine("Java = 1, DB = 2, BWL = 3, Web = 4, Mathe = 5, Ende = 0");
+    Console.Write("Fachnummer: 1 bis 5. Beenden - 0: ");
+    int fach = int.Parse(Console.ReadLine());
+    if (fach == 0) break;
+
+    if (fach < 1 || fach > 5)
+    {
+        Console.WriteLine("Ungültiges Fach!");
+        continue;
+    }
+
+    Console.Write("Note Eingeben 1 bis 6: ");
+    int note = int.Parse(Console.ReadLine());
+    if (note < 1 || note > 6)
+    {
+        Console.WriteLine("Ungültige Note!");
+        continue;
+    }
+
+    arrayGrades[fach - 1, note - 1]++;
+    Console.WriteLine("Eingabe gespeichert.\n");
+}
+
+for (int row = 0; row < subjects.Length; row++)
+{
+    Console.WriteLine($"\nFach: {subjects[row]}");
+
+    int sum = 0;
+    int count = 0;
+
+    for (int col = 0; col < 6; col++)
+    {
+        Console.WriteLine($"Note {col + 1}: {arrayGrades[row, col]}");
+        sum += arrayGrades[row, col] * (col + 1);
+        count += arrayGrades[row, col];
+    }
+
+    if (count > 0)
+        Console.WriteLine($"Durchschnitt: {(double)sum / count:F2}");
+    else
+        Console.WriteLine("Keine Noten eingetragen.");
+}
