@@ -7,7 +7,7 @@ Console.WriteLine("3 = Tippschein speichern");
 Console.WriteLine("0 = Programm beenden\n");
 
 Console.Write("Menu Auswahl: ");
-string inputEingabe = Console.ReadLine();
+string? inputEingabe = Console.ReadLine();
 int menu_button_one = Convert.ToInt32(inputEingabe);
 Console.Write($"Es wurde Programm: {inputEingabe} gewählt!\n");
 
@@ -32,7 +32,7 @@ else
 Console.WriteLine("\nBitte füllen Sie Ihren Tippschein aus mit nummern von 1 bis 49. Bitte kein doppel Zahlen Auswählen!.\n");
 
 Console.Write("Zahl 1: ");
-string input_tippschein_1 = Console.ReadLine();
+string? input_tippschein_1 = Console.ReadLine();
 int zahl_1 = Convert.ToInt32(input_tippschein_1);
 
 if (zahl_1 < 1 || zahl_1 > 49)
@@ -42,7 +42,7 @@ if (zahl_1 < 1 || zahl_1 > 49)
 }
 
 Console.Write("Zahl 2: ");
-string input_tippschein_2 = Console.ReadLine();
+string? input_tippschein_2 = Console.ReadLine();
 int zahl_2 = Convert.ToInt32(input_tippschein_2);
 
 if (zahl_2 < 1 || zahl_2 > 49 || zahl_2 == zahl_1)
@@ -52,7 +52,7 @@ if (zahl_2 < 1 || zahl_2 > 49 || zahl_2 == zahl_1)
 }
 
 Console.Write("Zahl 3: ");
-string input_tippschein_3 = Console.ReadLine();
+string? input_tippschein_3 = Console.ReadLine();
 int zahl_3 = Convert.ToInt32(input_tippschein_3);
 
 if (zahl_3 < 1 || zahl_3 > 49 || zahl_3 == zahl_2 || zahl_3 == zahl_1)
@@ -62,7 +62,7 @@ if (zahl_3 < 1 || zahl_3 > 49 || zahl_3 == zahl_2 || zahl_3 == zahl_1)
 }
 
 Console.Write("Zahl 4: ");
-string input_tippschein_4 = Console.ReadLine();
+string? input_tippschein_4 = Console.ReadLine();
 int zahl_4 = Convert.ToInt32(input_tippschein_4);
 
 if (zahl_4 < 1 || zahl_4 > 49 || zahl_4 == zahl_3 || zahl_4 == zahl_2 || zahl_4 == zahl_1)
@@ -72,7 +72,7 @@ if (zahl_4 < 1 || zahl_4 > 49 || zahl_4 == zahl_3 || zahl_4 == zahl_2 || zahl_4 
 }
 
 Console.Write("Zahl 5: ");
-string input_tippschein_5 = Console.ReadLine();
+string? input_tippschein_5 = Console.ReadLine();
 int zahl_5 = Convert.ToInt32(input_tippschein_5);
 
 if (zahl_5 < 1 || zahl_5 > 49 || zahl_5 == zahl_4 || zahl_5 == zahl_3 || zahl_5 == zahl_2 || zahl_5 == zahl_1)
@@ -82,7 +82,7 @@ if (zahl_5 < 1 || zahl_5 > 49 || zahl_5 == zahl_4 || zahl_5 == zahl_3 || zahl_5 
 }
 
 Console.Write("Zahl 6: ");
-string input_tippschein_6 = Console.ReadLine();
+string? input_tippschein_6 = Console.ReadLine();
 int zahl_6 = Convert.ToInt32(input_tippschein_6);
 
 if (zahl_6 < 1 || zahl_6 > 49 || zahl_6 == zahl_5 || zahl_6 == zahl_4 || zahl_6 == zahl_3 || zahl_6 == zahl_2 || zahl_6 == zahl_1)
@@ -96,9 +96,9 @@ Console.WriteLine($"\nGlückwunsch, Ihre Zahlen: {zahl_1} {zahl_2} {zahl_3} {zah
 int[] userNumbers = { zahl_1, zahl_2, zahl_3, zahl_4, zahl_5, zahl_6 };
 
 int matches = 0;
-for (int i = 0; i < arrayNumbers.Length; i++)
+for (int count = 0; count < arrayNumbers.Length; count++)
 {
-    if (userNumbers.Contains(arrayNumbers[i]))
+    if (userNumbers.Contains(arrayNumbers[count]))
     {
         matches++;
     }

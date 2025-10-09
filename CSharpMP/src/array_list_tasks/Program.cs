@@ -128,7 +128,7 @@
 //     }
 // }
 
-Console.WriteLine($"Sum of Array {sum}");
+// Console.WriteLine($"Sum of Array {sum}");
 
 
 // Working version something like that.

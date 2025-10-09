@@ -111,19 +111,19 @@ int playerHand = 0;
 
 Random rng = new Random();
 
-playerCard += rng.Next(1, 12);  // Random from 1 to 11? exclusive upperbound
+playerHand += rng.Next(1, 12);  // Random from 1 to 11? exclusive upperbound
 // dealerCard += rng.Next(1, 12);
 
 // player 1
 while (true)
 {
-    if (playerCard == 21)
+    if (playerHand == 21)
     {
         Console.WriteLine($"Black Jack!: {playerHand} punkte erreicht."); break;
     }
     Console.Write($"Dein Karte wert ist: {playerHand}, Weiter? j für Ja, n für Nein: ");
 
-    string answer = Console.ReadLine();
+    string? answer = Console.ReadLine();
 
     if (answer == "j")
     {
