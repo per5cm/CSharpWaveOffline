@@ -28,14 +28,29 @@ class Program
     // }
 
     // Rückgabe von Methoden
-    static int VerdoppleZahl(int x)
-    {
-        return 2 * x;
-    }
+    // static int VerdoppleZahl(int x)
+    // {
+    //     return 2 * x;
+    // }
 
-    static void Main(string[] args)
+    // static void Main(string[] args)
+    // {
+    //     Console.WriteLine("5 verdoppelt ist: " + VerdoppleZahl(5));
+    //     Console.WriteLine("12 verdoppelt ist: " + VerdoppleZahl(12));
+    // }
+
+    // Mehrere Methode gemeinsam verwenden.
+    static int Addiere(int x, int y)
     {
-        Console.WriteLine("5 verdoppelt ist: " + VerdoppleZahl(5));
-        Console.WriteLine("12 verdoppelt ist: " + VerdoppleZahl(12));
+        return x + y;
+    }
+    static void SchreibeErgebnis(int wert)
+    {
+        Console.WriteLine($"Das Ergebnis ist: {wert}");
+    }
+        static void Main(string[] args)
+    {
+        int ergebnis = Addiere(10, 5);
+        SchreibeErgebnis(ergebnis);
     }
 }
