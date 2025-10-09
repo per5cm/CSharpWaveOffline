@@ -40,17 +40,39 @@ class Program
     // }
 
     // Mehrere Methode gemeinsam verwenden.
-    static int Addiere(int x, int y)
+    // static int Addiere(int x, int y)
+    // {
+    //     return x + y;
+    // }
+    // static void SchreibeErgebnis(int wert)
+    // {
+    //     Console.WriteLine($"Das Ergebnis ist: {wert}");
+    // }
+    // static void Main(string[] args)
+    // {
+    //     int summe = Addiere(10, 5);
+    //     SchreibeErgebnis(summe);
+    // }
+
+    // Ausgangscode "all in one".
+    static void Main()
     {
-        return x + y;
-    }
-    static void SchreibeErgebnis(int wert)
-    {
-        Console.WriteLine($"Das Ergebnis ist: {wert}");
-    }
-        static void Main(string[] args)
-    {
-        int ergebnis = Addiere(10, 5);
-        SchreibeErgebnis(ergebnis);
+        Console.WriteLine("Bitte gib die Temperatur in Celsius ein:");
+        double celsius = Convert.ToDouble(Console.ReadLine());
+        double fahrenheit = (celsius * 9 / 5) + 32;
+        Console.WriteLine(celsius + "°C sind " + fahrenheit + "°F");
+
+        if (celsius < 0)
+        {
+            Console.WriteLine("Es ist sehr kalt!");
+        }
+        else if (celsius > 30)
+        {
+            Console.WriteLine("Es ist heiß!");
+        }
+        else
+        {
+            Console.WriteLine("Die Temperatur ist angenehm.");
+        }
     }
 }
