@@ -55,13 +55,20 @@ class Program
     // }
 
     // Ausgangscode "all in one".
-    static void Main()
+    static double LiesTemperatur()
     {
         Console.WriteLine("Bitte gib die Temperatur in Celsius ein:");
         double celsius = Convert.ToDouble(Console.ReadLine());
-        double fahrenheit = (celsius * 9 / 5) + 32;
-        Console.WriteLine(celsius + "°C sind " + fahrenheit + "°F");
+        return celsius;
+    }
 
+    static double UmrechnenInFahrenheit(double celsius)
+    {
+        return (celsius * 9 / 5) + 32;
+    }
+    
+    static void BewerteTemperatur(double celsius)
+    {
         if (celsius < 0)
         {
             Console.WriteLine("Es ist sehr kalt!");
@@ -74,5 +81,13 @@ class Program
         {
             Console.WriteLine("Die Temperatur ist angenehm.");
         }
+    }
+    static void Main(string[] args)
+    {
+        double celsius = LiesTemperatur();
+        double fahrenheit = UmrechnenInFahrenheit(celsius);
+
+        Console.WriteLine($"{celsius}°C sind {fahrenheit}°F");
+        BewerteTemperatur(celsius);
     }
 }
