@@ -93,7 +93,7 @@ if (zahl_6 < 1 || zahl_6 > 49 || zahl_6 == zahl_5 || zahl_6 == zahl_4 || zahl_6 
 
 Console.WriteLine($"\nGlückwunsch, Ihre Zahlen: {zahl_1} {zahl_2} {zahl_3} {zahl_4} {zahl_5} {zahl_6}");
 
-int[,] pickedNumbers = new int[5, 6];
+int[,] pickedNumbers = new int[2, 6];
 int[] userNumbers = { zahl_1, zahl_2, zahl_3, zahl_4, zahl_5, zahl_6 };
 
 int ticketCount = 0;
