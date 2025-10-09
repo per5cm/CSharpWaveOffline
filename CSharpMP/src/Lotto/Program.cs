@@ -93,16 +93,30 @@ if (zahl_6 < 1 || zahl_6 > 49 || zahl_6 == zahl_5 || zahl_6 == zahl_4 || zahl_6 
 
 Console.WriteLine($"\nGlückwunsch, Ihre Zahlen: {zahl_1} {zahl_2} {zahl_3} {zahl_4} {zahl_5} {zahl_6}");
 
+int[,] pickedNumbers = new int[5, 6];
 int[] userNumbers = { zahl_1, zahl_2, zahl_3, zahl_4, zahl_5, zahl_6 };
 
-int matches = 0;
-for (int count = 0; count < arrayNumbers.Length; count++)
+int ticketCount = 0;
+
+while (true)
 {
-    if (userNumbers.Contains(arrayNumbers[count]))
+    Console.WriteLine($"\nTippschein Nr. {ticketCount + 1} ausfüllen, oder 'n' zu beenden");
+    Console.Write("Neuer Tippschein?: j/n ");
+    string? choice = Console.ReadLine();
+    if (choice == "n") break;
+
+    for (int count = 0; count < arrayNumbers.Length; count++)
     {
-        matches++;
+        Console.Write($"Zahl {count + 1}: ");
+        pickedNumbers[ticketCount, count] = int.Parse(Console.ReadLine());
+    }
+
+    ticketCount++;
+
+    if(ticketCount >= pickedNumbers.GetLength(0))
+    {
+        Console.WriteLine("Maximale Anzahl an Tippscheinen erreicht!"); break;
     }
 }
 
-Console.WriteLine($"\nGezogene Zahlen: {string.Join(" ", arrayNumbers)}");
-Console.WriteLine($"Treffer: {matches}");
+
