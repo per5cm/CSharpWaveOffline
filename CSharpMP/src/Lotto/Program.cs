@@ -113,10 +113,20 @@ while (true)
 
     ticketCount++;
 
-    if(ticketCount >= pickedNumbers.GetLength(0))
+    if (ticketCount >= pickedNumbers.GetLength(0))
     {
         Console.WriteLine("Maximale Anzahl an Tippscheinen erreicht!"); break;
     }
 }
 
+for (int ticket = 0; ticket < ticketCount; ticket++)
+{
+    int matches = 0;
+    for (int matchesCount = 0; matchesCount < 6; matchesCount++)
+    {
+        if (arrayNumbers.Contains(pickedNumbers[ticket, matchesCount]))
+            matches++;
+    }
 
+    Console.WriteLine($"Tippschein {ticket + 1}: {matches} Treffer");
+}
