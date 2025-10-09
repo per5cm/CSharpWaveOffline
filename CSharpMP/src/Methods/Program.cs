@@ -15,15 +15,27 @@ class Program
     // }
 
     // Hallo Zu.
-    static void SagHalloZu(string name)
+    // static void SagHalloZu(string name)
+    // {
+    //     Console.WriteLine("Hallo, " + name);
+    // }
+
+    // static void Main(string[] args)
+    // {
+    //     SagHalloZu("Maria!");
+    //     SagHalloZu("Alibaba!");
+    //     SagHalloZu("Max!");
+    // }
+
+    // Rückgabe von Methoden
+    static int VerdoppleZahl(int x)
     {
-        Console.WriteLine("Hallo, " + name);
+        return 2 * x;
     }
 
     static void Main(string[] args)
     {
-        SagHalloZu("Maria!");
-        SagHalloZu("Alibaba!");
-        SagHalloZu("Max!");
+        Console.WriteLine("5 verdoppelt ist: " + VerdoppleZahl(5));
+        Console.WriteLine("12 verdoppelt ist: " + VerdoppleZahl(12));
     }
 }
