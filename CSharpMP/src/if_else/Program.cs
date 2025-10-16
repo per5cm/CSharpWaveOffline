@@ -1,23 +1,23 @@
-﻿Console.WriteLine("Durschnittsverbrauch");
+﻿// Console.WriteLine("Durschnittsverbrauch");
 
-Console.WriteLine("\nBenzin");
+// Console.WriteLine("\nBenzin");
 
-Console.Write("Bitte geben Sie die gefahreren Kilometer ein: ");
-int zahl_kilometer = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Bitte geben Sie die gefahreren Kilometer ein: ");
+// int zahl_kilometer = Convert.ToInt32(Console.ReadLine());
 
-if (zahl_kilometer == 0)
-{
-    Console.WriteLine("Ungültige Strecke eingegeben!");
-    return;
-}
+// if (zahl_kilometer == 0)
+// {
+//     Console.WriteLine("Ungültige Strecke eingegeben!");
+//     return;
+// }
 
-Console.Write("Bitte geben Sie die verbrauchten Benzinmenge in Litern ein: ");
-float zahl_benzin = Convert.ToSingle(Console.ReadLine());
+// Console.Write("Bitte geben Sie die verbrauchten Benzinmenge in Litern ein: ");
+// float zahl_benzin = Convert.ToSingle(Console.ReadLine());
 
 
-float verbrauch = (zahl_benzin / zahl_kilometer) * 100;
+// float verbrauch = (zahl_benzin / zahl_kilometer) * 100;
 
-Console.WriteLine($"Verbrauch: {verbrauch}");
+// Console.WriteLine($"Verbrauch: {verbrauch}");
 
 
 // Console.WriteLine("Kindergeld");
