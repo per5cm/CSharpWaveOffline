@@ -1,75 +1,112 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using System;
+using System.Globalization;
 
-// Console.WriteLine("Rechner\n");
+class Program
+{
+    // German parsing/formatting (comma decimals)
+    static readonly CultureInfo De = new("de-DE");
 
-// Console.WriteLine("Bitte geben Sie zwei ganzen Zahle ein!");
-// Console.Write("Zahl 1: ");
-// string input_zahl_1 = Console.ReadLine();
-// int zahl_1 = int.Parse(input_zahl_1);
-// Console.Write("Zahl 2: ");
-// string input_zahl_2 = Console.ReadLine();
-// int zahl_2 = int.Parse(input_zahl_2);
+    static void Main()
+    {
+        Console.WriteLine("Operatoren-Demos\n");
 
+        Rechner();              // + - * /
+        Verbrauch();            // l/100km
+        DreiecksFlaeche();      // A = (g*h)/2
+        Waehrungsrechner();     // EUR -> USD (Demo-Kurs)
+        SchreinereiHelfer();    // Stückzahl + Verschnitt
+    }
 
-// Console.WriteLine($"Summe: {zahl_1 + zahl_2}");
-// Console.WriteLine($"Differenz: {zahl_1 - zahl_2}");
-// Console.WriteLine($"Produkt: {zahl_1 * zahl_2}");
-// Console.WriteLine($"Quotient: {zahl_1 % zahl_2}");
+    // ---------- Helpers ----------
+    static int ReadInt(string label, int min = int.MinValue, int max = int.MaxValue)
+    {
+        while (true)
+        {
+            Console.Write($"{label}: ");
+            if (int.TryParse(Console.ReadLine(), NumberStyles.Integer, De, out int n) && n >= min && n <= max)
+                return n;
+            Console.WriteLine("Ungültige Eingabe.");
+        }
+    }
 
+    static double ReadDouble(string label, double minExclusive = double.NegativeInfinity)
+    {
+        while (true)
+        {
+            Console.Write($"{label}: ");
+            if (double.TryParse(Console.ReadLine(), NumberStyles.Float, De, out double x) && x > minExclusive)
+                return x;
+            Console.WriteLine("Ungültige Eingabe.");
+        }
+    }
 
-// Console.WriteLine("\nBenzin");
+    // ---------- Tasks ----------
+    static void Rechner()
+    {
+        Console.WriteLine("Rechner (Grundrechenarten)");
+        int a = ReadInt("Zahl 1");
+        int b = ReadInt("Zahl 2");
 
-// Console.Write("Bitte geben Sie die gefahreren Kilometer ein: ");
-// int zahl_kilometer = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine($"Summe:      {a + b}");
+        Console.WriteLine($"Differenz:  {a - b}");
+        Console.WriteLine($"Produkt:    {a * b}");
+        if (b != 0)
+        {
+            Console.WriteLine($"Quotient:   {(a / (double)b).ToString("F2", De)}"); // / not %
+            Console.WriteLine($"Rest (mod): {a % b}");
+        }
+        else
+        {
+            Console.WriteLine("Quotient:   Division durch 0 nicht möglich");
+        }
+        Console.WriteLine();
+    }
 
-// Console.Write("Bitte geben Sie die verbrauchten Benzinmenge in Litern ein: ");
-// float zahl_benzin = Convert.ToSingle(Console.ReadLine());
+    static void Verbrauch()
+    {
+        Console.WriteLine("Durchschnittsverbrauch (l/100 km)");
+        double km = ReadDouble("Gefahrene Kilometer (>0)", 0);
+        double liter = ReadDouble("Verbrauchte Benzinmenge in Litern (>=0)", -1);
 
-// float verbrauch = (zahl_benzin / zahl_kilometer) * 100;
+        double v = (liter / km) * 100.0;
+        Console.WriteLine($"Verbrauch:  {v.ToString("F2", De)} l/100 km\n");
+    }
 
+    static void DreiecksFlaeche()
+    {
+        Console.WriteLine("Dreiecksfläche");
+        double grundlinie = ReadDouble("Grundlinie in cm (>0)", 0);
+        double hoehe      = ReadDouble("Höhe in cm (>0)", 0);
 
-// Console.WriteLine($"Der Druschnittsverbrauch ist: {verbrauch} Liter/100km");
+        double flaeche = (grundlinie * hoehe) / 2.0;
+        Console.WriteLine($"Fläche: {flaeche.ToString("F2", De)} cm²\n");
+    }
 
+    static void Waehrungsrechner()
+    {
+        Console.WriteLine("Währungsrechner (EUR → USD, Demo-Kurs)");
+        double eur = ReadDouble("Betrag in Euro (>=0)", -1);
+        const double eurToUsd = 1.10; // Demo-Wert, kein Livekurs
+        double usd = eur * eurToUsd;
+        Console.WriteLine($"Dollarbetrag: {usd.ToString("F2", De)} $\n");
+    }
 
+    static void SchreinereiHelfer()
+    {
+        Console.WriteLine("Schreinereihelfer – Bretter zuschneiden");
+        int brett = ReadInt("Brettlänge in cm (>0)", 1);
+        int stueck = ReadInt("Holzstück-Länge in cm (>0)", 1);
 
-// Console.WriteLine("\nDreiecksberechnung");
+        if (stueck > brett)
+        {
+            Console.WriteLine("Kein Zuschnitt möglich (Stück länger als Brett).\n");
+            return;
+        }
 
-// Console.Write("Berechnung Grundlinie: ");
-// float zahl_grundlinie = Convert.ToSingle(Console.ReadLine());
+        int anzahl = brett / stueck;
+        int verschnitt = brett - (anzahl * stueck);
 
-// Console.Write("Berechnung die Höhe: ");
-// float zahl_hoehe = Convert.ToSingle(Console.ReadLine());
-
-// float zahl_dreieckberechnung = (zahl_grundlinie * zahl_hoehe) / 2;
-
-// Console.WriteLine($"Die Fläche beträgt: {zahl_dreieckberechnung}");
-
-
-// Console.WriteLine("Währungsrechner");
-
-// Console.Write("Eingeben Betrag in Euro: ");
-// float zahl_euro = Convert.ToSingle(Console.ReadLine());
-
-// float euro_wert = 1.3f;
-
-// float dollar_wert = zahl_euro * euro_wert;
-
-// Console.WriteLine($"Dollarbetrag: {dollar_wert:F2} $");
-
-
-Console.WriteLine("\nSchreinereihelfer Bretter");
-
-Console.Write("Brett Länge in cm eingeben: ");
-int brett_laenge = Convert.ToInt32(Console.ReadLine());
-
-Console.Write("Holzstück Länge in cm eingeben: ");
-int holstueck_laenge = Convert.ToInt32(Console.ReadLine());
-
-int holzstueck_menge = brett_laenge / holstueck_laenge;
-
-Console.WriteLine($"Holzstücke: {holzstueck_menge}");
-
-double verchnitt = holzstueck_menge * holstueck_laenge;
-double verschnitt_final = brett_laenge - verchnitt;
-
-Console.WriteLine($"Verschnitt in cm: {verschnitt_final}");
+        Console.WriteLine($"Holzstücke: {anzahl}");
+        Console.WriteLine($"Verschnitt: {verschnitt} cm\n");
+    }
+}
