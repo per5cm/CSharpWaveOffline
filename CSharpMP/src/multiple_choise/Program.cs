@@ -8,7 +8,7 @@ class Program
 
     static void Main()
     {
-        Console.WriteLine("Mehrfachauswahl – Demos\n");
+        Console.WriteLine("Mehrfachauswahl - Demos\n");
 
         while (true)
         {
@@ -56,7 +56,7 @@ class Program
     // ========= 1) Briefporto =========
     static void Briefporto()
     {
-        Console.WriteLine("\nBriefe – Porto nach Gewicht (Demo-Tabelle)");
+        Console.WriteLine("\nBriefe - Porto nach Gewicht (Demo-Tabelle)");
         int g = ReadInt("Gewicht in Gramm (1-1000)", 1, 1000);
 
         // Beispielwerte (nicht die echten Deutsche-Post-Tarife)
@@ -102,7 +102,7 @@ class Program
     // ========= 3) Geometrie =========
     static void GeometrieMenue()
     {
-        Console.WriteLine("\nGeometrie – Form wählen");
+        Console.WriteLine("\nGeometrie - Form wählen");
         Console.WriteLine("1) Zylinder");
         Console.WriteLine("2) Würfel");
         Console.WriteLine("3) Quader");

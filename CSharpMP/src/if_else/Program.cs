@@ -3,33 +3,66 @@ using System.Globalization;
 
 class Program
 {
+    // Deutsch: 1,5 statt 1.5
     static readonly CultureInfo De = new("de-DE");
 
     static void Main()
     {
-        Console.WriteLine("1) Verbrauch  2) Temperatur  3) BMI  0) Ende");
+        Console.WriteLine("If/Else-Übungen - Menü\n");
+
         while (true)
         {
-            var choice = ReadInt("Auswahl", 0, 3);
-            if (choice == 0) break;
+            Console.WriteLine("1) Durchschnittsverbrauch (l/100 km)");
+            Console.WriteLine("2) Kindergeld (Demo-Tabelle)");
+            Console.WriteLine("3) Bußgeld (Geschwindigkeits-Überschreitung - Demo)");
+            Console.WriteLine("4) Temperaturzustand Wasser (+ Fahrenheit)");
+            Console.WriteLine("5) BMI & Broca (Normal-/Idealgewicht)");
+            Console.WriteLine("0) Ende");
 
-            switch (choice)
+            int choice = ReadInt("Auswahl", 0, 5);
+            Console.WriteLine();
+
+            if (choice == 0)
             {
-                case 1: FuelConsumption(); break;
-                case 2: TemperaturePhase(); break;
-                case 3: BmiCalculator(); break;
+                break;
             }
+            else if (choice == 1)
+            {
+                Verbrauch();
+            }
+            else if (choice == 2)
+            {
+                KindergeldDemo();
+            }
+            else if (choice == 3)
+            {
+                BussgeldDemo();
+            }
+            else if (choice == 4)
+            {
+                WasserPhase();
+            }
+            else if (choice == 5)
+            {
+                BmiUndBroca();
+            }
+
+            Console.WriteLine();
         }
     }
 
-    // --- Helpers ---
+    // ========= Helpers (nur für Eingaben) =========
     static int ReadInt(string label, int min, int max)
     {
         while (true)
         {
             Console.Write($"{label} ({min}-{max}): ");
-            if (int.TryParse(Console.ReadLine(), out var n) && n >= min && n <= max)
-                return n;
+            string? s = Console.ReadLine();
+            int n;
+            if (int.TryParse(s, NumberStyles.Integer, De, out n))
+            {
+                if (n >= min && n <= max) return n;
+            }
             Console.WriteLine("Ungültige Eingabe.");
         }
     }
@@ -39,48 +72,118 @@ class Program
         while (true)
         {
             Console.Write($"{label}: ");
-            var s = Console.ReadLine();
-            if (double.TryParse(s, NumberStyles.Float, De, out var x) && x > minExclusive)
-                return x;
+            string? s = Console.ReadLine();
+            double x;
+            if (double.TryParse(s, NumberStyles.Float, De, out x))
+            {
+                if (x > minExclusive) return x;
+            }
             Console.WriteLine("Ungültige Eingabe.");
         }
     }
 
-    // --- Tasks ---
-    static void FuelConsumption()
+    // ========= 1) Durchschnittsverbrauch =========
+    static void Verbrauch()
     {
-        Console.WriteLine("\nDurchschnittsverbrauch (l/100km)");
-        var km = ReadDouble("Gefahrene Kilometer (>0)", 0);
-        var liter = ReadDouble("Verbrauchte Benzinmenge in Litern (>=0)", -1);
-        var verbrauch = (liter / km) * 100.0;
-        Console.WriteLine($"Verbrauch: {verbrauch.ToString("F2", De)} l/100km\n");
+        Console.WriteLine("Durchschnittsverbrauch (l/100 km)");
+        double km = ReadDouble("Gefahrene Kilometer (>0)", 0);
+        double liter = ReadDouble("Verbrauchte Benzinmenge in Litern (>=0)", -1);
+
+        double v = (liter / km) * 100.0;
+        Console.WriteLine($"Verbrauch: {v.ToString("F2", De)} l/100 km");
     }
 
-    static void TemperaturePhase()
+    // ========= 2) Kindergeld – DEMO (vereinfachte Werte) =========
+    static void KindergeldDemo()
     {
-        Console.WriteLine("\nTemperaturzustand von Wasser");
-        var c = ReadDouble("Temperatur in °C");
-        if (c < 0) Console.WriteLine("Zustand: Eis\n");
-        else if (c <= 100) Console.WriteLine("Zustand: Wasser\n");
-        else Console.WriteLine("Zustand: Dampf\n");
-    }
+        Console.WriteLine("Kindergeld (vereinfachte Demo-Werte)");
+        double einkommen = ReadDouble("Jahreseinkommen in € (>=0)", -1);
+        int kinder = ReadInt("Anzahl Kinder (0-10)", 0, 10);
 
-    static void BmiCalculator()
-    {
-        Console.WriteLine("\nBMI-Rechner");
-        var cm = ReadDouble("Größe in cm (>0)", 0);
-        var kg = ReadDouble("Gewicht in kg (>0)", 0);
-        var m = cm / 100.0;
-        var bmi = kg / (m * m);
+        double betrag = 0;
 
-        string cat = bmi switch
+        if (einkommen < 45000)
         {
-            < 18.5 => "Untergewicht",
-            < 25.0 => "Normalgewicht",
-            < 30.0 => "Übergewicht",
-            _      => "Adipositas"
-        };
+            if (kinder == 0) betrag = 0;
+            else if (kinder == 1) betrag = 70;
+            else if (kinder == 2) betrag = 130;
+            else if (kinder == 3) betrag = 220;
+            else betrag = 240; // 4 oder mehr
+        }
+        else // einkommen >= 45000
+        {
+            if (kinder == 0) betrag = 0;
+            else if (kinder == 1) betrag = 70;
+            else if (kinder == 2) betrag = 70;
+            else if (kinder == 3) betrag = 140;
+            else betrag = 140; // 4 oder mehr
+        }
 
-        Console.WriteLine($"BMI: {bmi.ToString("F1", De)} – {cat}\n");
+        Console.WriteLine($"Kindergeld (Demo): {betrag.ToString("F2", De)} €");
+    }
+
+    // ========= 3) Bußgeld – DEMO =========
+    static void BussgeldDemo()
+    {
+        Console.WriteLine("Bußgeld (vereinfachte Demo)");
+        double v = ReadDouble("Überschreitung in km/h (>=0)", -1);
+
+        int euro = 0;
+        if (v < 10) euro = 0;
+        else if (v < 20) euro = 30;
+        else if (v < 30) euro = 60;
+        else euro = 200;
+
+        Console.WriteLine($"Bußgeld: {euro} €");
+    }
+
+    // ========= 4) Wasserzustand + Fahrenheit =========
+    static void WasserPhase()
+    {
+        Console.WriteLine("Temperaturrechner (Wasserzustand)");
+        double c = ReadDouble("Temperatur in °C");
+
+        if (c < 0)
+            Console.WriteLine("Zustand: Eis");
+        else if (c <= 100)
+            Console.WriteLine("Zustand: Wasser");
+        else
+            Console.WriteLine("Zustand: Dampf");
+
+        double f = c * 1.8 + 32;
+        Console.WriteLine($"{c.ToString("F1", De)} °C = {f.ToString("F1", De)} °F");
+    }
+
+    // ========= 5) BMI & Broca =========
+    static void BmiUndBroca()
+    {
+        Console.WriteLine("Gewichtsrechner – BMI & Broca");
+        double cm = ReadDouble("Größe in cm (>0)", 0);
+        double kg = ReadDouble("Gewicht in kg (>0)", 0);
+
+        // BMI
+        double m = cm / 100.0;
+        double bmi = kg / (m * m);
+        string kategorie;
+
+        if (bmi < 18.5) kategorie = "Untergewicht";
+        else if (bmi < 25.0) kategorie = "Normalgewicht";
+        else if (bmi < 30.0) kategorie = "Übergewicht";
+        else kategorie = "Adipositas";
+
+        Console.WriteLine($"BMI: {bmi.ToString("F1", De)} – {kategorie}");
+
+        // Broca (historische Faustformeln – NICHT medizinisch)
+        double brocaNormal = cm - 100;
+        double brocaIdealM = (cm - 100) * 0.9;   // Männer
+        double brocaIdealF = (cm - 100) * 0.85;  // Frauen
+
+        Console.WriteLine($"Broca Normalgewicht: {brocaNormal.ToString("F1", De)} kg");
+        Console.WriteLine($"Broca Idealgewicht (M): {brocaIdealM.ToString("F1", De)} kg");
+        Console.WriteLine($"Broca Idealgewicht (F): {brocaIdealF.ToString("F1", De)} kg");
+
+        // Abweichung ggü. Broca-Ideal (M) – nur als Beispiel
+        double diffM = (kg - brocaIdealM) / brocaIdealM * 100.0;
+        Console.WriteLine($"Abweichung zu Broca-Ideal (M): {diffM.ToString("F1", De)} %");
     }
 }
