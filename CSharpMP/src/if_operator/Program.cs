@@ -1,76 +1,98 @@
-﻿// Console.WriteLine("Berechnung Bestellwert");
-// Console.Write("Bestellwert in Euro: ");
+﻿using System;
+using System.Globalization;
 
-// Ausführlich
-// string eingabe = Console.ReadLine();
-// double eingabeUmgewandelt = double.Parse(eingabe);
-
-// 2 Schritte auf einmal
-// double bestellWert  = double.Parse(Console.ReadLine());
-// double ergebnis = bestellWert;
-
-// if(bestellWert < 200)
-// {
-//     ergebnis = ergebnis + 5.5;
-// }
-
-// Console.WriteLine($"Rechnungsbetrag {ergebnis}" );
-// Console.WriteLine("Programmende Bestell");
-
-// Console.WriteLine("Ein Dreieck Berechnung");
-
-// Console.Write("Bitte Seite A eingeben: ");
-// float seite_a = Convert.ToSingle(Console.ReadLine());
-
-// Console.Write("Bitte Seite B eingeben: ");
-// float seite_b = Convert.ToSingle(Console.ReadLine());
-
-// Console.Write("Bitte seite C eingeben: ");
-// float seite_c = Convert.ToSingle(Console.ReadLine());
-
-
-// Console.WriteLine("Gleichung X");
-
-// Console.Write("Gleichunn A: ");
-// int gleichung_a = Convert.ToInt32(Console.ReadLine());
-
-// Console.Write("Gleichung B: ");
-// int gleichung_b = Convert.ToInt32(Console.ReadLine());
-
-// Prüfung Fehler bei ungültiger Eingabe a = b
-// if (gleichung_a == 0)
-// {
-//     Console.WriteLine("Fehler: ");
-// }
-
-// else if (gleichung_b == 0)
-// {
-//     Console.WriteLine("Fehler: ");
-// }
-
-// else
-// {
-//     double ergebnis_x = -gleichung_b / gleichung_a;
-//     Console.WriteLine($"Lösung: {ergebnis_x}");
-// }
-
-
-// starts with
-
-Console.WriteLine("Bank Hallo!!\n");
-
-Console.Write("Bitte geben Sie Ihre Begrüßung ein und finden Sie heraus, welchen Preis Sie bekommen!: ");
-string begruessung = Console.ReadLine();
-if (begruessung.Equals("Hello", StringComparison.OrdinalIgnoreCase))
+class Program
 {
-    Console.WriteLine("0€");
-}
-else if (begruessung.Equals("H",StringComparison.OrdinalIgnoreCase))
-{
-    Console.WriteLine("20€");
-}
-else
-{
-    Console.WriteLine("100€");
-}
+    // Culture for decimal numbers (1,5 etc.)
+    static readonly CultureInfo De = new("de-DE");
 
+    static void Main()
+    {
+        Console.WriteLine("IF-Operator Übungen\n");
+
+        BestellwertMitVersand();
+        GleichungX();
+        BankBegruessung();
+    }
+
+    // ---------- Helper ----------
+    static double ReadDouble(string label, double minExclusive = double.NegativeInfinity)
+    {
+        while (true)
+        {
+            Console.Write($"{label}: ");
+            string? input = Console.ReadLine();
+
+            if (double.TryParse(input, NumberStyles.Float, De, out double value) && value > minExclusive)
+                return value;
+
+            Console.WriteLine("Ungültige Eingabe. Bitte erneut versuchen.");
+        }
+    }
+
+    static int ReadInt(string label)
+    {
+        while (true)
+        {
+            Console.Write($"{label}: ");
+            string? input = Console.ReadLine();
+            if (int.TryParse(input, out int x))
+                return x;
+            Console.WriteLine("Ungültige Eingabe. Bitte ganze Zahl verwenden.");
+        }
+    }
+
+    // ---------- 1) Bestellwert ----------
+    static void BestellwertMitVersand()
+    {
+        Console.WriteLine("=== Berechnung Bestellwert ===");
+        double bestellwert = ReadDouble("Bestellwert in Euro (>=0)", -1);
+
+        double gesamt = bestellwert;
+        if (bestellwert < 200)
+        {
+            gesamt += 5.50;  // Versandkosten
+        }
+
+        Console.WriteLine($"Rechnungsbetrag: {gesamt.ToString("F2", De)} €\n");
+    }
+
+    // ---------- 2) Gleichung X lösen ----------
+    static void GleichungX()
+    {
+        Console.WriteLine("=== Gleichung lösen (ax + b = 0) ===");
+        int a = ReadInt("Wert für a (≠ 0)");
+        int b = ReadInt("Wert für b");
+
+        if (a == 0)
+        {
+            Console.WriteLine("Fehler: a darf nicht 0 sein.\n");
+        }
+        else
+        {
+            double x = -b / (double)a;
+            Console.WriteLine($"Lösung: x = {x.ToString("F2", De)}\n");
+        }
+    }
+
+    // ---------- 3) Bank Begrüßungs-Rabatt ----------
+    static void BankBegruessung()
+    {
+        Console.WriteLine("=== Bank Begrüßung ===");
+        Console.Write("Begrüßung eingeben: ");
+        string? gruss = Console.ReadLine();
+
+        if (gruss.Equals("Hello", StringComparison.OrdinalIgnoreCase))
+        {
+            Console.WriteLine("Preis: 0€\n");
+        }
+        else if (gruss.Equals("H", StringComparison.OrdinalIgnoreCase))
+        {
+            Console.WriteLine("Preis: 20€\n");
+        }
+        else
+        {
+            Console.WriteLine("Preis: 100€\n");
+        }
+    }
+}
