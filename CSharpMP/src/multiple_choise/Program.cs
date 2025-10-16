@@ -1,153 +1,171 @@
-﻿// Console.WriteLine("Briefe!\n");
+﻿using System;
+using System.Globalization;
 
-// Console.Write("Bitte gewischt in gram eingeben: ");
-// string eingabe_gram = Console.ReadLine();
-// int ausgabe_gram = int.Parse(eingabe_gram);
-
-// double duke_dollars = 0;
-
-// switch (ausgabe_gram)
-// {
-//     case <= 20:
-//         duke_dollars += 1.00;
-//         Console.WriteLine($"Porto Kosten bis 20 gram: ${duke_dollars:F2}.\n");
-//         break;
-
-//     case <= 50:
-//         duke_dollars += 1.70;
-//         Console.WriteLine($"Porto Kosten bis 50 gram: ${duke_dollars:F2}.\n");
-//         break;
-
-//     case <= 100:
-//         duke_dollars += 2.40;
-//         Console.WriteLine($"Porto Kosten bis 100 gram: ${duke_dollars:F2}.\n");
-//         break;
-
-//     case <= 250:
-//         duke_dollars += 3.20;
-//         Console.WriteLine($"Porto Kosten bis 250 gram: ${duke_dollars:F2}.\n");
-//         break;
-
-//     case <= 500:
-//         duke_dollars += 4.00;
-//         Console.WriteLine($"Porto Kosten bis 500 gram: ${duke_dollars:F2}.\n");
-//         break;
-
-//     case <= 1000:
-//         duke_dollars += 4.80;
-//         Console.WriteLine($"Porto Kosten bis 1000 gram: ${duke_dollars:F2}.\n");
-//         break;
-
-//     default:
-//         Console.WriteLine("Geh nach Hause bitte!\n");
-//         break;
-// }
-
-// Consol.WriteLine("Tachenrechner\n"); //voll falch!
-
-// Console.WriteLine("Zahl eins: ");
-// string zahl_eins = double.Parse(Console.ReadLine());
-
-// Console.WriteLine("Mögliche berechnungen +, -, *, /: ");
-// string operator_auswahl = Console.ReadLine();
-
-// Console.WriteLine("Zahl zwei: ");
-// string zahl_zwei = double.Parse(Console.ReadLine());
-
-// double ergebnis_summe = 0;
-
-// switch (operator_auswahl)
-// {
-//     case "+":
-//         ergebnis_summe = zahl_eins + zahl_zwei;
-//         Console.WriteLine($"Ergebnis +: {ergebnis_summe}.");
-//         break;
-
-//     case "-":
-//         ergebnis_summe = zahl_eins - zahl_zwei;
-//         Console.WriteLine($"Ergebnis -: {ergebnis_summe}.");
-//         break;
-
-//     case "*":
-//         ergebnis_summe = zahl_eins * zahl_zwei;
-//         Console.WriteLine($"Ergebnis *: {ergebnis_summe}.");
-//         break;
-
-//     case "/":
-//         ergebnis_summe = zahl_eins / zahl_zwei;
-//         Console.WriteLine($"Ergebnis /: {ergebnis_summe}.");
-//         break;
-
-//     default:
-//         Console.WriteLine("Fehler - Ungültiger Operator!");
-//         break;
-// }
-
-Console.WriteLine("Kreiszahl PI\n");
-
-Console.WriteLine("1 = Zylinder");
-Console.WriteLine("2 = Würfel");
-Console.WriteLine("3 = Quader");
-Console.WriteLine("4 = Kugel\n");
-
-int menu_button = int.Parse(Console.ReadLine());
-
-switch (menu_button)
+class Program
 {
-    case 1:
-        Console.Write("Zylinder - radius in cm: ");
-        double radius_z = double.Parse(Console.ReadLine());
+    // Deutsche Zahlformatierung (Komma als Dezimaltrennzeichen)
+    static readonly CultureInfo De = new("de-DE");
 
-        Console.Write("Zylinder - höhe in cm: ");
-        double height_z = double.Parse(Console.ReadLine());
+    static void Main()
+    {
+        Console.WriteLine("Mehrfachauswahl – Demos\n");
 
-        double cylinder_o = 2 * Math.PI * radius_z * (radius_z + height_z);
-        double cylinder_v = Math.PI * radius_z * radius_z * height_z;
+        while (true)
+        {
+            Console.WriteLine("1) Briefporto");
+            Console.WriteLine("2) Taschenrechner (+, -, *, /)");
+            Console.WriteLine("3) Geometrie (Zylinder/Würfel/Quader/Kugel)");
+            Console.WriteLine("0) Ende");
+            int choice = ReadInt("Auswahl", 0, 3);
 
-        Console.WriteLine($"Zylinder oberfläche: PI-{cylinder_o}.");
-        Console.WriteLine($"Zylinder volumen: PI-{cylinder_v}");
-        break;
+            switch (choice)
+            {
+                case 0: return;
+                case 1: Briefporto(); break;
+                case 2: Taschenrechner(); break;
+                case 3: GeometrieMenue(); break;
+            }
 
-    case 2:
-        Console.WriteLine("Würfel - Kantenlänge (nur einer Kante reicht) in cm: ");
-        double height_w = double.Parse(Console.ReadLine());
+            Console.WriteLine();
+        }
+    }
 
-        double cubic_o = 6 * height_w * height_w;
-        double cubic_v = height_w * height_w * height_w;
+    // ========= Helpers =========
+    static int ReadInt(string label, int min, int max)
+    {
+        while (true)
+        {
+            Console.Write($"{label} ({min}-{max}): ");
+            if (int.TryParse(Console.ReadLine(), NumberStyles.Integer, De, out int n) && n >= min && n <= max)
+                return n;
+            Console.WriteLine("Ungültige Eingabe.");
+        }
+    }
 
-        Console.WriteLine($"Würfel oberfläche: PI-{cubic_o}");
-        Console.WriteLine($"Würfel volumen: PI-{cubic_v}");
-        break;
+    static double ReadDouble(string label, double minExclusive = double.NegativeInfinity)
+    {
+        while (true)
+        {
+            Console.Write($"{label}: ");
+            if (double.TryParse(Console.ReadLine(), NumberStyles.Float, De, out double x) && x > minExclusive)
+                return x;
+            Console.WriteLine("Ungültige Eingabe.");
+        }
+    }
 
-    case 3:
-        Console.WriteLine("Quader - höhe in cm: ");
-        double height_a = double.Parse(Console.ReadLine());
+    // ========= 1) Briefporto =========
+    static void Briefporto()
+    {
+        Console.WriteLine("\nBriefe – Porto nach Gewicht (Demo-Tabelle)");
+        int g = ReadInt("Gewicht in Gramm (1-1000)", 1, 1000);
 
-        Console.WriteLine("Quader - länge in cm: ");
-        double height_b = double.Parse(Console.ReadLine());
+        // Beispielwerte (nicht die echten Deutsche-Post-Tarife)
+        double preis = g switch
+        {
+            <= 20   => 1.00,
+            <= 50   => 1.70,
+            <= 100  => 2.40,
+            <= 250  => 3.20,
+            <= 500  => 4.00,
+            <= 1000 => 4.80,
+            _       => 0
+        };
 
-        Console.WriteLine("Quader - breite in cm: ");
-        double height_c = double.Parse(Console.ReadLine());
+        if (preis == 0) Console.WriteLine("Kein Tarif gefunden.");
+        else Console.WriteLine($"Porto: {preis.ToString("F2", De)} €");
+    }
 
-        double quader_o = 2 * height_a * height_c + 2 * height_b * height_c + 2 * height_a * height_b;
-        double quader_v = height_a * height_b * height_c;
+    // ========= 2) Taschenrechner =========
+    static void Taschenrechner()
+    {
+        Console.WriteLine("\nTaschenrechner");
+        double a = ReadDouble("Zahl 1");
+        double b = ReadDouble("Zahl 2");
+        Console.Write("Operator (+, -, *, /): ");
+        string op = Console.ReadLine()?.Trim() ?? "";
 
-        Console.WriteLine($"Quader oberfläche: PI-{quader_o}");
-        Console.WriteLine($"Quader volumen: PI-{quader_v}");
-        break;
+        double result;
+        switch (op)
+        {
+            case "+": result = a + b; break;
+            case "-": result = a - b; break;
+            case "*": result = a * b; break;
+            case "/":
+                if (b == 0) { Console.WriteLine("Division durch 0 nicht möglich."); return; }
+                result = a / b; break;
+            default:
+                Console.WriteLine("Ungültiger Operator."); return;
+        }
+        Console.WriteLine($"Ergebnis: {result.ToString("G", De)}");
+    }
 
-    case 4:
-        Console.WriteLine("Kugel - radius in cm: ");
-        double radius_k = double.Parse(Console.ReadLine());
+    // ========= 3) Geometrie =========
+    static void GeometrieMenue()
+    {
+        Console.WriteLine("\nGeometrie – Form wählen");
+        Console.WriteLine("1) Zylinder");
+        Console.WriteLine("2) Würfel");
+        Console.WriteLine("3) Quader");
+        Console.WriteLine("4) Kugel");
+        int m = ReadInt("Auswahl", 1, 4);
 
-        double circle_o = 4 * Math.PI * radius_k * radius_k;
-        double circle_v = (4 / 3) * Math.PI * radius_k * radius_k * radius_k;
+        switch (m)
+        {
+            case 1: Zylinder(); break;
+            case 2: Wuerfel(); break;
+            case 3: Quader(); break;
+            case 4: Kugel(); break;
+        }
+    }
 
-        Console.WriteLine($"Quader oberfläche: PI-{circle_o}");
-        Console.WriteLine($"Kugel volumen: PI-{circle_v}");
-        break;
+    static void Zylinder()
+    {
+        Console.WriteLine("\nZylinder");
+        double r = ReadDouble("Radius r in cm (>0)", 0);
+        double h = ReadDouble("Höhe h in cm (>0)", 0);
 
-    default:
-        Console.WriteLine("Kein Bock zu Tippen???!!!");
-        break;
+        double o = 2 * Math.PI * r * (r + h);      // Oberfläche
+        double v = Math.PI * r * r * h;            // Volumen
+
+        Console.WriteLine($"Oberfläche: {o.ToString("F2", De)} cm²");
+        Console.WriteLine($"Volumen:    {v.ToString("F2", De)} cm³");
+    }
+
+    static void Wuerfel()
+    {
+        Console.WriteLine("\nWürfel");
+        double a = ReadDouble("Kantenlänge a in cm (>0)", 0);
+
+        double o = 6 * a * a;      // Oberfläche
+        double v = a * a * a;      // Volumen
+
+        Console.WriteLine($"Oberfläche: {o.ToString("F2", De)} cm²");
+        Console.WriteLine($"Volumen:    {v.ToString("F2", De)} cm³");
+    }
+
+    static void Quader()
+    {
+        Console.WriteLine("\nQuader");
+        double a = ReadDouble("Höhe a in cm (>0)", 0);
+        double b = ReadDouble("Länge b in cm (>0)", 0);
+        double c = ReadDouble("Breite c in cm (>0)", 0);
+
+        double o = 2 * (a * b + a * c + b * c);    // Oberfläche
+        double v = a * b * c;                      // Volumen
+
+        Console.WriteLine($"Oberfläche: {o.ToString("F2", De)} cm²");
+        Console.WriteLine($"Volumen:    {v.ToString("F2", De)} cm³");
+    }
+
+    static void Kugel()
+    {
+        Console.WriteLine("\nKugel");
+        double r = ReadDouble("Radius r in cm (>0)", 0);
+
+        double o = 4 * Math.PI * r * r;                    // Oberfläche
+        double v = (4.0 / 3.0) * Math.PI * r * r * r;      // Volumen  **Achtung: 4.0/3.0**
+
+        Console.WriteLine($"Oberfläche: {o.ToString("F2", De)} cm²");
+        Console.WriteLine($"Volumen:    {v.ToString("F2", De)} cm³");
+    }
 }
