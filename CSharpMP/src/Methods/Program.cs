@@ -11,21 +11,17 @@ class Program
 
         // ---- Aktive Aufgabe hier aufrufen ----
         TemperaturProgramm();
-        // Beispiel: weitere Aufgaben testen
         // SagHallo();
         // SagHalloZu("Maria");
         // SchreibeErgebnis(VerdoppleZahl(5));
     }
 
-    #region SagHallo
+    #region Demo Methoden
     static void SagHallo()
     {
         Console.WriteLine("Hallo Welt!");
     }
 
-    #endregion
-
-    #region SagHalloZu
     static void SagHalloZu(string name)
     {
         Console.WriteLine($"Hallo {name}!");
@@ -49,7 +45,7 @@ class Program
     }
     #endregion
 
-    #region LiesTemperatur
+    #region Temperatur (Aufgabe)
     static double LiesTemperatur()
     {
         while (true)
