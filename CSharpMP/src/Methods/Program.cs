@@ -1,93 +1,103 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿// =========================================
+// METHODS PRACTICE FILE
+// Sammlung von Aufgaben zu Methoden
+// =========================================
+
 using System;
+using System.Globalization;
 
 class Program
 {
-    // Hallo Welt.
-    // static void SagHallo()
-    // {
-    //     Console.WriteLine("Hallo Welt! Ich Liebe Pizza!");
-    // }
+    static readonly CultureInfo De = new("de-DE");
 
-    // static void Main(string[] args)
-    // {
-    //     SagHallo();
-    // }
+    static void Main()
+    {
+        Console.WriteLine("=== Methoden Übungen ===\n");
 
-    // Hallo Zu.
-    // static void SagHalloZu(string name)
-    // {
-    //     Console.WriteLine("Hallo, " + name);
-    // }
+        // ---- Aktive Aufgabe hier aufrufen ----
+        TemperaturProgramm();
 
-    // static void Main(string[] args)
-    // {
-    //     SagHalloZu("Maria!");
-    //     SagHalloZu("Alibaba!");
-    //     SagHalloZu("Max!");
-    // }
+        // Beispiel: weitere Aufgaben testen
+        // SagHallo();
+        // SagHalloZu("Maria");
+        // SchreibeErgebnis(VerdoppleZahl(5));
+    }
 
-    // Rückgabe von Methoden
-    // static int VerdoppleZahl(int x)
-    // {
-    //     return 2 * x;
-    // }
 
-    // static void Main(string[] args)
-    // {
-    //     Console.WriteLine("5 verdoppelt ist: " + VerdoppleZahl(5));
-    //     Console.WriteLine("12 verdoppelt ist: " + VerdoppleZahl(12));
-    // }
+    // =========================================
+    // Beispiel 1 – Methode ohne Parameter
+    // =========================================
+    static void SagHallo()
+    {
+        Console.WriteLine("Hallo Welt!");
+    }
 
-    // Mehrere Methode gemeinsam verwenden.
-    // static int Addiere(int x, int y)
-    // {
-    //     return x + y;
-    // }
-    // static void SchreibeErgebnis(int wert)
-    // {
-    //     Console.WriteLine($"Das Ergebnis ist: {wert}");
-    // }
-    // static void Main(string[] args)
-    // {
-    //     int summe = Addiere(10, 5);
-    //     SchreibeErgebnis(summe);
-    // }
 
-    // Ausgangscode "all in one".
+    // =========================================
+    // Beispiel 2 – Methode mit Parameter
+    // =========================================
+    static void SagHalloZu(string name)
+    {
+        Console.WriteLine($"Hallo {name}!");
+    }
+
+
+    // =========================================
+    // Beispiel 3 – Methode mit Rückgabewert
+    // =========================================
+    static int VerdoppleZahl(int x)
+    {
+        return x * 2;
+    }
+
+
+    // =========================================
+    // Beispiel 4 – Methoden kombinieren
+    // =========================================
+    static int Addiere(int a, int b)
+    {
+        return a + b;
+    }
+
+    static void SchreibeErgebnis(int wert)
+    {
+        Console.WriteLine($"Das Ergebnis ist: {wert}");
+    }
+
+
+    // =========================================
+    // AKTUELLE AUFGABE – Temperaturrechner
+    // =========================================
     static double LiesTemperatur()
     {
-        Console.WriteLine("Bitte gib die Temperatur in Celsius ein:");
-        double celsius = Convert.ToDouble(Console.ReadLine());
-        return celsius;
+        while (true)
+        {
+            Console.Write("Temperatur in °C eingeben: ");
+            if (double.TryParse(Console.ReadLine(), NumberStyles.Float, De, out double x))
+                return x;
+
+            Console.WriteLine("Ungültige Eingabe.");
+        }
     }
 
-    static double UmrechnenInFahrenheit(double celsius)
+    static double CelsiusZuFahrenheit(double c)
     {
-        return (celsius * 9 / 5) + 32;
+        return c * 9 / 5 + 32;
     }
-    
-    static void BewerteTemperatur(double celsius)
-    {
-        if (celsius < 0)
-        {
-            Console.WriteLine("Es ist sehr kalt!");
-        }
-        else if (celsius > 30)
-        {
-            Console.WriteLine("Es ist heiß!");
-        }
-        else
-        {
-            Console.WriteLine("Die Temperatur ist angenehm.");
-        }
-    }
-    static void Main(string[] args)
-    {
-        double celsius = LiesTemperatur();
-        double fahrenheit = UmrechnenInFahrenheit(celsius);
 
-        Console.WriteLine($"{celsius}°C sind {fahrenheit}°F");
-        BewerteTemperatur(celsius);
+    static void TemperaturBewertung(double c)
+    {
+        if (c < 0) Console.WriteLine("Es ist sehr kalt!");
+        else if (c > 30) Console.WriteLine("Es ist heiß!");
+        else Console.WriteLine("Das Wetter ist angenehm.");
+    }
+
+    static void TemperaturProgramm()
+    {
+        double c = LiesTemperatur();
+        double f = CelsiusZuFahrenheit(c);
+
+        Console.WriteLine($"{c:F1}°C sind {f:F1}°F");
+        TemperaturBewertung(c);
     }
 }
