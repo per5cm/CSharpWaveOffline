@@ -1,31 +1,31 @@
 ﻿
-Console.WriteLine("Hello, World!");
+// Console.WriteLine("Hello, World!");
 
 // hier ist komentar /* multi komentare */
 
-string name = "Erik";
-int age = 30;
+// string name = "Erik";
+// int age = 30;
 
 //console.WriteLine($"I love" + name + "and Pizza! He is: " + age + "years old.");
 // $ ist F-string version von Python.
-Console.WriteLine($"I love {name} and Pizza! He is: {age} years old.");
+// Console.WriteLine($"I love {name} and Pizza! He is: {age} years old.");
 
 // Kundin Sandra Schmidt (27 Jahre) hat Konto-Nr. 
 // 9876543210 -M Letzte Messung: 23.7°C Pi = 3.14159. Preis netto: 19.95 € Mitglied? True
 
 //Unterstriche nur für die Lesbarkeit! 
-long accountId = 987_654_321_0;
-float temperature = 23.7f;
-double pi = 3.14159;
-decimal price = 19.95m;
-bool isMember = true;
-char separator = '-';
-string firstName = "Sandra";
-string lastName = "Schmidt";
+// long accountId = 987_654_321_0;
+// float temperature = 23.7f;
+// double pi = 3.14159;
+// decimal price = 19.95m;
+// bool isMember = true;
+// char separator = '-';
+// string firstName = "Sandra";
+// string lastName = "Schmidt";
 
-Console.WriteLine($"Kundin {firstName} {lastName} {age} Jahre alt"
-+ $"\nKonto-Nr. {accountId}{separator}M Letzte Messung: {temperature}°C"
-+ $"Pi = {pi}. Preis netto: {price} € Mitglied: {isMember}");
+// Console.WriteLine($"Kundin {firstName} {lastName} {age} Jahre alt"
+// + $"\nKonto-Nr. {accountId}{separator}M Letzte Messung: {temperature}°C"
+// + $"Pi = {pi}. Preis netto: {price} € Mitglied: {isMember}");
 
 
 // Console.WriteLine("Einsteins E = mc^2");
@@ -103,3 +103,16 @@ Console.WriteLine($"Kundin {firstName} {lastName} {age} Jahre alt"
 // Console.WriteLine((i / 2 == 3 || i == 7) && i != 0);
 // Console.WriteLine((i * 2 > 10) && (i + 1 <= 8));
 
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        static void Space(int lines = 1)
+        {
+            for (int i = 0; i < lines; i++)
+                Console.WriteLine();
+        }
+    }
+}
