@@ -1,9 +1,4 @@
-﻿// =========================================
-// METHODS PRACTICE FILE
-// Sammlung von Aufgaben zu Methoden
-// =========================================
-
-using System;
+﻿using System;
 using System.Globalization;
 
 class Program
@@ -16,44 +11,33 @@ class Program
 
         // ---- Aktive Aufgabe hier aufrufen ----
         TemperaturProgramm();
-
         // Beispiel: weitere Aufgaben testen
         // SagHallo();
         // SagHalloZu("Maria");
         // SchreibeErgebnis(VerdoppleZahl(5));
     }
 
-
-    // =========================================
-    // Beispiel 1 – Methode ohne Parameter
-    // =========================================
+    #region SagHallo
     static void SagHallo()
     {
         Console.WriteLine("Hallo Welt!");
     }
 
+    #endregion
 
-    // =========================================
-    // Beispiel 2 – Methode mit Parameter
-    // =========================================
+    #region SagHalloZu
     static void SagHalloZu(string name)
     {
         Console.WriteLine($"Hallo {name}!");
     }
 
 
-    // =========================================
-    // Beispiel 3 – Methode mit Rückgabewert
-    // =========================================
     static int VerdoppleZahl(int x)
     {
         return x * 2;
     }
 
 
-    // =========================================
-    // Beispiel 4 – Methoden kombinieren
-    // =========================================
     static int Addiere(int a, int b)
     {
         return a + b;
@@ -63,11 +47,9 @@ class Program
     {
         Console.WriteLine($"Das Ergebnis ist: {wert}");
     }
+    #endregion
 
-
-    // =========================================
-    // AKTUELLE AUFGABE – Temperaturrechner
-    // =========================================
+    #region LiesTemperatur
     static double LiesTemperatur()
     {
         while (true)
@@ -100,4 +82,6 @@ class Program
         Console.WriteLine($"{c:F1}°C sind {f:F1}°F");
         TemperaturBewertung(c);
     }
+
+    #endregion
 }
