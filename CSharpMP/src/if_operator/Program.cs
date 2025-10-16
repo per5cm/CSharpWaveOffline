@@ -42,7 +42,7 @@ class Program
         }
     }
 
-    // ---------- 1) Bestellwert ----------
+    #region Bestellwert 
     static void BestellwertMitVersand()
     {
         Console.WriteLine("=== Berechnung Bestellwert ===");
@@ -56,8 +56,9 @@ class Program
 
         Console.WriteLine($"Rechnungsbetrag: {gesamt.ToString("F2", De)} €\n");
     }
+    #endregion
 
-    // ---------- 2) Gleichung X lösen ----------
+    #region Gleichung X lösen 
     static void GleichungX()
     {
         Console.WriteLine("=== Gleichung lösen (ax + b = 0) ===");
@@ -74,8 +75,9 @@ class Program
             Console.WriteLine($"Lösung: x = {x.ToString("F2", De)}\n");
         }
     }
+    #endregion
 
-    // ---------- 3) Bank Begrüßungs-Rabatt ----------
+    #region Bank Begrüßungs-Rabatt 
     static void BankBegruessung()
     {
         Console.WriteLine("=== Bank Begrüßung ===");
@@ -95,4 +97,5 @@ class Program
             Console.WriteLine("Preis: 100€\n");
         }
     }
+    #endregion
 }

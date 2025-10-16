@@ -41,7 +41,7 @@ class Program
         }
     }
 
-    // ---------- 1) Rechner ----------
+    #region Rechner 
     static void Rechner()
     {
         Console.WriteLine("Rechner\nBitte geben Sie zwei ganze Zahlen ein.");
@@ -65,8 +65,9 @@ class Program
 
         Console.WriteLine();
     }
+    #endregion
 
-    // ---------- 2) Durchschnittsverbrauch ----------
+    #region Durchschnittsverbrauch 
     static void Verbrauch()
     {
         Console.WriteLine("Durchschnittsverbrauch (l/100 km)");
@@ -76,19 +77,21 @@ class Program
         double verbrauch = (liter / km) * 100.0;
         Console.WriteLine($"Der Durchschnittsverbrauch ist: {verbrauch.ToString("F2", De)} l/100 km\n");
     }
+    #endregion
 
-    // ---------- 3) Dreiecksfläche ----------
+    #region Dreiecksfläche 
     static void DreiecksFlaeche()
     {
         Console.WriteLine("Dreiecksberechnung – Fläche");
         double grundlinie = ReadDouble("Grundlinie in cm (>0)", 0);
-        double hoehe      = ReadDouble("Höhe in cm (>0)", 0);
+        double hoehe = ReadDouble("Höhe in cm (>0)", 0);
 
         double flaeche = (grundlinie * hoehe) / 2.0;
         Console.WriteLine($"Die Fläche beträgt: {flaeche.ToString("F2", De)} cm²\n");
     }
+    #endregion
 
-    // ---------- 4) Währungsrechner ----------
+    #region Währungsrechner 
     static void Waehrungsrechner()
     {
         Console.WriteLine("Währungsrechner (EUR → USD, Demo-Kurs)");
@@ -99,13 +102,14 @@ class Program
 
         Console.WriteLine($"Dollarbetrag: {usd.ToString("F2", De)} $\n");
     }
+    #endregion
 
-    // ---------- 5) Schreinereihelfer ----------
+    #region Schreinereihelfer 
     static void Schreinerei()
     {
-        Console.WriteLine("Schreinereihelfer – Bretter zuschneiden");
-        int brettLaenge    = ReadInt("Brettlänge in cm (>0)", 1);
-        int stueckLaenge   = ReadInt("Holzstück-Länge in cm (>0)", 1);
+        Console.WriteLine("Schreinereihelfer - Bretter zuschneiden");
+        int brettLaenge = ReadInt("Brettlänge in cm (>0)", 1);
+        int stueckLaenge = ReadInt("Holzstück-Länge in cm (>0)", 1);
 
         if (stueckLaenge > brettLaenge)
         {
@@ -119,4 +123,5 @@ class Program
         Console.WriteLine($"Holzstücke: {anzahl}");
         Console.WriteLine($"Verschnitt in cm: {verschnitt}\n");
     }
+    #endregion
 }

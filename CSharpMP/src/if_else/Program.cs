@@ -82,7 +82,7 @@ class Program
         }
     }
 
-    // ========= 1) Durchschnittsverbrauch =========
+    #region Durchschnittsverbrauch 
     static void Verbrauch()
     {
         Console.WriteLine("Durchschnittsverbrauch (l/100 km)");
@@ -92,8 +92,9 @@ class Program
         double v = (liter / km) * 100.0;
         Console.WriteLine($"Verbrauch: {v.ToString("F2", De)} l/100 km");
     }
+    #endregion
 
-    // ========= 2) Kindergeld – DEMO (vereinfachte Werte) =========
+    #region Kindergeld - DEMO (vereinfachte Werte) 
     static void KindergeldDemo()
     {
         Console.WriteLine("Kindergeld (vereinfachte Demo-Werte)");
@@ -121,8 +122,9 @@ class Program
 
         Console.WriteLine($"Kindergeld (Demo): {betrag.ToString("F2", De)} €");
     }
+    #endregion
 
-    // ========= 3) Bußgeld – DEMO =========
+    #region Bußgeld - DEMO 
     static void BussgeldDemo()
     {
         Console.WriteLine("Bußgeld (vereinfachte Demo)");
@@ -136,8 +138,9 @@ class Program
 
         Console.WriteLine($"Bußgeld: {euro} €");
     }
+    #endregion
 
-    // ========= 4) Wasserzustand + Fahrenheit =========
+    #region Wasserzustand + Fahrenheit 
     static void WasserPhase()
     {
         Console.WriteLine("Temperaturrechner (Wasserzustand)");
@@ -153,8 +156,9 @@ class Program
         double f = c * 1.8 + 32;
         Console.WriteLine($"{c.ToString("F1", De)} °C = {f.ToString("F1", De)} °F");
     }
+    #endregion
 
-    // ========= 5) BMI & Broca =========
+    #region BMI & Broca 
     static void BmiUndBroca()
     {
         Console.WriteLine("Gewichtsrechner – BMI & Broca");
@@ -186,4 +190,5 @@ class Program
         double diffM = (kg - brocaIdealM) / brocaIdealM * 100.0;
         Console.WriteLine($"Abweichung zu Broca-Ideal (M): {diffM.ToString("F1", De)} %");
     }
+    #endregion
 }

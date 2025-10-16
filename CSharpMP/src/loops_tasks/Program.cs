@@ -67,7 +67,7 @@ class Program
         }
     }
 
-    // ----------- 1) Teiler (while) -----------
+    #region Teiler (while) 
     static void DivisorsWhile()
     {
         Console.WriteLine("Teiler mit while");
@@ -80,8 +80,9 @@ class Program
             d++;
         }
     }
+    #endregion
 
-    // ----------- 2) Noten (do…while) -----------
+    #region Noten (do…while) 
     static void GradesDoWhile()
     {
         Console.WriteLine("Notendurchschnitt (1–6, 0 = Ende)");
@@ -112,8 +113,9 @@ class Program
             Console.WriteLine($"Anzahl: {count}, Summe: {sum.ToString("F2", De)}, Durchschnitt: {avg.ToString("F2", De)}");
         }
     }
+    #endregion
 
-    // ----------- 3) Zinsen (for) -----------
+    #region Zinsen (for) 
     static void InterestFor()
     {
         Console.WriteLine("Zinseszins (for-Schleife)");
@@ -127,8 +129,9 @@ class Program
             Console.WriteLine($"Wert nach Jahr {jahr}: {kapital.ToString("F2", De)} €");
         }
     }
+    #endregion
 
-    // ----------- 4) Zahlenraten (while) -----------
+    #region Zahlenraten (while) 
     static void GuessNumberWhile()
     {
         Console.WriteLine("Zahlenratespiel (1–100)");
@@ -157,8 +160,9 @@ class Program
             }
         }
     }
+    #endregion
 
-    // ----------- 5) Blackjack Light (while) -----------
+    #region Blackjack Light (while) 
     static void BlackjackLight()
     {
         Console.WriteLine("Blackjack Light – Spieler vs. Dealer");
@@ -207,4 +211,5 @@ class Program
         else if (dealer > player) Console.WriteLine($"Dealer gewinnt ({dealer} vs. {player}).");
         else Console.WriteLine($"Spieler gewinnt ({player} vs. {dealer}).");
     }
+    #endregion
 }

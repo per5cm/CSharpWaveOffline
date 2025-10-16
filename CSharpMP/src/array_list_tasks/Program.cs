@@ -67,7 +67,7 @@ class Program
         }
     }
 
-    // ========= 1) Forward/Reverse =========
+    #region Forward/Reverse 
     static void PrintForwardReverse()
     {
         Console.WriteLine("Array vorwärts/rückwärts");
@@ -87,8 +87,9 @@ class Program
             Console.Write(a[i] + (i > 0 ? " " : ""));
         Console.WriteLine();
     }
+    #endregion
 
-    // ========= 2) Min/Max =========
+    #region Min/Max 
     static void MinMaxDemo()
     {
         Console.WriteLine("Min/Max in Array");
@@ -106,8 +107,9 @@ class Program
         Console.WriteLine("Array: " + string.Join(", ", values));
         Console.WriteLine($"Min: {min}, Max: {max}");
     }
+    #endregion
 
-    // ========= 3) Frequency =========
+    #region Frequency 
     static void FrequencyDemo()
     {
         Console.WriteLine("Häufigkeit einer Zahl zählen");
@@ -122,8 +124,9 @@ class Program
 
         Console.WriteLine($"Die Zahl {target} kommt {hits}x vor.");
     }
+    #endregion
 
-    // ========= 4) Grades with List<double> =========
+    #region Grades with List<double> 
     static void GradesListDemo()
     {
         Console.WriteLine("Schulnoten (1-6, 0 = Ende) - List<double>");
@@ -155,8 +158,9 @@ class Program
         double avg = sum / grades.Count;
         Console.WriteLine($"Anzahl: {grades.Count}, Summe: {sum.ToString("F2", De)}, Durchschnitt: {avg.ToString("F2", De)}");
     }
+    #endregion
 
-    // ========= 5) 2D grade distribution (subjects x grades) =========
+    #region 2D grade distribution (subjects x grades) 
     static void Grades2DDistribution()
     {
         Console.WriteLine("2D-Notenverteilung (Fach x Note)");
@@ -195,4 +199,5 @@ class Program
                 Console.WriteLine("Keine Noten eingetragen.");
         }
     }
+    #endregion
 }

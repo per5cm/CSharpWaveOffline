@@ -53,7 +53,7 @@ class Program
         }
     }
 
-    // ========= 1) Briefporto =========
+    #region Briefporto 
     static void Briefporto()
     {
         Console.WriteLine("\nBriefe - Porto nach Gewicht (Demo-Tabelle)");
@@ -62,20 +62,21 @@ class Program
         // Beispielwerte (nicht die echten Deutsche-Post-Tarife)
         double preis = g switch
         {
-            <= 20   => 1.00,
-            <= 50   => 1.70,
-            <= 100  => 2.40,
-            <= 250  => 3.20,
-            <= 500  => 4.00,
+            <= 20 => 1.00,
+            <= 50 => 1.70,
+            <= 100 => 2.40,
+            <= 250 => 3.20,
+            <= 500 => 4.00,
             <= 1000 => 4.80,
-            _       => 0
+            _ => 0
         };
 
         if (preis == 0) Console.WriteLine("Kein Tarif gefunden.");
         else Console.WriteLine($"Porto: {preis.ToString("F2", De)} €");
     }
+    #endregion
 
-    // ========= 2) Taschenrechner =========
+    #region Taschenrechner 
     static void Taschenrechner()
     {
         Console.WriteLine("\nTaschenrechner");
@@ -98,8 +99,9 @@ class Program
         }
         Console.WriteLine($"Ergebnis: {result.ToString("G", De)}");
     }
+    #endregion
 
-    // ========= 3) Geometrie =========
+    #region Geometrie 
     static void GeometrieMenue()
     {
         Console.WriteLine("\nGeometrie - Form wählen");
@@ -168,4 +170,5 @@ class Program
         Console.WriteLine($"Oberfläche: {o.ToString("F2", De)} cm²");
         Console.WriteLine($"Volumen:    {v.ToString("F2", De)} cm³");
     }
+    #endregion
 }
