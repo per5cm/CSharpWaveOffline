@@ -6,8 +6,8 @@
     <StackPanel DataContext="{Binding MyPet}" Margin="10">
         <TextBlock Text="{Binding Energy}" FontSize="24" HorizontalAlignment="Center" />
         <Button FontSize="20" Content="Lade Energie" Click="OnClick" Margin="10" />
-        <Button FontSize="20" Content="Lade Energie" Click="OnClick" Margin="10" />
+        <Button FontSize="25" Content="Entlade Energie" Click="OnClick" Margin="15" />
         <Slider Minimum="0" Maximum="100" Value="{Binding Energy, Mode=TwoWay}" 
-                IsSnapToTickEnabled="True" TickFrequency="20" Height="60" />
+                IsSnapToTickEnabled="True" TickFrequency="20" Height="60" Margin="10" />
     </StackPanel>
 </Window>
