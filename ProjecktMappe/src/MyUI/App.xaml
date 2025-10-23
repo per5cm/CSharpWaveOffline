@@ -1,12 +1,7 @@
-﻿<Window x:Class="Vpets.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Energy Tracker" Width="600" Height="400">
- 
-    <StackPanel DataContext="{Binding MyPet}" Margin="20, 30" Orientation="Vertical">
-        <TextBlock Text="{Binding Energy}" FontSize="24" HorizontalAlignment="Center" />
-        <Button FontSize="20" Content="Lade Energie" Click="OnClick" Margin="10" />
-        <Slider Minimum="0" Maximum="100" Value="{Binding Energy, Mode=TwoWay}" 
-                IsSnapToTickEnabled="True" TickFrequency="20" Height="60" />
-    </StackPanel>
-</Window>
+﻿<Application x:Class="MyUI.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources/>
+</Application>
+

@@ -12,7 +12,6 @@ C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\ProjecktMappe\src\MyUi\obj\Debu
 C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\ProjecktMappe\src\MyUi\obj\Debug\net9.0-windows\MainWindow.g.cs
 C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\ProjecktMappe\src\MyUi\obj\Debug\net9.0-windows\App.g.cs
 C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\ProjecktMappe\src\MyUi\obj\Debug\net9.0-windows\MyUI_MarkupCompile.cache
-C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\ProjecktMappe\src\MyUi\obj\Debug\net9.0-windows\MyUI_MarkupCompile.lref
 C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\ProjecktMappe\src\MyUi\obj\Debug\net9.0-windows\MainWindow.baml
 C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\ProjecktMappe\src\MyUi\obj\Debug\net9.0-windows\MyUI.g.resources
 C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\ProjecktMappe\src\MyUi\obj\Debug\net9.0-windows\MyUI.GeneratedMSBuildEditorConfig.editorconfig

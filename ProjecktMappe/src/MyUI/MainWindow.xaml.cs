@@ -8,16 +8,25 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Vpets.Models.Base;
 
-namespace MyUI;
 
 /// <summary>
 /// Interaction logic for MainWindow.xaml
 /// </summary>
-public partial class MainWindow : Window
+namespace MyUI
 {
-    public MainWindow()
+    public partial class MainWindow : Window
     {
-        InitializeComponent();
+        public Pet MyPet { get; } = new("Moony");
+        public MainWindow()
+        {
+            InitializeComponent();
+            DataContext = this;
+        }
+        private void OnClick(object sender, RoutedEventArgs e)
+        {
+            MyPet.Energy += 20;
+        }
     }
 }
