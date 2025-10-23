@@ -2,12 +2,26 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Energy Tracker" Width="600" Height="400">
- 
-    <StackPanel DataContext="{Binding MyPet}" Margin="10">
-        <TextBlock Text="{Binding Energy}" FontSize="24" HorizontalAlignment="Center" />
-        <Button FontSize="20" Content="Lade Energie" Click="OnClick" Margin="10" />
-        <Button FontSize="25" Content="Entlade Energie" Click="OnClick" Margin="15" />
-        <Slider Minimum="0" Maximum="100" Value="{Binding Energy, Mode=TwoWay}" 
-                IsSnapToTickEnabled="True" TickFrequency="20" Height="60" Margin="10" />
-    </StackPanel>
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0" DataContext="{Binding Moony}" Margin="10">
+            <TextBlock Text="{Binding Energy}" FontSize="24" HorizontalAlignment="Center" />
+            <Button FontSize="20" Content="Lade Energie" Click="OnClickMoony" Margin="10" />
+            <Button FontSize="20" Content="Entlade Energie" Click="OnClickMoony" Margin="10" />
+            <Slider Minimum="0" Maximum="100" Value="{Binding Energy, Mode=TwoWay}" 
+                    IsSnapToTickEnabled="True" TickFrequency="20" Height="60" Margin="10" />
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" DataContext="{Binding Speedy}" Margin="10">
+            <TextBlock Text="{Binding Energy}" FontSize="24" HorizontalAlignment="Center" />
+            <Button FontSize="20" Content="Lade Energie" Click="OnClickSpeedy" Margin="10" />
+            <Button FontSize="20" Content="Entlade Energie" Click="OnClickSpeedy" Margin="10" />
+            <Slider Minimum="0" Maximum="100" Value="{Binding Energy, Mode=TwoWay}" 
+                    IsSnapToTickEnabled="True" TickFrequency="20" Height="60" Margin="10" />
+        </StackPanel>
+    </Grid>
 </Window>

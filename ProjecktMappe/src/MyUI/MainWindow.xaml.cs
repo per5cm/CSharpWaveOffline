@@ -18,15 +18,20 @@ namespace MyUI
 {
     public partial class MainWindow : Window
     {
-        public Pet MyPet { get; } = new("Moony");
+        public Pet Moony { get; } = new("Moony");
+        public Pet Speedy { get; } = new("Speedy");
         public MainWindow()
         {
             InitializeComponent();
             DataContext = this;
         }
-        private void OnClick(object sender, RoutedEventArgs e)
+        private void OnClickMoony(object sender, RoutedEventArgs e)
         {
-            MyPet.Energy += 20;
+            Moony.Energy += 20;
+        }
+        private void OnClickSpeedy(object sender, RoutedEventArgs e)
+        {
+            Speedy.Energy += 20;
         }
     }
 }
