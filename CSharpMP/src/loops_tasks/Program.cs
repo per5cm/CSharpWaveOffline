@@ -9,7 +9,7 @@ class Program
 
     static void Main()
     {
-        Console.WriteLine("Loops – Übungssammlung\n");
+        Console.WriteLine("Loops - Übungssammlung\n");
 
         while (true)
         {
@@ -71,7 +71,7 @@ class Program
     static void DivisorsWhile()
     {
         Console.WriteLine("Teiler mit while");
-        int n = ReadIntOpen("Ganze Zahl (>0)", 0);
+        int n = ReadIntOpen("Ganze Zahl > 0", 0);
 
         int d = 1;
         while (d <= n)
@@ -85,14 +85,14 @@ class Program
     #region Noten (do…while) 
     static void GradesDoWhile()
     {
-        Console.WriteLine("Notendurchschnitt (1-6, 0 = Ende)");
+        Console.WriteLine("Notendurchschnitt (1 - 6, 0 = Ende)");
         double sum = 0;
         int count = 0;
         double grade;
 
         do
         {
-            grade = ReadDouble("Note (1-6, 0 zum Beenden)");
+            grade = ReadDouble("Note 1 - 6, 0 zum Beenden: ");
             if (grade == 0) break;
 
             if (grade < 1 || grade > 6)
@@ -140,14 +140,7 @@ class Program
 
         while (true)
         {
-            Console.Write("Tipp: ");
-            string? s = Console.ReadLine();
-            int tipp;
-            if (!int.TryParse(s, NumberStyles.Integer, De, out tipp))
-            {
-                Console.WriteLine("Bitte ganze Zahl eingeben.");
-                continue;
-            }
+            int tipp = ReadInt("Tipp", 1, 100);
 
             versuche++;
 
@@ -175,7 +168,7 @@ class Program
         // Spielerzug (while)
         while (true)
         {
-            Console.Write($"Spieler: {player} Punkte. Karte ziehen? (j/n): ");
+            Console.Write($"Spieler: {player} Punkte. Karte ziehen? j/n: ");
             string? a = Console.ReadLine()?.Trim().ToLowerInvariant();
 
             if (a == "j")

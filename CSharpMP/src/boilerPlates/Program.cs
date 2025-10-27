@@ -3,7 +3,6 @@ using System.Globalization;
 
 class Program
 {
-    // German culture (for comma decimal etc.)
     static readonly CultureInfo De = new("de-DE");
 
     static void Main()
@@ -11,43 +10,35 @@ class Program
         Console.OutputEncoding = System.Text.Encoding.UTF8;
         Console.WriteLine("=== Programmstart ===\n");
 
-        // Example usage (delete or replace with your logic)
-        int age = ReadInt("Alter eingeben", 0, 120);
-        double price = ReadDouble("Preis eingeben", 0);
-        string name = ReadText("Name eingeben");
+        // Beispielaufrufe:
+        int alter = ReadInt("Alter", 0, 120);
+        double preis = ReadDouble("Preis", 0, 10000);
+        string name = ReadText("Name");
 
-        Console.WriteLine($"\nName: {name}, Alter: {age}, Preis: {price.ToString("N2", De)}");
+        Console.WriteLine($"\nName: {name}, Alter: {alter}, Preis: {preis.ToString("N2", De)}");
     }
 
-    // === Helper methods ===
+    // ----------- Helpers (nur Eingabe) -----------
 
     static int ReadInt(string label, int min = int.MinValue, int max = int.MaxValue)
     {
-        int value;
         while (true)
         {
-            Console.Write($"{label}: ");
-            string? input = Console.ReadLine();
-
-            if (int.TryParse(input, NumberStyles.Integer, De, out value) && value >= min && value <= max)
-                return value;
-
-            Console.WriteLine($"Bitte eine ganze Zahl zwischen {min} und {max} eingeben.\n");
+            Console.Write($"{label} ({min}-{max}): ");
+            if (int.TryParse(Console.ReadLine(), NumberStyles.Integer, De, out int n) && n >= min && n <= max)
+                return n;
+            Console.WriteLine("Ungültige Eingabe.");
         }
     }
 
     static double ReadDouble(string label, double min = double.NegativeInfinity, double max = double.PositiveInfinity)
     {
-        double value;
         while (true)
         {
-            Console.Write($"{label}: ");
-            string? input = Console.ReadLine();
-
-            if (double.TryParse(input, NumberStyles.Float, De, out value) && value >= min && value <= max)
-                return value;
-
-            Console.WriteLine($"Bitte eine Zahl zwischen {min} und {max} eingeben (Komma erlaubt).\n");
+            Console.Write($"{label} ({min}-{max}): ");
+            if (double.TryParse(Console.ReadLine(), NumberStyles.Float, De, out double x) && x >= min && x <= max)
+                return x;
+            Console.WriteLine("Ungültige Eingabe.");
         }
     }
 
@@ -55,6 +46,7 @@ class Program
     {
         Console.Write($"{label}: ");
         string? input = Console.ReadLine();
-        return string.IsNullOrWhiteSpace(input) ? "(leer)" : input.Trim();
+        return string.IsNullOrWhiteSpace(input) ? "" : input.Trim();
     }
 }
+

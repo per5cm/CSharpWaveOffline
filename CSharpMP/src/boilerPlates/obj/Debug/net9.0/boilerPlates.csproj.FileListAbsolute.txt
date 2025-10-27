@@ -1,0 +1,15 @@
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\boilerPlates\bin\Debug\net9.0\boilerPlates.exe
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\boilerPlates\bin\Debug\net9.0\boilerPlates.deps.json
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\boilerPlates\bin\Debug\net9.0\boilerPlates.runtimeconfig.json
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\boilerPlates\bin\Debug\net9.0\boilerPlates.dll
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\boilerPlates\bin\Debug\net9.0\boilerPlates.pdb
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\boilerPlates\obj\Debug\net9.0\boilerPlates.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\boilerPlates\obj\Debug\net9.0\boilerPlates.AssemblyInfoInputs.cache
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\boilerPlates\obj\Debug\net9.0\boilerPlates.AssemblyInfo.cs
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\boilerPlates\obj\Debug\net9.0\boilerPlates.csproj.CoreCompileInputs.cache
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\boilerPlates\obj\Debug\net9.0\boilerPlates.sourcelink.json
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\boilerPlates\obj\Debug\net9.0\boilerPlates.dll
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\boilerPlates\obj\Debug\net9.0\refint\boilerPlates.dll
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\boilerPlates\obj\Debug\net9.0\boilerPlates.pdb
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\boilerPlates\obj\Debug\net9.0\boilerPlates.genruntimeconfig.cache
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\boilerPlates\obj\Debug\net9.0\ref\boilerPlates.dll
