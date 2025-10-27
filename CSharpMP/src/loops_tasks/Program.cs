@@ -85,14 +85,14 @@ class Program
     #region Noten (do…while) 
     static void GradesDoWhile()
     {
-        Console.WriteLine("Notendurchschnitt (1–6, 0 = Ende)");
+        Console.WriteLine("Notendurchschnitt (1-6, 0 = Ende)");
         double sum = 0;
         int count = 0;
         double grade;
 
         do
         {
-            grade = ReadDouble("Note (1–6, 0 zum Beenden)");
+            grade = ReadDouble("Note (1-6, 0 zum Beenden)");
             if (grade == 0) break;
 
             if (grade < 1 || grade > 6)
@@ -134,7 +134,7 @@ class Program
     #region Zahlenraten (while) 
     static void GuessNumberWhile()
     {
-        Console.WriteLine("Zahlenratespiel (1–100)");
+        Console.WriteLine("Zahlenratespiel (1-100)");
         int geheim = Rng.Next(1, 101);
         int versuche = 0;
 
@@ -165,7 +165,7 @@ class Program
     #region Blackjack Light (while) 
     static void BlackjackLight()
     {
-        Console.WriteLine("Blackjack Light – Spieler vs. Dealer");
+        Console.WriteLine("Blackjack Light - Spieler vs. Dealer");
         int player = 0, dealer = 0;
 
         // Startkarten
@@ -206,7 +206,7 @@ class Program
         }
 
         // Ergebnis
-        if (dealer > 21) Console.WriteLine("Dealer überkauft – Spieler gewinnt!");
+        if (dealer > 21) Console.WriteLine("Dealer überkauft - Spieler gewinnt!");
         else if (dealer == player) Console.WriteLine($"Unentschieden ({player} : {dealer}).");
         else if (dealer > player) Console.WriteLine($"Dealer gewinnt ({dealer} vs. {player}).");
         else Console.WriteLine($"Spieler gewinnt ({player} vs. {dealer}).");
