@@ -1,17 +1,21 @@
 ﻿using System;
 using Lotto.UI.bannerAscii;
+using Lotto.Helpers;
 
-class Program
+
+namespace Lotto
 {
-    static void Main()
+    internal static class Program
     {
-        Banner.ShowBanner();
+        static void Main()
+        {
+            Banner.ShowBanner();
 
-        // your main game logic here
-        Console.WriteLine("1 = Tippschein ausfüllen");
-        Console.WriteLine("2 = Lottozahlen ziehen");
-        Console.WriteLine("3 = Tippschein speichern");
-        Console.WriteLine("0 = Programm beenden\n");
+            // your main game logic here
+            Console.WriteLine("1 = Tippschein ausfüllen");
+            Console.WriteLine("2 = Lottozahlen ziehen");
+            Console.WriteLine("3 = Tippschein speichern");
+            Console.WriteLine("0 = Programm beenden\n");
+        }
     }
 }
-
