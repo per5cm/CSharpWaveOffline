@@ -119,8 +119,8 @@ class Program
     static void InterestFor()
     {
         Console.WriteLine("Zinseszins (for-Schleife)");
-        double kapital = ReadDouble("Anfangsbetrag in € (>0)", 0);
-        double zinssatz = ReadDouble("Zinssatz in % (>=0)", -1);
+        double kapital = ReadDouble("Anfangsbetrag in € > 0", 0);
+        double zinssatz = ReadDouble("Zinssatz in %  >= 0", -1);
         int jahre = ReadInt("Laufzeit in Jahren", 1, 100);
 
         for (int jahr = 1; jahr <= jahre; jahr++)
@@ -134,7 +134,7 @@ class Program
     #region Zahlenraten (while) 
     static void GuessNumberWhile()
     {
-        Console.WriteLine("Zahlenratespiel (1-100)");
+        Console.WriteLine("Zahlenratespiel shätze ein Zahl von 1 bis 100");
         int geheim = Rng.Next(1, 101);
         int versuche = 0;
 

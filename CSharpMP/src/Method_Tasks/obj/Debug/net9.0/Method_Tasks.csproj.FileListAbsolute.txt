@@ -1,0 +1,15 @@
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\Method_Tasks\obj\Debug\net9.0\Method_Tasks.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\Method_Tasks\obj\Debug\net9.0\Method_Tasks.AssemblyInfoInputs.cache
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\Method_Tasks\obj\Debug\net9.0\Method_Tasks.AssemblyInfo.cs
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\Method_Tasks\obj\Debug\net9.0\Method_Tasks.csproj.CoreCompileInputs.cache
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\Method_Tasks\obj\Debug\net9.0\Method_Tasks.sourcelink.json
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\Method_Tasks\bin\Debug\net9.0\Method_Tasks.exe
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\Method_Tasks\bin\Debug\net9.0\Method_Tasks.deps.json
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\Method_Tasks\bin\Debug\net9.0\Method_Tasks.runtimeconfig.json
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\Method_Tasks\bin\Debug\net9.0\Method_Tasks.dll
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\Method_Tasks\bin\Debug\net9.0\Method_Tasks.pdb
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\Method_Tasks\obj\Debug\net9.0\Method_Tasks.dll
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\Method_Tasks\obj\Debug\net9.0\refint\Method_Tasks.dll
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\Method_Tasks\obj\Debug\net9.0\Method_Tasks.pdb
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\Method_Tasks\obj\Debug\net9.0\Method_Tasks.genruntimeconfig.cache
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\Method_Tasks\obj\Debug\net9.0\ref\Method_Tasks.dll
