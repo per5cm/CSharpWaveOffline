@@ -37,6 +37,7 @@ class Program
         }
     }
 
+    #region Helpers
     // ----------- Helpers (nur Eingabe) -----------
 
     static int ReadInt(string label, int min = int.MinValue, int max = int.MaxValue)
@@ -67,4 +68,5 @@ class Program
         string? input = Console.ReadLine();
         return string.IsNullOrWhiteSpace(input) ? "" : input.Trim();
     }
+    #endregion
 }
