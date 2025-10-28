@@ -11,11 +11,23 @@ namespace Lotto
         {
             Banner.ShowBanner();
 
-            // your main game logic here
-            Console.WriteLine("1 = Tippschein ausfüllen");
-            Console.WriteLine("2 = Lottozahlen ziehen");
-            Console.WriteLine("3 = Tippschein speichern");
-            Console.WriteLine("0 = Programm beenden\n");
+            // menu with switch case. using helper as input
+            while (true)
+            {
+                Console.WriteLine("1 = Tippschein ausfüllen");
+                Console.WriteLine("2 = Lottozahlen ziehen");
+                Console.WriteLine("3 = Tippschein speichern");
+                Console.WriteLine("0 = Programm beenden\n");
+                int choice = ReadInt("Auswahl", 0, 3);
+
+                switch(choice)
+                {
+                    case 0: return;
+                    case 1: TippscheinAusfuehllen(); break;
+                    case 2: LottozahlenZiehen(); break;
+                    case 3: TippscheinSpeichern(); break;
+                }
+            }
         }
     }
 }
