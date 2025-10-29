@@ -10,7 +10,11 @@ namespace Lotto
         static void Main()
         {
             Banner.ShowBanner();
+            ShowMenu();
+        }
 
+        internal static void ShowMenu()
+        {
             // menu with switch case. using helper as input
             while (true)
             {
@@ -20,7 +24,7 @@ namespace Lotto
                 Console.WriteLine("0 = Programm beenden\n");
                 int choice = ReadInt("Auswahl", 0, 3);
 
-                switch(choice)
+                switch (choice)
                 {
                     case 0: return;
                     case 1: TippscheinAusfuehllen(); break;
