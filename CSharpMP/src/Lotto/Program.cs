@@ -1,6 +1,8 @@
 ﻿using System;
 using Lotto.UI.bannerAscii;
-using Lotto.Helpers;
+using static Lotto.Helpers.Helpers;
+
+
 
 
 namespace Lotto
@@ -27,11 +29,26 @@ namespace Lotto
                 switch (choice)
                 {
                     case 0: return;
-                    case 1: TippscheinAusfuehllen(); break;
-                    case 2: LottozahlenZiehen(); break;
-                    case 3: TippscheinSpeichern(); break;
+                    case 1: FillTicket(); break;
+                    case 2: DrawNumber(); break;
+                    case 3: SaveTicket(); break;
                 }
             }
+        }
+
+        private static void FillTicket()
+        {
+
+        }
+
+        private static void DrawNumber()
+        {
+
+        }
+        
+        private static void SaveTicket()
+        {
+            
         }
     }
 }
