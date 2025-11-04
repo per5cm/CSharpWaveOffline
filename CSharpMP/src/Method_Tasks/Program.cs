@@ -6,6 +6,8 @@ class Program
     static readonly Random Rng = new();
     static void Main()
     {
+        Console.WriteLine("Mehrfachauswahl\n");
+        
         while (true)
         {
             Console.WriteLine("1 = Sag Hallo!");
@@ -25,7 +27,8 @@ class Program
                 //case 4: ArbeitString(); break;
                 //case 5: TextZahl(); break;
             }
-        }
+            Console.WriteLine();
+    }
     
     static void ZufallZahlen ()
         {
@@ -33,7 +36,9 @@ class Program
             int diceTwo = Rng.Next(1, 7);
             int diceThree = Rng.Next(1, 7);
 
-            Console.Write($"Wurf Eins {diceOne}");
+            Console.WriteLine($"Wurf Eins: {diceOne}");
+            Console.WriteLine($"Wurf Zwei: {diceTwo}");
+            Console.WriteLine($"Wurf Drei: {diceThree}");
         }
     }
 

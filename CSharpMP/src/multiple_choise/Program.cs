@@ -8,13 +8,13 @@ class Program
 
     static void Main()
     {
-        Console.WriteLine("Mehrfachauswahl - Demos\n");
+        Console.WriteLine("Mehrfachauswahl\n");
 
         while (true)
         {
             Console.WriteLine("1) Briefporto");
-            Console.WriteLine("2) Taschenrechner (+, -, *, /)");
-            Console.WriteLine("3) Geometrie (Zylinder/Würfel/Quader/Kugel)");
+            Console.WriteLine("2) Taschenrechner +, -, *, /");
+            Console.WriteLine("3) Geometrie: Zylinder, Würfel, Quader, Kugel");
             Console.WriteLine("0) Ende");
             int choice = ReadInt("Auswahl", 0, 3);
 
