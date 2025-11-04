@@ -6,8 +6,8 @@ class Program
     static readonly Random Rng = new();
     static void Main()
     {
-        Console.WriteLine("Mehrfachauswahl\n");
-        
+        Console.WriteLine("Mehrfachauswahl");
+
         while (true)
         {
             Console.WriteLine("1 = Sag Hallo!");
@@ -15,7 +15,8 @@ class Program
             Console.WriteLine("3 = Zufallzahlen");
             Console.WriteLine("4 = Arbeit mit Strings");
             Console.WriteLine("5 = Text zu Zahl Spiel");
-            Console.WriteLine("0 = Programm beenden\n");
+            Console.WriteLine("0 = Programm beenden");
+            Console.WriteLine();
             int choice = ReadInt("Auswahl", 0, 5);
 
             switch (choice)
@@ -23,23 +24,42 @@ class Program
                 case 0: return;
                 //case 1: SagHallo(); break;
                 //case 2: MathMethode(); break;
-                case 3: ZufallZahlen(); break;
-                //case 4: ArbeitString(); break;
-                //case 5: TextZahl(); break;
+                case 3: RandomNumbers(); break;
+                case 4: StringManipulation(); break;
+                case 5: NumberManipulation(); break;
             }
             Console.WriteLine();
-    }
-    
-    static void ZufallZahlen ()
-        {
-            int diceOne = Rng.Next(1, 7);
-            int diceTwo = Rng.Next(1, 7);
-            int diceThree = Rng.Next(1, 7);
-
-            Console.WriteLine($"Wurf Eins: {diceOne}");
-            Console.WriteLine($"Wurf Zwei: {diceTwo}");
-            Console.WriteLine($"Wurf Drei: {diceThree}");
         }
+    }
+
+    static void RandomNumbers()
+    {
+        int diceOne = Rng.Next(1, 7);
+        int diceTwo = Rng.Next(1, 7);
+        int diceThree = Rng.Next(1, 7);
+
+        Console.WriteLine($"Wurf Eins: {diceOne}");
+        Console.WriteLine($"Wurf Zwei: {diceTwo}");
+        Console.WriteLine($"Wurf Drei: {diceThree}");
+    }
+
+    static void StringManipulation()
+    {
+        string sentance = ReadText("Bitte gib einen Satz ein: ");
+
+        Console.WriteLine($"Zeichenzahl: {sentance.Length}");
+        Console.WriteLine($"Groẞbuchstaben: {sentance.ToUpper()}"); // ToLower converts to lowercase letters
+        Console.WriteLine($"Enthält 'Hallo' in den satz? {sentance.Contains("Hallo", StringComparison.OrdinalIgnoreCase)}");
+    }
+
+    static void NumberManipulation()
+    {
+        string input = ReadText("Bitte gib ein Wort oder eine Zahl ein: ");
+
+        Console.WriteLine($"Originaltext: {input}");
+        Console.WriteLine($"Original text länge: {input.Length}");
+        Console.WriteLine($"Quadrat der Länge: {Math.Pow(input.Length, 2)}");
+        Console.WriteLine($"Enthält: {input.Contains("a", StringComparison.OrdinalIgnoreCase)}");
     }
 
     #region Helpers
