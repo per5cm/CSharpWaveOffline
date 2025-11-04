@@ -18,7 +18,7 @@ namespace Method_Translator
             Console.WriteLine("3 = Alle Wörter ausgeben");
             Console.WriteLine("4 = Vokabeltrainer");
             Console.WriteLine("0 = Programmende");
-            int choice = ReadInt(0, 5);
+            int choice = ReadInt("Auswahl: ", 0, 5);
 
             switch (choice)
             {

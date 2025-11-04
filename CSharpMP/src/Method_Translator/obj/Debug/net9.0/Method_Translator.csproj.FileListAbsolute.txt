@@ -1,0 +1,15 @@
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\Method_Translator\obj\Debug\net9.0\Method_Translator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\Method_Translator\obj\Debug\net9.0\Method_Translator.AssemblyInfoInputs.cache
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\Method_Translator\obj\Debug\net9.0\Method_Translator.AssemblyInfo.cs
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\Method_Translator\obj\Debug\net9.0\Method_Translator.csproj.CoreCompileInputs.cache
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\Method_Translator\obj\Debug\net9.0\Method_Translator.sourcelink.json
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\Method_Translator\bin\Debug\net9.0\Method_Translator.exe
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\Method_Translator\bin\Debug\net9.0\Method_Translator.deps.json
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\Method_Translator\bin\Debug\net9.0\Method_Translator.runtimeconfig.json
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\Method_Translator\bin\Debug\net9.0\Method_Translator.dll
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\Method_Translator\bin\Debug\net9.0\Method_Translator.pdb
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\Method_Translator\obj\Debug\net9.0\Method_Translator.dll
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\Method_Translator\obj\Debug\net9.0\refint\Method_Translator.dll
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\Method_Translator\obj\Debug\net9.0\Method_Translator.pdb
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\Method_Translator\obj\Debug\net9.0\Method_Translator.genruntimeconfig.cache
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\Method_Translator\obj\Debug\net9.0\ref\Method_Translator.dll
