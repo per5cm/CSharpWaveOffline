@@ -20,7 +20,7 @@ namespace Method_Translator
             Console.WriteLine("0 = Programmende");
             int choice = ReadInt(0, 5);
 
-            switch(choice)
+            switch (choice)
             {
                 case 0: return;
                 case 1: CaptureWords(); break;
@@ -28,6 +28,26 @@ namespace Method_Translator
                 case 3: DisplayAllWords(); break;
                 case 4: VocabularyTrainer(); break;
             }
+        }
+
+        static void CaptureWords()
+        {
+
+        }
+
+        static void QueryWords()
+        {
+
+        }
+
+        static void DisplayAllWords()
+        {
+
+        }
+
+        static void VocabularyTrainer()
+        {
+            
         }
 
         // ----------- Helpers (nur Eingabe) -----------
