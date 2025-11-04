@@ -59,7 +59,7 @@ class Program
         Console.WriteLine($"Originaltext: {input}");
         Console.WriteLine($"Original text länge: {input.Length}");
         Console.WriteLine($"Quadrat der Länge: {Math.Pow(input.Length, 2)}");
-        Console.WriteLine($"Enthält: {input.Contains("a", StringComparison.OrdinalIgnoreCase)}");
+        Console.WriteLine($"Enthält 'a': {input.Contains("a", StringComparison.OrdinalIgnoreCase)}");
     }
 
     #region Helpers
