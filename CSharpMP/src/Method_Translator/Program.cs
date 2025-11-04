@@ -13,20 +13,23 @@ namespace Method_Translator
 
         static void ShowMenu()
         {
-            Console.WriteLine("1 = Erfassen Wörter");
-            Console.WriteLine("2 = Abfrage Wörter");
-            Console.WriteLine("3 = Alle Wörter ausgeben");
-            Console.WriteLine("4 = Vokabeltrainer");
-            Console.WriteLine("0 = Programmende");
-            int choice = ReadInt("Auswahl: ", 0, 5);
-
-            switch (choice)
+            while(true)
             {
-                case 0: return;
-                case 1: CaptureWords(); break;
-                case 2: QueryWords(); break;
-                case 3: DisplayAllWords(); break;
-                case 4: VocabularyTrainer(); break;
+                Console.WriteLine("1 = Erfassen Wörter");
+                Console.WriteLine("2 = Abfrage Wörter");
+                Console.WriteLine("3 = Alle Wörter ausgeben");
+                Console.WriteLine("4 = Vokabeltrainer");
+                Console.WriteLine("0 = Programmende");
+                int choice = ReadInt("Auswahl: ", 0, 5);
+
+                switch (choice)
+                {
+                    case 0: return;
+                    case 1: CaptureWords(); break;
+                    case 2: QueryWords(); break;
+                    case 3: DisplayAllWords(); break;
+                    case 4: VocabularyTrainer(); break;
+                }
             }
         }
 
