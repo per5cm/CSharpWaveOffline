@@ -82,7 +82,7 @@ namespace Method_Translator
 
                 case 2:
                     string searchEn = ReadText("Englisches Suchwort");
-                    for (int index = 1; index < NumberOfWords; index++)
+                    for (int index = 0; index < NumberOfWords; index++)
                     {
                         if (string.Equals(SavedWords[index, 1], searchEn, StringComparison.OrdinalIgnoreCase))
                         {
