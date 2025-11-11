@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net;
 
 
 namespace Method_Translator
@@ -56,15 +57,47 @@ namespace Method_Translator
 
         static void QueryWords()
         {
+            Console.WriteLine("Abfrage - Richtung");
+            Console.WriteLine("1. Deutsch -> Englisch");
+            Console.WriteLine("2. Englisch -> Deutsch");
+            int direction = ReadInt("Auswahl", 1, 2);
 
+            bool found = false;
+
+            switch (direction)
+            {
+                case 1:
+                    search = ReadText("Deutsches Suchwort");
+                    for (int i = 0; i < NumberOfWords; i++)
+                    {
+                        if (string.Equals(SavedWords[i, 0], search, StringComparison.OrdinalIgnoreCase))
+                        {
+                            Console.WriteLine($"Gefunden: {SavedWords[i, 0]} -> {SavedWords[i, 1]}"); found = true; break;
+                        }
+                    }
+                    break;
+
+                case 2:
+                    search = ReadText("Englisches Suchwort");
+                    for (int i = 0; i < NumberOfWords; i++)
+                    {
+                        if (string.Equals(SavedWords[i, 1], search, StringComparison.OrdinalIgnoreCase))
+                        {
+                            Console.WriteLine($"Gefunden: {SavedWords[i, 1]} -> {SavedWords[i, 0]}"); found = true; break;
+                        }
+                    }
+                    break;
+            }
+            if (!found) Console.WriteLine("Keine Eintrag gefunden.");
+            Console.WriteLine();
         }
 
         static void DisplayAllWords()
         {
             Console.WriteLine("\nGespeicherte Wörter");
-            for (int i = 0; i < NumberOfWords; i++)
+            for (int display = 0; display < NumberOfWords; display++)
             {
-                Console.WriteLine($"{i + 1}. DE: {SavedWords[i, 0]} | EN: {SavedWords[i, 1]}");
+                Console.WriteLine($"{display + 1}. DE: {SavedWords[display, 0]} | EN: {SavedWords[display, 1]}");
             }
             Console.WriteLine();
         }
