@@ -39,7 +39,7 @@ namespace Method_Translator
 
         static void CaptureWords()
         {
-            if (NumberOfWords >= SavedWords.Length(0))
+            if (NumberOfWords >= SavedWords.GetLength(0))
             {
                 Console.WriteLine("Speicher ist voll - max. 100 Wörter.");
                 return;
@@ -58,20 +58,21 @@ namespace Method_Translator
 
         static void QueryWords()
         {
-            Console.WriteLine("Abfrage - Richtung");
+            DisplayAllWords();
+            Console.WriteLine("Listen Abfrage - Richtung");
             Console.WriteLine("1. Deutsch -> Englisch");
             Console.WriteLine("2. Englisch -> Deutsch");
-            int direction = ReadInt("Auswahl", 1, 2);
+            int direction = ReadInt("Auswahl: 1 für Deutsch, 2 für English", 1, 2);
 
             bool found = false;
 
             switch (direction)
             {
                 case 1:
-                    search = ReadText("Deutsches Suchwort");
+                    string searchDe = ReadText("Deutsches Suchwort");
                     for (int index = 0; index < NumberOfWords; index++)
                     {
-                        if (string.Equals(SavedWords[index, 0], search, StringComparison.OrdinalIgnoreCase))
+                        if (string.Equals(SavedWords[index, 0], searchDe, StringComparison.OrdinalIgnoreCase))
                         {
                             Console.WriteLine($"Gefunden: {SavedWords[index, 0]} -> {SavedWords[index, 1]}"); found = true; break;
                         }
@@ -79,10 +80,10 @@ namespace Method_Translator
                     break;
 
                 case 2:
-                    search = ReadText("Englisches Suchwort");
-                    for (int index = 0; index < NumberOfWords; index++)
+                    string searchEn = ReadText("Englisches Suchwort");
+                    for (int index = 1; index < NumberOfWords; index++)
                     {
-                        if (string.Equals(SavedWords[index, 1], search, StringComparison.OrdinalIgnoreCase))
+                        if (string.Equals(SavedWords[index, 1], searchEn, StringComparison.OrdinalIgnoreCase))
                         {
                             Console.WriteLine($"Gefunden: {SavedWords[index, 1]} -> {SavedWords[index, 0]}"); found = true; break;
                         }
@@ -95,7 +96,7 @@ namespace Method_Translator
 
         static void DisplayAllWords()
         {
-            Console.WriteLine("\nGespeicherte Wörter");
+            Console.WriteLine("\nGespeicherte Wörter:");
             for (int display = 0; display < NumberOfWords; display++)
             {
                 Console.WriteLine($"{display + 1}. DE: {SavedWords[display, 0]} | EN: {SavedWords[display, 1]}");
@@ -119,7 +120,7 @@ namespace Method_Translator
                 return;
             }
 
-            
+
         }
 
         // ----------- Helpers (nur Eingabe) -----------
