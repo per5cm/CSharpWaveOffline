@@ -37,12 +37,15 @@ namespace Method_Translator
 
         static void CaptureWords()
         {
-            WordsDE = ReadText("Deutsche Worte: ");
-            WordsEN = ReadText("Englishe Worte: ");
+            string wordDE = ReadText("Deutsche Worte: ");
+            string wordEN = ReadText("Englishe Worte: ");
 
-            SavedWords[WordOfNumbers, 0] = WordsDE;
-            SavedWords[WordOfNumbers, 1] = WordsEN;
-            WordOfNumbers++;
+            SavedWords[NumberOfWords, 0] = wordDE;
+            SavedWords[NumberOfWords, 1] = wordEN;
+            NumberOFWords++;
+
+            Console.WriteLine("Wortpaar gespeichert.");
+            Console.WriteLine();
         }
 
         static void QueryWords()
