@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.Design;
 using System.Net;
 
 
@@ -110,9 +111,9 @@ namespace Method_Translator
             Console.WriteLine("1. Deutsch -> Englisch");
             Console.WriteLine("2. Englisch -> Deutsch");
             int direction = ReadInt("Auswahl", 1, 2);
-            int quizzNumberOfWords = ReadInt("Wie viele Vokabeln wollen Sie abgefragt werden?");
+            int quizzNumberOfWords = ReadInt("Wie viele Vokabeln wollen Sie abgefragt werden?", 0, NumberOfWords);
 
-            int correctWords = 0;
+            int correct = 0;
 
             if (quizzNumberOfWords > NumberOfWords)
             {
@@ -120,7 +121,44 @@ namespace Method_Translator
                 return;
             }
 
+            for (int i = 0; i < quizzNumberOfWords; i++)
+            {
+                int index = Rng.Next(0, NumberOfWords);
 
+                switch (direction)
+                {
+                    case 1:
+                        Console.Write($"{SavedWords[index, 0]} -->");
+                        string translateDe = ReadText("");
+                        if (string.Equals(translateDe, SavedWords[index, 1], StringComparison.OrdinalIgnoreCase))
+                        {
+                            Console.WriteLine("ok!");
+                            correct++;
+                        }
+                        else
+                        {
+                            Console.WriteLine($"Falsch! richtig war: {SavedWords[index, 1]}");
+                        }
+                        break;
+
+                    case 2:
+                        Console.Write($"{SavedWords[index, 1]} -->");
+                        string translateEn = ReadText("");
+                        if (string.Equals(translateEn, SavedWords[index, 0], StringComparison.OrdinalIgnoreCase))
+                        {
+                            Console.WriteLine("ok!");
+                            correct++;
+                        }
+                        else
+                        {
+                            Console.WriteLine($"Falsch! richtig war: {SavedWords[index, 0]}");
+                        }
+                        break;
+                }
+            }
+            double percent = (double)correct / quizzNumberOfWords * 100;
+            Console.WriteLine($"Treffer: {correct} von {quizzNumberOfWords}, das sind {percent:F0}%");
+            Console.WriteLine();
         }
 
         // ----------- Helpers (nur Eingabe) -----------
