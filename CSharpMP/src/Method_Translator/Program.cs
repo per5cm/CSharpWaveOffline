@@ -67,29 +67,30 @@ namespace Method_Translator
 
             bool found = false;
 
-            switch (direction)
+            for (int index = 0; index < NumberOfWords; index++)
             {
-                case 1:
-                    string searchDe = ReadText("Deutsches Suchwort");
-                    for (int index = 0; index < NumberOfWords; index++)
-                    {
-                        if (string.Equals(SavedWords[index, 0], searchDe, StringComparison.OrdinalIgnoreCase))
+                switch (direction)
+                {
+                    case 1:
+                        string searchDe = ReadText("Deutsches Suchwort");
                         {
-                            Console.WriteLine($"Gefunden: {SavedWords[index, 0]} -> {SavedWords[index, 1]}"); found = true; break;
+                            if (string.Equals(SavedWords[index, 0], searchDe, StringComparison.OrdinalIgnoreCase))
+                            {
+                                Console.WriteLine($"Gefunden: {SavedWords[index, 0]} -> {SavedWords[index, 1]}"); found = true; break;
+                            }
                         }
-                    }
-                    break;
+                        break;
 
-                case 2:
-                    string searchEn = ReadText("Englisches Suchwort");
-                    for (int index = 0; index < NumberOfWords; index++)
-                    {
-                        if (string.Equals(SavedWords[index, 1], searchEn, StringComparison.OrdinalIgnoreCase))
+                    case 2:
+                        string searchEn = ReadText("Englisches Suchwort");
                         {
-                            Console.WriteLine($"Gefunden: {SavedWords[index, 1]} -> {SavedWords[index, 0]}"); found = true; break;
+                            if (string.Equals(SavedWords[index, 1], searchEn, StringComparison.OrdinalIgnoreCase))
+                            {
+                                Console.WriteLine($"Gefunden: {SavedWords[index, 1]} -> {SavedWords[index, 0]}"); found = true; break;
+                            }
                         }
-                    }
-                    break;
+                        break;
+                }
             }
             if (!found) Console.WriteLine("Keine Eintrag gefunden.");
             Console.WriteLine();
