@@ -157,7 +157,7 @@ namespace Method_Translator
                 }
             }
             double percent = (double)correct / quizzNumberOfWords * 100;
-            Console.WriteLine($"Treffer: {correct} von {quizzNumberOfWords}, das sind {percent:F0}%");
+            Console.WriteLine($"Treffer: {correct} von {quizzNumberOfWords}, das sind {percent:F0}% insgesamt.");
             Console.WriteLine();
         }
 
