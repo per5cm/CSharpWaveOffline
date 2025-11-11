@@ -42,7 +42,7 @@ namespace Method_Translator
 
             SavedWords[NumberOfWords, 0] = wordDE;
             SavedWords[NumberOfWords, 1] = wordEN;
-            NumberOFWords++;
+            NumberOfWords++;
 
             Console.WriteLine("Wortpaar gespeichert.");
             Console.WriteLine();
@@ -55,7 +55,12 @@ namespace Method_Translator
 
         static void DisplayAllWords()
         {
-
+            Console.WriteLine("\nGespeicherte Wörter");
+            for (int i = 0; i < NumberOfWords; i++)
+            {
+                Console.WriteLine($"{i + 1}. DE: {SavedWords[i, 0]} | EN: {SavedWords[i, 1]}");
+            }
+            Console.WriteLine();
         }
 
         static void VocabularyTrainer()
