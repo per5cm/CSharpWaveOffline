@@ -8,7 +8,7 @@ class Program
 
     static void Main()
     {
-        Console.WriteLine("Operatoren – Übungssammlung\n");
+        Console.WriteLine("Operatoren - Übungssammlung\n");
 
         Rechner();           // + - * / % (mit Guards)
         Verbrauch();         // l/100 km
