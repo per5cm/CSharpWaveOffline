@@ -8,6 +8,7 @@ namespace Method_Translator
     {
         static string[,] SavedWords = new string[100, 2];
         static int NumberOfWords = 0;
+        static readonly Random Rng = new();
         static void Main()
         {
             Console.WriteLine("=== Programmstart ===\n");
@@ -104,6 +105,20 @@ namespace Method_Translator
 
         static void VocabularyTrainer()
         {
+            Console.WriteLine("Abfrage - Richtung");
+            Console.WriteLine("1. Deutsch -> Englisch");
+            Console.WriteLine("2. Englisch -> Deutsch");
+            int direction = ReadInt("Auswahl", 1, 2);
+            int quizzNumberOfWords = ReadInt("Wie viele Vokabeln wollen Sie abgefragt werden?");
+
+            int correctWords = 0;
+
+            if (quizzNumberOfWords > NumberOfWords)
+            {
+                Console.WriteLine("Fehler: Es gibt nicht so viele geschpeicherte Vokabeln!");
+                return;
+            }
+
             
         }
 
