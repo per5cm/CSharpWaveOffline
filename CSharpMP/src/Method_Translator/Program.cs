@@ -37,6 +37,12 @@ namespace Method_Translator
 
         static void CaptureWords()
         {
+            if (NumberOfWords >= SavedWords.Length(0))
+            {
+                Console.WriteLine("Speicher ist voll - max. 100 Wörter.");
+                return;
+            }
+
             string wordDE = ReadText("Deutsche Worte: ");
             string wordEN = ReadText("Englishe Worte: ");
 
