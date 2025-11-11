@@ -5,6 +5,8 @@ namespace Method_Translator
 {
     internal static class Program
     {
+        static string[,] SavedWords = new string[100, 2];
+        static int NumberOfWords = 0;
         static void Main()
         {
             Console.WriteLine("=== Programmstart ===\n");
@@ -35,7 +37,12 @@ namespace Method_Translator
 
         static void CaptureWords()
         {
+            WordsDE = ReadText("Deutsche Worte: ");
+            WordsEN = ReadText("Englishe Worte: ");
 
+            SavedWords[WordOfNumbers, 0] = WordsDE;
+            SavedWords[WordOfNumbers, 1] = WordsEN;
+            WordOfNumbers++;
         }
 
         static void QueryWords()
