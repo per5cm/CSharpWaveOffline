@@ -68,22 +68,22 @@ namespace Method_Translator
             {
                 case 1:
                     search = ReadText("Deutsches Suchwort");
-                    for (int i = 0; i < NumberOfWords; i++)
+                    for (int index = 0; index < NumberOfWords; index++)
                     {
-                        if (string.Equals(SavedWords[i, 0], search, StringComparison.OrdinalIgnoreCase))
+                        if (string.Equals(SavedWords[index, 0], search, StringComparison.OrdinalIgnoreCase))
                         {
-                            Console.WriteLine($"Gefunden: {SavedWords[i, 0]} -> {SavedWords[i, 1]}"); found = true; break;
+                            Console.WriteLine($"Gefunden: {SavedWords[index, 0]} -> {SavedWords[index, 1]}"); found = true; break;
                         }
                     }
                     break;
 
                 case 2:
                     search = ReadText("Englisches Suchwort");
-                    for (int i = 0; i < NumberOfWords; i++)
+                    for (int index = 0; index < NumberOfWords; index++)
                     {
-                        if (string.Equals(SavedWords[i, 1], search, StringComparison.OrdinalIgnoreCase))
+                        if (string.Equals(SavedWords[index, 1], search, StringComparison.OrdinalIgnoreCase))
                         {
-                            Console.WriteLine($"Gefunden: {SavedWords[i, 1]} -> {SavedWords[i, 0]}"); found = true; break;
+                            Console.WriteLine($"Gefunden: {SavedWords[index, 1]} -> {SavedWords[index, 0]}"); found = true; break;
                         }
                     }
                     break;
