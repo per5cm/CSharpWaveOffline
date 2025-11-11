@@ -111,7 +111,7 @@ namespace Method_Translator
             Console.WriteLine("1. Deutsch -> Englisch");
             Console.WriteLine("2. Englisch -> Deutsch");
             int direction = ReadInt("Auswahl", 1, 2);
-            int quizzNumberOfWords = ReadInt("Wie viele Vokabeln wollen Sie abgefragt werden?", 0, NumberOfWords);
+            int quizzNumberOfWords = ReadInt("Wie viele Vokabeln wollen Sie abgefragt werden?");
 
             int correct = 0;
 
@@ -167,9 +167,14 @@ namespace Method_Translator
         {
             while (true)
             {
-                Console.Write($"{label} ({min}-{max}): ");
+                if (min == int.MinValue && max == int.MaxValue)
+                    Console.Write($"{label}: ");
+                else
+                    Console.Write($"{label} ({min}-{max}): ");
+
                 if (int.TryParse(Console.ReadLine(), out int n) && n >= min && n <= max)
                     return n;
+
                 Console.WriteLine("Ungültige Eingabe.");
             }
         }
@@ -178,12 +183,18 @@ namespace Method_Translator
         {
             while (true)
             {
-                Console.Write($"{label} ({min}-{max}): ");
+                if (min == double.NegativeInfinity && max == double.PositiveInfinity)
+                    Console.Write($"{label}: ");
+                else
+                    Console.Write($"{label} ({min}-{max}): ");
+
                 if (double.TryParse(Console.ReadLine(), out double x) && x >= min && x <= max)
                     return x;
+
                 Console.WriteLine("Ungültige Eingabe.");
             }
         }
+
 
         static string ReadText(string label)
         {

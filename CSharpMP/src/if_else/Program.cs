@@ -161,7 +161,7 @@ class Program
     #region BMI & Broca 
     static void BmiUndBroca()
     {
-        Console.WriteLine("Gewichtsrechner – BMI & Broca");
+        Console.WriteLine("Gewichtsrechner - BMI & Broca");
         double cm = ReadDouble("Größe in cm (>0)", 0);
         double kg = ReadDouble("Gewicht in kg (>0)", 0);
 

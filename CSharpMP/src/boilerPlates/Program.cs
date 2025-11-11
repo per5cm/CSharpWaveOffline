@@ -20,27 +20,37 @@ class Program
 
     // ----------- Helpers (nur Eingabe) -----------
 
-    static int ReadInt(string label, int min = int.MinValue, int max = int.MaxValue)
-    {
-        while (true)
+            static int ReadInt(string label, int min = int.MinValue, int max = int.MaxValue)
         {
-            Console.Write($"{label} ({min}-{max}): ");
-            if (int.TryParse(Console.ReadLine(), NumberStyles.Integer, De, out int n) && n >= min && n <= max)
-                return n;
-            Console.WriteLine("Ungültige Eingabe.");
-        }
-    }
+            while (true)
+            {
+                if (min == int.MinValue && max == int.MaxValue)
+                    Console.Write($"{label}: ");
+                else
+                    Console.Write($"{label} ({min}-{max}): ");
 
-    static double ReadDouble(string label, double min = double.NegativeInfinity, double max = double.PositiveInfinity)
-    {
-        while (true)
-        {
-            Console.Write($"{label} ({min}-{max}): ");
-            if (double.TryParse(Console.ReadLine(), NumberStyles.Float, De, out double x) && x >= min && x <= max)
-                return x;
-            Console.WriteLine("Ungültige Eingabe.");
+                if (int.TryParse(Console.ReadLine(), out int n) && n >= min && n <= max)
+                    return n;
+
+                Console.WriteLine("Ungültige Eingabe.");
+            }
         }
-    }
+
+        static double ReadDouble(string label, double min = double.NegativeInfinity, double max = double.PositiveInfinity)
+        {
+            while (true)
+            {
+                if (min == double.NegativeInfinity && max == double.PositiveInfinity)
+                    Console.Write($"{label}: ");
+                else
+                    Console.Write($"{label} ({min}-{max}): ");
+
+                if (double.TryParse(Console.ReadLine(), out double x) && x >= min && x <= max)
+                    return x;
+
+                Console.WriteLine("Ungültige Eingabe.");
+            }
+        }
 
     static string ReadText(string label)
     {
