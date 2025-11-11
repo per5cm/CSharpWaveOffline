@@ -1,7 +1,4 @@
 ﻿using System;
-using System.ComponentModel.Design;
-using System.Net;
-
 
 namespace Method_Translator
 {
@@ -10,6 +7,7 @@ namespace Method_Translator
         static string[,] SavedWords = new string[100, 2];
         static int NumberOfWords = 0;
         static readonly Random Rng = new();
+
         static void Main()
         {
             Console.WriteLine("=== Programmstart ===\n");
@@ -18,14 +16,14 @@ namespace Method_Translator
 
         static void ShowMenu()
         {
-            while(true)
+            while (true)
             {
                 Console.WriteLine("1 = Erfassen Wörter");
                 Console.WriteLine("2 = Abfrage Wörter");
                 Console.WriteLine("3 = Alle Wörter ausgeben");
                 Console.WriteLine("4 = Vokabeltrainer");
                 Console.WriteLine("0 = Programmende");
-                int choice = ReadInt("Auswahl: ", 0, 5);
+                int choice = ReadInt("Auswahl", 0, 5);
 
                 switch (choice)
                 {
@@ -46,53 +44,79 @@ namespace Method_Translator
                 return;
             }
 
-            string wordDE = ReadText("Deutsche Worte: ");
-            string wordEN = ReadText("Englishe Worte: ");
+            string wordDE = ReadText("Deutsches Wort");
+            string wordEN = ReadText("Englisches Wort");
 
             SavedWords[NumberOfWords, 0] = wordDE;
             SavedWords[NumberOfWords, 1] = wordEN;
             NumberOfWords++;
 
-            Console.WriteLine("Wortpaar gespeichert.");
-            Console.WriteLine();
+            Console.WriteLine("Wortpaar gespeichert.\n");
         }
 
         static void QueryWords()
         {
+            if (NumberOfWords == 0)
+            {
+                Console.WriteLine("Keine Wörter gespeichert.\n");
+                return;
+            }
+
             DisplayAllWords();
+
             Console.WriteLine("Listen Abfrage - Richtung");
             Console.WriteLine("1. Deutsch -> Englisch");
             Console.WriteLine("2. Englisch -> Deutsch");
-            int direction = ReadInt("Auswahl: 1 für Deutsch, 2 für English", 1, 2);
+            int direction = ReadInt("Auswahl: 1 für Deutsch, 2 für Englisch", 1, 2);
 
-            bool found = false;
+            bool again;
 
-            for (int index = 0; index < NumberOfWords; index++)
+            do
             {
+                bool found = false;
+
                 switch (direction)
                 {
                     case 1:
+                    {
                         string searchDe = ReadText("Deutsches Suchwort");
+                        for (int index = 0; index < NumberOfWords; index++)
                         {
                             if (string.Equals(SavedWords[index, 0], searchDe, StringComparison.OrdinalIgnoreCase))
                             {
-                                Console.WriteLine($"Gefunden: {SavedWords[index, 0]} -> {SavedWords[index, 1]}"); found = true; break;
+                                Console.WriteLine($"Gefunden: {SavedWords[index, 0]} -> {SavedWords[index, 1]}");
+                                found = true;
+                                break;
                             }
                         }
+                        if (!found) Console.WriteLine("Kein Eintrag gefunden.");
+                        Console.WriteLine();
                         break;
+                    }
 
                     case 2:
+                    {
                         string searchEn = ReadText("Englisches Suchwort");
+                        for (int index = 0; index < NumberOfWords; index++)
                         {
                             if (string.Equals(SavedWords[index, 1], searchEn, StringComparison.OrdinalIgnoreCase))
                             {
-                                Console.WriteLine($"Gefunden: {SavedWords[index, 1]} -> {SavedWords[index, 0]}"); found = true; break;
+                                Console.WriteLine($"Gefunden: {SavedWords[index, 1]} -> {SavedWords[index, 0]}");
+                                found = true;
+                                break;
                             }
                         }
+                        if (!found) Console.WriteLine("Kein Eintrag gefunden.");
+                        Console.WriteLine();
                         break;
+                    }
                 }
-            }
-            if (!found) Console.WriteLine("Keine Eintrag gefunden.");
+
+                string againInput = ReadText("Noch ein Wort suchen? (j/n)");
+                again = againInput.Equals("j", StringComparison.OrdinalIgnoreCase);
+
+            } while (again);
+
             Console.WriteLine();
         }
 
@@ -108,19 +132,25 @@ namespace Method_Translator
 
         static void VocabularyTrainer()
         {
+            if (NumberOfWords == 0)
+            {
+                Console.WriteLine("Keine Wörter gespeichert.\n");
+                return;
+            }
+
             Console.WriteLine("Abfrage - Richtung");
             Console.WriteLine("1. Deutsch -> Englisch");
             Console.WriteLine("2. Englisch -> Deutsch");
             int direction = ReadInt("Auswahl", 1, 2);
             int quizzNumberOfWords = ReadInt("Wie viele Vokabeln wollen Sie abgefragt werden?");
 
-            int correct = 0;
-
             if (quizzNumberOfWords > NumberOfWords)
             {
-                Console.WriteLine("Fehler: Es gibt nicht so viele geschpeicherte Vokabeln!");
+                Console.WriteLine("Fehler: Es gibt nicht so viele gespeicherte Vokabeln!");
                 return;
             }
+
+            int correct = 0;
 
             for (int i = 0; i < quizzNumberOfWords; i++)
             {
@@ -129,7 +159,8 @@ namespace Method_Translator
                 switch (direction)
                 {
                     case 1:
-                        Console.Write($"{SavedWords[index, 0]} -->");
+                    {
+                        Console.Write($"{SavedWords[index, 0]} --> ");
                         string translateDe = ReadText("");
                         if (string.Equals(translateDe, SavedWords[index, 1], StringComparison.OrdinalIgnoreCase))
                         {
@@ -138,12 +169,14 @@ namespace Method_Translator
                         }
                         else
                         {
-                            Console.WriteLine($"Falsch! richtig war: {SavedWords[index, 1]}");
+                            Console.WriteLine($"Falsch! Richtig war: {SavedWords[index, 1]}");
                         }
                         break;
+                    }
 
                     case 2:
-                        Console.Write($"{SavedWords[index, 1]} -->");
+                    {
+                        Console.Write($"{SavedWords[index, 1]} --> ");
                         string translateEn = ReadText("");
                         if (string.Equals(translateEn, SavedWords[index, 0], StringComparison.OrdinalIgnoreCase))
                         {
@@ -152,14 +185,15 @@ namespace Method_Translator
                         }
                         else
                         {
-                            Console.WriteLine($"Falsch! richtig war: {SavedWords[index, 0]}");
+                            Console.WriteLine($"Falsch! Richtig war: {SavedWords[index, 0]}");
                         }
                         break;
+                    }
                 }
             }
+
             double percent = (double)correct / quizzNumberOfWords * 100;
-            Console.WriteLine($"Treffer: {correct} von {quizzNumberOfWords}, das sind {percent:F0}% insgesamt.");
-            Console.WriteLine();
+            Console.WriteLine($"Treffer: {correct} von {quizzNumberOfWords}, das sind {percent:F0}% insgesamt.\n");
         }
 
         // ----------- Helpers (nur Eingabe) -----------
@@ -195,7 +229,6 @@ namespace Method_Translator
                 Console.WriteLine("Ungültige Eingabe.");
             }
         }
-
 
         static string ReadText(string label)
         {
