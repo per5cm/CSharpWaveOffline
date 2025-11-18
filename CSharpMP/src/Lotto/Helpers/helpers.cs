@@ -5,18 +5,6 @@ namespace Lotto.Helpers
 {
     public static class Helpers
     {
-        static readonly CultureInfo De = new("de-DE");
-        // Console.OutputEncoding = System.Text.Encoding.UTF8;
-        // Console.WriteLine("=== Programmstart ===\n");
-
-        // Beispielaufrufe:
-        // int alter = ReadInt("Alter", 0, 120);
-        // double preis = ReadDouble("Preis", 0, 10000);
-        // string name = ReadText("Name");
-
-        // Console.WriteLine($"\nName: {name}, Alter: {alter}, Preis: {preis.ToString("N2", De)}");
-        // }
-
         public static int ReadInt(string label, int min = int.MinValue, int max = int.MaxValue)
         {
             while (true)
