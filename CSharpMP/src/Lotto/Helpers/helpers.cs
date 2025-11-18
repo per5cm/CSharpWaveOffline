@@ -14,7 +14,9 @@ namespace Lotto.Helpers
                 else
                     Console.Write($"{label} ({min}-{max}): ");
 
-                if (int.TryParse(Console.ReadLine(), out int n) && n >= min && n <= max)
+                string? input = Console.ReadLine();
+
+                if (int.TryParse(input, out int n) && n >= min && n <= max)
                     return n;
 
                 Console.WriteLine("Ungültige Eingabe.");
@@ -30,7 +32,9 @@ namespace Lotto.Helpers
                 else
                     Console.Write($"{label} ({min}-{max}): ");
 
-                if (double.TryParse(Console.ReadLine(), out double x) && x >= min && x <= max)
+                string? input = Console.ReadLine();
+
+                if (double.TryParse(input, out double x) && x >= min && x <= max)
                     return x;
 
                 Console.WriteLine("Ungültige Eingabe.");
