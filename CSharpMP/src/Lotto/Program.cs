@@ -21,7 +21,7 @@ namespace Lotto
                 Console.WriteLine("3 = Tippschein speichern");
                 Console.WriteLine("0 = Programm beenden\n");
 
-                int choice = ReadInt("Auswahl", 0, 3);
+                int choice = ReadInt("Auswahl: ", 0, 3);
 
                 switch (choice)
                 {
@@ -40,6 +40,7 @@ namespace Lotto
 
         private static void DrawNumber()
         {
+            string sentance = ReadText("Bitte gib einen Satz ein: ");
         }
 
         private static void SaveTicket()
