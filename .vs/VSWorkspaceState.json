@@ -1,6 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\CSharpMP",
+    "\\CSharpMP\\src",
+    "\\CSharpMP\\src\\Method_Translator"
   ],
+  "SelectedNode": "\\CSharpMP\\src\\Method_Translator\\Program.cs",
   "PreviewInSolutionExplorer": false
 }

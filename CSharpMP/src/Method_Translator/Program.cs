@@ -196,6 +196,8 @@ namespace Method_Translator
             Console.WriteLine($"Treffer: {correct} von {quizzNumberOfWords}, das sind {percent:F0}% insgesamt.\n");
         }
 
+        #region Helpers
+
         // ----------- Helpers (nur Eingabe) -----------
 
         static int ReadInt(string label, int min = int.MinValue, int max = int.MaxValue)
@@ -237,4 +239,5 @@ namespace Method_Translator
             return string.IsNullOrWhiteSpace(input) ? "" : input.Trim();
         }
     }
+    #endregion 
 }
