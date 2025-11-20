@@ -8,18 +8,18 @@ class Program
 
     static void Main()
     {
-        Console.WriteLine("If/Else-Übungen - Menü\n");
+        Console.WriteLine("If/Else - Übungen - Menü\n");
 
         while (true)
         {
-            Console.WriteLine("1) Durchschnittsverbrauch (l/100 km)");
-            Console.WriteLine("2) Kindergeld (Demo-Tabelle)");
-            Console.WriteLine("3) Bußgeld (Geschwindigkeits-Überschreitung - Demo)");
-            Console.WriteLine("4) Temperaturzustand Wasser (+ Fahrenheit)");
-            Console.WriteLine("5) BMI & Broca (Normal-/Idealgewicht)");
+            Console.WriteLine("1) Durchschnittsverbrauch (l /100 km).");
+            Console.WriteLine("2) Kindergeld (Demo - Tabelle).");
+            Console.WriteLine("3) Bußgeld, Geschwindigkeits - Überschreitung.)");
+            Console.WriteLine("4) Temperaturzustand Wasser und in Fahrenheit.");
+            Console.WriteLine("5) BMI & Broca, Normal - Idealgewicht.");
             Console.WriteLine("0) Ende");
 
-            int choice = ReadInt("Auswahl", 0, 5);
+            int choice = ReadInt("Auswahl: ", 0, 5);
             Console.WriteLine();
 
             if (choice == 0)

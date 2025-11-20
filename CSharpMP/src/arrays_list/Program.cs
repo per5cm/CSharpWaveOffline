@@ -5,8 +5,8 @@ class Program
     static void Main(string[] args)
     {
         // Aktiviere genau das, was du testen willst
-        //array_1();
-        //array_2();
+        array_1();
+        array_2();
         array_3();
 
     }
