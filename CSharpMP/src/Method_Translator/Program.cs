@@ -46,6 +46,7 @@ namespace Method_Translator
 
             string wordDE = ReadText("Deutsches Wort");
             string wordEN = ReadText("Englisches Wort");
+            Console.WriteLine();
             
 
             SavedWords[NumberOfWords, 0] = wordDE;
@@ -54,10 +55,16 @@ namespace Method_Translator
 
             Console.WriteLine("Wortpaar gespeichert.\n");
 
-            string confirm = ReadText("Weiteres Wort erfassen? (j/n)");
-            if (confirm.Equals("j", StringComparison.OrdinalIgnoreCase))
+
+            while (true)
             {
-                Console.WriteLine("ok! Weiteres Wort erfassen!")
+                string confirm = ReadText("Weiteres Wort erfassen? (j/n)");
+                if (confirm.Equals("j", StringComparison.OrdinalIgnoreCase))
+                {
+                    Console.WriteLine("ok! Weiteres Wort erfassen!");
+                    
+                }
+                else; break; 
             }
         }
 
