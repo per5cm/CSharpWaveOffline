@@ -46,12 +46,19 @@ namespace Method_Translator
 
             string wordDE = ReadText("Deutsches Wort");
             string wordEN = ReadText("Englisches Wort");
+            
 
             SavedWords[NumberOfWords, 0] = wordDE;
             SavedWords[NumberOfWords, 1] = wordEN;
             NumberOfWords++;
 
             Console.WriteLine("Wortpaar gespeichert.\n");
+
+            string confirm = ReadText("Weiteres Wort erfassen? (j/n)");
+            if (confirm.Equals("j", StringComparison.OrdinalIgnoreCase))
+            {
+                Console.WriteLine("ok! Weiteres Wort erfassen!")
+            }
         }
 
         static void QueryWords()
