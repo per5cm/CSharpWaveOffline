@@ -61,10 +61,9 @@ namespace Method_Translator
                 string confirm = ReadText("Weiteres Wort erfassen? (j/n)");
                 if (confirm.Equals("j", StringComparison.OrdinalIgnoreCase))
                 {
-                    Console.WriteLine("ok! Weiteres Wort erfassen!");
-                    
+                    Console.WriteLine("ok! Weiteres Wort erfassen!\n");
+                    return;
                 }
-                else; break; 
             }
         }
 
