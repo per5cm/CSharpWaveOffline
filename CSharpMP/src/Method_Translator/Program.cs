@@ -33,7 +33,7 @@ namespace Method_Translator
                 
                 switch (choice)
                 {
-                    case 0: return;
+                    case 0: Console.WriteLine("Auf Wiedersehn!"); return;
                     case 1: CaptureWords(); break;
                     case 2: QueryWords(); break;
                     case 3: DisplayAllWords(); break;
