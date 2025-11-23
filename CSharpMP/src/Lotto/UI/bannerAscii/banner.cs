@@ -10,14 +10,17 @@ namespace Lotto.UI.bannerAscii
         {
             Console.ForegroundColor = ConsoleColor.Yellow; // change color here for example Green
 
-            string banner = @"
- _      ____  _______ _______  ____  
-| |    / __ \|__   __|__   __|/ __ \ 
-| |   | |  | |  | |     | |  | |  | |
-| |   | |  | |  | |     | |  | |  | |
-| |___| |__| |  | |     | |  | |__| |
-|______\____/   |_|     |_|   \____/ 
-";
+            string banner =
+                @"
+                 _      ____  _______ _______  ____  
+                | |    / __ \|__   __|__   __|/ __ \ 
+                | |   | |  | |  | |     | |  | |  | |
+                | |   | |  | |  | |     | |  | |  | |
+                | |___| |__| |  | |     | |  | |__| |
+                |______\____/   |_|     |_|   \____/ 
+
+                Willkommen zur GEWINNER LOTTO!
+                ";
 
             foreach (char c in banner)
             {
@@ -26,7 +29,6 @@ namespace Lotto.UI.bannerAscii
             }
 
             Console.ResetColor();
-            Console.WriteLine("\n\n🎲 Willkommen zur GEWINNER LOTTO! 🎲\n");
         }
     }
 }

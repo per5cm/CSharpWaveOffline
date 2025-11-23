@@ -14,13 +14,23 @@ namespace Lotto
 
         internal static void ShowMenu()
         {
+            string menu = 
+                @"
+                Lotto Programm
+
+                ======================
+
+                1: Tippschein ausfüllen
+                2: Lottozahlen ziehen
+                3: Tippschein speichern
+                0: Programm beenden
+
+                ======================
+                ";
+            
             while (true)
             {
-                Console.WriteLine("1 = Tippschein ausfüllen");
-                Console.WriteLine("2 = Lottozahlen ziehen");
-                Console.WriteLine("3 = Tippschein speichern");
-                Console.WriteLine("0 = Programm beenden\n");
-
+                Console.WriteLine(menu);
                 int choice = ReadInt("Auswahl: ", 0, 3);
 
                 switch (choice)
