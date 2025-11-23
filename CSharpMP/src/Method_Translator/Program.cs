@@ -10,21 +10,27 @@ namespace Method_Translator
 
         static void Main()
         {
-            Console.WriteLine("=== Programmstart ===\n");
             ShowMenu();
         }
 
         static void ShowMenu()
         {
+            string menu =
+                    @"
+                    --- Programmstart Menu ---
+
+                    1: Erfassen Wörter
+                    2: Abfrage Wörter
+                    3: Alle Wörter ausgeben
+                    4: Vokabeltrainer
+                    0: Programmende
+                    ";
+
             while (true)
             {
-                Console.WriteLine("1 = Erfassen Wörter");
-                Console.WriteLine("2 = Abfrage Wörter");
-                Console.WriteLine("3 = Alle Wörter ausgeben");
-                Console.WriteLine("4 = Vokabeltrainer");
-                Console.WriteLine("0 = Programmende");
+                Console.WriteLine(menu);
                 int choice = ReadInt("Auswahl", 0, 5);
-
+                
                 switch (choice)
                 {
                     case 0: return;
@@ -58,9 +64,7 @@ namespace Method_Translator
                 Console.WriteLine("Wortpaar gespeichert.\n");
 
 
-
-
-                string confirm = ReadText("Weiteres Wort erfassen? (j/n)");
+                string confirm = ReadText("Weiteres Wort erfassen? j/n ");
                 if (confirm.Equals("j", StringComparison.OrdinalIgnoreCase))
                 {
                     Console.WriteLine();
@@ -132,7 +136,7 @@ namespace Method_Translator
                     }
                 }
 
-                string againInput = ReadText("Noch ein Wort suchen? (j/n)");
+                string againInput = ReadText("Noch ein Wort suchen? j/n ");
                 again = againInput.Equals("j", StringComparison.OrdinalIgnoreCase);
 
             } while (again);
