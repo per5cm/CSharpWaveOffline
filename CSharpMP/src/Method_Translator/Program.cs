@@ -25,17 +25,20 @@ namespace Method_Translator
                 "0: Programmende",
             };
 
-            Console.WriteLine("=== Vokabeltrainer Programm ===");
-            foreach (var option in menuOptions)
-                Console.WriteLine(option);
-
             while (true)
             {
+                Console.WriteLine("=== Vokabeltrainer Programm ===");
+                foreach (var option in menuOptions)
+                    Console.WriteLine(option);
+
                 int choice = ReadInt("Auswahl", 0, 5);
                 
                 switch (choice)
                 {
-                    case 0: Console.WriteLine("Auf Wiedersehn!"); return;
+                    case 0: 
+                        Console.WriteLine("Auf Wiedersehn!"); 
+                        return;
+
                     case 1: CaptureWords(); break;
                     case 2: QueryWords(); break;
                     case 3: DisplayAllWords(); break;
@@ -92,12 +95,15 @@ namespace Method_Translator
 
             DisplayAllWords();
 
-            string menu ="""
-                    --- Listen Abfrage Menu ---
-                    Suchen Sie ein Wort in der Liste.
-                    1: Deutsch -> Englisch
-                    2: Englisch -> Deutsch  
-                    """;
+            string menu = """
+                
+                 
+                Suchen Sie ein Wort in der Liste.
+                
+                1: Deutsch -> Englisch
+                2: Englisch -> Deutsch 
+                
+                """;
 
             Console.WriteLine(menu);
             int direction = ReadInt("Auswahl: 1 für Deutsch, 2 für Englisch", 1, 2);
@@ -168,16 +174,17 @@ namespace Method_Translator
         {
             if (NumberOfWords == 0)
             {
-                Console.WriteLine("Keine Wörter gespeichert.\n");
+                Console.WriteLine("Keine Wörter gespeichert.");
                 return;
             }
 
             string menu ="""
-                    --- Vokabeltrainer Menu ---
-                    Sie werden zufällig abgefragt.
+                                
+                Sie werden zufällig abgefragt. 
                     1: Deutsch -> Englisch
-                    2: Englisch -> Deutsch
-                    """;
+                    2: Englisch -> Deutsch 
+                
+                """;
 
             Console.WriteLine(menu);
             int direction = ReadInt("Auswahl", 1, 2);
@@ -234,7 +241,8 @@ namespace Method_Translator
             }
 
             double percent = (double)correct / quizzNumberOfWords * 100;
-            Console.WriteLine($"Treffer: {correct} von {quizzNumberOfWords}, das sind {percent:F0}% insgesamt.\n");
+            Console.WriteLine($"Treffer: {correct} von {quizzNumberOfWords}, das sind {percent:F0}% insgesamt.");
+            Console.WriteLine();
         }
 
         #region Helpers
