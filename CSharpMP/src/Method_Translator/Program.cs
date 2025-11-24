@@ -4,7 +4,8 @@ namespace Method_Translator
 {
     internal static class Program
     {
-        static string[,] SavedWords = new string[100, 2];
+        const int MaxWords = 100;
+        static string[,] SavedWords = new string[MaxWords, 2];
         static int NumberOfWords = 0;
         static readonly Random Rng = new();
 
@@ -15,20 +16,21 @@ namespace Method_Translator
 
         static void ShowMenu()
         {
-            string menu =
-                    @"
-                    --- Programmstart Menu ---
+            var menuOptions = new List<string> 
+            {
+                "1: Erfassen Wörter",
+                "2: Abfrage Wörter",
+                "3: Alle Wörter ausgeben",
+                "4: Vokabeltrainer",
+                "0: Programmende",
+            };
 
-                    1: Erfassen Wörter
-                    2: Abfrage Wörter
-                    3: Alle Wörter ausgeben
-                    4: Vokabeltrainer
-                    0: Programmende
-                    ";
+            Console.WriteLine("=== Vokabeltrainer Programm ===");
+            foreach (var option in menuOptions)
+                Console.WriteLine(option);
 
             while (true)
             {
-                Console.WriteLine(menu);
                 int choice = ReadInt("Auswahl", 0, 5);
                 
                 switch (choice)
@@ -44,7 +46,7 @@ namespace Method_Translator
 
         static void CaptureWords()
         {
-            if (NumberOfWords >= SavedWords.GetLength(0))
+            if (NumberOfWords >= MaxWords)
             {
                 Console.WriteLine("Speicher ist voll - max. 100 Wörter.");
                 return;
@@ -90,13 +92,12 @@ namespace Method_Translator
 
             DisplayAllWords();
 
-            string menu =
-                    @"
+            string menu ="""
                     --- Listen Abfrage Menu ---
                     Suchen Sie ein Wort in der Liste.
                     1: Deutsch -> Englisch
                     2: Englisch -> Deutsch  
-                    ";
+                    """;
 
             Console.WriteLine(menu);
             int direction = ReadInt("Auswahl: 1 für Deutsch, 2 für Englisch", 1, 2);
@@ -171,13 +172,12 @@ namespace Method_Translator
                 return;
             }
 
-            string menu =
-                    @"
+            string menu ="""
                     --- Vokabeltrainer Menu ---
                     Sie werden zufällig abgefragt.
                     1: Deutsch -> Englisch
                     2: Englisch -> Deutsch
-                    ";
+                    """;
 
             Console.WriteLine(menu);
             int direction = ReadInt("Auswahl", 1, 2);
