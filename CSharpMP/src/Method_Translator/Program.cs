@@ -31,7 +31,7 @@ namespace Method_Translator
                 foreach (var option in menuOptions)
                     Console.WriteLine(option);
 
-                int choice = ReadInt("Auswahl", 0, 5);
+                int choice = ReadInt("Auswahl: ", 0, 5);
                 
                 switch (choice)
                 {
@@ -57,8 +57,8 @@ namespace Method_Translator
 
             while (true)
             {
-                string wordDE = ReadText("Deutsches Wort");
-                string wordEN = ReadText("Englisches Wort");
+                string wordDE = ReadText("Deutsches Wort: ");
+                string wordEN = ReadText("Englisches Wort: ");
                 Console.WriteLine();
 
 
@@ -118,7 +118,7 @@ namespace Method_Translator
                 {
                     case 1:
                     {
-                        string searchDe = ReadText("Deutsches Suchwort");
+                        string searchDe = ReadText("Deutsches Suchwort: ");
                         for (int index = 0; index < NumberOfWords; index++)
                         {
                             if (string.Equals(SavedWords[index, 0], searchDe, StringComparison.OrdinalIgnoreCase))
@@ -135,7 +135,7 @@ namespace Method_Translator
 
                     case 2:
                     {
-                        string searchEn = ReadText("Englisches Suchwort");
+                        string searchEn = ReadText("Englisches Suchwort: ");
                         for (int index = 0; index < NumberOfWords; index++)
                         {
                             if (string.Equals(SavedWords[index, 1], searchEn, StringComparison.OrdinalIgnoreCase))
@@ -187,8 +187,8 @@ namespace Method_Translator
                 """;
 
             Console.WriteLine(menu);
-            int direction = ReadInt("Auswahl", 1, 2);
-            int quizzNumberOfWords = ReadInt("Wie viele Vokabeln wollen Sie abgefragt werden?");
+            int direction = ReadInt("Auswahl: ", 1, 2);
+            int quizzNumberOfWords = ReadInt("Wie viele Vokabeln wollen Sie abgefragt werden?: ");
 
             if (quizzNumberOfWords > NumberOfWords)
             {
@@ -207,7 +207,7 @@ namespace Method_Translator
                     case 1:
                     {
                         Console.Write($"{SavedWords[index, 0]} --> ");
-                        string translateDe = ReadText("");
+                        string translateDe = ReadText(">");
                         if (string.Equals(translateDe, SavedWords[index, 1], StringComparison.OrdinalIgnoreCase))
                         {
                             Console.WriteLine("ok!");
@@ -224,7 +224,7 @@ namespace Method_Translator
                     case 2:
                     {
                         Console.Write($"{SavedWords[index, 1]} --> ");
-                        string translateEn = ReadText("");
+                        string translateEn = ReadText(">");
                         if (string.Equals(translateEn, SavedWords[index, 0], StringComparison.OrdinalIgnoreCase))
                         {
                             Console.WriteLine("ok!");
