@@ -2,11 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\src",
-    "\\src\\boilerPlates",
-    "\\src\\Lotto",
-    "\\src\\Method_Array",
-    "\\src\\Method_Translator"
+    "\\src\\Method_Translator",
+    "\\src\\OOP"
   ],
-  "SelectedNode": "\\src\\Method_Array\\Program.cs",
+  "SelectedNode": "\\src\\OOP\\OOP.sln",
   "PreviewInSolutionExplorer": false
 }
