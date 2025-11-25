@@ -58,33 +58,73 @@ namespace Method_Array
         static void ShowAll()
         {
             Console.WriteLine();
-            Console.WriteLine("PV-Anlage PV1    PV2    PV3    PV4    PV5");
+            Console.WriteLine("PV-Anlage: PV1 | PV2 | PV3 | PV4 | PV5");
             Console.WriteLine("Quartal");
 
-            for (int i = 0; i < QuartalDevices; i++)
+            for (int quartal = 0; quartal < QuartalDevices; quartal++)
             {
-                Console.Write($"  {i + 1}    ");
-                for (int j = 0; j < MaxPhotoDevices; j++)
+                Console.Write($"    {quartal + 1}   ");
+
+                for (int pv = 0; pv < MaxPhotoDevices; pv++)
                 {
-                    Console.Write($"{PvData[i, j],6}");
+                    Console.Write($"{PvData[quartal, pv],6}");
                 }
                 Console.WriteLine();
             }
+            Console.WriteLine();
         }
 
         static void CalculateAll()
         {
-            Console.WriteLine("Alle Geräte berechnen");
+            int sum = 0;
+
+            for (int quartal = 0; quartal < QuartalDevices; quartal++)
+            {
+                for (int pv = 0; pv < MaxPhotoDevices; pv++)
+                {
+                    sum += PvData[quartal, pv];
+                }
+            }
+
+            Console.WriteLine();
+            Console.WriteLine($"aller PV-Anlagen in KW: {sum}");
+            Console.WriteLine();
         }
 
         static void CalculateQuartal()
         {
-            Console.WriteLine("Quartal berechnen");
+
+            for (int quartal = 0; quartal < QuartalDevices; quartal++)
+            {
+                int sum = 0;
+
+                for (int pv = 0; pv < QuartalDevices; pv++)
+                {
+                    sum += PvData[quartal, pv];
+                }
+
+                Console.WriteLine();
+                Console.WriteLine($"Quartal Summe: {quartal + 1}: {sum}.");
+                Console.WriteLine();
+            }
         }
 
         static void CalculatePVSystem()
         {
-            Console.WriteLine("PV-Anlage berechnen");
+
+            int pvIndex = ReadInt("Geben Sie die PV-Anlage ein: ", 1, MaxPhotoDevices) - 1;
+            // int index = pvIndex - 1; // Alternative
+
+            int sum = 0;
+
+            for (int quartal = 0; quartal < QuartalDevices; quartal++)
+            {
+                sum += PvData[quartal, pvIndex];
+            }
+
+            Console.WriteLine();
+            Console.WriteLine($"Von der Anlage: {pvIndex}, wurde insgesamt: {sum} erwirtschaften.");
+            Console.WriteLine();
         }
 
         #region Helpers
