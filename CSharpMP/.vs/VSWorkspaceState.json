@@ -1,6 +1,12 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\src",
+    "\\src\\boilerPlates",
+    "\\src\\Lotto",
+    "\\src\\Method_Array",
+    "\\src\\Method_Translator"
   ],
+  "SelectedNode": "\\src\\Method_Array\\Program.cs",
   "PreviewInSolutionExplorer": false
 }

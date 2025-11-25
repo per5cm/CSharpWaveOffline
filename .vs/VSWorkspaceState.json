@@ -2,8 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\CSharpMP",
-    "\\CSharpMP\\src",
-    "\\CSharpMP\\src\\Method_Translator"
+    "\\CSharpMP\\src"
   ],
+  "SelectedNode": "\\CSharpMP\\src\\Method_Translator",
   "PreviewInSolutionExplorer": false
 }

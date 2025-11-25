@@ -1,0 +1,15 @@
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\Method_Array\bin\Debug\net10.0\Method_Array.exe
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\Method_Array\bin\Debug\net10.0\Method_Array.deps.json
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\Method_Array\bin\Debug\net10.0\Method_Array.runtimeconfig.json
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\Method_Array\bin\Debug\net10.0\Method_Array.dll
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\Method_Array\bin\Debug\net10.0\Method_Array.pdb
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\Method_Array\obj\Debug\net10.0\Method_Array.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\Method_Array\obj\Debug\net10.0\Method_Array.AssemblyInfoInputs.cache
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\Method_Array\obj\Debug\net10.0\Method_Array.AssemblyInfo.cs
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\Method_Array\obj\Debug\net10.0\Method_Array.csproj.CoreCompileInputs.cache
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\Method_Array\obj\Debug\net10.0\Method_Array.sourcelink.json
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\Method_Array\obj\Debug\net10.0\Method_Array.dll
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\Method_Array\obj\Debug\net10.0\refint\Method_Array.dll
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\Method_Array\obj\Debug\net10.0\Method_Array.pdb
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\Method_Array\obj\Debug\net10.0\Method_Array.genruntimeconfig.cache
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharpMP\src\Method_Array\obj\Debug\net10.0\ref\Method_Array.dll
