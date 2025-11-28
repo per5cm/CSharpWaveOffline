@@ -19,7 +19,7 @@ namespace OOP.Einkaufsliste
 
         internal double Gesamtpreis()
         {           
-            Console.WriteLine($"{Name} - {Preis} EUR pro Stück. Gesamtpreis: {Preis * Anzahl} EUR.");
+            Console.WriteLine($"{Name} - {Preis:F2} EUR pro Stück. Gesamtpreis: {(Preis * Anzahl):F2} EUR.");
             return Preis * Anzahl;
         }
     }

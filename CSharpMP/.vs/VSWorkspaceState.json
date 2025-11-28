@@ -2,10 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\src",
-    "\\src\\Method_Array",
-    "\\src\\Method_Translator",
-    "\\src\\OOP"
+    "\\src\\OOP",
+    "\\src\\OOP\\Benutzer",
+    "\\src\\OOP\\Einkaufsliste",
+    "\\src\\OOP\\Tier"
   ],
-  "SelectedNode": "\\src\\Method_Array\\Program.cs",
+  "SelectedNode": "\\src\\OOP\\Program.cs",
   "PreviewInSolutionExplorer": false
 }
