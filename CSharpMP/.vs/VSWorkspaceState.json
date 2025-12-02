@@ -1,12 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\src",
-    "\\src\\OOP",
-    "\\src\\OOP\\Benutzer",
-    "\\src\\OOP\\Einkaufsliste",
-    "\\src\\OOP\\Tier"
+    "\\src"
   ],
-  "SelectedNode": "\\src\\OOP\\Program.cs",
+  "SelectedNode": "\\src\\OOP",
   "PreviewInSolutionExplorer": false
 }
