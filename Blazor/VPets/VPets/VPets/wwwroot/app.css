@@ -68,3 +68,78 @@ h1:focus {
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
     text-align: start;
 }
+
+/* ============================
+   THEME OVERRIDES
+   ============================ */
+
+/* Light Mode Defaults */
+.light-mode {
+    background-color: #c8c6c6;
+    color: #041426;
+}
+
+/* Dark Mode Defaults */
+.dark-mode {
+    background-color: #081624;
+    color: #a3c4e5;
+}
+
+    /* Ensure full-page background applies */
+    .light-mode, .dark-mode,
+    .light-mode .page, .dark-mode .page {
+        min-height: 100vh;
+    }
+
+        /* Sidebar reacts to theme */
+        .light-mode .sidebar {
+            background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
+        }
+
+        .dark-mode .sidebar {
+            background-image: linear-gradient(180deg, #050710 0%, #0f0f1a 70%);
+        }
+
+        /* Top row reacts to theme */
+        .light-mode .top-row {
+            background-color: rgb(90, 182, 243);
+            border-bottom: 1px solid #d6d5d5;
+        }
+
+        .dark-mode .top-row {
+            background-color: #0d2233;
+            border-bottom: 1px solid #1a2b3c;
+        }
+
+        /* Links */
+        .light-mode a,
+        .light-mode .btn-link {
+            color: #006bb7;
+        }
+
+        .dark-mode a,
+        .dark-mode .btn-link {
+            color: #86c5ff;
+        }
+
+        /* Buttons */
+        .dark-mode button {
+            background-color: #1c2b3a;
+            color: #d7e8ff;
+        }
+
+        .light-mode button {
+            background-color: #e1e7ef;
+            color: #041426;
+        }
+        .light-mode, .dark-mode {
+            transition: all 0.25s ease-in-out;
+        }
+
+        .dark-mode .sidebar,
+        .light-mode .sidebar,
+        .dark-mode .top-row,
+        .light-mode .top-row {
+            transition: all 0.25s ease-in-out;
+        }
+

@@ -5,35 +5,40 @@
 @using Microsoft.EntityFrameworkCore
 @inject VPetsContext Db
 
-<h3>Virtuelles Haustier anlegen</h3>
+@if (petBeingEdited == null)
+{
+    <h2>Willkommen zu VPets!</h2>
+    <p>Erstellen und verwalten Sie Ihre virtuellen Haustiere.</p>
 
-<div>
-    <label>Name:</label>
-    <input @bind="newPet.Name" />
-</div>
-<div>
-    <label>Tierart:</label>
-    <input @bind="newPet.Species" />
-</div>
-<div>
-    <label>Alter:</label>
-    <input type="number" @bind="newPet.Age" />
-</div>
+    <h3>Virtuelles Haustier anlegen</h3>
 
-<button type="button" @onclick="SavePet">Speichern</button>
+    <div>
+        <label>Name:</label>
+        <input @bind="newPet.Name" />
+    </div>
+    <div>
+        <label>Tierart:</label>
+        <input @bind="newPet.Species" />
+    </div>
+    <div>
+        <label>Alter:</label>
+        <input type="number" @bind="newPet.Age" />
+    </div>
 
-<h3>Liste der Haustiere (@pets.Count)</h3>
-<ul>
-    @foreach (var pet in pets)
-    {
-        <li>
-            @pet.Name (@pet.Species, @pet.Age Jahre alt)
-            <button @onclick="() => EditPet(pet.Id)">✏️</button>
-            <button @onclick="() => DeletePet(pet.Id)">🗑️</button>
-        </li>
-    }
-</ul>
+    <button type="button" @onclick="SavePet">Speichern</button>
 
+    <h3>Liste der Haustiere (@pets.Count)</h3>
+    <ul>
+        @foreach (var pet in pets)
+        {
+            <li>
+                @pet.Name (@pet.Species, @pet.Age Jahre alt)
+                <button @onclick="() => EditPet(pet.Id)">✏️</button>
+                <button @onclick="() => DeletePet(pet.Id)">🗑️</button>
+            </li>
+        }
+    </ul>
+}
 @if (petBeingEdited != null)
 {
     <h3>Haustier bearbeiten</h3>
@@ -68,11 +73,22 @@
     {
         try
         {
-            Db.Pets.Add(newPet);
-            await Db.SaveChangesAsync();
+            if (petBeingEdited == null)
+            {
+                Db.Pets.Add(newPet);
+            }
+            else
+            {
+                // Update existing pet
+                petBeingEdited.Name = newPet.Name;
+                petBeingEdited.Species = newPet.Species;
+                petBeingEdited.Age = newPet.Age;
+            }
 
+            await Db.SaveChangesAsync();
             pets = await Db.Pets.ToListAsync();
             newPet = new Pet();
+            petBeingEdited = null; // exit edit mode
         }
         catch (Exception ex)
         {
@@ -108,7 +124,7 @@
         petBeingEdited = null; // exit edit mode
     }
 
-    async Task CancelEdit()
+    void CancelEdit()
     {
         newPet = new Pet();
         petBeingEdited = null; // exit edit mode

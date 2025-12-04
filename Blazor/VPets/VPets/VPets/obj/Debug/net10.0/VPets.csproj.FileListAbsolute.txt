@@ -236,4 +236,4 @@ C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets\obj\De
 C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets\obj\Debug\net10.0\VPets.pdb
 C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets\obj\Debug\net10.0\VPets.genruntimeconfig.cache
 C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets\obj\Debug\net10.0\ref\VPets.dll
-C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets\obj\Debug\net10.0\compressed\v79kp9wp5n-{0}-b70hlt18iu-b70hlt18iu.gz
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets\obj\Debug\net10.0\compressed\v79kp9wp5n-{0}-k4k73pfxix-k4k73pfxix.gz

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VPets")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f38248849edaaac988a7bf5e75fbab75d1901cad")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f51bcea96ebcc07443a4988a27529c0c0b556f46")]
 [assembly: System.Reflection.AssemblyProductAttribute("VPets")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VPets")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
