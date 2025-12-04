@@ -1,0 +1,57 @@
+﻿@page "/pets"
+@rendermode InteractiveServer
+@using VPets.Data
+@using VPets.Models
+@using Microsoft.EntityFrameworkCore
+@inject VPetsContext Db
+
+<h3>Virtuelles Haustier anlegen</h3>
+
+<div>
+    <label>Name:</label>
+    <input @bind="newPet.Name" />
+</div>
+<div>
+    <label>Tierart:</label>
+    <input @bind="newPet.Species" />
+</div>
+<div>
+    <label>Alter:</label>
+    <input type="number" @bind="newPet.Age" />
+</div>
+
+<button type="button" @onclick="SavePet">Speichern</button>
+
+<h3>Liste der Haustiere (@pets.Count)</h3>
+<ul>
+    @foreach (var pet in pets)
+    {
+        <li>@pet.Name (@pet.Species, @pet.Age Jahre alt)</li>
+    }
+</ul>
+
+@code {
+    Pet newPet = new();
+    List<Pet> pets = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        pets = await Db.Pets.ToListAsync();
+    }
+
+    async Task SavePet()
+    {
+        try
+        {
+            Db.Pets.Add(newPet);
+            await Db.SaveChangesAsync();
+
+            pets = await Db.Pets.ToListAsync();   // reload list
+            newPet = new Pet();                   // clear form
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex); // check Output window in VS
+        }
+    }
+}

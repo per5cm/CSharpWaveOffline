@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "kD8IFEUEots=",
+  "dgSpecHash": "2DaqYfWHOVg=",
   "success": true,
   "projectFilePath": "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\Blazor\\VPets\\VPets\\VPets\\VPets.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Eric\\.nuget\\packages\\blazored.localstorage\\4.5.0\\blazored.localstorage.4.5.0.nupkg.sha512",
     "C:\\Users\\Eric\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Eric\\.nuget\\packages\\microsoft.aspnetcore.app.internal.assets\\10.0.0\\microsoft.aspnetcore.app.internal.assets.10.0.0.nupkg.sha512",
     "C:\\Users\\Eric\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\10.0.0\\microsoft.aspnetcore.components.webassembly.10.0.0.nupkg.sha512",

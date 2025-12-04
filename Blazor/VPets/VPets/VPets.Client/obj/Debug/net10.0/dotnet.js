@@ -5,7 +5,7 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
   "mainAssemblyName": "VPets.Client",
   "applicationEnvironment": "Development",
   "resources": {
-    "hash": "sha256-XFdo/Xn8jQZnL2BWeVGfgX+KMt9rRQbiD73qNDykQYc=",
+    "hash": "sha256-GZwq7cPebSf+IZGJOHzxkHlb/yhH1o9PNABUqaREs0I=",
     "jsModuleNative": [
       {
         "name": "dotnet.native.xanz2e7ksm.js"
@@ -52,6 +52,11 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
       }
     ],
     "assembly": [
+      {
+        "virtualPath": "Blazored.LocalStorage.wasm",
+        "name": "Blazored.LocalStorage.12n6dz54qr.wasm",
+        "integrity": "sha256-OaMAAd5n7ORfyur5e3QIyEVKJ76MKIvwbg7/icnnYcU="
+      },
       {
         "virtualPath": "Humanizer.wasm",
         "name": "Humanizer.oqup3v7t3k.wasm",
@@ -1249,15 +1254,15 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
       },
       {
         "virtualPath": "VPets.Client.wasm",
-        "name": "VPets.Client.lllzsjxvpo.wasm",
-        "integrity": "sha256-GfDEdiDUAOJ/LXtjMTbtZ/xb9VDMePY0u5rNlCuRZsk="
+        "name": "VPets.Client.muaijr65dj.wasm",
+        "integrity": "sha256-khnCO1VV+obVA0BJ00iIlRHBg4finHBYz6Xv2pzFvbE="
       }
     ],
     "pdb": [
       {
         "virtualPath": "VPets.Client.pdb",
-        "name": "VPets.Client.lf0f592hgh.pdb",
-        "integrity": "sha256-DwfhHs8YNiv4YN42d4SQIB8ZLDiwsFQC5aesDdqw3Rg="
+        "name": "VPets.Client.aqtwrkd9a7.pdb",
+        "integrity": "sha256-fsbFavkiHuaBaydfBRRGJ6LEjbuWKjoQt+Z+F2u8qlo="
       }
     ],
     "satelliteResources": {

@@ -1,4 +1,5 @@
 C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client\bin\Debug\net10.0\VPets.Client.runtimeconfig.json
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client\bin\Debug\net10.0\wwwroot\_framework\Blazored.LocalStorage.12n6dz54qr.wasm
 C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client\bin\Debug\net10.0\wwwroot\_framework\Humanizer.oqup3v7t3k.wasm
 C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client\bin\Debug\net10.0\wwwroot\_framework\Microsoft.AspNetCore.Authorization.f7yamg8acn.wasm
 C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client\bin\Debug\net10.0\wwwroot\_framework\Microsoft.AspNetCore.Components.Forms.au92kshad9.wasm
@@ -237,8 +238,8 @@ C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client
 C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client\bin\Debug\net10.0\wwwroot\_framework\System.Xml.XPath.mto1j3qx1a.wasm
 C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client\bin\Debug\net10.0\wwwroot\_framework\System.Xml.XmlDocument.kp4g8oyokz.wasm
 C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client\bin\Debug\net10.0\wwwroot\_framework\System.Xml.XmlSerializer.1mt75y9wos.wasm
-C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client\bin\Debug\net10.0\wwwroot\_framework\VPets.Client.lf0f592hgh.pdb
-C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client\bin\Debug\net10.0\wwwroot\_framework\VPets.Client.lllzsjxvpo.wasm
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client\bin\Debug\net10.0\wwwroot\_framework\VPets.Client.aqtwrkd9a7.pdb
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client\bin\Debug\net10.0\wwwroot\_framework\VPets.Client.muaijr65dj.wasm
 C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client\bin\Debug\net10.0\wwwroot\_framework\WindowsBase.8yv9o2iuhl.wasm
 C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client\bin\Debug\net10.0\wwwroot\_framework\blazor.webassembly.js
 C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client\bin\Debug\net10.0\wwwroot\_framework\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.xahtunrvma.wasm
@@ -426,7 +427,7 @@ C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client
 C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client\bin\Debug\net10.0\wwwroot\_framework\dotnet.runtime.o0qy896u8v.js.gz
 C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client\bin\Debug\net10.0\wwwroot\_framework\System.Runtime.Loader.3t71kb21wu.wasm.gz
 C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client\bin\Debug\net10.0\wwwroot\_framework\icudt_EFIGS.tptq2av103.dat.gz
-C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client\bin\Debug\net10.0\wwwroot\_framework\VPets.Client.lllzsjxvpo.wasm.gz
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client\bin\Debug\net10.0\wwwroot\_framework\VPets.Client.muaijr65dj.wasm.gz
 C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client\bin\Debug\net10.0\wwwroot\_framework\ru\Microsoft.CodeAnalysis.CSharp.resources.u5qr7p1vic.wasm.gz
 C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client\bin\Debug\net10.0\wwwroot\_framework\Microsoft.Extensions.FileSystemGlobbing.4cqycihgg0.wasm.gz
 C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client\bin\Debug\net10.0\wwwroot\_framework\dotnet.js.gz
@@ -524,6 +525,7 @@ C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client
 C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client\bin\Debug\net10.0\wwwroot\_framework\System.Net.Security.7zwmva046j.wasm.gz
 C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client\bin\Debug\net10.0\wwwroot\_framework\pl\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.gany1xipf6.wasm.gz
 C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client\bin\Debug\net10.0\wwwroot\_framework\SQLitePCLRaw.batteries_v2.vh9uet5yp4.wasm.gz
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client\bin\Debug\net10.0\wwwroot\_framework\Blazored.LocalStorage.12n6dz54qr.wasm.gz
 C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client\bin\Debug\net10.0\wwwroot\_framework\System.IO.FileSystem.AccessControl.olg38ln9cn.wasm.gz
 C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client\bin\Debug\net10.0\wwwroot\_framework\System.Threading.AccessControl.m54ktoxm2s.wasm.gz
 C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client\bin\Debug\net10.0\wwwroot\_framework\System.Security.n9s9f533o4.wasm.gz
@@ -548,7 +550,7 @@ C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client
 C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client\bin\Debug\net10.0\wwwroot\_framework\System.Reflection.Metadata.4temtjmiid.wasm.gz
 C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client\bin\Debug\net10.0\wwwroot\_framework\es\Microsoft.CodeAnalysis.resources.ec0xfu5e6x.wasm.gz
 C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client\bin\Debug\net10.0\wwwroot\_framework\Microsoft.Build.Tasks.Core.yht191i7oz.wasm.gz
-C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client\bin\Debug\net10.0\wwwroot\_framework\VPets.Client.lf0f592hgh.pdb.gz
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client\bin\Debug\net10.0\wwwroot\_framework\VPets.Client.aqtwrkd9a7.pdb.gz
 C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client\bin\Debug\net10.0\wwwroot\_framework\System.Net.Sockets.3pbfy2myku.wasm.gz
 C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client\bin\Debug\net10.0\wwwroot\_framework\System.Security.SecureString.eim2t43py4.wasm.gz
 C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client\bin\Debug\net10.0\wwwroot\_framework\icudt_CJK.tjcz0u77k5.dat.gz
@@ -641,6 +643,7 @@ C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client
 C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client\bin\Debug\net10.0\VPets.Client.staticwebassets.endpoints.json
 C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client\bin\Debug\net10.0\VPets.Client.dll
 C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client\bin\Debug\net10.0\VPets.Client.pdb
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client\bin\Debug\net10.0\Blazored.LocalStorage.dll
 C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client\bin\Debug\net10.0\Humanizer.dll
 C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client\bin\Debug\net10.0\Microsoft.AspNetCore.Authorization.dll
 C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client\bin\Debug\net10.0\Microsoft.AspNetCore.Components.dll
@@ -967,6 +970,7 @@ C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client
 C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client\obj\Debug\net10.0\VPets.Client.csproj.CoreCompileInputs.cache
 C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client\obj\Debug\net10.0\VPets.Client.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client\obj\Debug\net10.0\VPets.Client.sourcelink.json
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client\obj\Debug\net10.0\webcil\Blazored.LocalStorage.wasm
 C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client\obj\Debug\net10.0\webcil\Humanizer.wasm
 C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client\obj\Debug\net10.0\webcil\Microsoft.AspNetCore.Authorization.wasm
 C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client\obj\Debug\net10.0\webcil\Microsoft.AspNetCore.Components.wasm
@@ -1282,6 +1286,7 @@ C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client
 C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client\obj\Debug\net10.0\blazor.build.boot-extension.json
 C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client\obj\Debug\net10.0\dotnet.js
 C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client\obj\Debug\net10.0\compressed\foe13fl0ta-{0}-66stpp682q-66stpp682q.gz
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client\obj\Debug\net10.0\compressed\nwubffm7xm-{0}-12n6dz54qr-12n6dz54qr.gz
 C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client\obj\Debug\net10.0\compressed\1ji7tewxpf-{0}-oqup3v7t3k-oqup3v7t3k.gz
 C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client\obj\Debug\net10.0\compressed\muu2f7h44c-{0}-f7yamg8acn-f7yamg8acn.gz
 C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client\obj\Debug\net10.0\compressed\gtxwzfmuog-{0}-i180xx2qq9-i180xx2qq9.gz
@@ -1597,9 +1602,9 @@ C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client
 C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client\obj\Debug\net10.0\compressed\r70fgra9hf-{0}-tjcz0u77k5-tjcz0u77k5.gz
 C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client\obj\Debug\net10.0\compressed\a0tdkh0vbm-{0}-tptq2av103-tptq2av103.gz
 C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client\obj\Debug\net10.0\compressed\jrsz63dtf7-{0}-lfu7j35m59-lfu7j35m59.gz
-C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client\obj\Debug\net10.0\compressed\a3p2x8wdct-{0}-lllzsjxvpo-lllzsjxvpo.gz
-C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client\obj\Debug\net10.0\compressed\qnmsavopfs-{0}-lf0f592hgh-lf0f592hgh.gz
-C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client\obj\Debug\net10.0\compressed\ag09lin2o7-{0}-7koc0vuahx-7koc0vuahx.gz
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client\obj\Debug\net10.0\compressed\a3p2x8wdct-{0}-muaijr65dj-muaijr65dj.gz
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client\obj\Debug\net10.0\compressed\qnmsavopfs-{0}-aqtwrkd9a7-aqtwrkd9a7.gz
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client\obj\Debug\net10.0\compressed\ag09lin2o7-{0}-o0x4ygbayf-o0x4ygbayf.gz
 C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client\obj\Debug\net10.0\staticwebassets.build.json
 C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client\obj\Debug\net10.0\staticwebassets.build.json.cache
 C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets.Client\obj\Debug\net10.0\staticwebassets.development.json

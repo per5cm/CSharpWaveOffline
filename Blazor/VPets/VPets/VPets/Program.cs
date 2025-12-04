@@ -1,3 +1,4 @@
+using Blazored.LocalStorage;
 using Microsoft.EntityFrameworkCore;
 using VPets.Components;
 using VPets.Data;
@@ -11,6 +12,8 @@ builder.Services.AddRazorComponents()
 
 builder.Services.AddDbContext<VPetsContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("VPets")));
+
+builder.Services.AddBlazoredLocalStorage();
 
 var app = builder.Build();
 

@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v10.0": {
       "VPets/1.0.0": {
         "dependencies": {
+          "Blazored.LocalStorage": "4.5.0",
           "Microsoft.AspNetCore.Components.WebAssembly.Server": "10.0.0",
           "Microsoft.EntityFrameworkCore": "10.0.0",
           "Microsoft.EntityFrameworkCore.Sqlite": "10.0.0",
@@ -16,6 +17,14 @@
         },
         "runtime": {
           "VPets.dll": {}
+        }
+      },
+      "Blazored.LocalStorage/4.5.0": {
+        "runtime": {
+          "lib/net8.0/Blazored.LocalStorage.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "Humanizer.Core/2.14.1": {
@@ -816,6 +825,7 @@
       },
       "VPets.Client/1.0.0": {
         "dependencies": {
+          "Blazored.LocalStorage": "4.5.0",
           "Microsoft.AspNetCore.Components.WebAssembly": "10.0.0",
           "Microsoft.DotNet.HotReload.WebAssembly.Browser": "10.0.100",
           "Microsoft.EntityFrameworkCore": "10.0.0",
@@ -835,6 +845,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Blazored.LocalStorage/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6nZuJwA7zNIKx83IsObiHXZb09ponJOpCClU3en+hI8ZFvrOKXeOw+H7TegQZQrvdR1n9fkrVkEBQZg8vx6ZTw==",
+      "path": "blazored.localstorage/4.5.0",
+      "hashPath": "blazored.localstorage.4.5.0.nupkg.sha512"
     },
     "Humanizer.Core/2.14.1": {
       "type": "package",

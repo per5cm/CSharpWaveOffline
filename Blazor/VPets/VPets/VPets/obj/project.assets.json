@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     "net10.0": {
+      "Blazored.LocalStorage/4.5.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Blazored.LocalStorage.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/Blazored.LocalStorage.dll": {}
+        }
+      },
       "Humanizer.Core/2.14.1": {
         "type": "package",
         "compile": {
@@ -1102,6 +1111,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
         "dependencies": {
+          "Blazored.LocalStorage": "4.5.0",
           "Microsoft.AspNetCore.Components.WebAssembly": "10.0.0",
           "Microsoft.DotNet.HotReload.WebAssembly.Browser": "10.0.100",
           "Microsoft.EntityFrameworkCore": "10.0.0",
@@ -1117,6 +1127,22 @@
     }
   },
   "libraries": {
+    "Blazored.LocalStorage/4.5.0": {
+      "sha512": "6nZuJwA7zNIKx83IsObiHXZb09ponJOpCClU3en+hI8ZFvrOKXeOw+H7TegQZQrvdR1n9fkrVkEBQZg8vx6ZTw==",
+      "type": "package",
+      "path": "blazored.localstorage/4.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "blazored.localstorage.4.5.0.nupkg.sha512",
+        "blazored.localstorage.nuspec",
+        "icon.png",
+        "lib/net6.0/Blazored.LocalStorage.dll",
+        "lib/net7.0/Blazored.LocalStorage.dll",
+        "lib/net8.0/Blazored.LocalStorage.dll"
+      ]
+    },
     "Humanizer.Core/2.14.1": {
       "sha512": "lQKvtaTDOXnoVJ20ibTuSIOf2i0uO0MPbDhd1jm238I+U/2ZnRENj0cktKZhtchBMtCUSRQ5v4xBCUbKNmyVMw==",
       "type": "package",
@@ -3171,6 +3197,7 @@
   },
   "projectFileDependencyGroups": {
     "net10.0": [
+      "Blazored.LocalStorage >= 4.5.0",
       "Microsoft.AspNetCore.App.Internal.Assets >= 10.0.0",
       "Microsoft.AspNetCore.Components.WebAssembly.Server >= 10.0.0",
       "Microsoft.EntityFrameworkCore >= 10.0.0",
@@ -3234,6 +3261,10 @@
       "net10.0": {
         "targetAlias": "net10.0",
         "dependencies": {
+          "Blazored.LocalStorage": {
+            "target": "Package",
+            "version": "[4.5.0, )"
+          },
           "Microsoft.AspNetCore.App.Internal.Assets": {
             "suppressParent": "All",
             "target": "Package",
