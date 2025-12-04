@@ -26,13 +26,38 @@
 <ul>
     @foreach (var pet in pets)
     {
-        <li>@pet.Name (@pet.Species, @pet.Age Jahre alt)</li>
+        <li>
+            @pet.Name (@pet.Species, @pet.Age Jahre alt)
+            <button @onclick="() => EditPet(pet.Id)">✏️</button>
+            <button @onclick="() => DeletePet(pet.Id)">🗑️</button>
+        </li>
     }
 </ul>
+
+@if (petBeingEdited != null)
+{
+    <h3>Haustier bearbeiten</h3>
+    <div>
+        <label>Name:</label>
+        <input @bind="newPet.Name" />
+    </div>
+    <div>
+        <label>Tierart:</label>
+        <input @bind="newPet.Species" />
+    </div>
+    <div>
+        <label>Alter:</label>
+        <input type="number" @bind="newPet.Age" />
+    </div>
+    <button type="button" @onclick="UpdatePet">Aktualisieren</button>
+    <button type="button" @onclick="CancelEdit">Abbrechen</button>
+}
+
 
 @code {
     Pet newPet = new();
     List<Pet> pets = new();
+    Pet? petBeingEdited = null; // for edit mode
 
     protected override async Task OnInitializedAsync()
     {
@@ -46,12 +71,61 @@
             Db.Pets.Add(newPet);
             await Db.SaveChangesAsync();
 
-            pets = await Db.Pets.ToListAsync();   // reload list
-            newPet = new Pet();                   // clear form
+            pets = await Db.Pets.ToListAsync();
+            newPet = new Pet();
         }
         catch (Exception ex)
         {
-            Console.WriteLine(ex); // check Output window in VS
+            Console.WriteLine(ex);
+        }
+    }
+
+    async Task EditPet(int id)
+    {
+        petBeingEdited = await Db.Pets.FirstOrDefaultAsync(p => p.Id == id);
+
+        if (petBeingEdited == null) return;
+
+        // Copy into the input fields so user can edit it
+        newPet = new Pet
+        {
+            Id = petBeingEdited.Id,
+            Name = petBeingEdited.Name,
+            Species = petBeingEdited.Species,
+            Age = petBeingEdited.Age
+        };
+    }
+
+    async Task UpdatePet()
+    {
+        if (petBeingEdited == null) return;
+        petBeingEdited.Name = newPet.Name;
+        petBeingEdited.Species = newPet.Species;
+        petBeingEdited.Age = newPet.Age;
+        await Db.SaveChangesAsync();
+        pets = await Db.Pets.ToListAsync();
+        newPet = new Pet();
+        petBeingEdited = null; // exit edit mode
+    }
+
+    async Task CancelEdit()
+    {
+        newPet = new Pet();
+        petBeingEdited = null; // exit edit mode
+    }
+
+    async Task DeletePet(int id)
+    {
+        var petToDelete = await Db.Pets.FirstOrDefaultAsync(p => p.Id == id);
+
+        if (petToDelete != null)
+        {
+            Db.Pets.Remove(petToDelete);
+            await Db.SaveChangesAsync();
+
+            pets = await Db.Pets.ToListAsync();
+            StateHasChanged(); // force rerender
         }
     }
 }
+
