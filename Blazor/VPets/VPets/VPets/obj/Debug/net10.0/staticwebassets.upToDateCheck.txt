@@ -1,0 +1,8 @@
+wwwroot\app.css
+Components\Layout\ReconnectModal.razor.js
+C:\Users\Eric\.nuget\packages\microsoft.aspnetcore.app.internal.assets\10.0.0\build\..\_framework\blazor.web.js
+C:\Users\Eric\.nuget\packages\microsoft.aspnetcore.app.internal.assets\10.0.0\build\..\_framework\blazor.server.js
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets\wwwroot\app.css
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\Blazor\VPets\VPets\VPets\Components\Layout\ReconnectModal.razor.js
+C:\Users\Eric\.nuget\packages\microsoft.aspnetcore.app.internal.assets\10.0.0\_framework\blazor.web.js
+C:\Users\Eric\.nuget\packages\microsoft.aspnetcore.app.internal.assets\10.0.0\_framework\blazor.server.js

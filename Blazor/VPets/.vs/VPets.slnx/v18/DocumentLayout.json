@@ -1,0 +1,104 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\Blazor\\VPets\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AA8F525B-CD9D-4319-9925-35E78D43BB44}|VPets\\VPets\\VPets.csproj|c:\\users\\eric\\desktop\\projects\\csharpwaveoffline\\blazor\\vpets\\vpets\\vpets\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AA8F525B-CD9D-4319-9925-35E78D43BB44}|VPets\\VPets\\VPets.csproj|solutionrelative:vpets\\vpets\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AA8F525B-CD9D-4319-9925-35E78D43BB44}|VPets\\VPets\\VPets.csproj|c:\\users\\eric\\desktop\\projects\\csharpwaveoffline\\blazor\\vpets\\vpets\\vpets\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{AA8F525B-CD9D-4319-9925-35E78D43BB44}|VPets\\VPets\\VPets.csproj|solutionrelative:vpets\\vpets\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AA8F525B-CD9D-4319-9925-35E78D43BB44}|VPets\\VPets\\VPets.csproj|c:\\users\\eric\\desktop\\projects\\csharpwaveoffline\\blazor\\vpets\\vpets\\vpets\\data\\vpetscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AA8F525B-CD9D-4319-9925-35E78D43BB44}|VPets\\VPets\\VPets.csproj|solutionrelative:vpets\\vpets\\data\\vpetscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AA8F525B-CD9D-4319-9925-35E78D43BB44}|VPets\\VPets\\VPets.csproj|c:\\users\\eric\\desktop\\projects\\csharpwaveoffline\\blazor\\vpets\\vpets\\vpets\\models\\pet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AA8F525B-CD9D-4319-9925-35E78D43BB44}|VPets\\VPets\\VPets.csproj|solutionrelative:vpets\\vpets\\models\\pet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\Blazor\\VPets\\VPets\\VPets\\appsettings.json",
+              "RelativeDocumentMoniker": "VPets\\VPets\\appsettings.json",
+              "ToolTip": "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\Blazor\\VPets\\VPets\\VPets\\appsettings.json",
+              "RelativeToolTip": "VPets\\VPets\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-04T08:59:41.829Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\Blazor\\VPets\\VPets\\VPets\\Program.cs",
+              "RelativeDocumentMoniker": "VPets\\VPets\\Program.cs",
+              "ToolTip": "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\Blazor\\VPets\\VPets\\VPets\\Program.cs",
+              "RelativeToolTip": "VPets\\VPets\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T08:49:19.239Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "vPetsContext.cs",
+              "DocumentMoniker": "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\Blazor\\VPets\\VPets\\VPets\\Data\\vPetsContext.cs",
+              "RelativeDocumentMoniker": "VPets\\VPets\\Data\\vPetsContext.cs",
+              "ToolTip": "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\Blazor\\VPets\\VPets\\VPets\\Data\\vPetsContext.cs",
+              "RelativeToolTip": "VPets\\VPets\\Data\\vPetsContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T08:26:31.375Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Pet.cs",
+              "DocumentMoniker": "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\Blazor\\VPets\\VPets\\VPets\\Models\\Pet.cs",
+              "RelativeDocumentMoniker": "VPets\\VPets\\Models\\Pet.cs",
+              "ToolTip": "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\Blazor\\VPets\\VPets\\VPets\\Models\\Pet.cs",
+              "RelativeToolTip": "VPets\\VPets\\Models\\Pet.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T08:14:28.526Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
