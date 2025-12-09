@@ -2,23 +2,23 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace OOP3.Auto
+namespace OOP3.Automaton
 {
     internal class Auto
     {
-        private static int _anzahlAutos = 0;
-
+        private static int anzahlAutos = 0;
         public static int AnzahlAutos
         {
             get
             {
-                return _anzahlAutos;
+                return anzahlAutos;
             }
             private set
             {
-                _anzahlAutos = value;
+                anzahlAutos = value;
             }
         }
+
 
         public int Nummer { get; set; }
         public int Geschwindikeit { get; set; }
@@ -29,12 +29,11 @@ namespace OOP3.Auto
         {
             get => ps;
             set
-            {                 
-                if (value < 0)
+            {
+                if (value > 0)
                 {
-                    throw new ArgumentOutOfRangeException("PS", "PS darf nicht negativ sein.");
-                }
-                ps = value;
+                    ps = value;
+                } // TODO: else Pfad definieren
             }
         }
 
@@ -50,5 +49,9 @@ namespace OOP3.Auto
             Name = name;
         }
 
+        public string ToString()
+        {
+            return "Auto " + Nummer + " ist " + Wert + " € wert, fährt aktuell " + Geschwindikeit + " km/h und heißt " + Name;
+        }
     }
 }

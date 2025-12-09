@@ -86,7 +86,7 @@
               "RelativeDocumentMoniker": "src\\OOP\\Program.cs",
               "ToolTip": "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\CSharpMP\\src\\OOP\\Program.cs",
               "RelativeToolTip": "src\\OOP\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-28T13:51:00.895Z",
               "EditorCaption": ""
@@ -101,8 +101,7 @@
               "RelativeToolTip": "src\\Lotto\\Program.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T07:41:57.184Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-25T07:41:57.184Z"
             },
             {
               "$type": "Document",
@@ -114,8 +113,7 @@
               "RelativeToolTip": "src\\Method_Translator\\Program.cs",
               "ViewState": "AgIAAHsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T07:35:35.81Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-25T07:35:35.81Z"
             },
             {
               "$type": "Document",
@@ -127,8 +125,7 @@
               "RelativeToolTip": "src\\Method_Array\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T07:35:29.602Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-25T07:35:29.602Z"
             }
           ]
         }
