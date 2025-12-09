@@ -5,9 +5,12 @@ using OOP4.Students;
 
 class Program
 {
-    static List<Students> StudentsData = new();
+    //static List<Students> StudentsData = new();
+    static int MaxStudents = 100;
+
     static void Main(string[] args)
     {
+        Students[] student = { }; 
         ShowMenu();
     }
 
@@ -41,14 +44,29 @@ class Program
                 case 2: ShowAdress(); break;
                 case 3: StudentCount(); break;
                 case 4: ClassList(); break;
-                case 5: Average(); break;              
+                case 5: Average(); break;
+                case 6: DisplayList(); break;
+                    //default: Console.WriteLine("Ungültige Eingabe.");
             }
         }
     }
 
     static void CreateStudent()
     {
+        Console.WriteLine("<Schüler anlegen>");
 
+        string name = ReadString("Name: ");
+        string surname = ReadString("Nachname: ");
+        string streetName = ReadString("Straẞenname: ");
+        int houseNumber = ReadInt("Hausenummer: ");
+        int zipCode = ReadInt("Postleitzahl: ");
+        string city = ReadString("Stadt: ");
+        string studentClass = ReadString("Klasse: ");
+        int note = ReadInt("Note 1 bis 6: ");
+
+        var newStudent = new Students(name, surname, streetName, houseNumber, zipCode, city, studentClass, note);
+
+        StudentData.Add(newStudent);
     }
 
     static void ShowAdress()
@@ -58,7 +76,8 @@ class Program
 
     static void StudentCount()
     {
-
+        Console.WriteLine();
+        Console.WriteLine("Schüller Liste ->");
     }
 
     static void ClassList()
@@ -69,6 +88,14 @@ class Program
     static void Average()
     {
 
+    }
+
+    static void DisplayList()
+    {
+        Console.WriteLine();
+        Console.WriteLine("Gespeicherte Schüller ->");
+
+        for (int display = 0; display < )
     }
 
     #region Helpers
@@ -83,6 +110,20 @@ class Program
 
             Console.WriteLine("Gib endlich eine Zahl ein.");
         }
+    }
+
+    static string ReadString(string label)
+    {
+        Console.Write(label);
+        string input = Console.ReadLine()?.Trim() ?? "";
+
+        while (string.IsNullOrEmpty(input))
+        {
+            Console.WriteLine("Darf nicht leer sein.");
+            Console.Write(label);
+            input = Console.ReadLine()?.Trim() ?? "";
+        }
+        return input;
     }
 
     #endregion
