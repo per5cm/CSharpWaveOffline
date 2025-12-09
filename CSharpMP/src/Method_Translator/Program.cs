@@ -97,7 +97,6 @@ namespace Method_Translator
 
             string menu = """
                 
-                 
                 Suchen Sie ein Wort in der Liste.
                 
                 1: Deutsch -> Englisch

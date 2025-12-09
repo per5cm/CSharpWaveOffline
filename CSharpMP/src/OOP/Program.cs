@@ -5,7 +5,7 @@ using OOP.Benutzer;
 
 class Program
 {
-       static void Main(string[] args)
+        static void Main(string[] args)
     {
         Tier katze = new Tier( "Katze", "Luna", "Miau!");
         Tier hund = new Tier( "Hund", "Bello", "Wuff!");
