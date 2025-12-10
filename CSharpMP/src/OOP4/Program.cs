@@ -5,12 +5,11 @@ using OOP4.Students;
 
 class Program
 {
-    //static List<Students> StudentsData = new();
+    static List<Students> StudentsData = new();
     static int MaxStudents = 100;
 
     static void Main(string[] args)
     {
-        Students[] student = { }; 
         ShowMenu();
     }
 
