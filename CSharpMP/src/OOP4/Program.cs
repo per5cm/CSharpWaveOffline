@@ -46,7 +46,7 @@ class Program
                 case 4: ClassList(); break;
                 case 5: Average(); break;
                 case 6: DisplayList(); break;
-                    //default: Console.WriteLine("Ungültige Eingabe.");
+                default: Console.WriteLine("Ungültige Eingabe."); break;
             }
         }
     }
