@@ -6,7 +6,7 @@ using OOP4.Students;
 class Program
 {
     static List<Students> StudentsData = new();
-    static int MaxStudents = 100;
+    //static int MaxStudents = 0;
 
     static void Main(string[] args)
     {
@@ -64,8 +64,7 @@ class Program
         int note = ReadInt("Note 1 bis 6: ");
 
         var newStudent = new Students(name, surname, streetName, houseNumber, zipCode, city, studentClass, note);
-
-        StudentData.Add(newStudent);
+        StudentsData.Add(newStudent);
     }
 
     static void ShowAdress()
@@ -94,7 +93,12 @@ class Program
         Console.WriteLine();
         Console.WriteLine("Gespeicherte Schüller ->");
 
-        for (int display = 0; display < )
+        for (int display = 0; display < StudentsData.Count; display++)
+        {
+            var student = StudentsData[display];
+            Console.WriteLine($"{student.Name} {student.Surname}, {student.StreetName} {student.HouseNumber}, {student.ZipCode} {student.City}, Klasse: {student.StudentClass}, Note: {student.Note}");
+        }
+        Console.WriteLine();
     }
 
     #region Helpers
