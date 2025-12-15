@@ -19,7 +19,6 @@ namespace OOP3.Automaton
             }
         }
 
-
         public int Nummer { get; set; }
         public int Geschwindikeit { get; set; }
         public double Wert { get; set; }

@@ -22,6 +22,7 @@ class Program
             "3. Gesamtzahl der Schüler",
             "4. Klassenliste",
             "5. Druchnittsnote",
+            "6. Alle Schüler anzeigen",
             "9. Programmende"
         };
 
@@ -52,23 +53,39 @@ class Program
 
     static void CreateStudent()
     {
-        Console.WriteLine("<Schüler anlegen>");
+        Console.WriteLine();
+        Console.WriteLine("<-- Schüler anlegen -->");
+        Console.WriteLine();
 
-        string name = ReadString("Name: ");
-        string surname = ReadString("Nachname: ");
-        string streetName = ReadString("Straẞenname: ");
-        int houseNumber = ReadInt("Hausenummer: ");
-        int zipCode = ReadInt("Postleitzahl: ");
-        string city = ReadString("Stadt: ");
-        string studentClass = ReadString("Klasse: ");
-        int note = ReadInt("Note 1 bis 6: ");
+        int numberOfStudents = ReadInt("Wie viele Schüler möchten Sie anlegen? ");
+        Console.WriteLine();
 
-        var newStudent = new Students(name, surname, streetName, houseNumber, zipCode, city, studentClass, note);
-        StudentsData.Add(newStudent);
+        for (int i = 0; i < numberOfStudents; i++)
+        {
+            string name = ReadString("Name: ");
+            string surname = ReadString("Nachname: ");
+            string streetName = ReadString("Straẞenname: ");
+            int houseNumber = ReadInt("Hausenummer: ");
+            int zipCode = ReadInt("Postleitzahl: ");
+            string city = ReadString("Stadt: ");
+            string studentClass = ReadString("Klasse: ");
+            int note = ReadInt("Note 1 bis 6: ");
+
+            var newStudent = new Students(name, surname, streetName, houseNumber, zipCode, city, studentClass, note);
+            StudentsData.Add(newStudent);
+        } 
     }
 
     static void ShowAdress()
     {
+        Console.WriteLine("Schüller Adressen ->");
+
+        for (int display = 0; display < StudentsData.Count; display++)
+        {
+            var student = StudentsData[display];
+            Console.WriteLine($"{student.Name} {student.Surname}, {student.StreetName} {student.HouseNumber}, {student.ZipCode} {student.City}");
+        }
+        Console.WriteLine();
 
     }
 
@@ -76,10 +93,17 @@ class Program
     {
         Console.WriteLine();
         Console.WriteLine("Schüller Liste ->");
+        Console.WriteLine();
+
+        if (StudentsData.Count > 0)
+            Console.WriteLine($"Es sind {StudentsData.Count} Schüler gespeichert.");
+        else
+            Console.WriteLine("Es sind keine Schüler gespeichert.");
     }
 
     static void ClassList()
     {
+
 
     }
 
