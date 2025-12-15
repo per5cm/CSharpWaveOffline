@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using OOP4.Students;
+using OOP4.Student;
 
 class Program
 {
-    static List<Students> StudentsData = new();
+    static List<Student> StudentsData = new();
 
     static void Main(string[] args)
     {
@@ -36,7 +36,9 @@ class Program
             switch (choice)
             {
                 case 9:
+                    Console.WriteLine();
                     Console.WriteLine("Auf Wiedersehn!");
+                    Pause();
                     return;
 
                 case 1: CreateStudent(); break;
@@ -64,13 +66,13 @@ class Program
             string name = ReadString("Name: ");
             string surname = ReadString("Nachname: ");
             string streetName = ReadString("Straẞenname: ");
-            int houseNumber = ReadInt("Hausenummer: ");
-            int zipCode = ReadInt("Postleitzahl: ");
+            string houseNumber = ReadString("Hausenummer: ");
+            string zipCode = ReadString("Postleitzahl: ");
             string city = ReadString("Stadt: ");
             string studentClass = ReadString("Klasse: ");
             int note = ReadInt("Note 1 bis 6: ");
 
-            var newStudent = new Students(name, surname, streetName, houseNumber, zipCode, city, studentClass, note);
+            var newStudent = new Student(name, surname, streetName, houseNumber, zipCode, city, studentClass, note);
             StudentsData.Add(newStudent);
         } 
     }
@@ -86,6 +88,7 @@ class Program
         }
         Console.WriteLine();
 
+        Pause();
     }
 
     static void StudentCount()
@@ -98,6 +101,8 @@ class Program
             Console.WriteLine($"Es sind {StudentsData.Count} Schüler gespeichert.");
         else
             Console.WriteLine("Es sind keine Schüler gespeichert.");
+
+        Pause();
     }
 
     static void ClassList()
@@ -105,25 +110,25 @@ class Program
         string className = ReadString("Geben Sie die Klasse ein, die Sie anzeigen möchten: ");
         Console.WriteLine();
 
+        bool found = false;
+
         foreach (var student in StudentsData)
         {
             //if (student.StudentClass == className)
             if (student.StudentClass.Equals(className, StringComparison.OrdinalIgnoreCase))
             {
                 Console.WriteLine($"{student.Name} {student.Surname}, Klasse: {student.StudentClass}");
+                found = true;
             }
-            else
-            {
-                Console.WriteLine("Keine Schüler in dieser Klasse gefunden.");
-            }
+            //else
+            //{
+            //    Console.WriteLine("Keine Schüler in dieser Klasse gefunden.");
+            //}
         }
 
-        //if (!StudentsData.Any(s => s.StudentClass == className))
-        //{
-        //    Console.WriteLine("No students in this class.");
-        //    return;
-        //}
+        if (!found) Console.WriteLine("Keine Schüler in dieser Klasse gefunden.");
 
+        Pause();
     }
 
     static void Average()
@@ -144,7 +149,7 @@ class Program
             }
         }
 
-        if (totalNotes == 0)
+        if (count == 0)
         {
             Console.WriteLine("Keine Schüler in dieser Klasse gefunden.");
             return;
@@ -152,6 +157,8 @@ class Program
 
         double average = (double)totalNotes / count;
         Console.WriteLine($"Durchschnittsnote für Klasse {className}: {average:F2}");
+
+        Pause();
     }
 
     static void DisplayList()
@@ -165,6 +172,8 @@ class Program
             Console.WriteLine($"{student.Name} {student.Surname}, {student.StreetName} {student.HouseNumber}, {student.ZipCode} {student.City}, Klasse: {student.StudentClass}, Note: {student.Note}");
         }
         Console.WriteLine();
+
+        Pause();
     }
 
     #region Helpers
@@ -193,6 +202,12 @@ class Program
             input = Console.ReadLine()?.Trim() ?? "";
         }
         return input;
+    }
+
+    static void Pause()
+    {
+        Console.WriteLine("\nDrücke Enter, um fortzufahren...");
+        Console.ReadLine();
     }
 
     #endregion
