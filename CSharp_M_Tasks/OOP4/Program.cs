@@ -6,7 +6,6 @@ using OOP4.Students;
 class Program
 {
     static List<Students> StudentsData = new();
-    //static int MaxStudents = 0;
 
     static void Main(string[] args)
     {
@@ -103,16 +102,56 @@ class Program
 
     static void ClassList()
     {
-        int studentClasses = ReadInt("Geben Sie die Klasse ein, die Sie anzeigen möchten: ");
+        string className = ReadString("Geben Sie die Klasse ein, die Sie anzeigen möchten: ");
         Console.WriteLine();
 
+        foreach (var student in StudentsData)
+        {
+            //if (student.StudentClass == className)
+            if (student.StudentClass.Equals(className, StringComparison.OrdinalIgnoreCase))
+            {
+                Console.WriteLine($"{student.Name} {student.Surname}, Klasse: {student.StudentClass}");
+            }
+            else
+            {
+                Console.WriteLine("Keine Schüler in dieser Klasse gefunden.");
+            }
+        }
 
+        //if (!StudentsData.Any(s => s.StudentClass == className))
+        //{
+        //    Console.WriteLine("No students in this class.");
+        //    return;
+        //}
 
     }
 
     static void Average()
     {
+        string className = ReadString("Geben Sie die Klasse ein, für die Sie die Durchschnittsnote berechnen möchten: ");
+        Console.WriteLine();
 
+        int totalNotes = 0;
+        int count = 0;
+
+        foreach (var student in StudentsData) 
+        {
+            //if (student.StudentClass == className)
+            if (student.StudentClass.Equals(className, StringComparison.OrdinalIgnoreCase))
+            {
+                totalNotes += student.Note;
+                count++;
+            }
+        }
+
+        if (totalNotes == 0)
+        {
+            Console.WriteLine("Keine Schüler in dieser Klasse gefunden.");
+            return;
+        }
+
+        double average = (double)totalNotes / count;
+        Console.WriteLine($"Durchschnittsnote für Klasse {className}: {average:F2}");
     }
 
     static void DisplayList()
