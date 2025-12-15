@@ -27,10 +27,5 @@ namespace OOP4.Students
             StudentClass = studentClass;
             Note = note;
         }
-
-        internal void getAdress()
-        {
-            Console.WriteLine($"{StreetName} {HouseNumber}, {ZipCode} {City}");
-        }
     }
 }

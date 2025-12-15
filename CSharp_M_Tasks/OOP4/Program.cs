@@ -103,6 +103,9 @@ class Program
 
     static void ClassList()
     {
+        int studentClasses = ReadInt("Geben Sie die Klasse ein, die Sie anzeigen möchten: ");
+        Console.WriteLine();
+
 
 
     }

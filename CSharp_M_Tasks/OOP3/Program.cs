@@ -64,7 +64,7 @@ namespace OOP3.Automaton
 
         private static void abfragenPS(Auto[] autos)
         {
-            Console.WriteLine("Mindest PS-Zahl:");
+            Console.WriteLine("Mindest PS-Zahl: ");
             int minPS = int.Parse(Console.ReadLine());
 
             for (int i = 0; i < autos.Length; i++)
@@ -96,17 +96,17 @@ namespace OOP3.Automaton
 
         private static Auto[] erfassenAuto(Auto[] autos)
         {
-            Console.WriteLine("Wie viele Autos?");
+            Console.WriteLine("Wie viele Autos?: ");
             int anz = int.Parse(Console.ReadLine());
             autos = new Auto[anz];
 
             for (int i = 0; i < anz; i++)
             {
-                Console.WriteLine("Wert:");
+                Console.WriteLine("Wert: ");
                 double wert = double.Parse(Console.ReadLine());
-                Console.WriteLine("PS:");
+                Console.WriteLine("PS: ");
                 int ps = int.Parse(Console.ReadLine());
-                Console.WriteLine("Name:");
+                Console.WriteLine("Name: ");
                 string name = Console.ReadLine();
 
                 autos[i] = new Auto(wert, ps, name);
