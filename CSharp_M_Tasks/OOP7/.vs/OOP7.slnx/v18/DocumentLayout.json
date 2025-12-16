@@ -7,16 +7,16 @@
       "RelativeMoniker": "D:0:0:{20CFF912-1D0F-89F8-9615-2A0CDD9F3A51}|OOP7\\OOP7.csproj|solutionrelative:oop7\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{20CFF912-1D0F-89F8-9615-2A0CDD9F3A51}|OOP7\\OOP7.csproj|c:\\users\\eric\\desktop\\projects\\csharpwaveoffline\\csharp_m_tasks\\oop7\\oop7\\coworkers\\hausemeister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{20CFF912-1D0F-89F8-9615-2A0CDD9F3A51}|OOP7\\OOP7.csproj|solutionrelative:oop7\\coworkers\\hausemeister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{20CFF912-1D0F-89F8-9615-2A0CDD9F3A51}|OOP7\\OOP7.csproj|c:\\users\\eric\\desktop\\projects\\csharpwaveoffline\\csharp_m_tasks\\oop7\\oop7\\coworker\\coworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20CFF912-1D0F-89F8-9615-2A0CDD9F3A51}|OOP7\\OOP7.csproj|solutionrelative:oop7\\coworker\\coworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{20CFF912-1D0F-89F8-9615-2A0CDD9F3A51}|OOP7\\OOP7.csproj|c:\\users\\eric\\desktop\\projects\\csharpwaveoffline\\csharp_m_tasks\\oop7\\oop7\\coworkers\\teacher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{20CFF912-1D0F-89F8-9615-2A0CDD9F3A51}|OOP7\\OOP7.csproj|solutionrelative:oop7\\coworkers\\teacher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{20CFF912-1D0F-89F8-9615-2A0CDD9F3A51}|OOP7\\OOP7.csproj|c:\\users\\eric\\desktop\\projects\\csharpwaveoffline\\csharp_m_tasks\\oop7\\oop7\\coworker\\teacher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20CFF912-1D0F-89F8-9615-2A0CDD9F3A51}|OOP7\\OOP7.csproj|solutionrelative:oop7\\coworker\\teacher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{20CFF912-1D0F-89F8-9615-2A0CDD9F3A51}|OOP7\\OOP7.csproj|c:\\users\\eric\\desktop\\projects\\csharpwaveoffline\\csharp_m_tasks\\oop7\\oop7\\coworkers\\coworkers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{20CFF912-1D0F-89F8-9615-2A0CDD9F3A51}|OOP7\\OOP7.csproj|solutionrelative:oop7\\coworkers\\coworkers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{20CFF912-1D0F-89F8-9615-2A0CDD9F3A51}|OOP7\\OOP7.csproj|c:\\users\\eric\\desktop\\projects\\csharpwaveoffline\\csharp_m_tasks\\oop7\\oop7\\coworker\\hausemeister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20CFF912-1D0F-89F8-9615-2A0CDD9F3A51}|OOP7\\OOP7.csproj|solutionrelative:oop7\\coworker\\hausemeister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,13 +46,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Hausemeister.cs",
-              "DocumentMoniker": "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\CSharp_M_Tasks\\OOP7\\OOP7\\Coworkers\\Hausemeister.cs",
-              "RelativeDocumentMoniker": "OOP7\\Coworkers\\Hausemeister.cs",
-              "ToolTip": "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\CSharp_M_Tasks\\OOP7\\OOP7\\Coworkers\\Hausemeister.cs",
-              "RelativeToolTip": "OOP7\\Coworkers\\Hausemeister.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAeAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\CSharp_M_Tasks\\OOP7\\OOP7\\Coworker\\Hausemeister.cs",
+              "RelativeDocumentMoniker": "OOP7\\Coworker\\Hausemeister.cs",
+              "ToolTip": "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\CSharp_M_Tasks\\OOP7\\OOP7\\Coworker\\Hausemeister.cs",
+              "RelativeToolTip": "OOP7\\Coworker\\Hausemeister.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-16T08:14:48.047Z",
               "EditorCaption": ""
@@ -61,24 +61,24 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Teacher.cs",
-              "DocumentMoniker": "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\CSharp_M_Tasks\\OOP7\\OOP7\\Coworkers\\Teacher.cs",
-              "RelativeDocumentMoniker": "OOP7\\Coworkers\\Teacher.cs",
-              "ToolTip": "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\CSharp_M_Tasks\\OOP7\\OOP7\\Coworkers\\Teacher.cs",
-              "RelativeToolTip": "OOP7\\Coworkers\\Teacher.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABfAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\CSharp_M_Tasks\\OOP7\\OOP7\\Coworker\\Teacher.cs",
+              "RelativeDocumentMoniker": "OOP7\\Coworker\\Teacher.cs",
+              "ToolTip": "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\CSharp_M_Tasks\\OOP7\\OOP7\\Coworker\\Teacher.cs",
+              "RelativeToolTip": "OOP7\\Coworker\\Teacher.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-16T08:14:32.946Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Coworkers.cs",
-              "DocumentMoniker": "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\CSharp_M_Tasks\\OOP7\\OOP7\\Coworkers\\Coworkers.cs",
-              "RelativeDocumentMoniker": "OOP7\\Coworkers\\Coworkers.cs",
-              "ToolTip": "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\CSharp_M_Tasks\\OOP7\\OOP7\\Coworkers\\Coworkers.cs",
-              "RelativeToolTip": "OOP7\\Coworkers\\Coworkers.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAhAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "Coworker.cs",
+              "DocumentMoniker": "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\CSharp_M_Tasks\\OOP7\\OOP7\\Coworker\\Coworker.cs",
+              "RelativeDocumentMoniker": "OOP7\\Coworker\\Coworker.cs",
+              "ToolTip": "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\CSharp_M_Tasks\\OOP7\\OOP7\\Coworker\\Coworker.cs",
+              "RelativeToolTip": "OOP7\\Coworker\\Coworker.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-16T07:57:43.722Z",
               "EditorCaption": ""
@@ -91,7 +91,7 @@
               "RelativeDocumentMoniker": "OOP7\\Program.cs",
               "ToolTip": "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\CSharp_M_Tasks\\OOP7\\OOP7\\Program.cs",
               "RelativeToolTip": "OOP7\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-16T07:54:53.842Z",
               "EditorCaption": ""

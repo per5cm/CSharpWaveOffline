@@ -2,24 +2,19 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace OOP7.Coworkers
+namespace OOP7.Coworker
 {
-    internal class Coworkers
+    abstract class Coworker
     {
         internal string Name { get; set; }
         internal int HoursWorked { get; set; } = 0;
+        internal abstract void Work();
 
 
-        internal Coworkers(string name, int hoursWorked) 
+        internal Coworker(string name, int hoursWorked) 
         {
             Name = name;
             HoursWorked = hoursWorked;
         }
-
-        internal void IsWorking()
-        {
-            Console.WriteLine($"Name: {Name} am arbeiten, seit: {HoursWorked} Stunden.");
-        }
-
     }
 }

@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace OOP7.Coworkers
+namespace OOP7.Coworker
 {
-    internal class Teacher : Coworkers
+    internal class Teacher : Coworker
     {
         internal string Subject { get; set; }
         internal Teacher(string name, int hoursWorked, string subject) : base(name, hoursWorked)
         {
             Subject = subject;
         }
-        internal void Teach()
+        internal override void Work()
         {
-            Console.WriteLine($"Name: {Name} unterrichtet gerade {Subject}.");
+            Console.WriteLine($"Name: {Name} unterrichtet für {HoursWorked} Studen in der Fach: {Subject}.");
         }
     }
 }

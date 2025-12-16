@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using OOP7.Coworkers;
+using OOP7.Coworker;
 
 
 namespace OOP7
@@ -10,13 +10,15 @@ namespace OOP7
     {
         static void Main(string[] args)
         {
-            Teacher teacher = new Teacher("Herr Müller", 5, "Mathematik");
-            teacher.IsWorking();
-            teacher.Teach();
+            List<Coworker> coworker = new List<Coworker>();
 
-            Hausemeister hausemeister = new Hausemeister("Frau Schmidt", 10, "Gartenpflege");
-            hausemeister.IsWorking();
-            hausemeister.Garden();
+            coworker.Add(new Teacher("Frau Karen Bottoms", 10, "Mathematik"));
+            coworker.Add(new Hausemeister("Herr Bob der Baumeister", 8, "Gartenpflege"));
+            
+
+            foreach (var c in coworker)
+                c.Work();
+
         }
     }
 }
