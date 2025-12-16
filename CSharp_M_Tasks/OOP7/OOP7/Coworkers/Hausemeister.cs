@@ -11,9 +11,9 @@ namespace OOP7.Coworkers
         {
             Role = role;
         }
-        internal void Clean()
+        internal void Garden()
         {
-            Console.WriteLine($"Name: {Name} reinigt gerade das Schulgebäude.");
+            Console.WriteLine($"Name: {Name} mäht den Garten.");
         }
     }
 }

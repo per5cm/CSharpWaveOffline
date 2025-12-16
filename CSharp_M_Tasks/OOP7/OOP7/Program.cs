@@ -16,7 +16,7 @@ namespace OOP7
 
             Hausemeister hausemeister = new Hausemeister("Frau Schmidt", 10, "Gartenpflege");
             hausemeister.IsWorking();
-            hausemeister.Clean();
+            hausemeister.Garden();
         }
     }
 }
