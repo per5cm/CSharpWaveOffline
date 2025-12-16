@@ -10,15 +10,14 @@ namespace OOP7
     {
         static void Main(string[] args)
         {
-            List<Coworker> coworker = new List<Coworker>();
+            List<Coworkers> coworkers = new List<Coworkers>();
 
-            coworker.Add(new Teacher("Frau Karen Bottoms", 10, "Mathematik"));
-            coworker.Add(new Hausemeister("Herr Bob der Baumeister", 8, "Gartenpflege"));
+            coworkers.Add(new Teacher("Frau Karen Bottoms", 10, "Mathematik"));
+            coworkers.Add(new Hausemeister("Herr Bob der Baumeister", 8, "Gartenpflege"));
             
 
-            foreach (var c in coworker)
-                c.Work();
-
+            foreach (var character in coworkers)
+                character.Work();
         }
     }
 }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace OOP7.Coworker
 {
-    internal class Teacher : Coworker
+    internal class Teacher : Coworkers
     {
         internal string Subject { get; set; }
         internal Teacher(string name, int hoursWorked, string subject) : base(name, hoursWorked)

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace OOP7.Coworker
 {
-    internal class Hausemeister : Coworker
+    internal class Hausemeister : Coworkers
     {
         internal string Role { get; set; }
         internal Hausemeister(string name, int hoursWorked, string role) : base(name, hoursWorked)
