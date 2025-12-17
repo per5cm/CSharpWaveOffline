@@ -247,7 +247,6 @@ namespace Method_Translator
         #region Helpers
 
         // ----------- Helpers (nur Eingabe) -----------
-
         static int ReadInt(string label, int min = int.MinValue, int max = int.MaxValue)
         {
             while (true)
