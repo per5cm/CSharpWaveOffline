@@ -262,7 +262,6 @@ namespace Method_Translator
                 Console.WriteLine("Ungültige Eingabe.");
             }
         }
-
         static double ReadDouble(string label, double min = double.NegativeInfinity, double max = double.PositiveInfinity)
         {
             while (true)
