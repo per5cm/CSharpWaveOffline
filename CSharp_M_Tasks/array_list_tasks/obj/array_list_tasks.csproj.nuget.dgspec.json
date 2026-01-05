@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Eric\\OneDrive\\Desktop\\Projects\\CSharpWaveOffline\\CSharp_M_Tasks\\array_list_tasks\\array_list_tasks.csproj": {}
+    "c:\\Users\\Eric\\OneDrive\\Desktop\\Projects\\CSharpWaveOffline\\CSharp_M_Tasks\\array_list_tasks\\array_list_tasks.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Eric\\OneDrive\\Desktop\\Projects\\CSharpWaveOffline\\CSharp_M_Tasks\\array_list_tasks\\array_list_tasks.csproj": {
+    "c:\\Users\\Eric\\OneDrive\\Desktop\\Projects\\CSharpWaveOffline\\CSharp_M_Tasks\\array_list_tasks\\array_list_tasks.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Eric\\OneDrive\\Desktop\\Projects\\CSharpWaveOffline\\CSharp_M_Tasks\\array_list_tasks\\array_list_tasks.csproj",
+        "projectUniqueName": "c:\\Users\\Eric\\OneDrive\\Desktop\\Projects\\CSharpWaveOffline\\CSharp_M_Tasks\\array_list_tasks\\array_list_tasks.csproj",
         "projectName": "array_list_tasks",
-        "projectPath": "C:\\Users\\Eric\\OneDrive\\Desktop\\Projects\\CSharpWaveOffline\\CSharp_M_Tasks\\array_list_tasks\\array_list_tasks.csproj",
+        "projectPath": "c:\\Users\\Eric\\OneDrive\\Desktop\\Projects\\CSharpWaveOffline\\CSharp_M_Tasks\\array_list_tasks\\array_list_tasks.csproj",
         "packagesPath": "C:\\Users\\Eric\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Eric\\OneDrive\\Desktop\\Projects\\CSharpWaveOffline\\CSharp_M_Tasks\\array_list_tasks\\obj\\",
+        "outputPath": "c:\\Users\\Eric\\OneDrive\\Desktop\\Projects\\CSharpWaveOffline\\CSharp_M_Tasks\\array_list_tasks\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Eric\\AppData\\Roaming\\NuGet\\NuGet.Config"
