@@ -1,32 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\CSharp_M_Tasks\\OOP4\\OOP4.csproj": {}
+    "C:\\Users\\Eric\\OneDrive\\Desktop\\Projects\\CSharpWaveOffline\\CSharp_M_Tasks\\OOP4\\OOP4.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\CSharp_M_Tasks\\OOP4\\OOP4.csproj": {
+    "C:\\Users\\Eric\\OneDrive\\Desktop\\Projects\\CSharpWaveOffline\\CSharp_M_Tasks\\OOP4\\OOP4.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\CSharp_M_Tasks\\OOP4\\OOP4.csproj",
+        "projectUniqueName": "C:\\Users\\Eric\\OneDrive\\Desktop\\Projects\\CSharpWaveOffline\\CSharp_M_Tasks\\OOP4\\OOP4.csproj",
         "projectName": "OOP4",
-        "projectPath": "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\CSharp_M_Tasks\\OOP4\\OOP4.csproj",
+        "projectPath": "C:\\Users\\Eric\\OneDrive\\Desktop\\Projects\\CSharpWaveOffline\\CSharp_M_Tasks\\OOP4\\OOP4.csproj",
         "packagesPath": "C:\\Users\\Eric\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\CSharp_M_Tasks\\OOP4\\obj\\",
+        "outputPath": "C:\\Users\\Eric\\OneDrive\\Desktop\\Projects\\CSharpWaveOffline\\CSharp_M_Tasks\\OOP4\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Eric\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Eric\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
