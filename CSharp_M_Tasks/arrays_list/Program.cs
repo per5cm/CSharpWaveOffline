@@ -23,7 +23,6 @@ class Program
         }
 
     }
-
     static void array_2()
     {
         int[] array_list = { 2, 4, 6, 8 };
