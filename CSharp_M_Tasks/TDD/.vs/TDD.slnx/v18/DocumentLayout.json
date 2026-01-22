@@ -5,6 +5,9 @@
     {
       "AbsoluteMoniker": "D:0:0:{6FC44875-8C98-AEC6-2666-B1928E097BA4}|TDD.csproj|c:\\users\\eric\\desktop\\projects\\csharpwaveoffline\\csharp_m_tasks\\tdd\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6FC44875-8C98-AEC6-2666-B1928E097BA4}|TDD.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A8794FF6-C73C-4380-85E7-4ADFD14499A1}|..\\xUnit\\xUnit.csproj|c:\\users\\eric\\desktop\\projects\\csharpwaveoffline\\csharp_m_tasks\\xunit\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +17,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -31,6 +34,19 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\CSharp_M_Tasks\\xUnit\\Class1.cs",
+              "RelativeDocumentMoniker": "..\\xUnit\\Class1.cs",
+              "ToolTip": "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\CSharp_M_Tasks\\xUnit\\Class1.cs",
+              "RelativeToolTip": "..\\xUnit\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-22T17:27:32.007Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
