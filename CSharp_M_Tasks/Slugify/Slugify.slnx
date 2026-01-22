@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="../Slugify.Test/Slugify.Test.csproj" />
+  <Project Path="Slugify.csproj" />
+</Solution>
