@@ -1,19 +1,25 @@
 ﻿using Xunit;
 using Slugify;
 
-public class DetailTests
+public class SlugifyRegexTests
 {
-    [Fact]
-    public void Slug_basic_example()
-    {
-        var sut = new Detail();
+    //[Fact]
+    //public void Slug_converts_sharp_s()
+    //{
+    //    var sut = new SlugifyRegex();
+    //    Assert.Equal("gross", sut.Slug("groß"));
+    //}
+    //[Fact]
+    //public void Slug_basic_example()
+    //{
+    //    var sut = new Detail();
 
-        var result = sut.Slug("\"Pulp Fiction\" von Quentin Tarantino");
+    //    var result = sut.Slug("\"Pulp Fiction\" von Quentin Tarantino");
 
-        Assert.Equal("pulp-fiction-von-quentin-tarantino", result);
-    }
+    //    Assert.Equal("pulp-fiction-von-quentin-tarantino", result);
+    //}
 
-    private readonly Detail _detail = new();
+    private readonly SlugifyRegex _detail = new();
 
     [Theory]
     [InlineData("\"Pulp Fiction\" von Quentin Tarantino", "pulp-fiction-von-quentin-tarantino")]
