@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="../SvNrTest/SvNrTest.csproj" />
+  <Project Path="SvNr.csproj" />
+</Solution>

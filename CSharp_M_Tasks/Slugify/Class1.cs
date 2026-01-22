@@ -38,7 +38,7 @@ namespace Slugify;
         foreach (var c in normalized)
         {
             if (CharUnicodeInfo.GetUnicodeCategory(c) != UnicodeCategory.NonSpacingMark)
-                sb.Append(c);
+                sb.Append(c); // sb = string builder
         }
 
         return sb.ToString().Normalize(NormalizationForm.FormC);
