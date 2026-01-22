@@ -9,6 +9,7 @@ namespace SvNrTest
         [Fact]
         public void Valid_Format_Passes()
         {
+            // valid inputs
             Assert.True(SvNrValidator.IsValidFormat("12 150485 M 003"));
             Assert.True(SvNrValidator.IsValidFormat("01 010101 F 123"));
             Assert.True(SvNrValidator.IsValidFormat("  12   150485   m   003  "));
@@ -17,6 +18,7 @@ namespace SvNrTest
         [Fact]
         public void Invalid_Format_Fails()
         {
+            // invalid inputs
             Assert.False(SvNrValidator.IsValidFormat("12-150485-M-003"));
             Assert.False(SvNrValidator.IsValidFormat("12150485M003"));
             Assert.False(SvNrValidator.IsValidFormat("01 010101 1 123"));

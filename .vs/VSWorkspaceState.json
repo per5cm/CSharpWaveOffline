@@ -1,6 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\CSharp_M_Tasks",
+    "\\CSharp_M_Tasks\\SvNr",
+    "\\CSharp_M_Tasks\\SvNrTest"
   ],
+  "SelectedNode": "\\CSharp_M_Tasks\\SvNrTest\\SvNrValidatorTest.cs",
   "PreviewInSolutionExplorer": false
 }
