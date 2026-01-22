@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\CSharp_M_Tasks\\Slugify\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F253AAB9-86CA-4469-A3A1-36232FF4D380}|Slugify.csproj|c:\\users\\eric\\desktop\\projects\\csharpwaveoffline\\csharp_m_tasks\\slugify\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F253AAB9-86CA-4469-A3A1-36232FF4D380}|Slugify.csproj|solutionrelative:class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{58E13F0E-1AD1-CAFA-768D-0488FB230D59}|..\\Slugify.Test\\Slugify.Test.csproj|c:\\users\\eric\\desktop\\projects\\csharpwaveoffline\\csharp_m_tasks\\slugify.test\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8AAA1F88-A7F2-4EB0-803B-F30948D8EF70}|..\\Slugify.Test\\Slugify.Test.csproj|c:\\users\\eric\\desktop\\projects\\csharpwaveoffline\\csharp_m_tasks\\slugify.test\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6946C73A-8664-F918-F591-A011F4C0BC8D}|Slugify.csproj|c:\\users\\eric\\desktop\\projects\\csharpwaveoffline\\csharp_m_tasks\\slugify\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6946C73A-8664-F918-F591-A011F4C0BC8D}|Slugify.csproj|solutionrelative:class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -17,7 +17,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -37,26 +37,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "UnitTest1.cs",
               "DocumentMoniker": "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\CSharp_M_Tasks\\Slugify.Test\\UnitTest1.cs",
               "RelativeDocumentMoniker": "..\\Slugify.Test\\UnitTest1.cs",
               "ToolTip": "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\CSharp_M_Tasks\\Slugify.Test\\UnitTest1.cs",
               "RelativeToolTip": "..\\Slugify.Test\\UnitTest1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-22T17:43:37.596Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Class1.cs",
               "DocumentMoniker": "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\CSharp_M_Tasks\\Slugify\\Class1.cs",
               "RelativeDocumentMoniker": "Class1.cs",
               "ToolTip": "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\CSharp_M_Tasks\\Slugify\\Class1.cs",
               "RelativeToolTip": "Class1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-22T17:42:03.956Z",
               "EditorCaption": ""
