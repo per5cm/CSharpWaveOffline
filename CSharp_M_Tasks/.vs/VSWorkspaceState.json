@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
+    "\\Slugify",
+    "\\Slugify.Test",
     "\\TDD"
   ],
-  "SelectedNode": "\\TDD\\Program.cs",
+  "SelectedNode": "\\Slugify.Test\\UnitTest1.cs",
   "PreviewInSolutionExplorer": false
 }

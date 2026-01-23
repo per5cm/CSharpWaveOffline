@@ -33,7 +33,7 @@ namespace Slugify;
     private static string RemoveDiacritics(string text)
     {
         var normalized = text.Normalize(NormalizationForm.FormD);
-        var sb = new StringBuilder(normalized.Length);
+        var sb = new StringBuilder(normalized.Length); // sb = string builder
 
         foreach (var c in normalized)
         {

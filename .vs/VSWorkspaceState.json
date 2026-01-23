@@ -2,9 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\CSharp_M_Tasks",
+    "\\CSharp_M_Tasks\\Slugify",
+    "\\CSharp_M_Tasks\\Slugify.Test",
     "\\CSharp_M_Tasks\\SvNr",
     "\\CSharp_M_Tasks\\SvNrTest"
   ],
-  "SelectedNode": "\\CSharp_M_Tasks\\SvNrTest\\SvNrValidatorTest.cs",
+  "SelectedNode": "\\CSharp_M_Tasks\\Slugify.Test\\UnitTest1.cs",
   "PreviewInSolutionExplorer": false
 }

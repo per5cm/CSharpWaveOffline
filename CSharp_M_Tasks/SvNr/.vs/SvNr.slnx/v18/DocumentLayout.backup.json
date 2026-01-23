@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\CSharp_M_Tasks\\SvNr\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A30EE5BF-AB81-F02F-A070-4D02A6566B32}|..\\SvNrTest\\SvNrTest.csproj|c:\\users\\eric\\desktop\\projects\\csharpwaveoffline\\csharp_m_tasks\\svnrtest\\svnrvalidatortest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{07DA8866-0499-4871-A39E-DCD068D65E1E}|SvNr.csproj|c:\\users\\eric\\desktop\\projects\\csharpwaveoffline\\csharp_m_tasks\\svnr\\svnrvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{07DA8866-0499-4871-A39E-DCD068D65E1E}|SvNr.csproj|solutionrelative:svnrvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A30EE5BF-AB81-F02F-A070-4D02A6566B32}|..\\SvNrTest\\SvNrTest.csproj|c:\\users\\eric\\desktop\\projects\\csharpwaveoffline\\csharp_m_tasks\\svnrtest\\svnrvalidatortest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -17,7 +17,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -37,26 +37,25 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "SvNrValidatorTest.cs",
               "DocumentMoniker": "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\CSharp_M_Tasks\\SvNrTest\\SvNrValidatorTest.cs",
               "RelativeDocumentMoniker": "..\\SvNrTest\\SvNrValidatorTest.cs",
               "ToolTip": "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\CSharp_M_Tasks\\SvNrTest\\SvNrValidatorTest.cs",
               "RelativeToolTip": "..\\SvNrTest\\SvNrValidatorTest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAABJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-22T20:04:49.488Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-22T20:04:49.488Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "SvNrValidator.cs",
               "DocumentMoniker": "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\CSharp_M_Tasks\\SvNr\\SvNrValidator.cs",
               "RelativeDocumentMoniker": "SvNrValidator.cs",
               "ToolTip": "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\CSharp_M_Tasks\\SvNr\\SvNrValidator.cs",
               "RelativeToolTip": "SvNrValidator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-22T20:03:46.828Z",
               "EditorCaption": ""

@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\CSharp_M_Tasks\\Slugify\\Class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CSharp_M_Tasks\\Slugify\\Class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\CSharpMP\\src\\Method_Translator\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CSharpMP\\src\\Method_Translator\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -35,6 +39,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\CSharp_M_Tasks\\Slugify\\Class1.cs",
+              "RelativeDocumentMoniker": "CSharp_M_Tasks\\Slugify\\Class1.cs",
+              "ToolTip": "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\CSharp_M_Tasks\\Slugify\\Class1.cs",
+              "RelativeToolTip": "CSharp_M_Tasks\\Slugify\\Class1.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T07:14:13.218Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\CSharpMP\\src\\Method_Translator\\Program.cs",
               "RelativeDocumentMoniker": "CSharpMP\\src\\Method_Translator\\Program.cs",
