@@ -1,0 +1,15 @@
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharp_M_Tasks\ConsoleKata\ConsoleKata_1\bin\Debug\net10.0\ConsoleKata_1.exe
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharp_M_Tasks\ConsoleKata\ConsoleKata_1\bin\Debug\net10.0\ConsoleKata_1.deps.json
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharp_M_Tasks\ConsoleKata\ConsoleKata_1\bin\Debug\net10.0\ConsoleKata_1.runtimeconfig.json
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharp_M_Tasks\ConsoleKata\ConsoleKata_1\bin\Debug\net10.0\ConsoleKata_1.dll
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharp_M_Tasks\ConsoleKata\ConsoleKata_1\bin\Debug\net10.0\ConsoleKata_1.pdb
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharp_M_Tasks\ConsoleKata\ConsoleKata_1\obj\Debug\net10.0\ConsoleKata_1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharp_M_Tasks\ConsoleKata\ConsoleKata_1\obj\Debug\net10.0\ConsoleKata_1.AssemblyInfoInputs.cache
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharp_M_Tasks\ConsoleKata\ConsoleKata_1\obj\Debug\net10.0\ConsoleKata_1.AssemblyInfo.cs
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharp_M_Tasks\ConsoleKata\ConsoleKata_1\obj\Debug\net10.0\ConsoleKata_1.csproj.CoreCompileInputs.cache
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharp_M_Tasks\ConsoleKata\ConsoleKata_1\obj\Debug\net10.0\ConsoleKata_1.sourcelink.json
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharp_M_Tasks\ConsoleKata\ConsoleKata_1\obj\Debug\net10.0\ConsoleKata_1.dll
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharp_M_Tasks\ConsoleKata\ConsoleKata_1\obj\Debug\net10.0\refint\ConsoleKata_1.dll
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharp_M_Tasks\ConsoleKata\ConsoleKata_1\obj\Debug\net10.0\ConsoleKata_1.pdb
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharp_M_Tasks\ConsoleKata\ConsoleKata_1\obj\Debug\net10.0\ConsoleKata_1.genruntimeconfig.cache
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharp_M_Tasks\ConsoleKata\ConsoleKata_1\obj\Debug\net10.0\ref\ConsoleKata_1.dll
