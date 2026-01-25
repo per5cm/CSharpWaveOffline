@@ -1,9 +1,12 @@
 {
   "ExpandedNodes": [
     "",
+    "\\array_list_tasks",
+    "\\boilerPlates",
+    "\\Operatoren",
     "\\Slugify",
     "\\Slugify.Test"
   ],
-  "SelectedNode": "\\Slugify\\Class1.cs",
+  "SelectedNode": "\\boilerPlates\\Program.cs",
   "PreviewInSolutionExplorer": false
 }
