@@ -1,0 +1,15 @@
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharp_M_Tasks\ShoppingList\bin\Debug\net10.0\ShoppingList.exe
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharp_M_Tasks\ShoppingList\bin\Debug\net10.0\ShoppingList.deps.json
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharp_M_Tasks\ShoppingList\bin\Debug\net10.0\ShoppingList.runtimeconfig.json
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharp_M_Tasks\ShoppingList\bin\Debug\net10.0\ShoppingList.dll
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharp_M_Tasks\ShoppingList\bin\Debug\net10.0\ShoppingList.pdb
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharp_M_Tasks\ShoppingList\obj\Debug\net10.0\ShoppingList.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharp_M_Tasks\ShoppingList\obj\Debug\net10.0\ShoppingList.AssemblyInfoInputs.cache
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharp_M_Tasks\ShoppingList\obj\Debug\net10.0\ShoppingList.AssemblyInfo.cs
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharp_M_Tasks\ShoppingList\obj\Debug\net10.0\ShoppingList.csproj.CoreCompileInputs.cache
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharp_M_Tasks\ShoppingList\obj\Debug\net10.0\ShoppingList.sourcelink.json
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharp_M_Tasks\ShoppingList\obj\Debug\net10.0\ShoppingList.dll
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharp_M_Tasks\ShoppingList\obj\Debug\net10.0\refint\ShoppingList.dll
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharp_M_Tasks\ShoppingList\obj\Debug\net10.0\ShoppingList.pdb
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharp_M_Tasks\ShoppingList\obj\Debug\net10.0\ShoppingList.genruntimeconfig.cache
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharp_M_Tasks\ShoppingList\obj\Debug\net10.0\ref\ShoppingList.dll
