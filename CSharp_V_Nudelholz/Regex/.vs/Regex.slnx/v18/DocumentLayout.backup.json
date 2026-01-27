@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\CSharp_V_Nudelholz\\Regex\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{21CD6562-D8DA-44F1-8300-9EF82CC3388B}|Regex.csproj|c:\\users\\eric\\desktop\\projects\\csharpwaveoffline\\csharp_v_nudelholz\\regex\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21CD6562-D8DA-44F1-8300-9EF82CC3388B}|Regex.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DE1D4CCB-9511-8B5B-FBF4-9BE4CC112390}|Regex.csproj|c:\\users\\eric\\desktop\\projects\\csharpwaveoffline\\csharp_v_nudelholz\\regex\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE1D4CCB-9511-8B5B-FBF4-9BE4CC112390}|Regex.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -36,7 +36,7 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\CSharp_V_Nudelholz\\Regex\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-27T22:23:12.941Z",
               "EditorCaption": ""

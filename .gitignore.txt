@@ -1,10 +1,8 @@
-# Visual Studio / .NET
+# Visual Studio gremlin trash
 .vs/
-*.slnx
 *.suo
 *.user
 *.sln.docstates
 *.cache
 *.vsidx
-slnx.sqlite
-FileContentIndex/
+**/FileContentIndex/
