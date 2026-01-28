@@ -40,6 +40,19 @@ class Program
                 case 0: 
                     Console.WriteLine("Tchussie!");
                     return;
+
+                case 1:
+                    string input = ReadText("SV Nummer eingeben: ");
+                    bool valid = IsValid(input);
+                    if (valid)
+                    {
+                        Console.WriteLine("das passt!");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Nope... ungültig.");
+                    }
+                    break;
             }
         }
     }
@@ -48,8 +61,10 @@ class Program
     {
         if (string.IsNullOrEmpty(value)) return false;
 
+        value = Regex.Replace(value.Trim(), @"\s+", " "); // collapse multiple spaces
+        value = value.ToUpperInvariant(); // M/m -> M
 
-
+        return Regex.IsMatch(value, @"^\d{2}\s\d{6}\s[A-Z]\s\d{3}$");
     }
 
     #region Helpers
@@ -68,6 +83,12 @@ class Program
 
             Console.WriteLine("Ungültige Eingabe.");
         }  
+    }
+    static string ReadText(string label)
+    {
+        Console.Write($"{label}: ");
+        return Console.ReadLine() ?? string.Empty;
+        
     }
     #endregion
 }

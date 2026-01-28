@@ -1,0 +1,15 @@
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharp_V_Nudelholz\Regex\obj\Debug\net10.0\Regex.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharp_V_Nudelholz\Regex\obj\Debug\net10.0\Regex.AssemblyInfoInputs.cache
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharp_V_Nudelholz\Regex\obj\Debug\net10.0\Regex.AssemblyInfo.cs
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharp_V_Nudelholz\Regex\obj\Debug\net10.0\Regex.csproj.CoreCompileInputs.cache
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharp_V_Nudelholz\Regex\obj\Debug\net10.0\Regex.sourcelink.json
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharp_V_Nudelholz\Regex\bin\Debug\net10.0\Regex.exe
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharp_V_Nudelholz\Regex\bin\Debug\net10.0\Regex.deps.json
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharp_V_Nudelholz\Regex\bin\Debug\net10.0\Regex.runtimeconfig.json
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharp_V_Nudelholz\Regex\bin\Debug\net10.0\Regex.dll
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharp_V_Nudelholz\Regex\bin\Debug\net10.0\Regex.pdb
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharp_V_Nudelholz\Regex\obj\Debug\net10.0\Regex.dll
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharp_V_Nudelholz\Regex\obj\Debug\net10.0\refint\Regex.dll
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharp_V_Nudelholz\Regex\obj\Debug\net10.0\Regex.pdb
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharp_V_Nudelholz\Regex\obj\Debug\net10.0\Regex.genruntimeconfig.cache
+C:\Users\Eric\Desktop\Projects\CSharpWaveOffline\CSharp_V_Nudelholz\Regex\obj\Debug\net10.0\ref\Regex.dll
