@@ -18,6 +18,11 @@ namespace SvNr_2
         public bool IstGueltig(string input)
         {
             Match match = Regex.Match(input, @"\d{2}(?!3[0-1]02)(0[1-9]|[12][0-9]|3[01])(0[1-9]|1[0-2])\d{2}[A-Z]\d{2}\d");
+
+            // this works too without method. dumb version.
+            string last = input[^1].ToString();
+
+            //if (match.Success)
             if (match.Success && IsPruefzifferGueltig(input.Substring(input.Length-1)))
                 return true;
             else

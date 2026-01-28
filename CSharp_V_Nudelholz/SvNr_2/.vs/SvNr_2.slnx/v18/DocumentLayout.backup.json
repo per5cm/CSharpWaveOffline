@@ -39,28 +39,34 @@
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SvNr_2.cs",
+              "DocumentMoniker": "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\CSharp_V_Nudelholz\\SvNr_2\\SvNr_2.cs",
+              "RelativeDocumentMoniker": "SvNr_2.cs",
+              "ToolTip": "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\CSharp_V_Nudelholz\\SvNr_2\\SvNr_2.cs*",
+              "RelativeToolTip": "SvNr_2.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-28T12:52:11.998Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "SvNr_2Test.cs",
               "DocumentMoniker": "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\CSharp_V_Nudelholz\\SvNr_2Test\\SvNr_2Test.cs",
               "RelativeDocumentMoniker": "..\\SvNr_2Test\\SvNr_2Test.cs",
               "ToolTip": "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\CSharp_V_Nudelholz\\SvNr_2Test\\SvNr_2Test.cs",
               "RelativeToolTip": "..\\SvNr_2Test\\SvNr_2Test.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAowCsAAAA0AAAAAAAAAA==",
+              "ViewState": "AgIAABoAAAAAAAAAAAAwwCYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-28T12:53:54.258Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "SvNr_2.cs",
-              "DocumentMoniker": "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\CSharp_V_Nudelholz\\SvNr_2\\SvNr_2.cs",
-              "RelativeDocumentMoniker": "SvNr_2.cs",
-              "ToolTip": "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\CSharp_V_Nudelholz\\SvNr_2\\SvNr_2.cs",
-              "RelativeToolTip": "SvNr_2.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAIAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-28T12:52:11.998Z",
               "EditorCaption": ""
             }
           ]
