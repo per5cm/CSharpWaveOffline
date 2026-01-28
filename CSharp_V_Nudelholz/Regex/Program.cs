@@ -33,7 +33,7 @@ class Program
             foreach (var option in menuOption)
                 Console.WriteLine(option);
 
-            int choice = ReadInt("Auswahl: ", 0, 9);
+            int choice = ReadInt("Auswahl: ");
 
             switch (choice)
             {

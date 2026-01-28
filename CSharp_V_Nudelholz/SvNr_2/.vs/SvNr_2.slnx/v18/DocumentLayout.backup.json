@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\CSharp_V_Nudelholz\\SvNr_2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D912ED9B-B2ED-49EC-92F7-5980310D4CC1}|SvNr_2.csproj|c:\\users\\eric\\desktop\\projects\\csharpwaveoffline\\csharp_v_nudelholz\\svnr_2\\svnr_2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D912ED9B-B2ED-49EC-92F7-5980310D4CC1}|SvNr_2.csproj|solutionrelative:svnr_2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EB908B3-9C73-4602-ADC8-1C5BBBB0575A}|..\\SvNr_2Test\\SvNr_2Test.csproj|c:\\users\\eric\\desktop\\projects\\csharpwaveoffline\\csharp_v_nudelholz\\svnr_2test\\svnr_2test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SvNr_2Test.cs",
+              "DocumentMoniker": "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\CSharp_V_Nudelholz\\SvNr_2Test\\SvNr_2Test.cs",
+              "RelativeDocumentMoniker": "..\\SvNr_2Test\\SvNr_2Test.cs",
+              "ToolTip": "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\CSharp_V_Nudelholz\\SvNr_2Test\\SvNr_2Test.cs",
+              "RelativeToolTip": "..\\SvNr_2Test\\SvNr_2Test.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAcwBsAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-28T12:53:54.258Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SvNr_2.cs",
+              "DocumentMoniker": "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\CSharp_V_Nudelholz\\SvNr_2\\SvNr_2.cs",
+              "RelativeDocumentMoniker": "SvNr_2.cs",
+              "ToolTip": "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\CSharp_V_Nudelholz\\SvNr_2\\SvNr_2.cs",
+              "RelativeToolTip": "SvNr_2.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-28T12:52:11.998Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
