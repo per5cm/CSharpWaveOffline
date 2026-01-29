@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ConsoleKata_1")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+52a00baaa0bece63e91fd4f2ba4b2293d2534f8c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fe1c06fc0d9144f9afa0f1afa6a0bc61d1ddec4e")]
 [assembly: System.Reflection.AssemblyProductAttribute("ConsoleKata_1")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ConsoleKata_1")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
