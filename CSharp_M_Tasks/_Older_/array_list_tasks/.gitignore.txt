@@ -1,0 +1,8 @@
+# Visual Studio gremlin trash
+.vs/
+*.suo
+*.user
+*.sln.docstates
+*.cache
+*.vsidx
+**/FileContentIndex/
