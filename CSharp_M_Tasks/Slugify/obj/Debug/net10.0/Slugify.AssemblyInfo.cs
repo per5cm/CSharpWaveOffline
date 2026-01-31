@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Slugify")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0cb16e5e8b555abad78db07df0e4179ddc7e010f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b6ae129c146b5e5549a91e5ab77bcdea190e532c")]
 [assembly: System.Reflection.AssemblyProductAttribute("Slugify")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Slugify")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
