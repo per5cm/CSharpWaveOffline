@@ -14,10 +14,7 @@ namespace Slugify;
         input = input.ToLowerInvariant();
 
         // replace German special characters
-        input = input.Replace("ä", "ae")
-                     .Replace("ö", "oe")
-                     .Replace("ü", "ue")
-                     .Replace("ß", "ss");
+        input = input.Replace("ß", "ss");
 
         // remove diacritics
         input = RemoveDiacritics(input);
