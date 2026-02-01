@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "boilerPlates", "boilerPlates.csproj", "{34A094A7-3738-DDD2-5F68-5A74F60E98E4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{34A094A7-3738-DDD2-5F68-5A74F60E98E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34A094A7-3738-DDD2-5F68-5A74F60E98E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34A094A7-3738-DDD2-5F68-5A74F60E98E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34A094A7-3738-DDD2-5F68-5A74F60E98E4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0A9D1C45-1588-45CF-9092-167AA4AC1425}
+	EndGlobalSection
+EndGlobal
