@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("boilerPlates")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a351a9330ca6fb1eddfd4c2003d79007da4a1ab4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+82a1e99a20fb4f7d55b99e6b3484eb3aa7287be8")]
 [assembly: System.Reflection.AssemblyProductAttribute("boilerPlates")]
 [assembly: System.Reflection.AssemblyTitleAttribute("boilerPlates")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

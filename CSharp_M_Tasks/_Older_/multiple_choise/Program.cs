@@ -30,7 +30,7 @@ class Program
         }
     }
 
-    // ========= Helpers =========
+    #region Helpers
     static int ReadInt(string label, int min, int max)
     {
         while (true)
@@ -41,6 +41,7 @@ class Program
             Console.WriteLine("Ungültige Eingabe.");
         }
     }
+    #endregion
 
     static double ReadDouble(string label, double minExclusive = double.NegativeInfinity)
     {

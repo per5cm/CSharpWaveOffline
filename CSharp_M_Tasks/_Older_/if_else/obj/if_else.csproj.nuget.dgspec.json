@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\CSharpMP\\src\\if_else\\if_else.csproj": {}
+    "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\CSharp_M_Tasks\\_Older_\\if_else\\if_else.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\CSharpMP\\src\\if_else\\if_else.csproj": {
+    "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\CSharp_M_Tasks\\_Older_\\if_else\\if_else.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\CSharpMP\\src\\if_else\\if_else.csproj",
+        "projectUniqueName": "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\CSharp_M_Tasks\\_Older_\\if_else\\if_else.csproj",
         "projectName": "if_else",
-        "projectPath": "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\CSharpMP\\src\\if_else\\if_else.csproj",
+        "projectPath": "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\CSharp_M_Tasks\\_Older_\\if_else\\if_else.csproj",
         "packagesPath": "C:\\Users\\Eric\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\CSharpMP\\src\\if_else\\obj\\",
+        "outputPath": "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\CSharp_M_Tasks\\_Older_\\if_else\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -45,7 +45,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net9.0": {
@@ -66,7 +66,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -33,7 +33,7 @@ class Opoerators
 
             //if (int.TryParse(Console.ReadLine(), out int n) && n >= min && n <= max)
             //    return n;
-            if (int.TryParse(Console.ReadLine), out int n)
+            if (int.TryParse(Console.ReadLine(), out int n) && n >= min && n <= max)
                 return n;
 
             Console.WriteLine("Ungültige Eingabe.");
