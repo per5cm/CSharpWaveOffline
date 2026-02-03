@@ -53,39 +53,59 @@ class ConsoleAndOperators
 
             int choice = ReadInt("Auswahl: ", 0, 5);
 
-            int inputOne = ReadInt("Erste Ganzzahlen eingeben: ");
-            int inputTwo = ReadInt("Zweite Ganzzahlen eingeben: ");
+            double inputOne = ReadDouble("Erste zahl eingeben: ");
+            double inputTwo = ReadDouble("Zweite zahl eingeben: ");
 
             switch (choice)
             {
-                case 1:
+                case 1:                 
                     {
-                        int sumAdd = inputOne + inputTwo;
+                        double sumAdd = inputOne + inputTwo;
                         Console.WriteLine($"Ergebnis: {sumAdd}");
+                    }
+                    if(inputOne == 0 || inputTwo == 0)
+                    {
+                        Console.WriteLine("Möchten Sie 0 Addieren?");                    
                     } break;
 
                 case 2:
                     {
-                        int sumSubstract = inputOne - inputTwo;
+                        double sumSubstract = inputOne - inputTwo;
                         Console.WriteLine($"Ergebnis: {sumSubstract}");
+                    }
+                    if (inputOne == 0 || inputTwo == 0)
+                    {
+                        Console.WriteLine("Möchten Sie 0 Substranhieren?");
                     } break;
 
                 case 3:
                     {
-                        int sumMultiply = inputOne * inputTwo;
+                        double sumMultiply = inputOne * inputTwo;
                         Console.WriteLine($"Ergebnis: {sumMultiply}");
+                    }
+                    if (inputOne == 0 || inputTwo == 0)
+                    {
+                        Console.WriteLine("Möchten Sie Multiplizieren durch 0?");
                     } break;
 
                 case 4:
                     {
-                        int sumSubstract = inputOne / inputTwo;
+                        double sumSubstract = inputOne / inputTwo;
                         Console.WriteLine($"Ergebnis: {sumSubstract}");
+                    }
+                    if (inputOne == 0 || inputTwo == 0)
+                    {
+                        Console.WriteLine("Möchten Sie Subtranhieren durch 0?");
                     } break;
 
                 case 5:
                     {
-                        int sumModulo = inputOne % inputTwo;
-                        Console.WriteLine($"Ergebnis: {sumModulo}");
+                        double sumModulo = (inputOne % inputTwo);
+                        Console.WriteLine($"Ergebnis: Rest-{sumModulo}");
+                    }
+                    if (inputOne == 0 || inputTwo == 0)
+                    {
+                        Console.WriteLine("Möchten Sie Modulo durch 0?");
                     } break;
             }
         }
