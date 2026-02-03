@@ -81,6 +81,12 @@ class ConsoleAndOperators
                         int sumSubstract = inputOne / inputTwo;
                         Console.WriteLine($"Ergebnis: {sumSubstract}");
                     } break;
+
+                case 5:
+                    {
+                        int sumModulo = inputOne % inputTwo;
+                        Console.WriteLine($"Ergebnis: {sumModulo}");
+                    } break;
             }
         }
         
