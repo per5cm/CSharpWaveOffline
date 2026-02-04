@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq.Expressions;
 
 namespace ConsoleOperators;
 
@@ -18,7 +19,16 @@ class ConsoleAndOperators
             foreach (var item in menuOption)
                  Console.WriteLine(item);
             
-            int choice = ReadInt("Auswahl: ", 0, 9);
+            //int choice = ReadInt("Auswahl: ", 0, 9);
+            Console.WriteLine();
+            Console.WriteLine("Auswahl: ");
+
+            if (!int.TryParse(Console.ReadLine(), out int choice)) // you can also add range: && choice >= 0 <= 9)
+            {
+                Console.WriteLine("Kein gültige eingabe!");
+                    Console.ReadKey(true);
+                continue;
+            }
 
             switch (choice)
             {
@@ -27,88 +37,13 @@ class ConsoleAndOperators
 
                 case 1: Calculator();break;
                 case 2: Bensin(); break;
+                default: Console.WriteLine($"Nur 0 bis 2 erlaubt, nicht {choice}"); break;
             }
         }
     }
 
     public static void Calculator()
     {
-        Console.WriteLine("Bitte nur Ganzzahlen eingeben wie 10 oder 3 u.s.w.!");
-        Console.WriteLine();
-
-        var calculatorOption = new List<string>
-        {
-            "0: Exit",
-            "1: +, Addieren",
-            "2: -, Subtranhieren",
-            "3: *, Multiplizieren",
-            "4: /, Dividieren",
-            "5: %, Modulo"
-        };
-
-        while (true)
-        {
-            foreach (var item in calculatorOption) 
-                Console.WriteLine(item);
-
-            int choice = ReadInt("Auswahl: ", 0, 5);
-
-            double inputOne = ReadDouble("Erste zahl eingeben: ");
-            double inputTwo = ReadDouble("Zweite zahl eingeben: ");
-
-            switch (choice)
-            {
-                case 1:                 
-                    {
-                        double sumAdd = inputOne + inputTwo;
-                        Console.WriteLine($"Ergebnis: {sumAdd}");
-                    }
-                    if(inputOne == 0 || inputTwo == 0)
-                    {
-                        Console.WriteLine("Möchten Sie 0 Addieren?");                    
-                    } break;
-
-                case 2:
-                    {
-                        double sumSubstract = inputOne - inputTwo;
-                        Console.WriteLine($"Ergebnis: {sumSubstract}");
-                    }
-                    if (inputOne == 0 || inputTwo == 0)
-                    {
-                        Console.WriteLine("Möchten Sie 0 Substranhieren?");
-                    } break;
-
-                case 3:
-                    {
-                        double sumMultiply = inputOne * inputTwo;
-                        Console.WriteLine($"Ergebnis: {sumMultiply}");
-                    }
-                    if (inputOne == 0 || inputTwo == 0)
-                    {
-                        Console.WriteLine("Möchten Sie Multiplizieren durch 0?");
-                    } break;
-
-                case 4:
-                    {
-                        double sumSubstract = inputOne / inputTwo;
-                        Console.WriteLine($"Ergebnis: {sumSubstract}");
-                    }
-                    if (inputOne == 0 || inputTwo == 0)
-                    {
-                        Console.WriteLine("Möchten Sie Subtranhieren durch 0?");
-                    } break;
-
-                case 5:
-                    {
-                        double sumModulo = (inputOne % inputTwo);
-                        Console.WriteLine($"Ergebnis: Rest-{sumModulo}");
-                    }
-                    if (inputOne == 0 || inputTwo == 0)
-                    {
-                        Console.WriteLine("Möchten Sie Modulo durch 0?");
-                    } break;
-            }
-        }
         
     }
 

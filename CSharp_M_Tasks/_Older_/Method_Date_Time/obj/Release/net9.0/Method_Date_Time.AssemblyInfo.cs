@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Method_Date_Time")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a8bca00f25c9836ca006e8ae75854e647179257d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f50c34d78c4998a249e2dcd0a7500e5c71639cdc")]
 [assembly: System.Reflection.AssemblyProductAttribute("Method_Date_Time")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Method_Date_Time")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
