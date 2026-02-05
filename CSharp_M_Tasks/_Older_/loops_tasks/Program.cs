@@ -33,7 +33,7 @@ class Program
         }
     }
 
-    // ----------- Helpers (nur Eingabe) -----------
+    #region Helpers
     static int ReadInt(string label, int min, int max)
     {
         while (true)
@@ -66,6 +66,7 @@ class Program
             Console.WriteLine("Ungültige Eingabe.");
         }
     }
+    #endregion
 
     #region Teiler (while) 
     static void DivisorsWhile()
