@@ -10,8 +10,9 @@ namespace Mix
         {
             var menu = new List<string>
             {
-                "0: Exit",
-                "1: FizzBuzz"
+                "0: Exit.",
+                "1: FizzBuzz.",
+                "2: Binary String to Decimal."
             };
 
             while (true)
@@ -36,7 +37,18 @@ namespace Mix
                         Console.WriteLine("Bye!"); return;
 
                     case 1: FizzBuzz(); break;
+                    case 2:
+                        {
+                            Console.WriteLine("Enter binary number: ");
+                            string? input = Console.ReadLine();
 
+                            if (BinToDec(input, out int value))
+                                Console.WriteLine($"Decimal: {value}");
+
+                            else Console.WriteLine("Invalid binary number");
+
+                            Console.ReadKey(true); break;
+                        }
 
                     default:
                         Console.WriteLine("Option not available!");
@@ -66,6 +78,21 @@ namespace Mix
                     Console.WriteLine(i);
                 }                     
             }
+        }
+
+        internal static bool BinToDec(string? bin, out int result)
+        {
+            result = 0;
+
+            if (string.IsNullOrWhiteSpace(bin))
+                return false;
+
+            foreach (char c in bin)
+                if (c != '0' && c != '1')
+                    return false;
+
+            result = Convert.ToInt32(bin, 2);
+            return true;
         }
     }
 }
