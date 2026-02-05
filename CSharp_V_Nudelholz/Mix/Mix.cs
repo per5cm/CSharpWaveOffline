@@ -26,6 +26,7 @@ namespace Mix
                 if (!int.TryParse(Console.ReadLine(), out int choice))
                 {
                     Console.WriteLine("Invalid Option!");
+                    Console.WriteLine("Press any Key to continue...");
                         Console.ReadKey(true); // read key true = doesnt display key pressed, read key false does display pressed key.
                     continue;
                 }
@@ -36,30 +37,52 @@ namespace Mix
                     case 0:
                         Console.WriteLine("Bye!"); return;
 
-                    case 1: FizzBuzz(); break;
+                    case 1:
+                        {
+                            Console.WriteLine("Enter a number to calculate FizzBuzz range: ");
+                            string? inputFor = Console.ReadLine();
+
+                            if (!int.TryParse(inputFor, out int rangeIn) || rangeIn < 1)
+                            {
+                                Console.WriteLine("That not valid positive number. Try again."); break;
+                            }
+
+                            FizzBuzz(rangeIn);
+
+                            Console.WriteLine("Press any Key to continue...");
+                            Console.ReadKey(true);
+                            break;
+                        } 
                     case 2:
                         {
                             Console.WriteLine("Enter binary number: ");
-                            string? input = Console.ReadLine();
+                            string? inputBinary = Console.ReadLine();
 
-                            if (BinToDec(input, out int value))
-                                Console.WriteLine($"Decimal: {value}");
+                            if (BinToDec(inputBinary, out int valueDecimal))
+                                Console.WriteLine($"From Binary to Decimal Number, value is - {valueDecimal}");
 
-                            else Console.WriteLine("Invalid binary number");
+                            else Console.WriteLine("Entered an invalid binary number");
 
+                            Console.WriteLine("Press any Key to continue...");
                             Console.ReadKey(true); break;
                         }
 
                     default:
-                        Console.WriteLine("Option not available!");
+                        Console.WriteLine("Menu option not available!");
+                        Console.WriteLine("Press any Key to continue...");
                         Console.ReadKey(true); break;
                 }
             }           
         }
 
-        internal static void FizzBuzz()
+        internal static void FizzBuzz(int rangeOut)
         {
-            for (int i = 0; i < 100; i++)
+            Console.WriteLine();
+            Console.WriteLine($"FizzBuzz up to {rangeOut}");
+            Console.WriteLine();
+
+            // loop starts at 0.
+            for (int i = 0; i <= rangeOut; i++)
             {
                 if (i % 3 == 0 && i % 5 == 0)
                 {
@@ -80,18 +103,18 @@ namespace Mix
             }
         }
 
-        internal static bool BinToDec(string? bin, out int result)
+        internal static bool BinToDec(string? binaryIn, out int resultOut)
         {
-            result = 0;
+            resultOut = 0;
 
-            if (string.IsNullOrWhiteSpace(bin))
-                return false;
+            if (string.IsNullOrWhiteSpace(binaryIn)) return false;
 
-            foreach (char c in bin)
-                if (c != '0' && c != '1')
-                    return false;
+            binaryIn = binaryIn.Trim(); 
 
-            result = Convert.ToInt32(bin, 2);
+            foreach (char c in binaryIn)
+                if (c != '0' && c != '1') return false;
+
+            resultOut = Convert.ToInt32(binaryIn, 2);
             return true;
         }
     }

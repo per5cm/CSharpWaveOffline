@@ -17,7 +17,7 @@ class ConsoleAndOperators
         while (true)
         {
             foreach (var item in menuOption)
-                 Console.WriteLine(item);
+                Console.WriteLine(item);
             
             //int choice = ReadInt("Auswahl: ", 0, 9);
             Console.WriteLine();
