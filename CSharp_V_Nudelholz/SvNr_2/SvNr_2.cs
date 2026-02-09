@@ -37,8 +37,8 @@ namespace SvNr_2
         // Buchstaben-Zahlen Zuordnung
         Dictionary<char, int> buchstabenZuZahlen = new Dictionary<char, int>()
         {
-            {'A', 01}, {'B', 02}, {'C', 03}, {'D', 04}, {'E', 05},
-            {'F', 06}, {'G', 07}, {'H', 08}, {'I', 09}, {'J', 10},
+            {'A', 1}, {'B', 2}, {'C', 3}, {'D', 4}, {'E', 5},
+            {'F', 6}, {'G', 7}, {'H', 8}, {'I', 9}, {'J', 10},
             {'K', 11}, {'L', 12}, {'M', 13}, {'N', 14}, {'O', 15},
             {'P', 16}, {'Q', 17}, {'R', 18}, {'S', 19}, {'T', 20},
             {'U', 21}, {'V', 22}, {'W', 23}, {'X', 24}, {'Y', 25},
@@ -69,7 +69,7 @@ namespace SvNr_2
             {
                 // input[i] ist in diesem Fall ein Char (mit einem Char kann keine mathematische
                 // Berechnung angestellt werden, deswegen ToString() in eine Zahl...
-                bool parseErfolgreich = int.TryParse(input[i].ToString(), out int zahlAlsInt);
+                bool parseErfolgreich = int.TryParse(input[i].ToString(), out int ZahlAlsInt);
 
                 if (parseErfolgreich == false)
                 {
@@ -79,12 +79,31 @@ namespace SvNr_2
 
                     // parseErfolgreich = false, war nicht erfolgreich und enthält "Quatsch"
                     // dann muss der Buchstabe in eine Zahl umgewandelt werden
-                    ergebnis[i] = faktoren[i] * BuchstabeZuZahl(input[i]);
+
+                    int buchstabeInZahlUmgewandelt = BuchstabeZuZahl(input[i]);
+                    ZahlAlsInt = buchstabeInZahlUmgewandelt;
                 }
-                else
+
+                ergebnis[i] = faktoren[i] * ZahlAlsInt;
+            }
+            return ergebnis;
+        }
+
+        public static int[] QuersummeBerechnen(int[] arrayVonGewichtetenProdukte)
+        {
+            int[] ergebnis = new int[12];
+
+            for (int i = 0; i < 12; i++)
+            {
+                int zahl = arrayVonGewichtetenProdukte[i];
+                int quersumme = 0;
+
+                while (zahl > 0)
                 {
-                    ergebnis[i] = faktoren[i] * zahlAlsInt;
+                    quersumme += zahl % 10; // Letzte Ziffer hinzufügen
+                    zahl /= 10; // Letzte Ziffer entfernen
                 }
+                ergebnis[i] = quersumme;
             }
             return ergebnis;
         }

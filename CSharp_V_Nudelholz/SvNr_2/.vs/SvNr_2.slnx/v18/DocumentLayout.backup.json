@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\CSharp_V_Nudelholz\\SvNr_2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A6964B6C-3795-156D-A85F-F49EA2CBFB3E}|SvNr_2.csproj|c:\\users\\eric\\desktop\\projects\\csharpwaveoffline\\csharp_v_nudelholz\\svnr_2\\svnr_2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A6964B6C-3795-156D-A85F-F49EA2CBFB3E}|SvNr_2.csproj|solutionrelative:svnr_2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{744D56C2-18AF-EF9A-6F6E-82D1FA72A0A4}|..\\SvNr_2Test\\SvNr_2Test.csproj|c:\\users\\eric\\desktop\\projects\\csharpwaveoffline\\csharp_v_nudelholz\\svnr_2test\\svnr_2test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{744D56C2-18AF-EF9A-6F6E-82D1FA72A0A4}|..\\SvNr_2Test\\SvNr_2Test.csproj|c:\\users\\eric\\desktop\\projects\\csharpwaveoffline\\csharp_v_nudelholz\\svnr_2test\\svnr_2test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A6964B6C-3795-156D-A85F-F49EA2CBFB3E}|SvNr_2.csproj|c:\\users\\eric\\desktop\\projects\\csharpwaveoffline\\csharp_v_nudelholz\\svnr_2\\svnr_2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6964B6C-3795-156D-A85F-F49EA2CBFB3E}|SvNr_2.csproj|solutionrelative:svnr_2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -29,11 +29,11 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             }
           ]
         },
@@ -43,13 +43,13 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "SvNr_2Test.cs",
               "DocumentMoniker": "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\CSharp_V_Nudelholz\\SvNr_2Test\\SvNr_2Test.cs",
               "RelativeDocumentMoniker": "..\\SvNr_2Test\\SvNr_2Test.cs",
               "ToolTip": "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\CSharp_V_Nudelholz\\SvNr_2Test\\SvNr_2Test.cs",
               "RelativeToolTip": "..\\SvNr_2Test\\SvNr_2Test.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAmwFQAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-28T12:53:54.258Z",
               "EditorCaption": ""
@@ -62,13 +62,13 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "SvNr_2.cs",
               "DocumentMoniker": "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\CSharp_V_Nudelholz\\SvNr_2\\SvNr_2.cs",
               "RelativeDocumentMoniker": "SvNr_2.cs",
-              "ToolTip": "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\CSharp_V_Nudelholz\\SvNr_2\\SvNr_2.cs",
-              "RelativeToolTip": "SvNr_2.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAowFsAAAABAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Eric\\Desktop\\Projects\\CSharpWaveOffline\\CSharp_V_Nudelholz\\SvNr_2\\SvNr_2.cs*",
+              "RelativeToolTip": "SvNr_2.cs*",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAcwG4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-28T12:52:11.998Z",
               "EditorCaption": ""
