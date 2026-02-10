@@ -32,10 +32,10 @@ namespace SvNr_2
         // 5. Prüfziffer vergleichen
 
         // Faktoren für die Multiplikation
-        int[] faktoren = { 2, 1, 2, 5, 7, 1, 2, 1, 2, 1, 2, 1 };
+        private readonly int[] faktoren = { 2, 1, 2, 5, 7, 1, 2, 1, 2, 1, 2, 1 };
 
         // Buchstaben-Zahlen Zuordnung
-        Dictionary<char, int> buchstabenZuZahlen = new Dictionary<char, int>()
+        private readonly Dictionary<char, int> buchstabenZuZahlen = new ()
         {
             {'A', 1}, {'B', 2}, {'C', 3}, {'D', 4}, {'E', 5},
             {'F', 6}, {'G', 7}, {'H', 8}, {'I', 9}, {'J', 10},
@@ -69,7 +69,7 @@ namespace SvNr_2
             {
                 // input[i] ist in diesem Fall ein Char (mit einem Char kann keine mathematische
                 // Berechnung angestellt werden, deswegen ToString() in eine Zahl...
-                bool parseErfolgreich = int.TryParse(input[i].ToString(), out int ZahlAlsInt);
+                bool parseErfolgreich = int.TryParse(input[i].ToString(), out int zahlAlsInt);
 
                 if (parseErfolgreich == false)
                 {
@@ -81,10 +81,10 @@ namespace SvNr_2
                     // dann muss der Buchstabe in eine Zahl umgewandelt werden
 
                     int buchstabeInZahlUmgewandelt = BuchstabeZuZahl(input[i]);
-                    ZahlAlsInt = buchstabeInZahlUmgewandelt;
+                    zahlAlsInt = buchstabeInZahlUmgewandelt;
                 }
 
-                ergebnis[i] = faktoren[i] * ZahlAlsInt;
+                ergebnis[i] = faktoren[i] * zahlAlsInt;
             }
             return ergebnis;
         }
