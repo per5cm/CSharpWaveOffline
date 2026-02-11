@@ -44,7 +44,7 @@ namespace Mix
 
                             if (!int.TryParse(inputFor, out int rangeIn) || rangeIn < 1)
                             {
-                                Console.WriteLine("That not valid positive number. Try again."); break;
+                                Console.WriteLine("That not valid positive number. Try again."); 
                             }
 
                             FizzBuzz(rangeIn);
@@ -84,6 +84,7 @@ namespace Mix
             // loop starts at 0.
             for (int i = 0; i <= rangeOut; i++)
             {
+                // or you can just say %15
                 if (i % 3 == 0 && i % 5 == 0)
                 {
                     Console.WriteLine("FizzBuzz");
