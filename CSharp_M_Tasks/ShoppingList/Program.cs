@@ -5,7 +5,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        List<string> shoppingList = new List<string>();
+        List<string> ShoppingList = new ();
 
         while (true)
         {
@@ -17,7 +17,7 @@ class Program
                 string item = Console.ReadLine()?.ToLower().Trim() ?? "";
                 if(!string.IsNullOrWhiteSpace(item))
                 {
-                    shoppingList.Add(item);
+                    ShoppingList.Add(item);
                     Console.WriteLine();
                     Console.WriteLine($"\"{item}\" hinzugefügt");
                 }              
@@ -27,12 +27,12 @@ class Program
                 Console.WriteLine("Artikel zum Entfernen: ");
                 string item = Console.ReadLine()?.ToLower().Trim() ?? "";
                 Console.WriteLine();
-                if (shoppingList.Remove(item)) Console.WriteLine("Entfernt!");
+                if (ShoppingList.Remove(item)) Console.WriteLine("Entfernt!");
                 else Console.WriteLine("Nicht Gefunden!");
             }
             else if (option == "3" || option == "anzeigen")
             {
-                Console.WriteLine(string.Join(", ", shoppingList));
+                Console.WriteLine(string.Join(", ", ShoppingList));
             }
             else if (option == "4" || option == "beenden") break;
         }
