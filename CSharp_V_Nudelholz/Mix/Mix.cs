@@ -17,7 +17,7 @@ namespace Mix
 
             while (true)
             {
-                foreach(var item in menu)
+                foreach (var item in menu)
                     Console.WriteLine(item);
 
                 Console.WriteLine();
@@ -25,9 +25,7 @@ namespace Mix
 
                 if (!int.TryParse(Console.ReadLine(), out int choice))
                 {
-                    Console.WriteLine("Invalid Option!");
-                    Console.WriteLine("Press any Key to continue...");
-                        Console.ReadKey(true); // read key true = doesnt display key pressed, read key false does display pressed key.
+                    Pause();
                     continue;
                 }
 
@@ -44,15 +42,14 @@ namespace Mix
 
                             if (!int.TryParse(inputFor, out int rangeIn) || rangeIn < 1)
                             {
-                                Console.WriteLine("That not valid positive number. Try again."); 
+                                Console.WriteLine("That not valid positive number. Try again.");
                             }
 
                             FizzBuzz(rangeIn);
 
-                            Console.WriteLine("Press any Key to continue...");
-                            Console.ReadKey(true);
+                            Pause();
                             break;
-                        } 
+                        }
                     case 2:
                         {
                             Console.WriteLine("Enter binary number: ");
@@ -63,16 +60,14 @@ namespace Mix
 
                             else Console.WriteLine("Entered an invalid binary number");
 
-                            Console.WriteLine("Press any Key to continue...");
-                            Console.ReadKey(true); break;
+                            Pause();
+                            break;
                         }
 
                     default:
-                        Console.WriteLine("Menu option not available!");
-                        Console.WriteLine("Press any Key to continue...");
-                        Console.ReadKey(true); break;
+                        Pause(); break;
                 }
-            }           
+            }
         }
 
         internal static void FizzBuzz(int rangeOut)
@@ -100,7 +95,7 @@ namespace Mix
                 else
                 {
                     Console.WriteLine(i);
-                }                     
+                }
             }
         }
 
@@ -110,7 +105,7 @@ namespace Mix
 
             if (string.IsNullOrWhiteSpace(binaryIn)) return false;
 
-            binaryIn = binaryIn.Trim(); 
+            binaryIn = binaryIn.Trim();
 
             foreach (char c in binaryIn)
                 if (c != '0' && c != '1') return false;
@@ -118,5 +113,15 @@ namespace Mix
             resultOut = Convert.ToInt32(binaryIn, 2);
             return true;
         }
+    #region Helppers
+
+    public static void Pause()
+        {
+            Console.WriteLine("Invalid Option!");
+            Console.WriteLine("Press any Key to continue...");
+            Console.ReadKey(true); // read key true = doesnt display key pressed, read key false does display pressed key.
+        }
+
+        #endregion
     }
 }
