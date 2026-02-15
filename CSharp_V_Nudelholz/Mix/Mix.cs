@@ -25,7 +25,7 @@ namespace Mix
 
                 if (!int.TryParse(Console.ReadLine(), out int choice))
                 {
-                    Pause();
+                    ShowPause();
                     continue;
                 }
 
@@ -47,7 +47,7 @@ namespace Mix
 
                             FizzBuzz(rangeIn);
 
-                            Pause();
+                            ShowPause();
                             break;
                         }
                     case 2:
@@ -60,12 +60,12 @@ namespace Mix
 
                             else Console.WriteLine("Entered an invalid binary number");
 
-                            Pause();
+                            ShowPause();
                             break;
                         }
 
                     default:
-                        Pause(); break;
+                        ShowPause(); break;
                 }
             }
         }
@@ -114,14 +114,11 @@ namespace Mix
             return true;
         }
     #region Helppers
-
-    public static void Pause()
+    public static void ShowPause(string message = "Press any key to continue...")
         {
-            Console.WriteLine("Invalid Option!");
-            Console.WriteLine("Press any Key to continue...");
+            Console.WriteLine(message);
             Console.ReadKey(true); // read key true = doesnt display key pressed, read key false does display pressed key.
         }
-
         #endregion
     }
 }
