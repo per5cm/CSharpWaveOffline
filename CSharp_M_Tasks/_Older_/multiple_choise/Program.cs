@@ -12,10 +12,10 @@ class Program
 
         while (true)
         {
-            Console.WriteLine("1) Briefporto");
-            Console.WriteLine("2) Taschenrechner +, -, *, /");
-            Console.WriteLine("3) Geometrie: Zylinder, Würfel, Quader, Kugel");
-            Console.WriteLine("0) Ende");
+            Console.WriteLine("1. Briefporto");
+            Console.WriteLine("2. Taschenrechner +, -, *, /");
+            Console.WriteLine("3. Geometrie: Zylinder, Würfel, Quader, Kugel");
+            Console.WriteLine("0. Ende");
             int choice = ReadInt("Auswahl", 0, 3);
 
             switch (choice)
@@ -124,8 +124,8 @@ class Program
     static void Zylinder()
     {
         Console.WriteLine("\nZylinder");
-        double r = ReadDouble("Radius r in cm (>0)", 0);
-        double h = ReadDouble("Höhe h in cm (>0)", 0);
+        double r = ReadDouble("Radius r in cm >0", 0);
+        double h = ReadDouble("Höhe h in cm >0", 0);
 
         double o = 2 * Math.PI * r * (r + h);      // Oberfläche
         double v = Math.PI * r * r * h;            // Volumen
@@ -137,7 +137,7 @@ class Program
     static void Wuerfel()
     {
         Console.WriteLine("\nWürfel");
-        double a = ReadDouble("Kantenlänge a in cm (>0)", 0);
+        double a = ReadDouble("Kantenlänge a in cm >0", 0);
 
         double o = 6 * a * a;      // Oberfläche
         double v = a * a * a;      // Volumen
@@ -149,9 +149,9 @@ class Program
     static void Quader()
     {
         Console.WriteLine("\nQuader");
-        double a = ReadDouble("Höhe a in cm (>0)", 0);
-        double b = ReadDouble("Länge b in cm (>0)", 0);
-        double c = ReadDouble("Breite c in cm (>0)", 0);
+        double a = ReadDouble("Höhe a in cm >0", 0);
+        double b = ReadDouble("Länge b in cm >0", 0);
+        double c = ReadDouble("Breite c in cm >0", 0);
 
         double o = 2 * (a * b + a * c + b * c);    // Oberfläche
         double v = a * b * c;                      // Volumen
@@ -163,7 +163,7 @@ class Program
     static void Kugel()
     {
         Console.WriteLine("\nKugel");
-        double r = ReadDouble("Radius r in cm (>0)", 0);
+        double r = ReadDouble("Radius r in cm >0", 0);
 
         double o = 4 * Math.PI * r * r;                    // Oberfläche
         double v = (4.0 / 3.0) * Math.PI * r * r * r;      // Volumen  **Achtung: 4.0/3.0**
