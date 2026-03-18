@@ -1,4 +1,5 @@
 ﻿using System;
+using CellularRule.Library;
 
 namespace CellularRule
 {
@@ -6,7 +7,7 @@ namespace CellularRule
     {
         internal static void Main(string[] args)
         {
-
+            Rule30.CellularRule30();
         }
     }
 }

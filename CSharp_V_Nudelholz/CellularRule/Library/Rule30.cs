@@ -6,7 +6,7 @@ namespace CellularRule.Library
 {
     internal class Rule30
     {
-        internal static int CellularRule30()
+        internal static void CellularRule30()
         {
             int width = 80;
 
@@ -24,7 +24,7 @@ namespace CellularRule.Library
 
             #endregion
 
-            cellularBlankArray[width / 2] = positiv;
+            cellularBlankArray[width / 2] = positiv; // or 1
 
             int generation = 0;
 
@@ -32,9 +32,14 @@ namespace CellularRule.Library
             {
                 Console.Clear();
 
-                Console.Write($"Generation: {0}", generation);
+                Console.Write($"Generation: ", generation);
 
-
+                for (int row = 0; row < width; row++ )
+                {
+                    if (cellularBlankArray[row] == 1) Console.Write("X");
+                    else Console.Write(".");
+                }
+                Console.WriteLine();
 
                 generation++;
 
@@ -45,8 +50,6 @@ namespace CellularRule.Library
                     default: break;
                 }
             }
-
-            return width;
         }
     }
 }
