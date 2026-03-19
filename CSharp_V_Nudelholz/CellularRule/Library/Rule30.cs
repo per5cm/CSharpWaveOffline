@@ -10,9 +10,9 @@ namespace CellularRule.Library
         {
             int width = 80;
 
-            int[] cellularBlankArray = new int[width];
+            int[] currentArray = new int[width];
 
-            int[] cellularFinalArray = new int[width];
+            int[] nextArray = new int[width];
 
             int positiv = 0b0001;
             int negativ = 0b0000;
@@ -24,7 +24,7 @@ namespace CellularRule.Library
 
             #endregion
 
-            cellularBlankArray[width / 2] = positiv; // or 1
+            currentArray[width / 2] = positiv; // or 1
 
             int generation = 0;
 
@@ -32,15 +32,21 @@ namespace CellularRule.Library
             {
                 Console.Clear();
 
-                Console.Write($"Generation: ", generation);
+                //Console.Write($"Generation: ", generation);
 
                 for (int row = 0; row < width; row++ )
                 {
-                    if (cellularBlankArray[row] == 1) Console.Write("X");
+                    if (currentArray[row] == 1) Console.Write("X");
                     else Console.Write(".");
                 }
                 Console.WriteLine();
 
+                for (int row = 0; row < width; row++)
+                {
+
+                }
+
+                Array.Copy(nextArray, currentArray, width);
                 generation++;
 
                 var key = Console.ReadKey(true);
