@@ -1,0 +1,61 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace CellularRule.Library
+{
+    internal class Rule30
+    {
+        internal static void CellularRule30()
+        {
+            int width = 80;
+
+            int[] currentArray = new int[width];
+
+            int [] nextArray = new int[width];
+
+            int positiv = 0b0001;
+            int negativ = 0b0000;
+
+            #region UserDirection
+
+            bool end = false;
+            const ConsoleKey endButton = ConsoleKey.Q;
+
+            #endregion
+
+            currentArray[width / 2] = positiv; // or 1
+
+            int generation = 0;
+
+            while(!end)
+            {
+                Console.Clear();
+
+                Console.WriteLine($"Generation: ", generation);
+
+                for (int row = 0; row < width; row++ )
+                {
+                    if (currentArray[row] == positiv) Console.Write("X");
+                    else Console.Write(".");
+                }
+                Console.WriteLine();
+
+                for (int row = 0;row < width; row++ )
+                {
+
+                }
+
+                Array.Copy(nextArray, currentArray, width);
+                generation++;
+
+                var key = Console.ReadKey(true);
+                switch (key.Key)
+                {
+                    case endButton: end = true; break;
+                    default: break;
+                }
+            }
+        }
+    }
+}
