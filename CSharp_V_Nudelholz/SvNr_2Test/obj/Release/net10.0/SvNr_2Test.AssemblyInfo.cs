@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SvNr_2Test")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+89ef62a9127eb0517f08e903cf9846d9047934c3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e63a612b637d1dc5a757af3e2a8b15d2062dcb94")]
 [assembly: System.Reflection.AssemblyProductAttribute("SvNr_2Test")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SvNr_2Test")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
