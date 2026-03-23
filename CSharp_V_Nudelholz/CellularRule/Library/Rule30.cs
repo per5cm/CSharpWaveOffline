@@ -9,14 +9,14 @@ namespace CellularRule.Library
     {
         internal static void CellularRule30()
         {
-            int width = 80;
+            int width = 81;
 
             int[] currentArray = new int[width];
 
             int [] nextArray = new int[width];
 
-            int positiv = 0b0001;
-            //int negativ = 0b0000;
+            int positiv = 0b0001; // this is decimal 1 from binary
+            //int negativ = 0b0000; // this is decimal 0 from binary
 
             #region UserDirection
 
@@ -65,8 +65,8 @@ namespace CellularRule.Library
 
                 Array.Copy(nextArray, currentArray, width);
                 generation++;
-                
-                if(Console.KeyAvailable)
+
+                if (Console.KeyAvailable)
                 {
                     var key = Console.ReadKey(true);
                     if (key.Key == ConsoleKey.Q)
