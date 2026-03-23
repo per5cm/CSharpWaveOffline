@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using System.Text;
 
 namespace CellularRule.Library
@@ -15,12 +16,12 @@ namespace CellularRule.Library
             int [] nextArray = new int[width];
 
             int positiv = 0b0001;
-            int negativ = 0b0000;
+            //int negativ = 0b0000;
 
             #region UserDirection
 
             bool end = false;
-            const ConsoleKey endButton = ConsoleKey.Q;
+            //const ConsoleKey endButton = ConsoleKey.Q;
 
             #endregion
 
@@ -28,11 +29,11 @@ namespace CellularRule.Library
 
             int generation = 0;
 
-            while(!end)
+            while(!end && generation < width)
             {
-                Console.Clear();
+                //Console.Clear();
 
-                Console.WriteLine($"Generation: ", generation);
+                //Console.WriteLine($"Generation: {generation}");
 
                 for (int row = 0; row < width; row++ )
                 {
@@ -43,17 +44,33 @@ namespace CellularRule.Library
 
                 for (int row = 0;row < width; row++ )
                 {
+                    int left = (row > 0) ? currentArray[row -1] : 0;
+                    int center = currentArray[row];
+                    int right = (row < width -1) ? currentArray[row +1] : 0;
 
+                    int code = (left << 2) | (center << 1) | right;
+
+                    switch (code)
+                    {
+                        case 0b000: nextArray[row] = 0; break; // --> 000 --> 0
+                        case 0b001: nextArray[row] = 1; break; // --> 001 --> 1
+                        case 0b010: nextArray[row] = 1; break; // --> 010 --> 1
+                        case 0b011: nextArray[row] = 1; break; // --> 011 --> 1
+                        case 0b100: nextArray[row] = 1; break; // --> 100 --> 1
+                        case 0b101: nextArray[row] = 0; break; // --> 101 --> 0
+                        case 0b110: nextArray[row] = 0; break; // --> 110 --> 0
+                        case 0b111: nextArray[row] = 0; break; // --> 111 --> 0
+                    }
                 }
 
                 Array.Copy(nextArray, currentArray, width);
                 generation++;
-
-                var key = Console.ReadKey(true);
-                switch (key.Key)
+                
+                if(Console.KeyAvailable)
                 {
-                    case endButton: end = true; break;
-                    default: break;
+                    var key = Console.ReadKey(true);
+                    if (key.Key == ConsoleKey.Q)
+                        end = true;
                 }
             }
         }
