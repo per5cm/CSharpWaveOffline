@@ -90,7 +90,7 @@ class Program
 
         while (true)
         {
-            Console.Write("Zahl eingeben (0 = Ende): ");
+            Console.Write("Zahl eingeben, 0 = Ende: ");
             if (int.TryParse(Console.ReadLine(), out int zahl))
             {
                 if (zahl == 0)

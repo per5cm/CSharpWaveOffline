@@ -1,30 +1,31 @@
 ﻿using System;
-using System.Globalization;
 
 class Program
 {
-    static readonly CultureInfo De = new("de-DE");
-
     static void Main()
     {
-        Console.WriteLine("=== Methoden Übungen ===\n");
-
         // ---- Aktive Aufgabe hier aufrufen ----
-        TemperaturProgramm();
-        // SagHallo();
-        // SagHalloZu("Maria");
+        
+        // SagHalloZu("Maria!");
+        // SagHalloZu("Alibaba!");
+        // SagHalloZu("Max!");
         // SchreibeErgebnis(VerdoppleZahl(5));
+        TemperaturProgramm();
     }
 
     #region Demo Methoden
     static void SagHallo()
     {
-        Console.WriteLine("Hallo Welt!");
+        // Hallo Welt.
+        {
+            Console.WriteLine("Hallo Welt! Ich Liebe Pizza!");
+        }
     }
 
     static void SagHalloZu(string name)
     {
         Console.WriteLine($"Hallo {name}!");
+        // Console.WriteLine("Hallo, " + name);
     }
 
 
@@ -58,25 +59,25 @@ class Program
         }
     }
 
-    static double CelsiusZuFahrenheit(double c)
+    static double CelsiusZuFahrenheit(double celsius)
     {
-        return c * 9 / 5 + 32;
+        return celsius * 9 / 5 + 32;
     }
 
-    static void TemperaturBewertung(double c)
+    static void TemperaturBewertung(double celsius)
     {
-        if (c < 0) Console.WriteLine("Es ist sehr kalt!");
-        else if (c > 30) Console.WriteLine("Es ist heiß!");
+        if (celsius < 0) Console.WriteLine("Es ist sehr kalt!");
+        else if (celsius > 30) Console.WriteLine("Es ist heiß!");
         else Console.WriteLine("Das Wetter ist angenehm.");
     }
 
     static void TemperaturProgramm()
     {
-        double c = LiesTemperatur();
-        double f = CelsiusZuFahrenheit(c);
+        double celsius = LiesTemperatur();
+        double fahrenheit = CelsiusZuFahrenheit(celsius);
 
-        Console.WriteLine($"{c:F1}°C sind {f:F1}°F");
-        TemperaturBewertung(c);
+        Console.WriteLine($"{celsius:F1}°C sind {fahrenheit:F1}°F");
+        TemperaturBewertung(celsius);
     }
 
     #endregion

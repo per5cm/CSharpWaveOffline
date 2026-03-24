@@ -1,127 +1,73 @@
-﻿using System;
-using System.Globalization;
+﻿// Console.WriteLine("Rechner\n");
 
-class Program
-{
-    // Deutsch: 1,5 statt 1.5
-    static readonly CultureInfo De = new("de-DE");
+// Console.WriteLine("Bitte geben Sie zwei ganzen Zahle ein!");
+// Console.Write("Zahl 1: ");
+// string input_zahl_1 = Console.ReadLine();
+// int zahl_1 = int.Parse(input_zahl_1);
+// Console.Write("Zahl 2: ");
+// string input_zahl_2 = Console.ReadLine();
+// int zahl_2 = int.Parse(input_zahl_2);
 
-    static void Main()
-    {
-        Console.WriteLine("Operatoren - Übungssammlung\n");
 
-        Rechner();           // + - * / % (mit Guards)
-        Verbrauch();         // l/100 km
-        DreiecksFlaeche();   // A = (g*h)/2
-        Waehrungsrechner();  // EUR -> USD (Demo-Kurs)
-        Schreinerei();       // Stückzahl + Verschnitt
-    }
+// Console.WriteLine($"Summe: {zahl_1 + zahl_2}");
+// Console.WriteLine($"Differenz: {zahl_1 - zahl_2}");
+// Console.WriteLine($"Produkt: {zahl_1 * zahl_2}");
+// Console.WriteLine($"Quotient: {zahl_1 % zahl_2}");
 
-    // ---------- Helpers ----------
-    static int ReadInt(string label, int minInclusive = int.MinValue, int maxInclusive = int.MaxValue)
-    {
-        while (true)
-        {
-            Console.Write($"{label}: ");
-            if (int.TryParse(Console.ReadLine(), NumberStyles.Integer, De, out int n) &&
-                n >= minInclusive && n <= maxInclusive)
-                return n;
-            Console.WriteLine("Ungültige Eingabe.");
-        }
-    }
 
-    static double ReadDouble(string label, double minExclusive = double.NegativeInfinity)
-    {
-        while (true)
-        {
-            Console.Write($"{label}: ");
-            if (double.TryParse(Console.ReadLine(), NumberStyles.Float, De, out double x) && x > minExclusive)
-                return x;
-            Console.WriteLine("Ungültige Eingabe.");
-        }
-    }
+// Console.WriteLine("\nBenzin");
 
-    #region Rechner 
-    static void Rechner()
-    {
-        Console.WriteLine("Rechner\nBitte geben Sie zwei ganze Zahlen ein.");
-        int a = ReadInt("Zahl 1");
-        int b = ReadInt("Zahl 2");
+// Console.Write("Bitte geben Sie die gefahreren Kilometer ein: ");
+// int zahl_kilometer = Convert.ToInt32(Console.ReadLine());
 
-        Console.WriteLine($"Summe:      {a + b}");
-        Console.WriteLine($"Differenz:  {a - b}");
-        Console.WriteLine($"Produkt:    {a * b}");
+// Console.Write("Bitte geben Sie die verbrauchten Benzinmenge in Litern ein: ");
+// float zahl_benzin = Convert.ToSingle(Console.ReadLine());
 
-        if (b != 0)
-        {
-            Console.WriteLine($"Quotient:   {(a / (double)b).ToString("F2", De)}"); // Division
-            Console.WriteLine($"Rest (mod): {a % b}");                               // Modulo
-        }
-        else
-        {
-            Console.WriteLine("Quotient:   Division durch 0 nicht möglich");
-            Console.WriteLine("Rest (mod): nicht definiert");
-        }
+// float verbrauch = (zahl_benzin / zahl_kilometer) * 100;
 
-        Console.WriteLine();
-    }
-    #endregion
 
-    #region Durchschnittsverbrauch 
-    static void Verbrauch()
-    {
-        Console.WriteLine("Durchschnittsverbrauch (l/100 km)");
-        double km = ReadDouble("Gefahrene Kilometer (>0)", 0);
-        double liter = ReadDouble("Verbrauchte Benzinmenge in Litern (>=0)", -1);
+// Console.WriteLine($"Der Druschnittsverbrauch ist: {verbrauch} Liter/100km");
 
-        double verbrauch = (liter / km) * 100.0;
-        Console.WriteLine($"Der Durchschnittsverbrauch ist: {verbrauch.ToString("F2", De)} l/100 km\n");
-    }
-    #endregion
 
-    #region Dreiecksfläche 
-    static void DreiecksFlaeche()
-    {
-        Console.WriteLine("Dreiecksberechnung – Fläche");
-        double grundlinie = ReadDouble("Grundlinie in cm (>0)", 0);
-        double hoehe = ReadDouble("Höhe in cm (>0)", 0);
 
-        double flaeche = (grundlinie * hoehe) / 2.0;
-        Console.WriteLine($"Die Fläche beträgt: {flaeche.ToString("F2", De)} cm²\n");
-    }
-    #endregion
+// Console.WriteLine("\nDreiecksberechnung");
 
-    #region Währungsrechner 
-    static void Waehrungsrechner()
-    {
-        Console.WriteLine("Währungsrechner (EUR → USD, Demo-Kurs)");
-        double euro = ReadDouble("Betrag in Euro (>=0)", -1);
+// Console.Write("Berechnung Grundlinie: ");
+// float zahl_grundlinie = Convert.ToSingle(Console.ReadLine());
 
-        const double EurToUsd = 1.30; // DEMO: fester Kurs wie in deinem Code
-        double usd = euro * EurToUsd;
+// Console.Write("Berechnung die Höhe: ");
+// float zahl_hoehe = Convert.ToSingle(Console.ReadLine());
 
-        Console.WriteLine($"Dollarbetrag: {usd.ToString("F2", De)} $\n");
-    }
-    #endregion
+// float zahl_dreieckberechnung = (zahl_grundlinie * zahl_hoehe) / 2;
 
-    #region Schreinereihelfer 
-    static void Schreinerei()
-    {
-        Console.WriteLine("Schreinereihelfer - Bretter zuschneiden");
-        int brettLaenge = ReadInt("Brettlänge in cm (>0)", 1);
-        int stueckLaenge = ReadInt("Holzstück-Länge in cm (>0)", 1);
+// Console.WriteLine($"Die Fläche beträgt: {zahl_dreieckberechnung}");
 
-        if (stueckLaenge > brettLaenge)
-        {
-            Console.WriteLine("Kein Zuschnitt möglich (Stück länger als Brett).\n");
-            return;
-        }
 
-        int anzahl = brettLaenge / stueckLaenge;
-        int verschnitt = brettLaenge - (anzahl * stueckLaenge);
+// Console.WriteLine("Währungsrechner");
 
-        Console.WriteLine($"Holzstücke: {anzahl}");
-        Console.WriteLine($"Verschnitt in cm: {verschnitt}\n");
-    }
-    #endregion
-}
+// Console.Write("Eingeben Betrag in Euro: ");
+// float zahl_euro = Convert.ToSingle(Console.ReadLine());
+
+// float euro_wert = 1.3f;
+
+// float dollar_wert = zahl_euro * euro_wert;
+
+// Console.WriteLine($"Dollarbetrag: {dollar_wert:F2} $");
+
+
+Console.WriteLine("\nSchreinereihelfer Bretter");
+
+Console.Write("Brett Länge in cm eingeben: ");
+int brett_laenge = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Holzstück Länge in cm eingeben: ");
+int holstueck_laenge = Convert.ToInt32(Console.ReadLine());
+
+int holzstueck_menge = brett_laenge / holstueck_laenge;
+
+Console.WriteLine($"Holzstücke: {holzstueck_menge}");
+
+double verchnitt = holzstueck_menge * holstueck_laenge;
+double verschnitt_final = brett_laenge - verchnitt;
+
+Console.WriteLine($"Verschnitt in cm: {verschnitt_final}");

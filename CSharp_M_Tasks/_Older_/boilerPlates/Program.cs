@@ -18,7 +18,7 @@ class Program
         Console.WriteLine($"\nName: {name}, Alter: {alter}, Preis: {preis.ToString("N2", De)}");
     }
 
-    // ----------- Helpers (nur Eingabe) -----------
+    // ----------- Helpers nur Eingabe -----------
 
         static int ReadInt(string label, int min = int.MinValue, int max = int.MaxValue)
         {
