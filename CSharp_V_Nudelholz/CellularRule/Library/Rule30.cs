@@ -37,8 +37,8 @@ namespace CellularRule.Library
 
                 for (int row = 0; row < width; row++ )
                 {
-                    if (currentArray[row] == positiv) Console.Write("X");
-                    else Console.Write(".");
+                    if (currentArray[row] == positiv) Console.Write("█");
+                    else Console.Write(" ");
                 }
                 Console.WriteLine();
 
@@ -52,26 +52,26 @@ namespace CellularRule.Library
 
                     switch (code)
                     {
-                        case 0b000: nextArray[row] = 0; break; // --> 000 --> 0
-                        case 0b001: nextArray[row] = 1; break; // --> 001 --> 1
-                        case 0b010: nextArray[row] = 1; break; // --> 010 --> 1
-                        case 0b011: nextArray[row] = 1; break; // --> 011 --> 1
-                        case 0b100: nextArray[row] = 1; break; // --> 100 --> 1
-                        case 0b101: nextArray[row] = 0; break; // --> 101 --> 0
-                        case 0b110: nextArray[row] = 0; break; // --> 110 --> 0
-                        case 0b111: nextArray[row] = 0; break; // --> 111 --> 0
+                        case 0b000: nextArray[row] = 0; break; // --> 000 --> 0 | 1
+                        case 0b001: nextArray[row] = 1; break; // --> 001 --> 1 | 2
+                        case 0b010: nextArray[row] = 1; break; // --> 010 --> 1 | 4
+                        case 0b011: nextArray[row] = 1; break; // --> 011 --> 1 | 8
+                        case 0b100: nextArray[row] = 1; break; // --> 100 --> 1 | 16
+                        case 0b101: nextArray[row] = 0; break; // --> 101 --> 0 | 32
+                        case 0b110: nextArray[row] = 0; break; // --> 110 --> 0 | 64
+                        case 0b111: nextArray[row] = 0; break; // --> 111 --> 0 | 128
                     }
                 }
 
                 Array.Copy(nextArray, currentArray, width);
                 generation++;
 
-                if (Console.KeyAvailable)
-                {
-                    var key = Console.ReadKey(true);
-                    if (key.Key == ConsoleKey.Q)
-                        end = true;
-                }
+                //if (Console.KeyAvailable)
+                //{
+                //    var key = Console.ReadKey(true);
+                //    if (key.Key == ConsoleKey.Q)
+                //        end = true;
+                //}
             }
         }
     }

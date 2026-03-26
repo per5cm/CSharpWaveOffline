@@ -75,6 +75,10 @@ if (begruessung.Equals("Hello", StringComparison.OrdinalIgnoreCase))
 }
 
 else if (gleichung_b == 0)
+{
+    Console.WriteLine("Fehler: ");
+    Console.WriteLine("10€");
+}
 else if (begruessung.Equals("H",StringComparison.OrdinalIgnoreCase))
 {
     Console.WriteLine("Fehler: ");

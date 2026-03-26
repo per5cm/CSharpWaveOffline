@@ -128,7 +128,7 @@
 //     }
 // }
 
-Console.WriteLine($"Sum of Array {sum}");
+// Console.WriteLine($"Sum of Array {sum}");
 
 int[,] arrayGrades = new int[5, 6];
 string[] subjects = { "Java", "DB", "BWL", "Web", "Mathe" };
