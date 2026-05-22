@@ -7,7 +7,7 @@ namespace EnumsAmpel_ExE_1
     {
         static void Main(string[] args)
         {
-            var ampel = new Ampel(ampelPhase:AmpelPhase.Grün, schaltZeitung: 180);
+            var ampel = new Ampel(ampelPhase:AmpelPhase.Grün, schaltZeitung: 1);
 
             for (int i = 0; i < 5; i++)
             {
