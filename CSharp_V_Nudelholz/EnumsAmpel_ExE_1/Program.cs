@@ -5,14 +5,14 @@ namespace EnumsAmpel_ExE_1
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
-            var ampel = new Ampel(ampelPhase:AmpelPhase.Grün, schaltZeitung: 1);
+            var ampel = new Ampel(ampelPhase:AmpelPhase.Grün, schaltZeit: 1);
 
-            for (int i = 0; i < 5; i++)
+            while (true)
             {
                 Console.WriteLine(ampel.AktuellePhase);
-                Thread.Sleep(ampel.SchaltZeitung * 1000);
+                await Task.Delay(ampel.SchaltZeit * 1000);
                 ampel.WechselPhase();
             }
         }
