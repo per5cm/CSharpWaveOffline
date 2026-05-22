@@ -5,6 +5,13 @@ namespace EnumsAmpel_ExE_1.Library;
 public class Ampel
 {
     internal AmpelPhase AktuellePhase { get; private set; }
+    internal int SchaltZeitung { get; private set; }
+
+    internal Ampel(AmpelPhase ampelPhase, int schaltZeitung)
+    {
+        SchaltZeitung = schaltZeitung;
+        AktuellePhase = ampelPhase;
+    }
 
     internal void WechselPhase()
     {

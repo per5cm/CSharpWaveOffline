@@ -7,11 +7,12 @@ namespace EnumsAmpel_ExE_1
     {
         static void Main(string[] args)
         {
-            var ampel = new Ampel();
+            var ampel = new Ampel(ampelPhase:AmpelPhase.Grün, schaltZeitung: 180);
 
             for (int i = 0; i < 5; i++)
             {
                 Console.WriteLine(ampel.AktuellePhase);
+                Thread.Sleep(ampel.SchaltZeitung * 1000);
                 ampel.WechselPhase();
             }
         }
