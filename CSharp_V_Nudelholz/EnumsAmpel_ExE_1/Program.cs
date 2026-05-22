@@ -1,4 +1,5 @@
 ﻿using System;
+using EnumsAmpel_ExE_1.Library;
 
 namespace EnumsAmpel_ExE_1
 {
@@ -6,7 +7,13 @@ namespace EnumsAmpel_ExE_1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var ampel = new Ampel();
+
+            for (int i = 0; i < 5; i++)
+            {
+                Console.WriteLine(ampel.AktuellePhase);
+                ampel.WechselPhase();
+            }
         }
     }
 }
