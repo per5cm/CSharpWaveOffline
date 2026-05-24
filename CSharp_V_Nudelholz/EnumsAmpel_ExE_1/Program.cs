@@ -7,7 +7,7 @@ namespace EnumsAmpel_ExE_1
     {
         static async Task Main(string[] args)
         {
-            var ampel = new Ampel(ampelPhase:AmpelPhase.Grün, schaltZeit: 1);
+            var ampel = new Ampel(ampelPhase:AmpelPhase.Grün, schaltZeit: 180);
 
             while (true)
             {
