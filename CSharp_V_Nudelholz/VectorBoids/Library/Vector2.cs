@@ -1,8 +1,8 @@
 namespace VectorBoids.Library;
 
-public class Vector2
+internal class Vector2
 {
-    public readonly struct Vector
+    internal readonly struct Vector
     {
         private double X { get; }
         private double Y { get; }
@@ -26,10 +26,11 @@ public class Vector2
             return Math.Sqrt(length);
         }
 
-        internal static Vector Normalise(Vector vector1)
+        internal static Vector Normalise(Vector vector)
         {
-            double lengthVector = Length(vector1);
-            var normalise = new Vector (vector1.X / lengthVector, vector1.Y / lengthVector);
+            double lengthVector = Length(vector);
+            if (lengthVector <= 0) return new Vector(0, 0);
+            var normalise = new Vector (vector.X / lengthVector, vector.Y / lengthVector);
             return normalise;
         }
     }
