@@ -1,4 +1,5 @@
 ﻿using System;
+using VectorBoids.Library;
 
 namespace VectorBoids
 {
