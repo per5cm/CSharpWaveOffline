@@ -2,12 +2,12 @@ namespace VectorBoids.Library;
 
 public class Vector2
 {
-    internal readonly struct Vector
+    public readonly struct Vector
     {
         private double X { get; }
         private double Y { get; }
 
-        internal Vector(double x, double y)
+        private Vector(double x, double y)
         {
             X = x;
             Y = y;
@@ -15,17 +15,22 @@ public class Vector2
         
         internal static Vector Add(Vector vector1, Vector vector2)
         {
-            return new Vector (vector1.X + vector2.X + vector2.Y + vector1.Y);
+            double newX = vector1.X + vector2.X;
+            double newY = vector1.Y + vector2.Y;
+            return new Vector(newX, newY);
         }
 
-        internal static Vector Length(Vector vector1, Vector vector2)
+        private static double Length(Vector vector)
         {
-            return new Vector (vector1.X * vector1.X) + (vector2.Y * vector1.Y);
+            double length = (vector.X * vector.X + vector.Y * vector.Y);
+            return Math.Sqrt(length);
         }
 
-        internal static Vector Normalise(Vector vector1, Vector vector2)
+        internal static Vector Normalise(Vector vector1)
         {
-            return new Vector (vector1.X / vector2.Y);
+            double lengthVector = Length(vector1);
+            var normalise = new Vector (vector1.X / lengthVector, vector1.Y / lengthVector);
+            return normalise;
         }
     }
 }
