@@ -7,7 +7,7 @@ internal class Vector2
         private double X { get; }
         private double Y { get; }
 
-        private Vector(double x, double y)
+        internal Vector(double x, double y)
         {
             X = x;
             Y = y;
