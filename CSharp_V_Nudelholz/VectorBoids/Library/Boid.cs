@@ -19,10 +19,10 @@ internal class Boids
 
     internal void Separation(List<Boids> boids)
     {
-        foreach (var boid in boids)
+        foreach (var flok in boids)
         {
-            if (boid == this) continue;
-            double distance = Vector2.Vector.Distance(Position, boid.Position);
+            if (flok == this) continue;
+            double distance = Vector2.Vector.Distance(Position, flok.Position);
         }
     }
 }
