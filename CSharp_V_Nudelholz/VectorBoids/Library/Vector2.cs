@@ -4,8 +4,8 @@ internal class Vector2
 {
     internal readonly struct Vector
     {
-        private double X { get; }
-        private double Y { get; }
+        internal double X { get; }
+        internal double Y { get; }
 
         internal Vector(double x, double y)
         {

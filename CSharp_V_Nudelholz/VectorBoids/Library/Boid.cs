@@ -23,6 +23,16 @@ internal class Boids
         {
             if (flok == this) continue;
             double distance = Vector2.Vector.Distance(Position, flok.Position);
+
+            if (distance < 5)
+            {
+                double awayX = Position.X - flok.Position.X;
+                double awayY = Position.Y - flok.Position.Y;
+                
+                Vector2.Vector awayDirection = new Vector2.Vector(awayX, awayY);
+                Vector2.Vector normalised = Vector2.Vector.Normalise(awayDirection);
+                Velocity = Vector2.Vector.Add(Velocity, normalised);
+            }
         }
     }
 }

@@ -15,11 +15,11 @@ namespace VectorBoids
                 BoidsList.Add(new Boids(new Vector2.Vector(i, 1), new Vector2.Vector(0, 2)));
             }
 
-            foreach (var boid in BoidsList)
+            foreach (var flok in BoidsList)
             {
-                Console.WriteLine(boid);
-                boid.Separation(BoidsList);
-                boid.Update();
+                Console.WriteLine(flok);
+                flok.Separation(BoidsList);
+                flok.Update();
             }
         }
     }
