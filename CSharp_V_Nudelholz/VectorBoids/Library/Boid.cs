@@ -16,4 +16,13 @@ internal class Boids
         var newPosition = Vector2.Vector.Add(Position, Velocity);
         Position = newPosition;
     }
+
+    internal void Separation(List<Boids> boids)
+    {
+        foreach (var boid in boids)
+        {
+            if (boid == this) continue;
+            double distance = Vector2.Vector.Distance(Position, boid.Position);
+        }
+    }
 }

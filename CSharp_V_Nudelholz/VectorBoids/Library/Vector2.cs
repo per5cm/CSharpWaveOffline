@@ -33,5 +33,12 @@ internal class Vector2
             var normalise = new Vector (vector.X / lengthVector, vector.Y / lengthVector);
             return normalise;
         }
+
+        internal static double Distance(Vector vector1, Vector vector2)
+        {
+            double newX = vector1.X - vector2.X;
+            double newY = vector1.Y - vector2.Y;
+            return Math.Sqrt(newX * newX + newY * newY);
+        }
     }
 }
