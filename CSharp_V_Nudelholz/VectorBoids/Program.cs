@@ -17,7 +17,7 @@ namespace VectorBoids
 
             foreach (var flok in BoidsList)
             {
-                Console.WriteLine(flok);
+                // Console.WriteLine(flok);
                 flok.Separation(BoidsList);
                 flok.Update();
             }
