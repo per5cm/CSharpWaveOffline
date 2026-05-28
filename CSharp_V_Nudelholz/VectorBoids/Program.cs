@@ -6,20 +6,20 @@ namespace VectorBoids
 {
     internal class Program
     {
-        internal static List<Boids> BoidsList = new();
+        private static readonly List<Boids> BoidsList = new();
         
         static void Main(string[] args)
         {
-            for (int i = 0; i < 25; i++)
+            for (int bird = 0; bird < 25; bird++)
             {
-                BoidsList.Add(new Boids(new Vector2.Vector(i, 1), new Vector2.Vector(0, 2)));
+                BoidsList.Add(new Boids(new Vector2D.Vector(bird, 1), new Vector2D.Vector(0, 2)));
             }
 
-            foreach (var flok in BoidsList)
+            foreach (var flock in BoidsList)
             {
                 // Console.WriteLine(flok);
-                flok.Separation(BoidsList);
-                flok.Update();
+                flock.Separation(BoidsList);
+                flock.Update();
             }
         }
     }

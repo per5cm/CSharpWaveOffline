@@ -1,6 +1,6 @@
 namespace VectorBoids.Library;
 
-internal class Vector2
+internal class Vector2D
 {
     internal readonly struct Vector
     {
