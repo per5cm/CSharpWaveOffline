@@ -38,16 +38,13 @@ internal class Boids
         }
     }
 
-    internal void Alignment(List<Boids> boids)
+    internal void Alignment(List<Boids> boids, int countObjects = 0, double currentX = 0, double currentY = 0)
     {
-        int countObjects = 0;
-        double currentX = 0;
-        double currentY = 0;
-        
         foreach (var flock in boids)
         {
             if (flock == this) continue;
             double distance = Vector2D.Vector.Distance(Position, flock.Position);
+            
             if (distance < 15)
             {
                 currentX += flock.Velocity.X;
