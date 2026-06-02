@@ -17,9 +17,8 @@ namespace VectorBoids
 
             foreach (var flock in BoidsList)
             {
-                // Console.WriteLine(flok);
-                flock.Separation(BoidsList);
-                flock.Update();
+                // flock.Separation(BoidsList);
+                flock.Update(BoidsList);
             }
         }
     }

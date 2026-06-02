@@ -13,8 +13,11 @@ internal class Boids
         Velocity = velocity;
     }
 
-    internal void Update()
+    internal void Update(List<Boids> boids)
     {
+        Separation(boids);
+        Alignment(boids);
+        Cohesion(boids);
         var newPosition = Vector2D.Vector.Add(Position, Velocity);
         Position = newPosition;
     }
