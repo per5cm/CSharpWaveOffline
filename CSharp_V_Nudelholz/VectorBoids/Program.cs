@@ -14,6 +14,9 @@ namespace VectorBoids
             {
                 BoidsList.Add(new Boids(new Vector2D.Vector(bird, 1), new Vector2D.Vector(0, 2)));
             }
+            
+            int width = Console.WindowWidth - 1;
+            int height = Console.WindowHeight - 1;
 
             foreach (var flock in BoidsList)
             {
@@ -28,7 +31,6 @@ namespace VectorBoids
                 {
                     flock.Update(BoidsList);
                     Console.SetCursorPosition((int)flock.Position.X, (int)flock.Position.Y);
-                    Console.Write(flock.Velocity);
                     Console.Write("o");
                 }
                 Thread.Sleep(100);
