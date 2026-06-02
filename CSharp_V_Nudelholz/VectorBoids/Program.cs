@@ -20,6 +20,19 @@ namespace VectorBoids
                 // flock.Separation(BoidsList);
                 flock.Update(BoidsList);
             }
+
+            while (true)
+            {
+                Console.Clear();
+                foreach (var flock in BoidsList)
+                {
+                    flock.Update(BoidsList);
+                    Console.SetCursorPosition((int)flock.Position.X, (int)flock.Position.Y);
+                    Console.Write(flock.Velocity);
+                    Console.Write("o");
+                }
+                Thread.Sleep(100);
+            }
         }
     }
 }

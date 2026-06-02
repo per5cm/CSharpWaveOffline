@@ -4,8 +4,8 @@ namespace VectorBoids.Library;
 
 internal class Boids
 {
-    private Vector2D.Vector Position { get; set; }
-    private Vector2D.Vector Velocity { get; set; }
+    internal Vector2D.Vector Position { get; private set; }
+    internal Vector2D.Vector Velocity { get; set; }
 
     internal Boids(Vector2D.Vector position, Vector2D.Vector velocity)
     {
