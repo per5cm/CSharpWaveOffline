@@ -20,6 +20,13 @@ internal class Vector2D
             return new Vector(newX, newY);
         }
 
+        internal static Vector Subtract(Vector vector1, Vector vector2)
+        {
+            double newX = vector1.X - vector2.X;
+            double newY = vector1.Y - vector2.Y;
+            return new Vector(newX, newY);
+        }
+
         private static double Length(Vector vector)
         {
             double length = (vector.X * vector.X + vector.Y * vector.Y);

@@ -38,8 +38,12 @@ internal class Boids
         }
     }
 
-    internal void Alignment(List<Boids> boids, int countObjects = 0, double currentX = 0, double currentY = 0)
+    internal void Alignment(List<Boids> boids)
     {
+        int countObjects = 0;
+        double currentX = 0;
+        double currentY = 0;
+        
         foreach (var flock in boids)
         {
             if (flock == this) continue;
@@ -61,6 +65,37 @@ internal class Boids
             Vector2D.Vector averageDirection = new Vector2D.Vector(averageX, averageY);
             Vector2D.Vector normalised = Vector2D.Vector.Normalise(averageDirection);
             Velocity = Vector2D.Vector.Add(Velocity, normalised);
+        }
+    }
+
+    internal void Cohesion(List<Boids> boids)
+    {
+        int countObjects = 0;
+        double currentX = 0;
+        double currentY = 0;
+        
+        foreach (var flock in boids)
+        {
+            if (flock == this) continue;
+            double distance = Vector2D.Vector.Distance(Position, flock.Position);
+
+            if (distance < 15)
+            {
+                currentX += flock.Position.X;
+                currentY += flock.Position.Y;
+                countObjects++;
+            }
+
+            if (countObjects > 0)
+            {
+                double averageX = (currentX / countObjects);
+                double averageY = (currentY / countObjects);
+                
+                Vector2D.Vector middle= new Vector2D.Vector(averageX, averageY);
+                Vector2D.Vector steeringDirection = Vector2D.Vector.Subtract(middle, Position);
+                Vector2D.Vector normalised = Vector2D.Vector.Normalise(steeringDirection);
+                Velocity = Vector2D.Vector.Add(Velocity, normalised);
+            }
         }
     }
 }
