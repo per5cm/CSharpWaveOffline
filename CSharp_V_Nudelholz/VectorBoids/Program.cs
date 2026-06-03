@@ -21,7 +21,7 @@ namespace VectorBoids
             foreach (var flock in BoidsList)
             {
                 // flock.Separation(BoidsList);
-                flock.Update(BoidsList);
+                flock.Update(BoidsList, width, height);
             }
 
             while (true)
@@ -29,7 +29,7 @@ namespace VectorBoids
                 Console.Clear();
                 foreach (var flock in BoidsList)
                 {
-                    flock.Update(BoidsList);
+                    flock.Update(BoidsList, width, height);
                     Console.SetCursorPosition((int)flock.Position.X, (int)flock.Position.Y);
                     Console.Write("o");
                 }
