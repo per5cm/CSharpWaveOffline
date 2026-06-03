@@ -27,7 +27,7 @@ internal readonly struct Vector2D
     internal static Vector2D Normalise(Vector2D vector)
     {
         double vectorLength = Length(vector);
-        if (vectorLength < 0) return new Vector2D(0, 0);
+        if (vectorLength == 0) return new Vector2D(0, 0);
         return new Vector2D (vector.X / vectorLength, vector.Y / vectorLength);
     }
 

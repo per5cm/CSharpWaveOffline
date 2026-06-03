@@ -15,16 +15,14 @@ internal class Boids
 
     internal void Update(List<Boids> boids, int width, int height)
     {
-        
-        
         Separation(boids);
         Alignment(boids);
         Cohesion(boids);
         Speed();
-        BorderWall(width, height);
         
-        var newPosition = Vector2D.Add(Position, Velocity);
-        Position = newPosition;
+        Position = Vector2D.Add(Position, Velocity);
+        
+        BorderWall(width, height);
     }
 
     private void Separation(List<Boids> boids)
@@ -70,7 +68,7 @@ internal class Boids
             double averageX = currentX / neighborCount;
             double averageY = currentY / neighborCount;
             
-            Vector2D averageDirection = new (averageX, averageY);
+            Vector2D averageDirection = new(averageX, averageY);
             var normalised = Vector2D.Normalise(averageDirection);
             Velocity = Vector2D.Add(Velocity, normalised);
         }
@@ -109,7 +107,7 @@ internal class Boids
     private void Speed()
     {
         double speed = Vector2D.Length(Velocity);
-        if (speed > 2)
+        if (speed > 3)
         {
             var velocity = Vector2D.Normalise(Velocity);
             Velocity = new Vector2D(velocity.X * 3, velocity.Y * 3);
