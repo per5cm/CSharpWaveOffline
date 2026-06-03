@@ -15,6 +15,8 @@ internal class Boids
 
     internal void Update(List<Boids> boids, int width, int height)
     {
+        
+        
         Separation(boids);
         Alignment(boids);
         Cohesion(boids);
@@ -37,8 +39,8 @@ internal class Boids
                 double awayX = Position.X - flock.Position.X;
                 double awayY = Position.Y - flock.Position.Y;
                 
-                Vector2D awayDirection = new Vector2D(awayX, awayY);
-                Vector2D normalised = Vector2D.Normalise(awayDirection);
+                Vector2D awayDirection = new(awayX, awayY);
+                var normalised = Vector2D.Normalise(awayDirection);
                 Velocity = Vector2D.Add(Velocity, new Vector2D(normalised.X * 3, normalised.Y * 3));
             }
         }
@@ -69,7 +71,7 @@ internal class Boids
             double averageY = currentY / neighborCount;
             
             Vector2D averageDirection = new (averageX, averageY);
-            Vector2D normalised = Vector2D.Normalise(averageDirection);
+            var normalised = Vector2D.Normalise(averageDirection);
             Velocity = Vector2D.Add(Velocity, normalised);
         }
     }
@@ -99,7 +101,7 @@ internal class Boids
             double averageY = (currentY / countObjects);
                 
             Vector2D steeringDirection = new (averageX - Position.X, averageY - Position.Y);
-            Vector2D normalised = Vector2D.Normalise(steeringDirection);
+            var normalised = Vector2D.Normalise(steeringDirection);
             Velocity = Vector2D.Add(Velocity, new Vector2D(normalised.X * 1, normalised.Y * 1));
         }
     }
@@ -109,7 +111,7 @@ internal class Boids
         double speed = Vector2D.Length(Velocity);
         if (speed > 2)
         {
-            Vector2D velocity = Vector2D.Normalise(Velocity);
+            var velocity = Vector2D.Normalise(Velocity);
             Velocity = new Vector2D(velocity.X * 3, velocity.Y * 3);
         }
     }
