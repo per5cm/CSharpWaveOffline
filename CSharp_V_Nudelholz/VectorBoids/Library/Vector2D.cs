@@ -26,10 +26,9 @@ internal readonly struct Vector2D
 
     internal static Vector2D Normalise(Vector2D vector)
     {
-        double lengthVector = Length(vector);
-        if (lengthVector <= 0) return new Vector2D(0, 0);
-        var normalise = new Vector2D (vector.X / lengthVector, vector.Y / lengthVector);
-        return normalise;
+        double vectorLength = Length(vector);
+        if (vectorLength <= 0) return new Vector2D(0, 0);
+        return new Vector2D (vector.X / vectorLength, vector.Y / vectorLength);
     }
 
     internal static double Distance(Vector2D vector1, Vector2D vector2)
