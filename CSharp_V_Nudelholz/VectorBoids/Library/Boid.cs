@@ -2,22 +2,22 @@ using System.Numerics;
 
 namespace VectorBoids.Library;
 
-internal class Boids
+internal class Boid
 {
     internal Vector2D Position { get; private set; }
     private Vector2D Velocity { get; set; }
 
-    internal Boids(Vector2D position, Vector2D velocity)
+    internal Boid(Vector2D position, Vector2D velocity)
     {
         Position = position;
         Velocity = velocity;
     }
 
-    internal void Update(List<Boids> boids, int width, int height)
+    internal void Update(List<Boid> boid, int width, int height)
     {
-        Separation(boids);
-        Alignment(boids);
-        Cohesion(boids);
+        Separation(boid);
+        Alignment(boid);
+        Cohesion(boid);
         Speed();
         
         Position = Vector2D.Add(Position, Velocity);
@@ -25,32 +25,32 @@ internal class Boids
         BorderWall(width, height);
     }
 
-    private void Separation(List<Boids> boids)
+    private void Separation(List<Boid> boid)
     {
-        foreach (var flock in boids)
+        foreach (var flock in boid)
         {
             if (flock == this) continue;
             double distance = Vector2D.Distance(Position, flock.Position);
 
-            if (distance < 40)
+            if (distance < 20)
             {
                 double awayX = Position.X - flock.Position.X;
                 double awayY = Position.Y - flock.Position.Y;
                 
                 Vector2D awayDirection = new(awayX, awayY);
-                var normalised = Vector2D.Normalise(awayDirection);
+                var normalised = Vector2D.Normalize(awayDirection);
                 Velocity = Vector2D.Add(Velocity, new Vector2D(normalised.X * 3, normalised.Y * 3));
             }
         }
     }
 
-    private void Alignment(List<Boids> boids)
+    private void Alignment(List<Boid> boid)
     {
         int neighborCount = 0;
         double currentX = 0;
         double currentY = 0;
         
-        foreach (var flock in boids)
+        foreach (var flock in boid)
         {
             if (flock == this) continue;
             double distance = Vector2D.Distance(Position, flock.Position);
@@ -69,18 +69,18 @@ internal class Boids
             double averageY = currentY / neighborCount;
             
             Vector2D averageDirection = new(averageX, averageY);
-            var normalised = Vector2D.Normalise(averageDirection);
+            var normalised = Vector2D.Normalize(averageDirection);
             Velocity = Vector2D.Add(Velocity, normalised);
         }
     }
 
-    private void Cohesion(List<Boids> boids)
+    private void Cohesion(List<Boid> boid)
     {
         int countObjects = 0;
         double currentX = 0;
         double currentY = 0;
         
-        foreach (var flock in boids)
+        foreach (var flock in boid)
         {
             if (flock == this) continue;
             double distance = Vector2D.Distance(Position, flock.Position);
@@ -99,7 +99,7 @@ internal class Boids
             double averageY = (currentY / countObjects);
                 
             Vector2D steeringDirection = new (averageX - Position.X, averageY - Position.Y);
-            var normalised = Vector2D.Normalise(steeringDirection);
+            var normalised = Vector2D.Normalize(steeringDirection);
             Velocity = Vector2D.Add(Velocity, new Vector2D(normalised.X * 1, normalised.Y * 1));
         }
     }
@@ -109,7 +109,7 @@ internal class Boids
         double speed = Vector2D.Length(Velocity);
         if (speed > 3)
         {
-            var velocity = Vector2D.Normalise(Velocity);
+            var velocity = Vector2D.Normalize(Velocity);
             Velocity = new Vector2D(velocity.X * 3, velocity.Y * 3);
         }
     }

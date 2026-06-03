@@ -6,13 +6,13 @@ namespace VectorBoids
 {
     internal class Program
     {
-        private static readonly List<Boids> BoidsList = new();
+        private static readonly List<Boid> BoidsList = new();
         
         static void Main(string[] args)
         {
             for (int bird = 0; bird < 25; bird++)
             {
-                BoidsList.Add(new Boids(new Vector2D(bird, 1), new Vector2D(0, 2)));
+                BoidsList.Add(new Boid(new Vector2D(bird, 1), new Vector2D(0, 2)));
             }
             
             int width = Console.WindowWidth;

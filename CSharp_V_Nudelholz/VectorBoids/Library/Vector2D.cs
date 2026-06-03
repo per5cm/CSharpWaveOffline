@@ -24,10 +24,10 @@ internal readonly struct Vector2D
         return Math.Sqrt(length);
     }
 
-    internal static Vector2D Normalise(Vector2D vector)
+    internal static Vector2D Normalize(Vector2D vector)
     {
         double vectorLength = Length(vector);
-        if (vectorLength == 0) return new Vector2D(0, 0);
+        if (vectorLength <= 0) return new Vector2D(0, 0);
         return new Vector2D (vector.X / vectorLength, vector.Y / vectorLength);
     }
 
