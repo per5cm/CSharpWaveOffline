@@ -12,11 +12,11 @@ namespace VectorBoids
         {
             for (int bird = 0; bird < 25; bird++)
             {
-                BoidsList.Add(new Boids(new Vector2D.Vector(bird, 1), new Vector2D.Vector(0, 2)));
+                BoidsList.Add(new Boids(new Vector2D(bird, 1), new Vector2D(0, 2)));
             }
             
-            int width = Console.WindowWidth - 1;
-            int height = Console.WindowHeight - 1;
+            int width = Console.WindowWidth;
+            int height = Console.WindowHeight;
 
             foreach (var flock in BoidsList)
             {
