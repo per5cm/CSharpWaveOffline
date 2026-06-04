@@ -12,7 +12,7 @@ namespace VectorBoids
         {
             for (int bird = 0; bird < 25; bird++)
             {
-                BoidsList.Add(new Boid(new Vector2D(bird, 10), new Vector2D(0, 2)));
+                BoidsList.Add(new Boid(new Vector2D(bird, 10), new Vector2D(0, 3)));
             }
             
             int width = Console.WindowWidth;
@@ -21,7 +21,7 @@ namespace VectorBoids
             foreach (var flock in BoidsList)
             {
                 // flock.Separation(BoidsList);
-                flock.Update(BoidsList, width, height);
+                flock.Update(BoidsList, width, height, 40, 0.5);
             }
 
             while (true)
@@ -29,8 +29,8 @@ namespace VectorBoids
                 Console.Clear();
                 foreach (var flock in BoidsList)
                 {
-                    flock.Update(BoidsList, width, height);
-                    Console.SetCursorPosition((int)flock.Position.X, (int)flock.Position.Y);
+                    flock.Update(BoidsList, width, height, 10, 0.1);
+                    Console.SetCursorPosition(left:Math.Max(0, (int)flock.Position.X), top: Math.Max(0, (int)flock.Position.Y));
                     Console.Write("o");
                 }
                 Thread.Sleep(100);

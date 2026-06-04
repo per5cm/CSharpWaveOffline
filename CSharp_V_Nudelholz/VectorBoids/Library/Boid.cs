@@ -13,7 +13,7 @@ internal class Boid
         Velocity = velocity;
     }
 
-    internal void Update(List<Boid> boid, int width, int height)
+    internal void Update(List<Boid> boid, int width, int height, double padding, double turn)
     {
         Separation(boid);
         Alignment(boid);
@@ -22,7 +22,7 @@ internal class Boid
         
         Position = Vector2D.Add(Position, Velocity);
         
-        BorderWall(width, height);
+        BorderWall(width, height, padding, turn);
     }
 
     private void Separation(List<Boid> boid)
@@ -100,7 +100,7 @@ internal class Boid
                 
             Vector2D centerDirection = new (averageX - Position.X, averageY - Position.Y);
             var steering = Vector2D.Normalize(centerDirection);
-            Velocity = Vector2D.Add(Velocity, new Vector2D(steering.X * 1, steering.Y * 1));
+            Velocity = Vector2D.Add(Velocity, new Vector2D(steering.X * 0.5, steering.Y * 0.5));
         }
     }
     
@@ -114,16 +114,12 @@ internal class Boid
         }
     }
 
-    private void BorderWall(int width, int height)
+    private void BorderWall(double width, double height, double padding, double turn)
     {
-        double newX = Position.X;
-        double newY = Position.Y;
+        if (Position.X < padding) Velocity  = new Vector2D(Velocity.X + turn , Velocity.Y);
+        if (Position.Y < padding) Velocity  = new Vector2D(Velocity.X, Velocity.Y + turn);
         
-        if (Position.X < 0) newX = width - 1;
-        if (Position.X > width) newX = 0;
-        if (Position.Y < 0) newY = height - 1;
-        if (Position.Y > height) newY = 0;
-        
-        Position = new Vector2D(newX, newY);
+        if (Position.X > width - padding) Velocity = new Vector2D(Velocity.X - turn, Velocity.Y);
+        if (Position.Y > height - padding) Velocity  = new Vector2D(Velocity.X, Velocity.Y - turn);
     }
 }
