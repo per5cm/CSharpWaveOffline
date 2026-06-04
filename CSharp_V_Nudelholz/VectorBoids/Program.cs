@@ -12,7 +12,7 @@ namespace VectorBoids
         {
             for (int bird = 0; bird < 25; bird++)
             {
-                BoidsList.Add(new Boid(new Vector2D(bird, 1), new Vector2D(0, 2)));
+                BoidsList.Add(new Boid(new Vector2D(bird, 10), new Vector2D(0, 2)));
             }
             
             int width = Console.WindowWidth;

@@ -38,15 +38,15 @@ internal class Boid
                 double awayY = Position.Y - flock.Position.Y;
                 
                 Vector2D awayDirection = new(awayX, awayY);
-                var normalised = Vector2D.Normalize(awayDirection);
-                Velocity = Vector2D.Add(Velocity, new Vector2D(normalised.X * 3, normalised.Y * 3));
+                var pushDirection = Vector2D.Normalize(awayDirection);
+                Velocity = Vector2D.Add(Velocity, new Vector2D(pushDirection.X * 3, pushDirection.Y * 3));
             }
         }
     }
 
     private void Alignment(List<Boid> boid)
     {
-        int neighborCount = 0;
+        int count = 0;
         double currentX = 0;
         double currentY = 0;
         
@@ -59,14 +59,14 @@ internal class Boid
             {
                 currentX += flock.Velocity.X;
                 currentY += flock.Velocity.Y;
-                neighborCount++;
+                count++;
             }
         }
 
-        if (neighborCount > 0)
+        if (count > 0)
         {
-            double averageX = currentX / neighborCount;
-            double averageY = currentY / neighborCount;
+            double averageX = currentX / count;
+            double averageY = currentY / count;
             
             Vector2D averageDirection = new(averageX, averageY);
             var normalised = Vector2D.Normalize(averageDirection);
@@ -98,9 +98,9 @@ internal class Boid
             double averageX = (currentX / countObjects);
             double averageY = (currentY / countObjects);
                 
-            Vector2D steeringDirection = new (averageX - Position.X, averageY - Position.Y);
-            var normalised = Vector2D.Normalize(steeringDirection);
-            Velocity = Vector2D.Add(Velocity, new Vector2D(normalised.X * 1, normalised.Y * 1));
+            Vector2D centerDirection = new (averageX - Position.X, averageY - Position.Y);
+            var steering = Vector2D.Normalize(centerDirection);
+            Velocity = Vector2D.Add(Velocity, new Vector2D(steering.X * 1, steering.Y * 1));
         }
     }
     
