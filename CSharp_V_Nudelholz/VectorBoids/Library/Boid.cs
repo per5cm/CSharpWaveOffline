@@ -4,23 +4,23 @@ namespace VectorBoids.Library;
 
 internal class Boid
 {
-    internal Vector2D Position { get; private set; }
-    private Vector2D Velocity { get; set; }
+    internal Position Position;
+    internal Velocity Velocity;
 
-    internal Boid(Vector2D position, Vector2D velocity)
+    internal Boid(double positionX, double positionY, double velocityX, double velocityY)
     {
-        Position = position;
-        Velocity = velocity;
+        Position = new Position(positionX, positionY);
+        Velocity = new Velocity(velocityX, velocityY);
     }
 
-    internal void Update(List<Boid> boid, int width, int height, double padding, double turn)
+    internal void Update(List<Boid> boid, double width, double height, double padding, double turn)
     {
         Separation(boid);
         Alignment(boid);
         Cohesion(boid);
-        Speed();
         
-        Position = Vector2D.Add(Position, Velocity);
+        Velocity.Speed(3);
+        Position.Move(Velocity.X , Velocity.Y);
         
         BorderWall(width, height, padding, turn);
     }
@@ -30,16 +30,16 @@ internal class Boid
         foreach (var flock in boid)
         {
             if (flock == this) continue;
-            double distance = Vector2D.Distance(Position, flock.Position);
+            double distance = Position.Distance(flock.Position);
 
             if (distance < 20)
             {
                 double awayX = Position.X - flock.Position.X;
                 double awayY = Position.Y - flock.Position.Y;
                 
-                Vector2D awayDirection = new(awayX, awayY);
-                var pushDirection = Vector2D.Normalize(awayDirection);
-                Velocity = Vector2D.Add(Velocity, new Vector2D(pushDirection.X * 3, pushDirection.Y * 3));
+                var awayDirection = (awayX, awayY);
+                var pushDirection = Position.Normalize(awayDirection);
+                Library.Velocity = Vector2D.Add(Library.Velocity, new Vector2D(pushDirection.X * 3, pushDirection.Y * 3));
             }
         }
     }
@@ -53,7 +53,7 @@ internal class Boid
         foreach (var flock in boid)
         {
             if (flock == this) continue;
-            double distance = Vector2D.Distance(Position, flock.Position);
+            double distance = Position.Distance(flock.Position);
             
             if (distance < 40)
             {
@@ -68,9 +68,9 @@ internal class Boid
             double averageX = currentX / count;
             double averageY = currentY / count;
             
-            Vector2D averageDirection = new(averageX, averageY);
-            var normalised = Vector2D.Normalize(averageDirection);
-            Velocity = Vector2D.Add(Velocity, normalised);
+            var averageDirection = (averageX, averageY);
+            var normalised = Position.Normalize(averageDirection);
+            Library.Velocity = Vector2D.Add(Library.Velocity, normalised);
         }
     }
 
@@ -83,7 +83,7 @@ internal class Boid
         foreach (var flock in boid)
         {
             if (flock == this) continue;
-            double distance = Vector2D.Distance(Position, flock.Position);
+            double distance = Position.Distance(flock.Position);
 
             if (distance < 40)
             {
@@ -98,28 +98,18 @@ internal class Boid
             double averageX = (currentX / countObjects);
             double averageY = (currentY / countObjects);
                 
-            Vector2D centerDirection = new (averageX - Position.X, averageY - Position.Y);
-            var steering = Vector2D.Normalize(centerDirection);
-            Velocity = Vector2D.Add(Velocity, new Vector2D(steering.X * 0.5, steering.Y * 0.5));
-        }
-    }
-    
-    private void Speed()
-    {
-        double speed = Vector2D.Length(Velocity);
-        if (speed > 3)
-        {
-            var velocity = Vector2D.Normalize(Velocity);
-            Velocity = new Vector2D(velocity.X * 3, velocity.Y * 3);
+            var centerDirection = (averageX - Position.X, averageY - Position.Y);
+            var steering = Position.Normalize(centerDirection);
+            Library.Velocity = Vector2D.Add(Library.Velocity, new Vector2D(steering.X * 0.5, steering.Y * 0.5));
         }
     }
 
     private void BorderWall(double width, double height, double padding, double turn)
     {
-        if (Position.X < padding) Velocity  = new Vector2D(Velocity.X + turn , Velocity.Y);
-        if (Position.Y < padding) Velocity  = new Vector2D(Velocity.X, Velocity.Y + turn);
+        if (Position.X < padding) Velocity.X += turn;
+        if (Position.Y < padding) Velocity.Y += turn;
         
-        if (Position.X > width - padding) Velocity = new Vector2D(Velocity.X - turn, Velocity.Y);
-        if (Position.Y > height - padding) Velocity  = new Vector2D(Velocity.X, Velocity.Y - turn);
+        if (Position.X > width - padding) Velocity.X -= turn;
+        if (Position.Y > height - padding) Velocity.Y -= turn;
     }
 }

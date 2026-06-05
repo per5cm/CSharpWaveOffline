@@ -7,6 +7,7 @@ namespace VectorBoids
     internal class Program
     {
         private static readonly List<Boid> BoidsList = new();
+        private readonly Random _random = new();
         
         static void Main(string[] args)
         {
@@ -15,8 +16,8 @@ namespace VectorBoids
                 BoidsList.Add(new Boid(new Vector2D(bird, 10), new Vector2D(0, 3)));
             }
             
-            int width = Console.WindowWidth;
-            int height = Console.WindowHeight;
+            var width = Console.WindowWidth;
+            var height = Console.WindowHeight;
 
             foreach (var flock in BoidsList)
             {
@@ -30,7 +31,7 @@ namespace VectorBoids
                 foreach (var flock in BoidsList)
                 {
                     flock.Update(BoidsList, width, height, 10, 0.1);
-                    Console.SetCursorPosition(left:Math.Max(0, (int)flock.Position.X), top: Math.Max(0, (int)flock.Position.Y));
+                    Console.SetCursorPosition(left:Math.Max(0, (int)flock._position.X), top: Math.Max(0, (int)flock._position.Y));
                     Console.Write("o");
                 }
                 Thread.Sleep(100);
