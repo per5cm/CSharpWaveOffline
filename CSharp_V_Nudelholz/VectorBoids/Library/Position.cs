@@ -19,6 +19,8 @@ internal struct Position
 
     internal double Distance(Position position)
     {
+        position.X -= X;
+        position.Y -= Y;
         return Math.Sqrt (position.X * position.X + position.Y * position.Y);
     }
 
