@@ -17,8 +17,8 @@ public class Field
         for (int i = 0; i < boidCount; i++)
         {
             BoidsList.Add(new Boid(
-                new Vector2D(_random.NextDouble() * _width, _random.NextDouble() * _height),
-                new Vector2D(_random.NextDouble() * 2, _random.NextDouble() * 3)
+                new Position(_random.NextDouble() * _width, _random.NextDouble() * _height),
+                new Velocity(_random.NextDouble() * 2, _random.NextDouble() * 3)
             ));
         }
     }

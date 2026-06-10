@@ -25,53 +25,44 @@ internal class Boid
         BorderWall(width, height, padding, turn);
     }
 
-    private void Separation(List<Boid> boid)
+    private void Separation(List<Boid> boid, double vision, double steer)
     {
         foreach (var flock in boid)
         {
-            if (flock == this) continue;
-            double distance = Position.Distance(flock.Position);
-
-            if (distance < 20)
+            double closeness = vision - flock.Position.Distance(Position);
+            if (closeness > 0)
             {
-                double awayX = Position.X - flock.Position.X;
-                double awayY = Position.Y - flock.Position.Y;
-                
-                var awayDirection = (awayX, awayY);
-                var pushDirection = Position.Normalize(awayDirection);
-                Library.Velocity = Vector2D.Add(Library.Velocity, new Vector2D(pushDirection.X * 3, pushDirection.Y * 3));
+                Velocity.X = (Position.X - flock.Position.X) * steer * closeness;
+                Velocity.Y = (Position.Y - flock.Position.Y) * steer * closeness;
             }
         }
     }
 
-    private void Alignment(List<Boid> boid)
+    private void Alignment(List<Boid> boid, double vision, double steer)
     {
         int count = 0;
         double currentX = 0;
         double currentY = 0;
-        
+
         foreach (var flock in boid)
         {
-            if (flock == this) continue;
-            double distance = Position.Distance(flock.Position);
-            
-            if (distance < 40)
+            if (flock.Position.Distance(Position) < vision)
             {
                 currentX += flock.Velocity.X;
                 currentY += flock.Velocity.Y;
                 count++;
             }
         }
+        
+        var averageX = currentX /= count;
+        var averageY = currentY /= count;
 
-        if (count > 0)
-        {
-            double averageX = currentX / count;
-            double averageY = currentY / count;
-            
-            var averageDirection = (averageX, averageY);
-            var normalised = Position.Normalize(averageDirection);
-            Library.Velocity = Vector2D.Add(Library.Velocity, normalised);
-        }
+        var averageDirection = (averageX, averageY);
+        var normalisation = Position.Normalize(averageDirection);
+        Velocity = Position.Move(Velocity, normalisation);
+
+        // Velocity.X += (currentX - Position.X) * steer;
+        // Velocity.Y += (currentY - Position.Y) * steer;
     }
 
     private void Cohesion(List<Boid> boid)

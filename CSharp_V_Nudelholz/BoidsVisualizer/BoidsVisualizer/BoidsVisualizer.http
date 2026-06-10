@@ -1,0 +1,6 @@
+@BoidsVisualizer_HostAddress = http://localhost:5049
+
+GET {{BoidsVisualizer_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
