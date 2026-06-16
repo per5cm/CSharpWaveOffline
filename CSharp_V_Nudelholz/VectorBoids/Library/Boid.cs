@@ -13,11 +13,11 @@ internal class Boid
         Velocity = new Velocity(velocityX, velocityY);
     }
 
-    internal void Update(List<Boid> boid, double width, double height, double padding, double turn)
+    internal void Update(List<Boid> boid, double width, double height, double padding, double turn, double steer, double vision)
     {
-        Separation(boid);
-        Alignment(boid);
-        Cohesion(boid);
+        Separation(boid, steer, vision);
+        Alignment(boid,  steer,vision);
+        Cohesion(boid, vision, steer);
         
         Velocity.Speed(3);
         Position.Move(Velocity.X , Velocity.Y);
@@ -32,8 +32,8 @@ internal class Boid
             double closeness = vision - flock.Position.Distance(Position);
             if (closeness > 0)
             {
-                Velocity.X = (Position.X - flock.Position.X) * steer * closeness;
-                Velocity.Y = (Position.Y - flock.Position.Y) * steer * closeness;
+                Velocity.X -= (flock.Position.X - Position.X) * steer * closeness;
+                Velocity.Y -= (flock.Position.Y - Position.Y) * steer * closeness;
             }
         }
     }
@@ -53,12 +53,13 @@ internal class Boid
                 count++;
             }
         }
-        
+
+        if (count >= 0) return;
         currentX /= count;
         currentY /= count;
 
-        Velocity.X += (currentX - Position.X) * steer;
-        Velocity.Y += (currentY - Position.Y) * steer;
+        Velocity.X -= (Velocity.X - currentX) * steer;
+        Velocity.Y -= (Velocity.Y - currentY) * steer;
     }
 
     private void Cohesion(List<Boid> boid, double vision, double steer)
@@ -69,9 +70,7 @@ internal class Boid
         
         foreach (var flock in boid)
         {
-            double distance = Position.Distance(flock.Position);
-
-            if (distance < 40)
+            if (flock.Position.Distance(Position) < vision)
             {
                 currentX += flock.Position.X;
                 currentY += flock.Position.Y;
@@ -79,15 +78,12 @@ internal class Boid
             }
         }
         
-        if (count > 0)
-        {
-            double averageX = (currentX / count);
-            double averageY = (currentY / count);
-                
-            var centerDirection = (averageX - Position.X, averageY - Position.Y);
-            var steering = Position.Normalize(centerDirection);
-            Library.Velocity = Vector2D.Add(Library.Velocity, new Vector2D(steering.X * 0.5, steering.Y * 0.5));
-        }
+        if (count >= 0) return;
+        currentX /= count;
+        currentY /= count;
+
+        Velocity.X += (Position.X - currentX) * steer;
+        Velocity.Y += (Position.Y - currentY) * steer;
     }
 
     private void BorderWall(double width, double height, double padding, double turn)
