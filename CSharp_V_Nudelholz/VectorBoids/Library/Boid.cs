@@ -7,10 +7,10 @@ internal class Boid
     internal Position Position;
     internal Velocity Velocity;
 
-    internal Boid(double positionX, double positionY, double velocityX, double velocityY)
+    internal Boid(Position position, Velocity velocity)
     {
-        Position = new Position(positionX, positionY);
-        Velocity = new Velocity(velocityX, velocityY);
+        Position = position;
+        Velocity = velocity;
     }
 
     internal void Update(List<Boid> boid, double width, double height, double padding, double turn)

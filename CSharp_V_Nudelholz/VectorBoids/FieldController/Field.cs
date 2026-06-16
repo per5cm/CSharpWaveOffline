@@ -6,7 +6,7 @@ public class Field
 {
     private readonly double _width;
     private readonly double _height;
-    private static readonly List<Boid> BoidsList = new();
+    private readonly List<Boid> _boidsList = new();
     private readonly Random _random = new();
 
     internal Field(double width, double height, int boidCount, bool random)
@@ -16,10 +16,20 @@ public class Field
 
         for (int i = 0; i < boidCount; i++)
         {
-            BoidsList.Add(new Boid(
+            _boidsList.Add(new Boid(
                 new Position(_random.NextDouble() * _width, _random.NextDouble() * _height),
                 new Velocity(_random.NextDouble() * 2, _random.NextDouble() * 3)
             ));
         }
+    }
+
+    internal void Step(double padding, double turn)
+    {
+        
+    }
+
+    internal IEnumerable<(double X, double Y)> Positions()
+    {
+        return new List<(double X, double Y)>();
     }
 }

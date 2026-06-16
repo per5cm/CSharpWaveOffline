@@ -14,14 +14,16 @@ public struct Velocity
     internal void Speed(double speed)
     {
         var currentVelocity = Math.Sqrt(X * X + Y * Y);
-        
-        double targetX = (X / currentVelocity) * speed;
-        double targetY = (Y / currentVelocity) * speed;
+
+        if (currentVelocity <= 0) return;
 
         if (currentVelocity >= speed)
         {
-            X = targetX;
-            Y = targetY;
+            X = (X / currentVelocity) * speed;
+            Y = (Y / currentVelocity) * speed;
+            
+            // X = targetX;
+            // Y = targetY;
         }
     }
 }
