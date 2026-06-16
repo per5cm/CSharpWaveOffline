@@ -21,9 +21,6 @@ public struct Velocity
         {
             X = (X / currentVelocity) * speed;
             Y = (Y / currentVelocity) * speed;
-            
-            // X = targetX;
-            // Y = targetY;
         }
     }
 }

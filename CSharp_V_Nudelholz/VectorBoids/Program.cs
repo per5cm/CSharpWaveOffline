@@ -1,5 +1,5 @@
 ﻿using System;
-
+using VectorBoids.FieldController;
 using VectorBoids.Library;
 
 namespace VectorBoids
@@ -9,6 +9,8 @@ namespace VectorBoids
         static void Main(string[] args)
         {
             Console.Title = "Vector Boids";
+
+            FieldController.Field();
         }
     }
 }
