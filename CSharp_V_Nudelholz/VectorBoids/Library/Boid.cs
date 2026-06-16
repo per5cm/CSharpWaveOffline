@@ -54,40 +54,35 @@ internal class Boid
             }
         }
         
-        var averageX = currentX /= count;
-        var averageY = currentY /= count;
+        currentX /= count;
+        currentY /= count;
 
-        var averageDirection = (averageX, averageY);
-        var normalisation = Position.Normalize(averageDirection);
-        Velocity = Position.Move(Velocity, normalisation);
-
-        // Velocity.X += (currentX - Position.X) * steer;
-        // Velocity.Y += (currentY - Position.Y) * steer;
+        Velocity.X += (currentX - Position.X) * steer;
+        Velocity.Y += (currentY - Position.Y) * steer;
     }
 
-    private void Cohesion(List<Boid> boid)
+    private void Cohesion(List<Boid> boid, double vision, double steer)
     {
-        int countObjects = 0;
+        int count = 0;
         double currentX = 0;
         double currentY = 0;
         
         foreach (var flock in boid)
         {
-            if (flock == this) continue;
             double distance = Position.Distance(flock.Position);
 
             if (distance < 40)
             {
                 currentX += flock.Position.X;
                 currentY += flock.Position.Y;
-                countObjects++;
+                count++;
             }
         }
         
-        if (countObjects > 0)
+        if (count > 0)
         {
-            double averageX = (currentX / countObjects);
-            double averageY = (currentY / countObjects);
+            double averageX = (currentX / count);
+            double averageY = (currentY / count);
                 
             var centerDirection = (averageX - Position.X, averageY - Position.Y);
             var steering = Position.Normalize(centerDirection);
