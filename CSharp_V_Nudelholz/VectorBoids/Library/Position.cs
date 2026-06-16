@@ -24,10 +24,10 @@ internal struct Position
         return Math.Sqrt (position.X * position.X + position.Y * position.Y);
     }
 
-    internal Position Normalize(Position vector)
+    internal static Position Normalize(Position vector)
     {
-        double vectorDirection = Distance(vector);
-        if (vectorDirection <= 0) return new Position(0, 0);
-        return new Position (vector.X / vectorDirection, vector.Y / vectorDirection);
+        double length = Math.Sqrt(vector.X * vector.X + vector.Y * vector.Y);
+        if (length <= 0) return new Position(0, 0);
+        return new Position (vector.X / length, vector.Y / length);
     }
 }

@@ -13,11 +13,11 @@ internal class Boid
         Velocity = new Velocity(velocityX, velocityY);
     }
 
-    internal void Update(List<Boid> boid, double width, double height, double padding, double turn, double steer, double vision)
+    internal void Update(List<Boid> boid, double width, double height, double padding, double turn)
     {
-        Separation(boid, steer, vision);
-        Alignment(boid,  steer,vision);
-        Cohesion(boid, vision, steer);
+        Separation(boid, 20, .001);
+        Alignment(boid,  50,.01);
+        Cohesion(boid, 50, .003);
         
         Velocity.Speed(3);
         Position.Move(Velocity.X , Velocity.Y);
@@ -30,10 +30,13 @@ internal class Boid
         foreach (var flock in boid)
         {
             double closeness = vision - flock.Position.Distance(Position);
+            
             if (closeness > 0)
             {
-                Velocity.X -= (flock.Position.X - Position.X) * steer * closeness;
-                Velocity.Y -= (flock.Position.Y - Position.Y) * steer * closeness;
+                var away = new Position(Position.X - flock.Position.X, Position.Y - flock.Position.Y);
+                var direction = Position.Normalize(away);
+                Velocity.X += direction.X * steer * closeness;
+                Velocity.Y += direction.Y * steer * closeness;
             }
         }
     }
