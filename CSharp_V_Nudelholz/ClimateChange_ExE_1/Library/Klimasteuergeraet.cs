@@ -6,8 +6,8 @@ public class Klimasteuergeraet
     // private readonly double _istWert;
     // private readonly double _aussenTemparatur;
 
-    private double SollWert { get; set; }
-    private  double IstWert { get; set; }
+    internal double SollWert { get; set; }
+    internal  double IstWert { get; set; }
     internal double AussenWert { get; set; }
     internal bool HeizungAktiv { get; set; }
     internal int Luefterstufe { get; set; }
@@ -26,16 +26,19 @@ public class Klimasteuergeraet
         if (SollWert > IstWert)
         {
             Console.WriteLine("Es ist Kühl!");
+            HeizungAktiv = true;
             return true;
         }
         else if (SollWert < IstWert)
         {
             Console.WriteLine("Es ist zu Heiss!");
+            HeizungAktiv = false;
             return false;
         }
         else
         {
             Console.WriteLine("Alles Ok!");
+            HeizungAktiv = false;
             return false;
         }
     }
@@ -44,7 +47,7 @@ public class Klimasteuergeraet
     {
         if (IstWert >= 25)
         {
-            Console.WriteLine("Lufterstufe 3");
+            Console.WriteLine("Lufterstufe 2");
             return Luefterstufe = 2;
         }
         else if (IstWert >= 10)

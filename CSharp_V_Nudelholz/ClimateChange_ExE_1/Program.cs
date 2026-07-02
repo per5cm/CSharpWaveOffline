@@ -1,5 +1,4 @@
-﻿using System;
-using ClimateChange_ExE_1.Library;
+﻿using ClimateChange_ExE_1.Library;
 
 namespace ClimateChange_ExE_1
 {
@@ -26,10 +25,8 @@ namespace ClimateChange_ExE_1
             geraet.Lueftersteuerung();
 
 
-            // Console.WriteLine($"Soll wert Klimasteuergerät in {Klimasteuergeraet.sollWert}C");
-            // Console.WriteLine($"Ist wert Klimasteuergerät in {istWert}C");
-            //
-
+            Console.WriteLine($"\nSoll wert Klimasteuergerät: {geraet.SollWert}C");
+            Console.WriteLine($"Ist wert Klimasteuergerät: {geraet.IstWert}C");
         }
     }
 }
