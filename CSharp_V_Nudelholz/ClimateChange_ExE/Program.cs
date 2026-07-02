@@ -8,7 +8,7 @@ namespace ClimateChange_ExE
         {
             Console.WriteLine("Klimasteuergerät gestartet");
             
-            Ac machine = new(targetSum: 21.5, currentSum: 16.5, outsideSum: 13, acAktive: false);
+            Ac machine = new(targetSum: 21.5, currentSum: 16.5, outsideSum: 13, acActive: false);
             machine.AcActivation();
             machine.LevelControl();
 
