@@ -30,22 +30,15 @@ public class Field
             boid.Separation(boids, 20, .001);
             boid.Alignment(boids, 50, .01);
             boid.Cohesion(boids, 50, .003);
+        }
 
+        foreach (var boid in boids)
+        {
             boid.Velocity.Speed(3);
             boid.Position.Move(boid.Velocity.X, boid.Velocity.Y);
 
             BorderWall(boid,width, height, padding, turn);
         }
-    }
-
-    internal void Advance(double padding, double turn)
-    {
-        
-    }
-
-    internal IEnumerable<(double X, double Y)> Positions()
-    {
-        return new List<(double X, double Y)>();
     }
     
     private void BorderWall(Boid boid,double width, double height, double padding, double turn)
