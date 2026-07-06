@@ -1,6 +1,7 @@
 ﻿using System;
+using System.Security.Cryptography;
 using VectorBoids.FieldController;
-using VectorBoids.Library;
+using VectorBoids.View;
 
 namespace VectorBoids
 {
@@ -9,15 +10,21 @@ namespace VectorBoids
         static void Main(string[] args)
         {
             Console.Title = "Vector Boids";
+            
+            double width = 800;
+            double height = 600;
+            int boidCount = 100;
+            double padding = 5;
+            double turn = 0.5;
 
-            var field = new Field(width: 800, height: 600, boidCount: 100);
+            var field = new Field(width, height, boidCount);
+            var renderer = new Renderer((int)width, (int)height);
 
             while (true)
             {
                 Console.Clear();
-                
-                
-                field.Update();
+                renderer.Draw(field.GetBoids());
+                field.Update(padding, turn);
                 Thread.Sleep(100); //frame delay
             }
         }

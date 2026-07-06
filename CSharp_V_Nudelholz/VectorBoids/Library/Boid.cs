@@ -45,7 +45,7 @@ internal class Boid
             }
         }
 
-        if (count >= 0) return;
+        if (count <= 0) return;
         currentX /= count;
         currentY /= count;
 
@@ -69,7 +69,7 @@ internal class Boid
             }
         }
         
-        if (count >= 0) return;
+        if (count <= 0) return;
         currentX /= count;
         currentY /= count;
 

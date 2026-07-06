@@ -50,9 +50,9 @@ public class Field
         if (boid.Position.Y > _height - padding) boid.Velocity.Y -= turn;
     }
     
-    internal IEnumerable<(double X, double Y)> Positions()
+    internal IEnumerable<(double X, double Y)> GetBoids()
     {
-        return new List<(double X, double Y)>();
+        return _boids.Select(b => (b.Position.X, b.Position.Y));
     }
 }
 
