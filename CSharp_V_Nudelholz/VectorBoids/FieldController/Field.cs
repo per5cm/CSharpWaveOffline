@@ -18,7 +18,7 @@ public class Field
         {
             _boids.Add(new Boid(
                 new Position(_random.NextDouble() * _width, _random.NextDouble() * _height),
-                new Velocity(_random.NextDouble() * 2, _random.NextDouble() * 3)
+                new Velocity(_random.NextDouble() * 2 - 1, _random.NextDouble() * 2 - 1)
             ));
         }
     }

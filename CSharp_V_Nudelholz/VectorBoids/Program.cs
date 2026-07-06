@@ -11,8 +11,8 @@ namespace VectorBoids
         {
             Console.Title = "Vector Boids";
             
-            double width = 800;
-            double height = 600;
+            double width = Console.WindowWidth;
+            double height = Console.WindowHeight;
             int boidCount = 100;
             double padding = 5;
             double turn = 0.5;

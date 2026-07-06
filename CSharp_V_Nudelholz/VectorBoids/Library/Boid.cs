@@ -73,7 +73,7 @@ internal class Boid
         currentX /= count;
         currentY /= count;
 
-        Velocity.X += (Position.X - currentX) * steer;
-        Velocity.Y += (Position.Y - currentY) * steer;
+        Velocity.X += (currentX - Position.X) * steer;
+        Velocity.Y += (currentY - Position.Y) * steer;
     }
 }
