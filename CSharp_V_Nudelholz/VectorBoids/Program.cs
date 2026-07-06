@@ -10,7 +10,16 @@ namespace VectorBoids
         {
             Console.Title = "Vector Boids";
 
-            FieldController.Field();
+            var field = new Field(width: 800, height: 600, boidCount: 100);
+
+            while (true)
+            {
+                Console.Clear();
+                
+                
+                field.Update();
+                Thread.Sleep(100); //frame delay
+            }
         }
     }
 }
