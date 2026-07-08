@@ -38,6 +38,17 @@ public class AcTests
 
         var result = machine.AcActivation();
         
+        Assert.True(result);
+        Assert.True(machine.AcActive);
+    }
+
+    [Fact]
+    public void AcDeactivation_WhenTargetOff()
+    {
+        Ac machine = new(targetTemp: 25.5, currentTemp: 25.5, acActive: false);
+        
+        var result = machine.AcActivation();
+        
         Assert.False(result);
         Assert.False(machine.AcActive);
     }
