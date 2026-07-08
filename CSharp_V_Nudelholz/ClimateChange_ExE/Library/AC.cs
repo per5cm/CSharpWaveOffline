@@ -2,29 +2,27 @@ namespace ClimateChange_ExE.Library;
 
 public class Ac
 {
-    internal double TargetSum { get; set; }
-    internal  double CurrentSum { get; set; }
-    internal double OutsideSum { get; set; }
+    internal double TargetTemp { get; set; }
+    internal  double CurrentTemp { get; set; }
     internal bool AcActive { get; private set; }
-    private Level Level { get; set; }
+    private Level CurrentLevel { get; set; }
 
-    internal Ac(double targetSum, double currentSum, double outsideSum,  bool acActive)
+    internal Ac(double targetTemp, double currentTemp, bool acActive)
     {
-        TargetSum = targetSum;
-        CurrentSum = currentSum;
-        OutsideSum = outsideSum;
+        TargetTemp = targetTemp;
+        CurrentTemp = currentTemp;
         AcActive = acActive;
     }
 
     internal bool AcActivation()
     {
-        if (CurrentSum < TargetSum)
+        if (CurrentTemp < TargetTemp)
         {
             Console.WriteLine("Es ist Kühl!");
             AcActive = true;
             return true;
         }
-        else if (CurrentSum > TargetSum)
+        else if (CurrentTemp > TargetTemp)
         {
             Console.WriteLine("Es ist zu Heiss!");
             AcActive = true;
@@ -40,27 +38,27 @@ public class Ac
 
     internal Level LevelControl()
     {
-        if (CurrentSum <= 32)
+        if (CurrentTemp >= 32)
         {
             Console.WriteLine("Lufterstufe 3");
-            Level = Level.Strong;
+            CurrentLevel = Level.Strong;
         }
-        else if (CurrentSum >= 25)
+        else if (CurrentTemp >= 25)
         {
             Console.WriteLine("Lufterstufe 2");
-            Level = Level.Middle;
+            CurrentLevel = Level.Middle;
         }
-        else if (CurrentSum >= 10)
+        else if (CurrentTemp >= 10)
         {
             Console.WriteLine("Lufterstufe 1");
-            Level = Level.Light;
+            CurrentLevel = Level.Light;
         }
         else
         {
             Console.WriteLine("Lufter aus!");
-            Level = Level.Off;
+            CurrentLevel = Level.Off;
         }
 
-        return Level;
+        return CurrentLevel;
     }
 }
