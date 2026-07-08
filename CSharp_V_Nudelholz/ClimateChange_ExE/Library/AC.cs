@@ -5,7 +5,7 @@ public class Ac
     internal double TargetSum { get; set; }
     internal  double CurrentSum { get; set; }
     internal double OutsideSum { get; set; }
-    internal bool AcActive { get; set; }
+    internal bool AcActive { get; private set; }
     private Level Level { get; set; }
 
     internal Ac(double targetSum, double currentSum, double outsideSum,  bool acActive)
@@ -18,17 +18,17 @@ public class Ac
 
     internal bool AcActivation()
     {
-        if (TargetSum > CurrentSum)
+        if (CurrentSum < TargetSum)
         {
             Console.WriteLine("Es ist Kühl!");
             AcActive = true;
             return true;
         }
-        else if (TargetSum < CurrentSum)
+        else if (CurrentSum > TargetSum)
         {
             Console.WriteLine("Es ist zu Heiss!");
-            AcActive = false;
-            return false;
+            AcActive = true;
+            return true;
         }
         else
         {
@@ -40,7 +40,12 @@ public class Ac
 
     internal Level LevelControl()
     {
-        if (CurrentSum >= 25)
+        if (CurrentSum <= 32)
+        {
+            Console.WriteLine("Lufterstufe 3");
+            Level = Level.Strong;
+        }
+        else if (CurrentSum >= 25)
         {
             Console.WriteLine("Lufterstufe 2");
             Level = Level.Middle;

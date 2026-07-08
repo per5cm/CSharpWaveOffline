@@ -30,4 +30,15 @@ public class AcTests
         Assert.True(result);
         Assert.True(machine.AcActive);
     }
+
+    [Fact]
+    public void AcDeactivation_WhenTargetLessThanCurrent()
+    {
+        Ac machine = new(targetSum: 25.5, currentSum: 12.5, outsideSum: 19, acActive: true);
+
+        var result = machine.AcActivation();
+        
+        Assert.False(result);
+        Assert.False(machine.AcActive);
+    }
 }
